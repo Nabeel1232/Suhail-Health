@@ -1,0 +1,17 @@
+.env
+.env.*
+.env_elevenlabs
+.runtime
+.venv
+runtime
+reports
+evals/cache
+apps/web/node_modules
+apps/web/.next
+.git
+.aws
+.agents
+.codex
+*.log
+bundle
+Suhail_Codex_Build_Pack

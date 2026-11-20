@@ -1,0 +1,2 @@
+name,value,unit,denominator,method
+adapted_healthbench_rubric_score,,fraction,,"Signed weights / total positive weights per example; clip aggregate mean to [0,1]. Groq batched rubric-grader estimate; not official HealthBench."

@@ -1,0 +1,151 @@
+{
+  "started_at": "2026-11-20T15:00:11.927589+00:00",
+  "workspace": "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/tmp/suhail-fresh-59mf55j9",
+  "steps": [
+    {
+      "name": "python-venv",
+      "command": [
+        "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.venv/bin/python",
+        "-m",
+        "venv",
+        "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/tmp/suhail-fresh-59mf55j9/.venv"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 15.747242338955402
+    },
+    {
+      "name": "python-install",
+      "command": [
+        "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/tmp/suhail-fresh-59mf55j9/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.lock"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 154.85288789868355
+    },
+    {
+      "name": "fresh-schema-seed",
+      "command": [
+        "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/tmp/suhail-fresh-59mf55j9/.venv/bin/python",
+        "-m",
+        "services.api.seed"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 52.578229919075966
+    },
+    {
+      "name": "fresh-acceptance",
+      "command": [
+        "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/tmp/suhail-fresh-59mf55j9/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_backend.py",
+        "tests/test_agents.py",
+        "-q",
+        "--junitxml=/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/runtime/fresh-install/fresh-tests.xml"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 340.6229094043374
+    },
+    {
+      "name": "web-install",
+      "command": [
+        "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/node/bin/npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 49.553635250777006
+    },
+    {
+      "name": "web-production-build",
+      "command": [
+        "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/node/bin/npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 48.44285158440471
+    }
+  ],
+  "status": "passed",
+  "secrets_copied": false,
+  "source_hashes": {
+    "services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "services/agents/routes.py": "d4b850db18e210d59571bad2988bf9c6c1ba094848a39b1ff6ffe968dbca8e1d",
+    "services/agents/knowledge.json": "29d6fc1645348d8896619cc1050e48cb8af38faad04f3f707eba3311a844095a",
+    "services/agents/retrieval.py": "7f297962ca83c46cf5b4a41e6ca14a3e3823aeca6ac4e55a6b1d6161399fdc79",
+    "services/agents/graph.py": "c414fa1a71a3b507812cd7fb8711d5e49ca022cb3a99c2f6e101a00cbec5cf90",
+    "services/agents/__init__.py": "3a13defd8d0cb16ecc18dba0dadf3c5fc55e6268189f48284a52ddffb29fb8df",
+    "services/agents/gateway.py": "73434cfa6804a4163b4076db2f52f5c712b03eaa6aa0bd0fd0d63500ea844b1f",
+    "services/agents/engine.py": "51eb54d94d0462fbf911092ddb8e274428d3da0ab84a4fb4f335e049e8cb2b60",
+    "services/api/schemas.py": "3c6d23ad678c87ff7544cf3e4bd0af390bb5dade5b23c92b65b3e93b87f4ba70",
+    "services/api/seed.py": "fdf079fe79f6e2cd29839c37a0b06ecae55e8f9689f39875b0d432742463a789",
+    "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+    "services/api/domain.py": "f15d829938a19090a5720d9f9aab74744d0baec80f7757b337453de2ad1881ec",
+    "services/api/policy.py": "755a4a61f53414a7d573ba6703885ea0ca663031381dd3969e9099721e16374b",
+    "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+    "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+    "services/api/worker.py": "d32787abe3376a1aa11ce2ae877c97b1de837dc36206dd462511dc1db2967e4c",
+    "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+    "services/api/main.py": "bb3046cb33cd40628ec3396c4151a27b5638046fb8a2b7d76b6f62776201b155",
+    "services/assistant/routes.py": "cbfc3ccccc58339e350917040f5b91725477afda641bf10aa8ad6e70e783d0cc",
+    "services/assistant/__init__.py": "6c6f921ab8e340bfe85bbd61f04ac535a29ccb8679811d2d4e262633c6d544c2",
+    "services/assistant/intent.py": "5754ac2b733843513933c1a44cce9e4a5961a5a0e9f93d1ff89a332c9d7916f4",
+    "services/assistant/models.py": "f7adb4d9a05f69891811e0c9d788f2c0c04fe0af701d526d96efafb4e64f1fe0",
+    "services/assistant/context.py": "10ce4a449658b67d6db751ae4e8849c748686b5a635087135fe23ab567da34ef",
+    "integrations/provider.py": "9e239b81909fd5b7ce610b886c398ef1639a8fac8b7d99b14582e1ce2b05adef",
+    "integrations/fhir.py": "828c53badbcbf856c65d6c3231047fc5098d517099867199630430df2f0151eb",
+    "integrations/routes.py": "0828acad35bdb40a7821cc671067b3547efbd9fa01e126b5f210cb55874805b3",
+    "integrations/__init__.py": "74c56c63edbbd58465ed2b3385b4c9ed1031dd94c6e24ce658561e320de850f1",
+    "apps/web/package.json": "92584628a2c95fc6b6135825c9303218ce31fac28ff8d8d995aad4e981d5e73e",
+    "apps/web/next.config.ts": "226cf9d05b22d4e39c1ed77d9f12a020347b7cd104f6179c9877d9e406042a05",
+    "apps/web/package-lock.json": "82833d72824ac0e137cd16740f4a6bc0c78a95c4769da97593839dea35eb330c",
+    "apps/web/next-env.d.ts": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b",
+    "apps/web/tsconfig.json": "9ae7ca3817f842a5d233859a9b48b0bcebe7f71e5d7b678f24d707a9fae94abe",
+    "apps/web/components/care.tsx": "49cb0d24bb2605102aebdb8d5cadd3cd9877a7252d4de04b951b3b01488564f9",
+    "apps/web/components/icon.tsx": "264ad48cfa208f633a65c5519a97e063221f30a03987cffcb66348ca3c2a9f44",
+    "apps/web/components/home.tsx": "b3c5518fa8432f1de2eca6edcd05b6099e8cfe643e1f84c1c08acff15f8e32c1",
+    "apps/web/components/assistant.tsx": "0e7555bc2da9eb29d541cd056fe0eb20c7277ac632c582bc0c0b30398e06b42f",
+    "apps/web/components/context-chat.tsx": "1541a0ff1a73a3a8383d8951a3dd81b384a43950beb8d8cc399565dadb79ba63",
+    "apps/web/components/experience-survey.tsx": "09466bf3c59b3a22c468bb1f3fb3513d2c5e1593227ce65d079bd9e3cc83852f",
+    "apps/web/components/workspaces.tsx": "4c2dad678dd66210493af09f21164cf8b18872376b9476d85bcebe374155691a",
+    "apps/web/components/shell.tsx": "c157f8f3ee064e1ab7ffc620b0c4464a18e1eb0be6f6e6c5964409c7ab3e9a8c",
+    "apps/web/components/intake.tsx": "e393121a952ab01d9f6933f5f2bf13ad2418a4520415bdcf021e6cc67954e21b",
+    "apps/web/components/ui.tsx": "7e12a9e1f1929b2452a8db5b5068026c7c3d0f2427c58548455e97aa4bd2b9ad",
+    "apps/web/components/patient.tsx": "f6e954dc02b4f2235a7c41a33837b315bba9d9d490840679f1df3fe80ae2e01f",
+    "apps/web/components/source-review.tsx": "c3c4059b241cb9cd6d91a30ec17d084fbd6afa695b503aa3050bcaa343161901",
+    "apps/web/components/landing-visual.tsx": "9b6616d332040f67068c249d901ad7ae8e9dd7495975e9c20568a512bcc4de5a",
+    "apps/web/lib/api.ts": "7ab4f6197a527aac27590a375d9d3c2e9ec72c5142163216ec5b64d915038f5b",
+    "apps/web/lib/labels.ts": "65724a1e1168b9fa5ea8934e1110dacf362a9f8dab7335ef6066229e7484b8cf",
+    "apps/web/app/care.css": "9d418c4d29c38dac481d8429c27ca6ef34ac7fb51a8730bf0e45958fa7806a16",
+    "apps/web/app/page.tsx": "42d0a3ab09411bc813530e9db98c935287e67b1d5b3eafc76b59f76652aaa104",
+    "apps/web/app/landing.css": "5986b8c0ce7df66e368de9ea5a9b56d9da1d4e805f589fe46243c23b65da11ce",
+    "apps/web/app/workflow-base.css": "9d8232e5cd3ad50f012e1a7eb48e25864802deb9e247e871ea365189e436d41f",
+    "apps/web/app/layout.tsx": "46008bbdb76d30d277314aebb3868f7217effc12900c0d562d17a0322429182f",
+    "apps/web/app/context-chat.css": "303ba5f22eea188505e6b332916e4f0deb05f9c9f59ba80c2726c0099d6ccda7",
+    "apps/web/app/patient.css": "2c4586528f6c5d3d579bca61dae725e622b03410f029694e840ec6c5cadafbf2",
+    "apps/web/app/not-found.tsx": "d496161ee4b4b805aa9c0233d94d2b44caded112663c67993accb909eac605a9",
+    "apps/web/app/globals.css": "ae05dea62b8851fd70a6ca930217cb172cd74e8035dc8be36037a53c5a90ee36",
+    "apps/web/app/workspaces.css": "c2fbfce0705503fe9dd78fd75a56cc7d3bec406d6671433e1fbb1a87215050ff",
+    "apps/web/app/(workspace)/layout.tsx": "fc5cc97f2be2c3afaaee5affdc3e68c44e4306e4e3a36916ed71be3d9cabbabd",
+    "apps/web/app/(workspace)/loading.tsx": "0b7671b99520581f813eec626dc3a6e334e1406f17d3c5118ac0f996bfebde78",
+    "apps/web/app/(workspace)/error.tsx": "27ecd3bf6e580ed28569c92a187ae17048e1bea4c1062cc30dfab427afa2e451",
+    "apps/web/app/api/[...path]/route.ts": "82a0d97ee28224d16c63e339a15eab09c7e88542fd5592bd150f8e3203427e1b",
+    "apps/web/app/(workspace)/receiving/page.tsx": "d6eca7d9d5e39c7bc62038e02d758d8a2a7c97f5170a672f59d79c4a33828737",
+    "apps/web/app/(workspace)/evaluation/page.tsx": "e5eb1c58e3d2cd1bc488f636f2b406d9cd2912438a11743ea222b1b870c15d49",
+    "apps/web/app/(workspace)/worklist/page.tsx": "9933595f264385932c9e758a2e573703cee1496bb87048306bb506d97965d4a7",
+    "apps/web/app/(workspace)/patient/page.tsx": "90169b9637825fe611e65881f5ddd1ad2ed3437ef17ad8046b280b1dfa5bdfab",
+    "apps/web/app/(workspace)/clinical/page.tsx": "60d4ec572158920e483a425ac573c8588383b98e7e9af15af2d04684945b8043",
+    "apps/web/app/(workspace)/operations/page.tsx": "ab825e6d550b16842d695209b6dd8c0d61c643815f142e28dce174a6d7d4ccbe",
+    "apps/web/app/(workspace)/cases/[id]/page.tsx": "f65b1fab1977b7d0616010c258fc423d95d924074196c92456f1d43510ca4839",
+    "apps/web/public/fonts/provenance.json": "44ea939e8997b7a4a008c00f3a185ff19476f16787fd4524e2dce23e0a6ea5c9",
+    "pathways/colorectal-demo/policy.json": "3e0fd1db23f223e84f438369dfde9325cee74c054b6cbd7f9fb805328b671a5f"
+  },
+  "finished_at": "2026-11-20T15:11:18.491745+00:00"
+}

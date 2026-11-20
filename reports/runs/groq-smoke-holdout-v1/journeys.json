@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "run_id": "groq-smoke-holdout-v1",
+  "status": "PARTIAL",
+  "reason_code": "execution_error",
+  "evidence_mode": "live_groq_synthetic",
+  "component": "journeys",
+  "started_at": "2026-11-14T21:32:32.252732+00:00",
+  "finished_at": "2026-11-14T21:40:18.744528+00:00",
+  "provenance": {
+    "code_revision": null,
+    "dirty_state_hash": "384a2997f15fab7c885e72966ec28302068b3e4e7288c49d3fd503142a34306b",
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "grader_model": null,
+    "dataset": "suhail_project_synthetic",
+    "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+    "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+    "license": "project_generated_no_upstream_license_claim",
+    "selected_case_ids": [
+      "paired-trajectory-holdout-500000-A",
+      "paired-trajectory-holdout-500000-B",
+      "paired-trajectory-holdout-500000-C",
+      "paired-trajectory-holdout-500001-A",
+      "paired-trajectory-holdout-500001-B",
+      "paired-trajectory-holdout-500001-C",
+      "paired-trajectory-holdout-500002-A",
+      "paired-trajectory-holdout-500002-B",
+      "paired-trajectory-holdout-500002-C",
+      "paired-trajectory-holdout-500003-A",
+      "paired-trajectory-holdout-500003-B",
+      "paired-trajectory-holdout-500003-C",
+      "paired-trajectory-holdout-500004-A",
+      "paired-trajectory-holdout-500004-B",
+      "paired-trajectory-holdout-500004-C",
+      "paired-trajectory-holdout-500005-A",
+      "paired-trajectory-holdout-500005-B",
+      "paired-trajectory-holdout-500005-C"
+    ],
+    "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+    "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+    "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+    "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+    "sampling_parameters": {
+      "temperature": 0,
+      "structured_max_tokens": 1500,
+      "external_max_tokens": 1500,
+      "grader_max_tokens": 1500,
+      "stream": false,
+      "concurrency": 1,
+      "configured_max_concurrency": 2,
+      "tool_parallel_calls": false,
+      "quantization": "provider managed; not disclosed"
+    }
+  },
+  "counts": {
+    "selected": 18,
+    "attempted": 14,
+    "completed": 12,
+    "failed": 2,
+    "skipped": 4,
+    "task_passed": 12,
+    "task_incorrect": 0
+  },
+  "metrics": [
+    {
+      "name": "task_accuracy",
+      "value": 1.0,
+      "unit": "fraction",
+      "denominator": 12,
+      "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+    },
+    {
+      "name": "evaluated_coverage",
+      "value": 0.6666666666666666,
+      "unit": "fraction",
+      "denominator": 18,
+      "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+    },
+    {
+      "name": "selected_case_pass_fraction",
+      "value": 0.6666666666666666,
+      "unit": "fraction",
+      "denominator": 18,
+      "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+    },
+    {
+      "name": "arm_A_marginal_coverage_required_care_completed",
+      "value": 0.0,
+      "unit": "fraction",
+      "denominator": 6,
+      "method": "Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence."
+    },
+    {
+      "name": "arm_B_marginal_coverage_required_care_completed",
+      "value": 1.0,
+      "unit": "fraction",
+      "denominator": 5,
+      "method": "Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence."
+    },
+    {
+      "name": "arm_C_marginal_coverage_required_care_completed",
+      "value": 1.0,
+      "unit": "fraction",
+      "denominator": 1,
+      "method": "Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence."
+    },
+    {
+      "name": "matched_A_B_required_care_difference",
+      "value": 1.0,
+      "unit": "fraction",
+      "denominator": 5,
+      "method": "Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate."
+    },
+    {
+      "name": "matched_B_C_required_care_difference",
+      "value": 0.0,
+      "unit": "fraction",
+      "denominator": 1,
+      "method": "Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate."
+    }
+  ],
+  "usage": {
+    "api_calls": 11,
+    "input_tokens": 26000,
+    "output_tokens": 8916,
+    "cost_usd": 0.009249599999999998,
+    "latency_ms_p50": 29700.981080532074,
+    "latency_ms_p95": 31182.783763855696,
+    "price_map_version": "groq-models-2026-11-15",
+    "budget_reason": null
+  },
+  "errors": [
+    {
+      "case_id": "paired-trajectory-holdout-500000-B",
+      "code": "execution_error",
+      "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+    },
+    {
+      "case_id": "paired-trajectory-holdout-500000-C",
+      "code": "execution_error",
+      "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+    },
+    {
+      "case_id": "paired-trajectory-holdout-500002-C",
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    },
+    {
+      "case_id": "paired-trajectory-holdout-500003-C",
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    },
+    {
+      "case_id": "paired-trajectory-holdout-500004-C",
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    },
+    {
+      "case_id": "paired-trajectory-holdout-500005-C",
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    }
+  ],
+  "limitations": [
+    "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+    "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+    "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+    "Standard/full presets not executed unless explicit budgets are supplied.",
+    "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+    "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+    "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+    "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+    "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+    "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+    "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+    "Scripted authorized domain role actions and known evidence use synthetic behavior and service capacity; no clinical effectiveness or reassurance claim.",
+    "A reminders; B full workflow templates; C same workflow plus observed bounded live proposals. Unexecuted selected arms remain skipped/failed with no outcome estimate.",
+    "The first shared-store pair is invalid for matched comparisons and retained with its failures. Only valid evaluated independent-store pairs enter comparison metrics.",
+    "Authorized scripted actors follow independent scenario truth while AI drafts are observed; no causal effect of model recommendations or real human review/understanding was measured."
+  ],
+  "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+}

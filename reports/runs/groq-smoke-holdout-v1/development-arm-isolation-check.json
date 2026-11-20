@@ -1,0 +1,868 @@
+{
+  "executed_at": "2026-11-14T21:34:43.369886+00:00",
+  "evidence_mode": "deterministic_software",
+  "no_model_calls": true,
+  "scenario": "rejected_handoff",
+  "independent_stores_verified": true,
+  "same_patient_order_truth_verified": true,
+  "results": [
+    {
+      "arm": "A",
+      "database": "/tmp/suhail-arm-isolation-development-i70yu_ad/A.sqlite3",
+      "initial_case_id": "SYN-DEVELOPMENT-900101-A",
+      "initial_version": 1,
+      "patient_id": "SYN-DEVELOPMENT-900101-P",
+      "order_id": "SYN-DEVELOPMENT-900101-O",
+      "disposition": "open",
+      "assertions": [
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        }
+      ],
+      "events": [
+        {
+          "command": "intake",
+          "input": {
+            "case_id": "SYN-DEVELOPMENT-900101-A",
+            "dataset": "eval-trajectory-development-900000",
+            "event_id": "SYN-DEVELOPMENT-900101-A-RESULT-v1",
+            "source_organization": "source-clinic",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "patient_name": "Synthetic Participant 900101",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1,
+            "test_code": "FIT_POSITIVE",
+            "issued_at": "2026-11-14T09:00:00+00:00",
+            "identity_verified": true,
+            "trusted_urgent": false,
+            "language": "en",
+            "source_reference": "synthetic://SYN-DEVELOPMENT-900101/result"
+          },
+          "version": 1
+        },
+        {
+          "command": "communication",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 1,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-A-1-communication",
+            "language": "en",
+            "channel": "portal"
+          },
+          "version": 2,
+          "record_id": "msg-3c58dc05c4ff4ee5"
+        },
+        {
+          "command": "worker.run_once",
+          "result": {
+            "delivered": 1,
+            "failed": 0,
+            "timers": 0
+          }
+        },
+        {
+          "command": "acknowledgement",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 3,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-A-2-acknowledgement",
+            "communication_id": "msg-3c58dc05c4ff4ee5"
+          },
+          "version": 4,
+          "record_id": null
+        },
+        {
+          "command": "understanding",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 4,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-A-3-understanding",
+            "communication_id": "msg-3c58dc05c4ff4ee5",
+            "outcome": "passed"
+          },
+          "version": 5,
+          "record_id": null
+        }
+      ]
+    },
+    {
+      "arm": "B",
+      "database": "/tmp/suhail-arm-isolation-development-i70yu_ad/B.sqlite3",
+      "initial_case_id": "SYN-DEVELOPMENT-900101-B",
+      "initial_version": 1,
+      "patient_id": "SYN-DEVELOPMENT-900101-P",
+      "order_id": "SYN-DEVELOPMENT-900101-O",
+      "disposition": "completed_required_care",
+      "assertions": [
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "authorized_completion_persisted",
+          "passed": true
+        }
+      ],
+      "events": [
+        {
+          "command": "intake",
+          "input": {
+            "case_id": "SYN-DEVELOPMENT-900101-B",
+            "dataset": "eval-trajectory-development-900000",
+            "event_id": "SYN-DEVELOPMENT-900101-B-RESULT-v1",
+            "source_organization": "source-clinic",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "patient_name": "Synthetic Participant 900101",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1,
+            "test_code": "FIT_POSITIVE",
+            "issued_at": "2026-11-14T09:00:00+00:00",
+            "identity_verified": true,
+            "trusted_urgent": false,
+            "language": "en",
+            "source_reference": "synthetic://SYN-DEVELOPMENT-900101/result"
+          },
+          "version": 1
+        },
+        {
+          "command": "communication",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 1,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-1-communication",
+            "language": "en",
+            "channel": "portal"
+          },
+          "version": 2,
+          "record_id": "msg-4b9ca8bfbb354025"
+        },
+        {
+          "command": "worker.run_once",
+          "result": {
+            "delivered": 1,
+            "failed": 0,
+            "timers": 0
+          }
+        },
+        {
+          "command": "acknowledgement",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 3,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-2-acknowledgement",
+            "communication_id": "msg-4b9ca8bfbb354025"
+          },
+          "version": 4,
+          "record_id": null
+        },
+        {
+          "command": "understanding",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 4,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-3-understanding",
+            "communication_id": "msg-4b9ca8bfbb354025",
+            "outcome": "passed"
+          },
+          "version": 5,
+          "record_id": null
+        },
+        {
+          "command": "consultation",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 5,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-4-consultation",
+            "type": "patient_to_clinician",
+            "question": "What is my next step?",
+            "recipient": "clinician"
+          },
+          "version": 6,
+          "record_id": "consult-a2c85697c1a7423f"
+        },
+        {
+          "command": "consultation_reply",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 6,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-5-consultation_reply",
+            "consultation_id": "consult-a2c85697c1a7423f",
+            "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you.",
+            "agreed_action": "Confirm the patient next step and arrange assessment",
+            "action_owner": "navigation-team"
+          },
+          "version": 7,
+          "record_id": null
+        },
+        {
+          "command": "consultation",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 7,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-6-consultation",
+            "type": "clinician_to_specialist",
+            "question": "Please advise the coordination steps for the documented actionable screening result.",
+            "recipient": "specialist"
+          },
+          "version": 8,
+          "record_id": "consult-cd8d0394db0d4b0e"
+        },
+        {
+          "command": "consultation_reply",
+          "actor_role": "specialist",
+          "input": {
+            "expected_version": 8,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-7-consultation_reply",
+            "consultation_id": "consult-cd8d0394db0d4b0e",
+            "reply": "Arrange the documented diagnostic assessment and return the report for clinician review.",
+            "agreed_action": "Obtain assessment report and clinician review",
+            "action_owner": "navigation-team"
+          },
+          "version": 9,
+          "record_id": null
+        },
+        {
+          "command": "task",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 9,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-8-task",
+            "task_id": "task-103bf412fc3f410d",
+            "status": "completed",
+            "reason": "Scenario actor completed the recorded agreed coordination action"
+          },
+          "version": 10,
+          "record_id": "task-103bf412fc3f410d"
+        },
+        {
+          "command": "task",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 10,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-9-task",
+            "task_id": "task-c2a17d695bfa4170",
+            "status": "completed",
+            "reason": "Scenario actor completed the recorded agreed coordination action"
+          },
+          "version": 11,
+          "record_id": "task-c2a17d695bfa4170"
+        },
+        {
+          "command": "handoff",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 11,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-10-handoff",
+            "receiver": "provider-a",
+            "scope": "task",
+            "reason": "Synthetic permitted minimal diagnostic referral"
+          },
+          "version": 12,
+          "record_id": "handoff-6e2fe9ad8fbe4cd0"
+        },
+        {
+          "command": "handoff_reject",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 12,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-11-handoff_reject",
+            "handoff_id": "handoff-6e2fe9ad8fbe4cd0",
+            "reason": "Synthetic service capacity unavailable"
+          },
+          "version": 13,
+          "record_id": null
+        },
+        {
+          "command": "task",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 13,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-12-task",
+            "task_id": "task-1baa840fb45c4c30",
+            "status": "completed",
+            "reason": "Scenario actor completed the recorded agreed coordination action"
+          },
+          "version": 14,
+          "record_id": "task-1baa840fb45c4c30"
+        },
+        {
+          "command": "handoff",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 14,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-13-handoff",
+            "receiver": "provider-a",
+            "scope": "task",
+            "reason": "Synthetic permitted minimal diagnostic referral"
+          },
+          "version": 15,
+          "record_id": "handoff-ec9e0e031fdc499e"
+        },
+        {
+          "command": "handoff_accept",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 15,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-14-handoff_accept",
+            "handoff_id": "handoff-ec9e0e031fdc499e",
+            "reason": "Synthetic destination explicitly accepts intended scope"
+          },
+          "version": 16,
+          "record_id": null
+        },
+        {
+          "command": "appointment_create",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 16,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-15-appointment_create",
+            "provider": "provider-a",
+            "scheduled_at": "2026-11-18T09:00:00+00:00"
+          },
+          "version": 17,
+          "record_id": "appt-9463459300c042fa"
+        },
+        {
+          "command": "appointment_event",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 17,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-16-appointment_event",
+            "appointment_id": "appt-9463459300c042fa",
+            "status": "attended",
+            "source_event_id": "SYN-DEVELOPMENT-900101-B-attended-15"
+          },
+          "version": 18,
+          "record_id": null
+        },
+        {
+          "command": "evidence_add",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 18,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-17-evidence_add",
+            "document_text": "Project-generated synthetic source document. Known truth: investigation for case SYN-DEVELOPMENT-900101-B. This fixture is not clinical guidance.",
+            "type": "investigation",
+            "reference": "synthetic://SYN-DEVELOPMENT-900101-B/investigation/16",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1
+          },
+          "version": 19,
+          "record_id": "ev-5a32e755e2464eb0"
+        },
+        {
+          "command": "evidence_verify",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 19,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-18-evidence_verify",
+            "evidence_id": "ev-5a32e755e2464eb0",
+            "verified": true,
+            "reason": "Synthetic scenario source identity/order/version independently checked"
+          },
+          "version": 20,
+          "record_id": null
+        },
+        {
+          "command": "evidence_add",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 20,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-19-evidence_add",
+            "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case SYN-DEVELOPMENT-900101-B. This fixture is not clinical guidance.",
+            "type": "reviewed_outcome",
+            "reference": "synthetic://SYN-DEVELOPMENT-900101-B/reviewed_outcome/18",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1,
+            "requires_onward": false
+          },
+          "version": 21,
+          "record_id": "ev-dc68df95c24d47d9"
+        },
+        {
+          "command": "evidence_verify",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 21,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-20-evidence_verify",
+            "evidence_id": "ev-dc68df95c24d47d9",
+            "verified": true,
+            "reason": "Synthetic scenario source identity/order/version independently checked"
+          },
+          "version": 22,
+          "record_id": null
+        },
+        {
+          "command": "evidence_add",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 22,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-21-evidence_add",
+            "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case SYN-DEVELOPMENT-900101-B. This fixture is not clinical guidance.",
+            "type": "patient_updated",
+            "reference": "synthetic://SYN-DEVELOPMENT-900101-B/patient_updated/20",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1
+          },
+          "version": 23,
+          "record_id": "ev-d40bb1ef9e2e43a4"
+        },
+        {
+          "command": "evidence_verify",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 23,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-22-evidence_verify",
+            "evidence_id": "ev-d40bb1ef9e2e43a4",
+            "verified": true,
+            "reason": "Synthetic scenario source identity/order/version independently checked"
+          },
+          "version": 24,
+          "record_id": null
+        },
+        {
+          "command": "disposition",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 24,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-B-23-disposition",
+            "category": "completed_required_care",
+            "reason": "All configured synthetic diagnostic/care endpoint evidence checked",
+            "residual_need": ""
+          },
+          "version": 25,
+          "record_id": null
+        }
+      ]
+    },
+    {
+      "arm": "C",
+      "database": "/tmp/suhail-arm-isolation-development-i70yu_ad/C.sqlite3",
+      "initial_case_id": "SYN-DEVELOPMENT-900101-C",
+      "initial_version": 1,
+      "patient_id": "SYN-DEVELOPMENT-900101-P",
+      "order_id": "SYN-DEVELOPMENT-900101-O",
+      "disposition": "completed_required_care",
+      "assertions": [
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "authorized_completion_persisted",
+          "passed": true
+        }
+      ],
+      "events": [
+        {
+          "command": "intake",
+          "input": {
+            "case_id": "SYN-DEVELOPMENT-900101-C",
+            "dataset": "eval-trajectory-development-900000",
+            "event_id": "SYN-DEVELOPMENT-900101-C-RESULT-v1",
+            "source_organization": "source-clinic",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "patient_name": "Synthetic Participant 900101",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1,
+            "test_code": "FIT_POSITIVE",
+            "issued_at": "2026-11-14T09:00:00+00:00",
+            "identity_verified": true,
+            "trusted_urgent": false,
+            "language": "en",
+            "source_reference": "synthetic://SYN-DEVELOPMENT-900101/result"
+          },
+          "version": 1
+        },
+        {
+          "command": "communication",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 1,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-1-communication",
+            "language": "en",
+            "channel": "portal"
+          },
+          "version": 2,
+          "record_id": "msg-7f48f13465f04e54"
+        },
+        {
+          "command": "worker.run_once",
+          "result": {
+            "delivered": 1,
+            "failed": 0,
+            "timers": 0
+          }
+        },
+        {
+          "command": "acknowledgement",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 3,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-2-acknowledgement",
+            "communication_id": "msg-7f48f13465f04e54"
+          },
+          "version": 4,
+          "record_id": null
+        },
+        {
+          "command": "understanding",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 4,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-3-understanding",
+            "communication_id": "msg-7f48f13465f04e54",
+            "outcome": "passed"
+          },
+          "version": 5,
+          "record_id": null
+        },
+        {
+          "command": "consultation",
+          "actor_role": "patient",
+          "input": {
+            "expected_version": 5,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-4-consultation",
+            "type": "patient_to_clinician",
+            "question": "What is my next step?",
+            "recipient": "clinician"
+          },
+          "version": 6,
+          "record_id": "consult-23afaa7919bb4a49"
+        },
+        {
+          "command": "consultation_reply",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 6,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-5-consultation_reply",
+            "consultation_id": "consult-23afaa7919bb4a49",
+            "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you.",
+            "agreed_action": "Confirm the patient next step and arrange assessment",
+            "action_owner": "navigation-team"
+          },
+          "version": 7,
+          "record_id": null
+        },
+        {
+          "command": "consultation",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 7,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-6-consultation",
+            "type": "clinician_to_specialist",
+            "question": "Please advise the coordination steps for the documented actionable screening result.",
+            "recipient": "specialist"
+          },
+          "version": 8,
+          "record_id": "consult-22fb30b6c20f4113"
+        },
+        {
+          "command": "consultation_reply",
+          "actor_role": "specialist",
+          "input": {
+            "expected_version": 8,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-7-consultation_reply",
+            "consultation_id": "consult-22fb30b6c20f4113",
+            "reply": "Arrange the documented diagnostic assessment and return the report for clinician review.",
+            "agreed_action": "Obtain assessment report and clinician review",
+            "action_owner": "navigation-team"
+          },
+          "version": 9,
+          "record_id": null
+        },
+        {
+          "command": "task",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 9,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-8-task",
+            "task_id": "task-0638fcc4a7674723",
+            "status": "completed",
+            "reason": "Scenario actor completed the recorded agreed coordination action"
+          },
+          "version": 10,
+          "record_id": "task-0638fcc4a7674723"
+        },
+        {
+          "command": "task",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 10,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-9-task",
+            "task_id": "task-a779bb601cf3468a",
+            "status": "completed",
+            "reason": "Scenario actor completed the recorded agreed coordination action"
+          },
+          "version": 11,
+          "record_id": "task-a779bb601cf3468a"
+        },
+        {
+          "command": "handoff",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 11,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-10-handoff",
+            "receiver": "provider-a",
+            "scope": "task",
+            "reason": "Synthetic permitted minimal diagnostic referral"
+          },
+          "version": 12,
+          "record_id": "handoff-f24a53adfb434150"
+        },
+        {
+          "command": "handoff_reject",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 12,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-11-handoff_reject",
+            "handoff_id": "handoff-f24a53adfb434150",
+            "reason": "Synthetic service capacity unavailable"
+          },
+          "version": 13,
+          "record_id": null
+        },
+        {
+          "command": "task",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 13,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-12-task",
+            "task_id": "task-75e68fca552a46b2",
+            "status": "completed",
+            "reason": "Scenario actor completed the recorded agreed coordination action"
+          },
+          "version": 14,
+          "record_id": "task-75e68fca552a46b2"
+        },
+        {
+          "command": "handoff",
+          "actor_role": "navigator",
+          "input": {
+            "expected_version": 14,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-13-handoff",
+            "receiver": "provider-a",
+            "scope": "task",
+            "reason": "Synthetic permitted minimal diagnostic referral"
+          },
+          "version": 15,
+          "record_id": "handoff-0212d13c562645ef"
+        },
+        {
+          "command": "handoff_accept",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 15,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-14-handoff_accept",
+            "handoff_id": "handoff-0212d13c562645ef",
+            "reason": "Synthetic destination explicitly accepts intended scope"
+          },
+          "version": 16,
+          "record_id": null
+        },
+        {
+          "command": "appointment_create",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 16,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-15-appointment_create",
+            "provider": "provider-a",
+            "scheduled_at": "2026-11-18T09:00:00+00:00"
+          },
+          "version": 17,
+          "record_id": "appt-1869a0e7205f46b3"
+        },
+        {
+          "command": "appointment_event",
+          "actor_role": "receiver_a",
+          "input": {
+            "expected_version": 17,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-16-appointment_event",
+            "appointment_id": "appt-1869a0e7205f46b3",
+            "status": "attended",
+            "source_event_id": "SYN-DEVELOPMENT-900101-C-attended-15"
+          },
+          "version": 18,
+          "record_id": null
+        },
+        {
+          "command": "evidence_add",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 18,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-17-evidence_add",
+            "document_text": "Project-generated synthetic source document. Known truth: investigation for case SYN-DEVELOPMENT-900101-C. This fixture is not clinical guidance.",
+            "type": "investigation",
+            "reference": "synthetic://SYN-DEVELOPMENT-900101-C/investigation/16",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1
+          },
+          "version": 19,
+          "record_id": "ev-dae29a3525454c9f"
+        },
+        {
+          "command": "evidence_verify",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 19,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-18-evidence_verify",
+            "evidence_id": "ev-dae29a3525454c9f",
+            "verified": true,
+            "reason": "Synthetic scenario source identity/order/version independently checked"
+          },
+          "version": 20,
+          "record_id": null
+        },
+        {
+          "command": "evidence_add",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 20,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-19-evidence_add",
+            "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case SYN-DEVELOPMENT-900101-C. This fixture is not clinical guidance.",
+            "type": "reviewed_outcome",
+            "reference": "synthetic://SYN-DEVELOPMENT-900101-C/reviewed_outcome/18",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1,
+            "requires_onward": false
+          },
+          "version": 21,
+          "record_id": "ev-1c06932114be4bdb"
+        },
+        {
+          "command": "evidence_verify",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 21,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-20-evidence_verify",
+            "evidence_id": "ev-1c06932114be4bdb",
+            "verified": true,
+            "reason": "Synthetic scenario source identity/order/version independently checked"
+          },
+          "version": 22,
+          "record_id": null
+        },
+        {
+          "command": "evidence_add",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 22,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-21-evidence_add",
+            "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case SYN-DEVELOPMENT-900101-C. This fixture is not clinical guidance.",
+            "type": "patient_updated",
+            "reference": "synthetic://SYN-DEVELOPMENT-900101-C/patient_updated/20",
+            "patient_id": "SYN-DEVELOPMENT-900101-P",
+            "order_id": "SYN-DEVELOPMENT-900101-O",
+            "result_version": 1
+          },
+          "version": 23,
+          "record_id": "ev-c38006f571aa4da7"
+        },
+        {
+          "command": "evidence_verify",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 23,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-22-evidence_verify",
+            "evidence_id": "ev-c38006f571aa4da7",
+            "verified": true,
+            "reason": "Synthetic scenario source identity/order/version independently checked"
+          },
+          "version": 24,
+          "record_id": null
+        },
+        {
+          "command": "disposition",
+          "actor_role": "clinician",
+          "input": {
+            "expected_version": 24,
+            "idempotency_key": "SYN-DEVELOPMENT-900101-C-23-disposition",
+            "category": "completed_required_care",
+            "reason": "All configured synthetic diagnostic/care endpoint evidence checked",
+            "residual_need": ""
+          },
+          "version": 25,
+          "record_id": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rag-provenance-erratum-v1",
+  "first_captured_at": "2026-11-14T21:23:08.053598+00:00",
+  "last_validated_at": "2026-11-14T21:45:05.777375+00:00",
+  "reason": "Original source allowlist omitted services/agents/knowledge.json; original retrieval_hash covered pathway files rather than the actual SQLiteFTS knowledge pack.",
+  "original_manifest_retrieval_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+  "original_hash_scope": "pathway source files only; not an initial byte capture of the actual RAG pack",
+  "late_capture_path": "rag-provenance/knowledge-captured-late.json",
+  "late_capture_sha256": "29d6fc1645348d8896619cc1050e48cb8af38faad04f3f707eba3311a844095a",
+  "actual_rag_snapshot_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+  "pack_version": "fit-pack-v1",
+  "observed_document_ids": [
+    "demo-fit-workflow",
+    "demo-patient-ar",
+    "demo-patient-en",
+    "uspstf-stool-followup"
+  ],
+  "all_pack_documents_observed_in_actual_provider_inputs": true,
+  "verified_provider_context_records": 59,
+  "source_unchanged_claim": "Owner implementation agent reports knowledge pack unchanged since development validation. Independently every observed full section/metadata/citation is byte-content equivalent to this capture; actual provider inputs retain those sections and their original call hashes.",
+  "no_retroactive_initial_capture_claim": true,
+  "no_model_prompt_scoring_output_or_original_ledger_change": true
+}

@@ -1,0 +1,5 @@
+{"timestamp": "2026-11-14T22:07:42.096520+00:00", "command": [".venv/bin/python", "-m", "evals.runner", "reports", "--run-id", "groq-smoke-holdout-v1"], "returncode": 0, "output": "runtime/evaluation-packaging-live-0.txt"}
+{"timestamp": "2026-11-14T22:07:43.249064+00:00", "command": [".venv/bin/python", "-m", "evals.runner", "validate", "--run-id", "groq-smoke-holdout-v1"], "returncode": 0, "output": "runtime/evaluation-packaging-live-1.txt"}
+{"timestamp": "2026-11-14T22:07:43.346102+00:00", "command": [".venv/bin/python", "scripts/render_secondary_audit.py"], "returncode": 0, "output": "runtime/evaluation-packaging-live-2.txt"}
+{"timestamp": "2026-11-14T22:09:55.188163+00:00", "command": [".venv/bin/python", "-m", "evals.runner", "reports", "--run-id", "software-delivery-final"], "returncode": 0, "output": "runtime/evaluation-packaging-software-0.txt"}
+{"timestamp": "2026-11-14T22:09:56.183995+00:00", "command": [".venv/bin/python", "-m", "evals.runner", "validate", "--run-id", "software-delivery-final"], "returncode": 0, "output": "runtime/evaluation-packaging-software-1.txt"}

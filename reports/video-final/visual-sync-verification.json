@@ -1,0 +1,858 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-20T15:04:34.182216+00:00",
+  "method": "Native FFmpeg SSIM of actual final encoded UI pixels against calibrated retained state references",
+  "video": "reports/video-final/Suhail_Health_Final_Demo.mp4",
+  "video_sha256": "16f1616d3f8d93f10fb652a4f83e7d3cce577709af22ad93fc0b9c73c7d7c06a",
+  "checked_cues": 19,
+  "expected_cues": 19,
+  "expected_ui_cues": 19,
+  "total_sync_cues": 25,
+  "all_cues_passed": true,
+  "cues": [
+    {
+      "chapter": "02",
+      "cue_id": "worklist",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 24.2,
+          "decoded_global_pts_seconds": 24.221016,
+          "ssim": 0.990846,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/02-a953f09-worklist-eb2554c-before_mention/encoded-frame.png",
+          "frame_sha256": "10b5f83d3250cdd0d5dc50a7aedb80c69cf70ec9bdf83731f4fc820e0bb3bb5e",
+          "stats_file": "reports/video-final/visual-sync-frames/02-a953f09-worklist-eb2554c-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 32.56474581228771,
+          "decoded_global_pts_seconds": 32.581016,
+          "ssim": 0.990872,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/02-a953f09-worklist-eb2554c-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "0535f16da7ae24000860c76dc4a0944b7f5af9978eb6f35a707745797879533e",
+          "stats_file": "reports/video-final/visual-sync-frames/02-a953f09-worklist-eb2554c-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/02-t1/worklist-ready.png",
+      "reference_sha256": "b6e363a3f9b76d9f074372efc07e41b2c5845606f3284e430dd112175e48a80e",
+      "projected_roi": {
+        "x": 347,
+        "y": 195,
+        "width": 1519,
+        "height": 769
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 5.08
+    },
+    {
+      "chapter": "02",
+      "cue_id": "filters",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 33.11817801914785,
+          "decoded_global_pts_seconds": 33.141016,
+          "ssim": 0.988463,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/02-a953f09-filters-47e2276-before_mention/encoded-frame.png",
+          "frame_sha256": "3ef79b2609a45b8fa62a72df5936dc5174f3892c8c1df4220e9cadce54edd067",
+          "stats_file": "reports/video-final/visual-sync-frames/02-a953f09-filters-47e2276-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 38.48241533901198,
+          "decoded_global_pts_seconds": 38.501016,
+          "ssim": 0.988581,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/02-a953f09-filters-47e2276-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "dcb5859be317c2579af60cc73a1d90e422a911c2f1861fd90a32207d714b5da1",
+          "stats_file": "reports/video-final/visual-sync-frames/02-a953f09-filters-47e2276-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/02-t1/filters-ready.png",
+      "reference_sha256": "93ffa1672e5440ae5ea639d1a92824df3f20ebc8432c772bcbadc59487297699",
+      "projected_roi": {
+        "x": 377,
+        "y": 194,
+        "width": 1459,
+        "height": 57
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 11.44
+    },
+    {
+      "chapter": "02",
+      "cue_id": "timeline",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 39.03584754587212,
+          "decoded_global_pts_seconds": 39.061016,
+          "ssim": 0.990617,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/02-a953f09-timeline-94d192b-before_mention/encoded-frame.png",
+          "frame_sha256": "ce7d5c3dd8b7c2c2503e4eecee792ac83ef37be4c91830be8d9041f2ac1cdbb2",
+          "stats_file": "reports/video-final/visual-sync-frames/02-a953f09-timeline-94d192b-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 46.56711877693105,
+          "decoded_global_pts_seconds": 46.581016,
+          "ssim": 0.99128,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/02-a953f09-timeline-94d192b-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "3ab55beaf05e1c63a8c448088fe150404954e335fa7b8b877c0fee144e39af21",
+          "stats_file": "reports/video-final/visual-sync-frames/02-a953f09-timeline-94d192b-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/02-t1/timeline-ready.png",
+      "reference_sha256": "4aacf2760630a7d5aeb04dfbddb13866add358be32d3fd1c997e181a7a26918c",
+      "projected_roi": {
+        "x": 347,
+        "y": 194,
+        "width": 942,
+        "height": 770
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 19.68
+    },
+    {
+      "chapter": "03",
+      "cue_id": "tracker",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 47.64,
+          "decoded_global_pts_seconds": 47.661016,
+          "ssim": 0.979823,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-tracker-7ae4495-before_mention/encoded-frame.png",
+          "frame_sha256": "aab39012ee0f9ab672c7e304711497d4a72a02aa4ec9cce5dce494e9d392815f",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-tracker-7ae4495-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 51.17059324116084,
+          "decoded_global_pts_seconds": 51.181016,
+          "ssim": 0.980363,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-tracker-7ae4495-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "5ee0cf6f0690bc90c5b9fa415e89367830e9b19a582d3c7660d1ec4f9fce75a7",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-tracker-7ae4495-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/03-t1/tracker-ready.png",
+      "reference_sha256": "de5feb321dd728a2c1d06e5dd6d71be58280f7b21ad31f7b353a3953e2d1f948",
+      "projected_roi": {
+        "x": 1237,
+        "y": 180,
+        "width": 352,
+        "height": 79
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 4.8
+    },
+    {
+      "chapter": "03",
+      "cue_id": "message",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 51.6406779898981,
+          "decoded_global_pts_seconds": 51.661016,
+          "ssim": 0.975629,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-message-ab530a1-before_mention/encoded-frame.png",
+          "frame_sha256": "e8989542775794ca9bc8f6e2faf3878a0640588de7418772d532bbc6854aa0c4",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-message-ab530a1-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 56.83822039351648,
+          "decoded_global_pts_seconds": 56.861016,
+          "ssim": 0.975595,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-message-ab530a1-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "2ff64271cdbd395f6211e0c45448e0726abc985b8a83befd93d0a5b7d40b5f79",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-message-ab530a1-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/03-t1/message-ready.png",
+      "reference_sha256": "24bcbcc481e6e89cdd61a479cef8cbd765fa259e7d67df36ca5c93367110f2ed",
+      "projected_roi": {
+        "x": 1260,
+        "y": 180,
+        "width": 306,
+        "height": 159
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 10.6
+    },
+    {
+      "chapter": "03",
+      "cue_id": "teachback",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 57.39165260037662,
+          "decoded_global_pts_seconds": 57.421016,
+          "ssim": 0.984116,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-teachback-328fd4f-before_mention/encoded-frame.png",
+          "frame_sha256": "52b49e26352886640b69e2c7b882aa0610fc377701af8d8da371f4e656dc2220",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-teachback-328fd4f-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 65.17296620580419,
+          "decoded_global_pts_seconds": 65.181016,
+          "ssim": 0.984121,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-teachback-328fd4f-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "53a770719154713d15ecd4a7e7e04b500a2a6841b1f6e16784f2b35dee752f28",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-teachback-328fd4f-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/03-t1/teachback-ready.png",
+      "reference_sha256": "7a4f6e176e4b1afe0c3903e788314869bc22589a417a9a9721e48f198b9dc3f8",
+      "projected_roi": {
+        "x": 1260,
+        "y": 180,
+        "width": 306,
+        "height": 563
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 16.8
+    },
+    {
+      "chapter": "03",
+      "cue_id": "contact",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 65.55970349641858,
+          "decoded_global_pts_seconds": 65.581016,
+          "ssim": 0.981891,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-contact-093e7d5-before_mention/encoded-frame.png",
+          "frame_sha256": "2816b0380c69f3c0b6aabc70d52513688cbf339d157e8b199b6b5528e268576e",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-contact-093e7d5-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 67.6733899494905,
+          "decoded_global_pts_seconds": 67.701016,
+          "ssim": 0.982471,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/03-0b8efa5-contact-093e7d5-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "3bfd1d016fa79a9a53f2a039d008d01e93b54f3ec4922518a72e07a69827d74d",
+          "stats_file": "reports/video-final/visual-sync-frames/03-0b8efa5-contact-093e7d5-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/03-t1/contact-ready.png",
+      "reference_sha256": "b16e62e24e25293191cc732e707dbbbf0e266da8e9c3d843b2e7b3e256b8a756",
+      "projected_roi": {
+        "x": 1237,
+        "y": 180,
+        "width": 352,
+        "height": 80
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 23.28
+    },
+    {
+      "chapter": "04",
+      "cue_id": "clinical-work",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 68.75999999999999,
+          "decoded_global_pts_seconds": 68.781016,
+          "ssim": 0.98648,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-clinical-work-398121e-before_mention/encoded-frame.png",
+          "frame_sha256": "0417c59966e9de9cd023a8565ec09a2d4382119f64e33e2ef521c02e856378e4",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-clinical-work-398121e-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 73.45745765488111,
+          "decoded_global_pts_seconds": 73.461016,
+          "ssim": 0.98687,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-clinical-work-398121e-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "0a06bb4ec2487e9abf4bc98f27098b3df2cb82db2eb7d0dbb602ac3dfd4ba3e2",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-clinical-work-398121e-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/08-refined/clinical-work-ready.png",
+      "reference_sha256": "af4df8cfb75af51f327a32d21f3e1ad80512d928d45e5693b786c85f806956fd",
+      "projected_roi": {
+        "x": 347,
+        "y": 194,
+        "width": 1519,
+        "height": 65
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 4.92
+    },
+    {
+      "chapter": "04",
+      "cue_id": "human-reply",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 73.92754240361838,
+          "decoded_global_pts_seconds": 73.941016,
+          "ssim": 0.98979,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-human-reply-47e861d-before_mention/encoded-frame.png",
+          "frame_sha256": "7ec5915ae9d6dea14554be88fe2964388cc676ea003664a585e5191852eb8ff6",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-human-reply-47e861d-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 77.29144072853346,
+          "decoded_global_pts_seconds": 77.301016,
+          "ssim": 0.989969,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-human-reply-47e861d-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "adcd09a2d5d82187614e864c829256c7bfe292fd1d3e796035d27b8e88f77e60",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-human-reply-47e861d-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/08-refined/human-reply-ready.png",
+      "reference_sha256": "4eb7687b6cbd2abbb27520f729cea31ee2a1a2b87bc0eebc699add92d1749b49",
+      "projected_roi": {
+        "x": 786,
+        "y": 195,
+        "width": 1049,
+        "height": 214
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 8.16
+    },
+    {
+      "chapter": "04",
+      "cue_id": "assigned-specialist",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 77.8448729353936,
+          "decoded_global_pts_seconds": 77.861016,
+          "ssim": 0.990673,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-assigned-specialist-c09ab62-before_mention/encoded-frame.png",
+          "frame_sha256": "7e19eb180623e0c0818b900f5cb7c2ecb9354942fc1487337fc7137ee7ae4bcb",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-assigned-specialist-c09ab62-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 80.62533905344854,
+          "decoded_global_pts_seconds": 80.661016,
+          "ssim": 0.990698,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-assigned-specialist-c09ab62-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "ea0354b04f6be1441e01a9243116f79aaf3143582468a4ddf18ec1bfe0bec96e",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-assigned-specialist-c09ab62-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/08-refined/assigned-specialist-ready.png",
+      "reference_sha256": "b203c70b1e71aabd883e21e2b3129ca822b33f040610e45c8357cea0c6b941b7",
+      "projected_roi": {
+        "x": 786,
+        "y": 511,
+        "width": 1049,
+        "height": 215
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 17.52
+    },
+    {
+      "chapter": "04",
+      "cue_id": "draft-controls",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 81.0954238021858,
+          "decoded_global_pts_seconds": 81.101016,
+          "ssim": 0.982308,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-draft-controls-9b1a5f4-before_mention/encoded-frame.png",
+          "frame_sha256": "c785332e4894a3329e2d23c001fa86deaa4841c77af63f0c847397d5fc74422a",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-draft-controls-9b1a5f4-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 87.95991536826173,
+          "decoded_global_pts_seconds": 87.981016,
+          "ssim": 0.983156,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/04-6cd5b6e-draft-controls-9b1a5f4-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "dc34326554b426a69342ae5baf802d481c95021ef74a676a89df12e768ad641b",
+          "stats_file": "reports/video-final/visual-sync-frames/04-6cd5b6e-draft-controls-9b1a5f4-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/08-refined/draft-controls-ready.png",
+      "reference_sha256": "904e94406f2507c75d4db45a5732f1ee42611cbfc5dc162e42730f603886b64f",
+      "projected_roi": {
+        "x": 1362,
+        "y": 194,
+        "width": 476,
+        "height": 553
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 24.4
+    },
+    {
+      "chapter": "05",
+      "cue_id": "packet",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 89.03999999999999,
+          "decoded_global_pts_seconds": 89.061016,
+          "ssim": 0.98987,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-packet-7426afc-before_mention/encoded-frame.png",
+          "frame_sha256": "eee66e72e2e3b83abe1c955c814116238033bf5f425cf30c9e8a21de4a57b9fe",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-packet-7426afc-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 92.15385595054646,
+          "decoded_global_pts_seconds": 92.181016,
+          "ssim": 0.990043,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-packet-7426afc-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "a41f90e33e5f32c83026590eefae5dc21e99db6f0deee7eb58a3ba04b703e99a",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-packet-7426afc-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/09-verified/packet-ready.png",
+      "reference_sha256": "b4a5083bb9f7d0da267d2e573d8cddee242544d522d4b0932c77ae6bf91738c2",
+      "projected_roi": {
+        "x": 347,
+        "y": 195,
+        "width": 737,
+        "height": 769
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 3.68
+    },
+    {
+      "chapter": "05",
+      "cue_id": "receiver-decision",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 92.62394069928371,
+          "decoded_global_pts_seconds": 92.661016,
+          "ssim": 0.985994,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-receiver-decision-dd753a7-before_mention/encoded-frame.png",
+          "frame_sha256": "374c1042fbd45da9374d5ec526618935a16b58213be4b82ab7d0591a6b1cdba8",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-receiver-decision-dd753a7-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 96.73796614730469,
+          "decoded_global_pts_seconds": 96.741016,
+          "ssim": 0.986372,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-receiver-decision-dd753a7-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "6b79f46316702c6c9a599efa5b7fb6994dd133d4a095b8bddde65d31b89f160a",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-receiver-decision-dd753a7-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/09-verified/receiver-decision-ready.png",
+      "reference_sha256": "e3149d10ffd99c952178c8c3889160753311e06c5223027a664566e5102d4eb4",
+      "projected_roi": {
+        "x": 380,
+        "y": 352,
+        "width": 670,
+        "height": 431
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 12.96
+    },
+    {
+      "chapter": "05",
+      "cue_id": "appointments",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 97.29139835416483,
+          "decoded_global_pts_seconds": 97.301016,
+          "ssim": 0.988193,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-appointments-ae6e417-before_mention/encoded-frame.png",
+          "frame_sha256": "9b794e6e15807f6e7864d046242748af195d7b5e5e9f91ec08409d1a169902e1",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-appointments-ae6e417-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 101.65546617655444,
+          "decoded_global_pts_seconds": 101.661016,
+          "ssim": 0.98785,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-appointments-ae6e417-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "e358ad10404823605dee904847b65e49fc47d186f00a81e99827df9a119a5648",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-appointments-ae6e417-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/09-verified/appointments-ready.png",
+      "reference_sha256": "18e40646d5f61c325d9e313c3636f3de78501104ebcf5f4be86f747ef2c8cc15",
+      "projected_roi": {
+        "x": 406,
+        "y": 439,
+        "width": 619,
+        "height": 71
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 21.88
+    },
+    {
+      "chapter": "05",
+      "cue_id": "sending-owner",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 102.1255509252917,
+          "decoded_global_pts_seconds": 102.141016,
+          "ssim": 0.9873,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-sending-owner-6186e24-before_mention/encoded-frame.png",
+          "frame_sha256": "3507aa140bfda1284d2b195555fe71097608b28baf162ac827fad89cd1a0efed",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-sending-owner-6186e24-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 108.65665265887611,
+          "decoded_global_pts_seconds": 108.661016,
+          "ssim": 0.989682,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/05-c97550c-sending-owner-6186e24-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "46971e5d287d18f1b669eb1a4f7b3d86f4246d1cb9d468078866f4f271313084",
+          "stats_file": "reports/video-final/visual-sync-frames/05-c97550c-sending-owner-6186e24-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-v4/captures/09-verified/sending-owner-ready.png",
+      "reference_sha256": "b4a5083bb9f7d0da267d2e573d8cddee242544d522d4b0932c77ae6bf91738c2",
+      "projected_roi": {
+        "x": 347,
+        "y": 195,
+        "width": 737,
+        "height": 769
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 27.8
+    },
+    {
+      "chapter": "06",
+      "cue_id": "urgent",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 109.72,
+          "decoded_global_pts_seconds": 109.741016,
+          "ssim": 0.983814,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/06-aacd834-urgent-f9d37c2-before_mention/encoded-frame.png",
+          "frame_sha256": "dfb1e99b88cb357ed759d038ff526ea035a7a535d1e36ec10c44167a98d77eae",
+          "stats_file": "reports/video-final/visual-sync-frames/06-aacd834-urgent-f9d37c2-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 117.25127123105895,
+          "decoded_global_pts_seconds": 117.261016,
+          "ssim": 0.985088,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/06-aacd834-urgent-f9d37c2-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "5eccbde1cb33b18c3641dd04c84af56a7fc1d044f3fe4cd83c52a7ff522137d1",
+          "stats_file": "reports/video-final/visual-sync-frames/06-aacd834-urgent-f9d37c2-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/06-t1/urgent-ready.png",
+      "reference_sha256": "d531bbe4fcd60649a1bb9e2962f24cdc7ecb77eefb696a672940ec61e4b2fae8",
+      "projected_roi": {
+        "x": 1335,
+        "y": 194,
+        "width": 531,
+        "height": 759
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 4.12
+    },
+    {
+      "chapter": "06",
+      "cue_id": "closure",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 117.80470343791909,
+          "decoded_global_pts_seconds": 117.821016,
+          "ssim": 0.986004,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/06-aacd834-closure-6d4cb93-before_mention/encoded-frame.png",
+          "frame_sha256": "3aa21b66cc8549ca2e15e325c62eb66756268802c99126dc4999eedf8109e53e",
+          "stats_file": "reports/video-final/visual-sync-frames/06-aacd834-closure-6d4cb93-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 129.420000116999,
+          "decoded_global_pts_seconds": 129.421016,
+          "ssim": 0.987786,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/06-aacd834-closure-6d4cb93-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "79e2dd9769b6793981edfccbfd6df9343d2f76d3cdc6cddfc6b268a27bd2b2d6",
+          "stats_file": "reports/video-final/visual-sync-frames/06-aacd834-closure-6d4cb93-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/06-t1/closure-ready.png",
+      "reference_sha256": "17c7968001bf36592101c4d1cc8c70e7436d86c3d1480367f8c9c402f6278410",
+      "projected_roi": {
+        "x": 1335,
+        "y": 195,
+        "width": 531,
+        "height": 769
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 12.44
+    },
+    {
+      "chapter": "07",
+      "cue_id": "measures",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 130.48,
+          "decoded_global_pts_seconds": 130.501016,
+          "ssim": 0.991713,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/07-19b100a-measures-372ea2d-before_mention/encoded-frame.png",
+          "frame_sha256": "51e47f6c5c8c3b2bf98b47cbdd3e84e4a96c24bc8e850a5d9c82e518871ffb8f",
+          "stats_file": "reports/video-final/visual-sync-frames/07-19b100a-measures-372ea2d-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 137.59453394044456,
+          "decoded_global_pts_seconds": 137.621016,
+          "ssim": 0.992115,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/07-19b100a-measures-372ea2d-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "a2b1ab20e7e05977361cb736ad9f4fe47706b8ce2331e6cbdd9dd4a15865a6bf",
+          "stats_file": "reports/video-final/visual-sync-frames/07-19b100a-measures-372ea2d-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/07-t1/measures-ready.png",
+      "reference_sha256": "d440df07680934f092cac49a41c64a3ce5c0308626256977ebb2a324a527e4b4",
+      "projected_roi": {
+        "x": 347,
+        "y": 194,
+        "width": 1519,
+        "height": 224
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 4.4
+    },
+    {
+      "chapter": "07",
+      "cue_id": "impact",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 138.0646186891818,
+          "decoded_global_pts_seconds": 138.101016,
+          "ssim": 0.987223,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/07-19b100a-impact-6f61f46-before_mention/encoded-frame.png",
+          "frame_sha256": "a4d74bba49a132d2a0c722bcb6401619fe2cf0e43a0c3575edab5bd20aa0e4e8",
+          "stats_file": "reports/video-final/visual-sync-frames/07-19b100a-impact-6f61f46-before_mention/encoded.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 150.76343232385912,
+          "decoded_global_pts_seconds": 150.781016,
+          "ssim": 0.987354,
+          "threshold": 0.95,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "frame": "reports/video-final/visual-sync-frames/07-19b100a-impact-6f61f46-spoken_phrase_end/encoded-frame.png",
+          "frame_sha256": "498172d5f34fda173c47186608f408cfcda3e59d7f29ba0cf4e51cedc3cb3bf1",
+          "stats_file": "reports/video-final/visual-sync-frames/07-19b100a-impact-6f61f46-spoken_phrase_end/encoded.ssim"
+        }
+      ],
+      "reference": "runtime/video-final/captures/07-t1/impact-ready.png",
+      "reference_sha256": "32f811d36348c1e195ab6888e221179ffc28f47b1ae3387acf683797a920d168",
+      "projected_roi": {
+        "x": 347,
+        "y": 194,
+        "width": 1519,
+        "height": 536
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.95,
+      "source_seconds": 10.68
+    }
+  ],
+  "failures": [],
+  "authored_cues_excluded": [
+    {
+      "chapter": "01",
+      "cue_id": "published-cohort",
+      "status": "separate_authored_visual_review"
+    },
+    {
+      "chapter": "01",
+      "cue_id": "handoff-gap",
+      "status": "separate_authored_visual_review"
+    },
+    {
+      "chapter": "01",
+      "cue_id": "connected-care",
+      "status": "separate_authored_visual_review"
+    },
+    {
+      "chapter": "08",
+      "cue_id": "agents-and-authority",
+      "status": "separate_authored_visual_review"
+    },
+    {
+      "chapter": "08",
+      "cue_id": "software-evidence",
+      "status": "separate_authored_visual_review"
+    },
+    {
+      "chapter": "08",
+      "cue_id": "pilot-ask",
+      "status": "separate_authored_visual_review"
+    }
+  ],
+  "authored_cue_count": 6,
+  "authored_review": "Requires separate authored-stage/visual review; no UI pixel result is invented for illustrations.",
+  "threshold": 0.95,
+  "border_inset_pixels": 8,
+  "provider_requests": 0,
+  "application_state_changes": 0,
+  "source_manifest_sha256": "4889f96eb130897acf79b04fa49c9f6c0572aa5b992772ee76394d7eabaf4f1f",
+  "sync_plan_sha256": "4dc157fac2f6ad16473587cb85bdf6070a0a4c73fbd54b2d0a4d98c386c82e2b",
+  "limits": [
+    "Two actual encoded frames are checked per UI cue: before its spoken mention and near the end of its explanation.",
+    "SSIM does not recognize text meaning or prove clinical correctness. Retained references/ROIs need independent visual review.",
+    "Highlight borders are excluded by an8px inset; captions and labels must remain outside these measured regions."
+  ]
+}

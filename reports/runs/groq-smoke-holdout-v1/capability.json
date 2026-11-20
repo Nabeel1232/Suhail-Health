@@ -1,0 +1,9 @@
+{
+  "selected_model": "openai/gpt-oss-120b",
+  "available_candidates": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "structured_call_id": "3d13ae5f-bc40-4237-b131-4e17fb348a39",
+  "synthetic": true
+}

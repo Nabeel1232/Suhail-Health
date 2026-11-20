@@ -1,0 +1,70 @@
+{
+  "captured_at": "2026-11-14T21:24:45.395422+00:00",
+  "development_validation_runs": [
+    {
+      "directory": "runtime/development-capability",
+      "archived_ledger": "candidate-selection-history/development-capability/provider-calls.jsonl",
+      "sha256": "2f16d68b647ae43dd70007233041886ef01d303d8bb4595d77b7d7762912eff3",
+      "provider_calls": 1,
+      "completed_calls": 1,
+      "failed_calls": 0,
+      "case_ids": [
+        "probe-structured"
+      ],
+      "models": [
+        "openai/gpt-oss-120b"
+      ]
+    },
+    {
+      "directory": "runtime/development-tools-compatibility",
+      "archived_ledger": "candidate-selection-history/development-tools-compatibility/provider-calls.jsonl",
+      "sha256": "4d9721b21f3118add0eece0477a572383fd1f90cb42f1a3b9a9d4c1a421fbda8",
+      "provider_calls": 2,
+      "completed_calls": 2,
+      "failed_calls": 0,
+      "case_ids": [
+        "coordination-validation-000"
+      ],
+      "models": [
+        "openai/gpt-oss-120b"
+      ]
+    },
+    {
+      "directory": "runtime/development-validation",
+      "archived_ledger": "candidate-selection-history/development-validation/provider-calls.jsonl",
+      "sha256": "26eb69c84669c4e66b5072e6ac2fce51a3efd9e690616a90d59ed047c4a4f362",
+      "provider_calls": 3,
+      "completed_calls": 3,
+      "failed_calls": 0,
+      "case_ids": [
+        "coordination-validation-000",
+        "patient_navigator-validation-003"
+      ],
+      "models": [
+        "openai/gpt-oss-120b"
+      ]
+    },
+    {
+      "directory": "runtime/development-validation-v2",
+      "archived_ledger": "candidate-selection-history/development-validation-v2/provider-calls.jsonl",
+      "sha256": "798e805687ff4d208b01f47993d6043153b4ffef42a440a15a77d16cbe1e067c",
+      "provider_calls": 3,
+      "completed_calls": 1,
+      "failed_calls": 2,
+      "case_ids": [
+        "coordination-validation-000",
+        "patient_navigator-validation-003"
+      ],
+      "models": [
+        "openai/gpt-oss-120b"
+      ]
+    }
+  ],
+  "included_in_final_smoke_usage": false,
+  "development_prompt_optimization_rounds": 2,
+  "development_rounds_source": "Implementation owner stated bounded development prompt repairs (Arabic message requirement and tool-call preparation); all actual development provider records archived, including failures.",
+  "final_holdout_optimization_rounds": 0,
+  "final_manifest_optimization_rounds_interpretation": "The original freeze.optimization_rounds=0 refers to no optimization on final holdout, not absence of development validation.",
+  "selection": "Configured120b candidate retained throughout; no model sweep or hidden candidate switch.",
+  "initial_development_model_listing_note": "First capability probe preceded model-list ledger instrumentation; its list request is not a task response and not part of the later final smoke ledger."
+}

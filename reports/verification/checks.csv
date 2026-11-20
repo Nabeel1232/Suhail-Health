@@ -1,0 +1,4 @@
+layer,status,tests,passed,failed,skipped,artifact
+acceptance_security_provider_postgres,COMPLETE,98,98,0,0,runtime/test-results.xml
+browser_patient_staff,COMPLETE,10,10,0,0,runtime/browser-results.xml
+fresh_install_acceptance,COMPLETE,65,65,0,0,runtime/fresh-install/fresh-tests.xml

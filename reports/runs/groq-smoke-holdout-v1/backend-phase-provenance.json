@@ -1,0 +1,26 @@
+{
+  "id": "final-backend-before-first-journey",
+  "captured_at": "2026-11-14T21:24:14.189485+00:00",
+  "file_hashes": {
+    "services/api/schemas.py": "0f0a76baa18fa5f136e2f6acf9baa86523e1c52769de2b319de5cd9b1e482d52",
+    "services/api/seed.py": "c4f4c1214541ee622354b8ccf5358a1b4772d2e83e4f5f75734f078b5958f0ee",
+    "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+    "services/api/domain.py": "450f6835f5380e6f34730209393d52927f5ef84269e7ec249fe78e86c4ebba33",
+    "services/api/policy.py": "450b752a045e51adc627cf1fef99c042edc0c65f029a9f20798318652dade7dc",
+    "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+    "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+    "services/api/worker.py": "da243719b7a1c53463dfc1c54acbbbbfd8486dd14f6f4b8c673f2ace3c07dba9",
+    "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+    "services/api/main.py": "4f4744fdada382c748be50d472fbe9b173dec92f8e414c84e6e43989ff14cc9b"
+  },
+  "backend_hash": "5f144c5c70a58e836ab4d808dcce90d36a3ec5addfbf3248a922fe5743d143c4",
+  "captured_before_any_journey_record": true,
+  "inference_candidate_and_scorer_unchanged": true,
+  "reason": "Final API security/policy/capacity corrections after model candidate freeze; actual fulljourney backend is captured before DomainHarness imports services.api modules. Root confirms backend now frozen.",
+  "case_record_backend_source_hash_interpretation": "The scheduler wrapper backend_source_hash records the earlier scheduler-resume point. For actual journey execution use this explicit later preimport phase map; original case ledger remains immutable.",
+  "applies_to_components": [
+    "journeys"
+  ],
+  "artifact_path": "backend-source-before-first-journey"
+}

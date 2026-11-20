@@ -1,0 +1,23 @@
+[
+  {
+    "arm": "A",
+    "source": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-A/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "artifact": "journey-databases/A.sqlite3",
+    "sha256": "7051e6120dbb730c4753fecb3ce5620faba4eb2a911a2c8d14ad2f277d0ae76a",
+    "independent_arm_store": true
+  },
+  {
+    "arm": "B",
+    "source": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-B/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "artifact": "journey-databases/B.sqlite3",
+    "sha256": "79cf67f43265361de3fa9a516abb19b75f3b82705f662662c5b2f4c288f936de",
+    "independent_arm_store": true
+  },
+  {
+    "arm": "C",
+    "source": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-C/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "artifact": "journey-databases/C.sqlite3",
+    "sha256": "6bc43f4c4f96876019fd4acfb34f850f110578bc3fd9c85ed29575e29cc86d78",
+    "independent_arm_store": true
+  }
+]

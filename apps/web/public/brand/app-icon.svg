@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Suhail navigation star app icon</title><desc id="desc">A gold navigation star above a simple curved route on a deep teal background. Secondary app mark.</desc>
+  <rect width="512" height="512" rx="112" fill="#143D3C"/>
+  <path d="M111 383C158 312 341 334 302 254C276 202 190 232 217 188C233 162 288 148 330 139" fill="none" stroke="#81D5CA" stroke-width="30" stroke-linecap="round"/>
+  <path d="M354 66L369 124L427 139L369 154L354 212L339 154L281 139L339 124Z" fill="#C9A25B"/>
+</svg>

@@ -1,0 +1,19 @@
+case_id,arm,scenario,attempted,evaluated,passed,notification,understanding,consultation,accepted_handoffs,attendance,care_completed,residual_need,delay_reasons
+paired-trajectory-holdout-500000-A,A,normal_completion,True,True,True,True,True,0,0,False,False,Diagnostic follow-up pending,[]
+paired-trajectory-holdout-500000-B,B,normal_completion,True,False,False,,,,,,,,
+paired-trajectory-holdout-500000-C,C,normal_completion,True,False,False,,,,,,,,
+paired-trajectory-holdout-500001-A,A,rejected_handoff,True,True,True,True,True,0,0,False,False,Diagnostic follow-up pending,[]
+paired-trajectory-holdout-500001-B,B,rejected_handoff,True,True,True,True,True,2,1,True,True,,['handoff_rejected']
+paired-trajectory-holdout-500001-C,C,rejected_handoff,True,True,True,True,True,2,1,True,True,,['handoff_rejected']
+paired-trajectory-holdout-500002-A,A,no_show,True,True,True,True,True,0,0,False,False,Diagnostic follow-up pending,[]
+paired-trajectory-holdout-500002-B,B,no_show,True,True,True,True,True,2,1,True,True,,"['handoff_rejected', 'no_show']"
+paired-trajectory-holdout-500002-C,C,no_show,False,False,,,,,,,,,
+paired-trajectory-holdout-500003-A,A,onward_care,True,True,True,True,True,0,0,False,False,Diagnostic follow-up pending,[]
+paired-trajectory-holdout-500003-B,B,onward_care,True,True,True,True,True,2,2,True,True,,[]
+paired-trajectory-holdout-500003-C,C,onward_care,False,False,,,,,,,,,
+paired-trajectory-holdout-500004-A,A,identity_conflict,True,True,True,True,True,0,0,False,False,Diagnostic follow-up pending,[]
+paired-trajectory-holdout-500004-B,B,identity_conflict,True,True,True,True,True,2,1,True,True,,[]
+paired-trajectory-holdout-500004-C,C,identity_conflict,False,False,,,,,,,,,
+paired-trajectory-holdout-500005-A,A,urgent_timeout,True,True,True,True,True,0,0,False,False,Diagnostic follow-up pending,[]
+paired-trajectory-holdout-500005-B,B,urgent_timeout,True,True,True,True,True,2,1,True,True,,[]
+paired-trajectory-holdout-500005-C,C,urgent_timeout,False,False,,,,,,,,,

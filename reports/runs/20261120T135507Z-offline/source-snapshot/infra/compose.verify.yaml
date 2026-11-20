@@ -1,0 +1,6 @@
+# Isolated container verification; leaves the primary local app untouched.
+services:
+  api:
+    ports: !override ["127.0.0.1:18001:8000"]
+  web:
+    ports: !override ["127.0.0.1:13000:3000"]

@@ -1,0 +1,15 @@
+{
+  "validated_at": "2026-11-14T21:36:40.755271+00:00",
+  "paired_id": "trajectory-holdout-500001",
+  "same_patient_order_truth": true,
+  "independent_actual_databases": true,
+  "baseline_case_ids": [
+    "paired-trajectory-holdout-500001-A",
+    "paired-trajectory-holdout-500001-B"
+  ],
+  "baseline_output_case_ids": [
+    "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A",
+    "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B"
+  ],
+  "before_any_C_request_for_this_pair": true
+}

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Suhail Health · journeys</title><style>body{font:16px system-ui;margin:32px;color:#143d3c;background:#f4f8f7}main{max-width:1000px;margin:auto;background:white;padding:28px;border:1px solid #d4e2de;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:12px;border-bottom:1px solid #d4e2de}th{background:#e8f3f0}pre{white-space:pre-wrap}</style><main><p>Suhail Health · Guiding every result to care</p><h1>journeys</h1><p>20261120T135507Z-offline · COMPLETE · deterministic_software</p><table><tr><th>Measurement</th><th>Value</th><th>Denominator</th><th>Method</th></tr><tr><td>task_accuracy</td><td>1.0</td><td>1000</td><td>Independent scenario truth; incorrect evaluated answers remain in denominator.</td></tr><tr><td>evaluated_coverage</td><td>1.0</td><td>1000</td><td>All selected cases remain in execution coverage, including failures and skipped cases.</td></tr><tr><td>selected_case_pass_fraction</td><td>1.0</td><td>1000</td><td>Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.</td></tr><tr><td>arm_B_marginal_coverage_required_care_completed</td><td>0.05</td><td>1000</td><td>Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence.</td></tr><tr><td>matched_A_B_required_care_difference</td><td>Not measured</td><td>Not measured</td><td>Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate.</td></tr><tr><td>matched_B_C_required_care_difference</td><td>Not measured</td><td>Not measured</td><td>Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate.</td></tr></table><h2>Execution counts and usage</h2><pre>{
+  &quot;counts&quot;: {
+    &quot;selected&quot;: 1000,
+    &quot;attempted&quot;: 1000,
+    &quot;completed&quot;: 1000,
+    &quot;failed&quot;: 0,
+    &quot;skipped&quot;: 0,
+    &quot;task_passed&quot;: 1000,
+    &quot;task_incorrect&quot;: 0
+  },
+  &quot;usage&quot;: {
+    &quot;api_calls&quot;: 0,
+    &quot;input_tokens&quot;: 0,
+    &quot;output_tokens&quot;: 0,
+    &quot;cost_usd&quot;: 0,
+    &quot;latency_ms_p50&quot;: null,
+    &quot;latency_ms_p95&quot;: null,
+    &quot;price_map_version&quot;: null,
+    &quot;budget_reason&quot;: null
+  }
+}</pre><h2>Limits</h2><ul><li>Deterministic persisted domain commands, no live model inference in this layer.</li><li>SQLite isolated test store; production PostgreSQL API/browser integration verified separately.</li><li>Provider requests/events here execute domain authorization with synthetic actors; independent provider HTTP-contract checks are a separate test layer.</li><li>Operational deadlines and behavior are demonstration settings, not clinical validation.</li><li>usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.</li><li>Scripted authorized domain role actions and known evidence use synthetic behavior and service capacity; no clinical effectiveness or reassurance claim.</li><li>A reminders; B full workflow templates; C same workflow plus observed bounded live proposals. Unexecuted selected arms remain skipped/failed with no outcome estimate.</li><li>The first shared-store pair is invalid for matched comparisons and retained with its failures. Only valid evaluated independent-store pairs enter comparison metrics.</li><li>Authorized scripted actors follow independent scenario truth while AI drafts are observed; no causal effect of model recommendations or real human review/understanding was measured.</li></ul></main></html>

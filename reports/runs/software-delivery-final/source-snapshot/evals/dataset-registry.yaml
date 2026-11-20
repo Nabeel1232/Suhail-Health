@@ -1,0 +1,115 @@
+schema_version: "1.0"
+checked_date: "2026-11-14"
+default_remote_provider: groq
+default_remote_data_policy: public_permitted_or_project_synthetic_only
+upstream_revision_policy: resolve_pin_and_record_before_run
+datasets:
+  - id: suhail_synthetic_intake
+    source: project_generator
+    provenance: synthetic_known_truth
+    license: project_generated_no_upstream_license_claim
+    access: local_generated
+    remote_allowed: true
+    agents: [intake]
+    tasks: [field_extraction, source_spans, missingness, amendment]
+    gold: independent_case_truth
+    split: patient_template_scenario_family_disjoint
+  - id: suhail_synthetic_router
+    source: project_generator
+    provenance: synthetic_known_truth
+    access: local_generated
+    remote_allowed: true
+    agents: [pathway_router]
+    tasks: [supported_pathway, unsupported_pathway, ambiguity, conflict]
+    gold: configured_mapping_and_review_rules
+    split: patient_template_scenario_family_disjoint
+  - id: suhail_synthetic_urgency
+    source: project_generator
+    provenance: synthetic_demonstration_policy
+    access: local_generated
+    remote_allowed: true
+    agents: [safety_escalation]
+    tasks: [trusted_flag, concerning_text, ambiguity, model_outage, acknowledgement_timeout]
+    gold: operational_scenario_truth_not_clinical_validation
+  - id: suhail_synthetic_navigation
+    source: project_generator
+    provenance: synthetic_known_next_action_and_owner
+    access: local_generated
+    remote_allowed: true
+    agents: [patient_navigator]
+    tasks: [next_step, language, understanding_check, callback, barrier, outcome_update]
+    gold: case_truth_and_source_support
+  - id: suhail_synthetic_coordination
+    source: project_generator
+    provenance: synthetic_known_state_transitions
+    access: local_generated
+    remote_allowed: true
+    agents: [coordination]
+    tasks: [consultation, handoff_reject_accept, booking_attendance, no_show, capacity, access]
+    gold: independent_expected_commands_and_states
+  - id: suhail_synthetic_closure
+    source: project_generator
+    provenance: synthetic_known_evidence_and_endpoint
+    access: local_generated
+    remote_allowed: true
+    agents: [closure_evidence]
+    tasks: [evidence_relevance, wrong_patient, stale_evidence, pending_outcome, onward_care, exception]
+    gold: independent_evidence_ids_and_closure_predicates
+    deterministic_invalid_closure_cases: 500
+  - id: suhail_journeys
+    source: project_generator
+    provenance: synthetic_known_state_transitions
+    access: local_generated
+    remote_allowed: true
+    agents: [intake, pathway_router, safety_escalation, patient_navigator, coordination, closure_evidence]
+    deterministic_trajectory_cases: 1000
+    comparisons: [reminders, full_workflow_templates, same_workflow_with_ai]
+    live_subset_must_be_reported_separately: true
+  - id: healthbench_adapted
+    source_url: https://huggingface.co/datasets/openai/healthbench
+    repository_id: openai/healthbench
+    repository_type: dataset
+    license_at_check: MIT
+    access: public
+    remote_allowed: true
+    upstream_revision: resolve_at_fetch
+    agents: [safety_escalation, patient_navigator]
+    reference_evaluator_url: https://github.com/openai/simple-evals/blob/main/healthbench_eval.py
+    required_fields: [conversation_messages, rubric_criteria, signed_weights, original_example_id]
+    field_mapping: inspect_and_validate_actual_pinned_schema
+    grader: configured_groq_model
+    result_label: adapted_healthbench_subset_groq_grader
+    official_full_score: false
+    preserve_negative_rubric_weights: true
+    no_rubric_leakage_to_candidate: true
+  - id: synthea
+    source_url: https://github.com/synthetichealth/synthea
+    software_license_at_check: Apache-2.0
+    access: public_software_generate_synthetic_records
+    remote_allowed: true
+    upstream_revision: resolve_at_fetch
+    agents: [intake, coordination]
+    role: integration_fixtures_not_clinical_ground_truth
+    optional_java_generator: true
+    alternative: clearly_labelled_project_generated_fhir
+  - id: medagentbench_optional
+    source_url: https://github.com/stanfordmlgroup/MedAgentBench
+    software_license_at_check: MIT
+    data_license_status: verify_separately_before_use
+    provenance: real_record_derived_deidentified_jittered_profiles_not_wholly_synthetic
+    access: verify_data_container_and_original_scorer
+    remote_allowed: false
+    remote_unblock_condition: documented_data_rights_and_processing_permission
+    agents: [coordination]
+    enabled_by_default: false
+    required_artifacts: [pinned_repository_commit, pinned_container_digest, original_refsol_py]
+    if_unavailable: report_blocked_continue_other_work
+  - id: mimic_iv_ed_optional
+    source_url: https://physionet.org/content/mimic-iv-ed/2.2/
+    access: credentialed_training_and_data_use_agreement
+    provenance: restricted_real_clinical_records
+    remote_allowed: false
+    enabled_by_default: false
+    agents: [safety_escalation]
+    role: optional_local_retrospective_research_not_screening_validation
+    if_unavailable: report_blocked_continue_other_work

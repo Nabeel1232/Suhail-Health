@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-11-14T22:10:14.612195+00:00",
+  "packaging_new_inference_calls": 0,
+  "application_model_source_edits": false,
+  "runs": {
+    "groq-smoke-holdout-v1": {
+      "status": "PARTIAL",
+      "counts": {
+        "selected": 66,
+        "attempted": 52,
+        "completed": 44,
+        "failed": 8,
+        "skipped": 14,
+        "task_passed": 42,
+        "task_incorrect": 0
+      },
+      "integrity_valid": true
+    },
+    "software-delivery-final": {
+      "status": "COMPLETE",
+      "counts": {
+        "selected": 1500,
+        "attempted": 1500,
+        "completed": 1500,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": 1500,
+        "task_incorrect": 0
+      },
+      "integrity_valid": true
+    }
+  },
+  "secondary_scoring_audit": {
+    "existing_live_responses_audited": 6,
+    "task_passed": 5,
+    "task_incorrect": 1,
+    "new_api_calls": 0,
+    "original_failure_counts_unchanged": true
+  }
+}

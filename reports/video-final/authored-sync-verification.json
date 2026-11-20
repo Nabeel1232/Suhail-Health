@@ -1,0 +1,404 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-20T15:04:27.441975+00:00",
+  "method": "Actual decoded identity-clock authored source and final encoded frames compared with native FFmpeg SSIM",
+  "video": "reports/video-final/Suhail_Health_Final_Demo.mp4",
+  "video_sha256": "16f1616d3f8d93f10fb652a4f83e7d3cce577709af22ad93fc0b9c73c7d7c06a",
+  "checked_cues": 6,
+  "expected_cues": 6,
+  "actual_authored_cues": 6,
+  "all_cues_passed": true,
+  "cues": [
+    {
+      "chapter": "01",
+      "cue_id": "published-cohort",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 0.32,
+          "decoded_global_pts_seconds": 0.341016,
+          "source_requested_seconds": 0.341016,
+          "decoded_source_pts_seconds": 0.36,
+          "ssim": 0.998948,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/01-938db8c-published-cohort-005f5ca-before_mention/encoded-frame.png",
+          "encoded_frame_sha256": "9603d14e1b54d17973d090bf6f6f923e7bf3348b898d98139518ac4d4a87682f",
+          "source_frame": "reports/video-final/authored-sync-frames/01-938db8c-published-cohort-005f5ca-before_mention/actual-source-frame.png",
+          "source_frame_sha256": "0658116aa45df11ff0be73254c5ee80e5089bbc8fca6ab77f591ef684c316059",
+          "stats_file": "reports/video-final/authored-sync-frames/01-938db8c-published-cohort-005f5ca-before_mention/authored.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 13.102161092800195,
+          "decoded_global_pts_seconds": 13.141016,
+          "source_requested_seconds": 13.141016,
+          "decoded_source_pts_seconds": 13.16,
+          "ssim": 0.999242,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/01-938db8c-published-cohort-005f5ca-spoken_phrase_end/encoded-frame.png",
+          "encoded_frame_sha256": "02915bb0beb75ff3b2b0902eec11622e5a2dba5cf36a78e0b8bb918ce917af63",
+          "source_frame": "reports/video-final/authored-sync-frames/01-938db8c-published-cohort-005f5ca-spoken_phrase_end/actual-source-frame.png",
+          "source_frame_sha256": "0d2cca3b26dcaf0378122288fd3fb2b887a70e6abd9d3f3a610eece8da427a7e",
+          "stats_file": "reports/video-final/authored-sync-frames/01-938db8c-published-cohort-005f5ca-spoken_phrase_end/authored.ssim"
+        }
+      ],
+      "source_video": "runtime/video-final/motion/01-solution.mp4",
+      "source_video_sha256": "024c10f0235c97b16bbbd3a2ec26f7b52215a6b1e1c9424eedac6fc91d4a1eff",
+      "ready_screenshot": "runtime/video-final/motion/ready-01/published-cohort-ready.png",
+      "ready_screenshot_sha256": "73bad5709711100b35a2e7359ab17e12deaabbb2b94bb2c400db08354fa72028",
+      "measured_source_roi": {
+        "x": 1024,
+        "y": 208,
+        "width": 809,
+        "height": 584
+      },
+      "projected_roi": {
+        "x": 1024,
+        "y": 208,
+        "width": 809,
+        "height": 584
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.92,
+      "mention_start_seconds": 0.4,
+      "mention_end_seconds": 13.152161092800196
+    },
+    {
+      "chapter": "01",
+      "cue_id": "handoff-gap",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 14.739110255257737,
+          "decoded_global_pts_seconds": 14.741016,
+          "source_requested_seconds": 14.741016,
+          "decoded_source_pts_seconds": 14.76,
+          "ssim": 0.997786,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/01-938db8c-handoff-gap-67f4989-before_mention/encoded-frame.png",
+          "encoded_frame_sha256": "6af19344d428621df0b1984268450b38a394c4cd2ea8d57ca13943a9579f6b22",
+          "source_frame": "reports/video-final/authored-sync-frames/01-938db8c-handoff-gap-67f4989-before_mention/actual-source-frame.png",
+          "source_frame_sha256": "75d398d71a8520a2db2a6566692be30cf3f00123c8b9427e91a00b92c4667263",
+          "stats_file": "reports/video-final/authored-sync-frames/01-938db8c-handoff-gap-67f4989-before_mention/authored.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 18.93648316140159,
+          "decoded_global_pts_seconds": 18.941016,
+          "source_requested_seconds": 18.941016,
+          "decoded_source_pts_seconds": 18.96,
+          "ssim": 0.997816,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/01-938db8c-handoff-gap-67f4989-spoken_phrase_end/encoded-frame.png",
+          "encoded_frame_sha256": "d2683c579af1ef665733517806ab8dc0663b0734f9b095931b097b05dfd49902",
+          "source_frame": "reports/video-final/authored-sync-frames/01-938db8c-handoff-gap-67f4989-spoken_phrase_end/actual-source-frame.png",
+          "source_frame_sha256": "aebf7673b4f524343be4ae71acd9214e9a77cf650c0c2b4527d2134373d8e97b",
+          "stats_file": "reports/video-final/authored-sync-frames/01-938db8c-handoff-gap-67f4989-spoken_phrase_end/authored.ssim"
+        }
+      ],
+      "source_video": "runtime/video-final/motion/01-solution.mp4",
+      "source_video_sha256": "024c10f0235c97b16bbbd3a2ec26f7b52215a6b1e1c9424eedac6fc91d4a1eff",
+      "ready_screenshot": "runtime/video-final/motion/ready-01/handoff-gap-ready.png",
+      "ready_screenshot_sha256": "65eb46d90d2f903b15f82432e7b47632563456484d0fcf80a3f8306cae05f927",
+      "measured_source_roi": {
+        "x": 103,
+        "y": 200,
+        "width": 1709,
+        "height": 684
+      },
+      "projected_roi": {
+        "x": 103,
+        "y": 200,
+        "width": 1709,
+        "height": 684
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.92,
+      "mention_start_seconds": 14.819110255257737,
+      "mention_end_seconds": 18.98648316140159
+    },
+    {
+      "chapter": "01",
+      "cue_id": "connected-care",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 19.57326282638461,
+          "decoded_global_pts_seconds": 19.581016,
+          "source_requested_seconds": 19.581016,
+          "decoded_source_pts_seconds": 19.6,
+          "ssim": 0.998057,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/01-938db8c-connected-care-7c754c5-before_mention/encoded-frame.png",
+          "encoded_frame_sha256": "f7f2cfb9add0c07b9691b6c4989c973ca1f0c11d42bf155f11655160a70dc560",
+          "source_frame": "reports/video-final/authored-sync-frames/01-938db8c-connected-care-7c754c5-before_mention/actual-source-frame.png",
+          "source_frame_sha256": "5205ca28656b5ecebcaa875f76814e0a70d32657682e96955acef443bda2b4a5",
+          "stats_file": "reports/video-final/authored-sync-frames/01-938db8c-connected-care-7c754c5-before_mention/authored.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 23.187203525668323,
+          "decoded_global_pts_seconds": 23.221016,
+          "source_requested_seconds": 23.221016,
+          "decoded_source_pts_seconds": 23.24,
+          "ssim": 0.998586,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/01-938db8c-connected-care-7c754c5-spoken_phrase_end/encoded-frame.png",
+          "encoded_frame_sha256": "5a01f9391b1f5edcd276d655756be0484e5fbd2c1c55e448e075ad154b35aa24",
+          "source_frame": "reports/video-final/authored-sync-frames/01-938db8c-connected-care-7c754c5-spoken_phrase_end/actual-source-frame.png",
+          "source_frame_sha256": "5da492c7318f48c7340e3046c219b377c11d8526fec1520e6956b69c5ecbd098",
+          "stats_file": "reports/video-final/authored-sync-frames/01-938db8c-connected-care-7c754c5-spoken_phrase_end/authored.ssim"
+        }
+      ],
+      "source_video": "runtime/video-final/motion/01-solution.mp4",
+      "source_video_sha256": "024c10f0235c97b16bbbd3a2ec26f7b52215a6b1e1c9424eedac6fc91d4a1eff",
+      "ready_screenshot": "runtime/video-final/motion/ready-01/connected-care-ready.png",
+      "ready_screenshot_sha256": "65b1402981c3fcf2329a4ab3d28eb4b246120d3454d37187ab9a191b8a84a086",
+      "measured_source_roi": {
+        "x": 103,
+        "y": 198,
+        "width": 1709,
+        "height": 684
+      },
+      "projected_roi": {
+        "x": 103,
+        "y": 198,
+        "width": 1709,
+        "height": 684
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.92,
+      "mention_start_seconds": 19.65326282638461,
+      "mention_end_seconds": 23.237203525668324
+    },
+    {
+      "chapter": "08",
+      "cue_id": "agents-and-authority",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 151.83999999999997,
+          "decoded_global_pts_seconds": 151.861016,
+          "source_requested_seconds": 0.34101600000002463,
+          "decoded_source_pts_seconds": 0.36,
+          "ssim": 0.9985,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/08-323783b-agents-and-authority-1d7b8da-before_mention/encoded-frame.png",
+          "encoded_frame_sha256": "49246bbadf71bbfd9cc646aba31ad9526317c84f3fb597b70e93e489a51e0fd1",
+          "source_frame": "reports/video-final/authored-sync-frames/08-323783b-agents-and-authority-1d7b8da-before_mention/actual-source-frame.png",
+          "source_frame_sha256": "3286ec17364d89a5da9289cc638b695269d5f5ea6ef9d27dfa7991254a9b6f72",
+          "stats_file": "reports/video-final/authored-sync-frames/08-323783b-agents-and-authority-1d7b8da-before_mention/authored.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 158.45444919170728,
+          "decoded_global_pts_seconds": 158.461016,
+          "source_requested_seconds": 6.941016000000019,
+          "decoded_source_pts_seconds": 6.96,
+          "ssim": 0.998497,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/08-323783b-agents-and-authority-1d7b8da-spoken_phrase_end/encoded-frame.png",
+          "encoded_frame_sha256": "8fc41ffe2bbfcd381014409a5541999b71a056d7224dcce83a1985762266b42f",
+          "source_frame": "reports/video-final/authored-sync-frames/08-323783b-agents-and-authority-1d7b8da-spoken_phrase_end/actual-source-frame.png",
+          "source_frame_sha256": "5bd8802e25954706d1e097c6dd20bafaf626415e70b4cd2dff0542f134135108",
+          "stats_file": "reports/video-final/authored-sync-frames/08-323783b-agents-and-authority-1d7b8da-spoken_phrase_end/authored.ssim"
+        }
+      ],
+      "source_video": "runtime/video-final/motion/08-agents.mp4",
+      "source_video_sha256": "77b99b2e771d575bb14c7d60b819c36eba4c1dd206030bdf9a4834a37a5a510d",
+      "ready_screenshot": "runtime/video-final/motion/ready-08/agents-and-authority-ready.png",
+      "ready_screenshot_sha256": "a2fc5978a0ed6a1f4390cc8859168985362de82577d0c260a7d7f1b13b3d221e",
+      "measured_source_roi": {
+        "x": 103,
+        "y": 198,
+        "width": 1709,
+        "height": 719
+      },
+      "projected_roi": {
+        "x": 103,
+        "y": 198,
+        "width": 1709,
+        "height": 719
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.92,
+      "mention_start_seconds": 0.4,
+      "mention_end_seconds": 6.984449191707291
+    },
+    {
+      "chapter": "08",
+      "cue_id": "software-evidence",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 158.92453394044455,
+          "decoded_global_pts_seconds": 158.941016,
+          "source_requested_seconds": 7.421016000000009,
+          "decoded_source_pts_seconds": 7.44,
+          "ssim": 0.997771,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/08-323783b-software-evidence-ad49209-before_mention/encoded-frame.png",
+          "encoded_frame_sha256": "d524e24c23ad43cdadbbd01811abde2650c7b494bb6394fc969ce9be294c8e8c",
+          "source_frame": "reports/video-final/authored-sync-frames/08-323783b-software-evidence-ad49209-before_mention/actual-source-frame.png",
+          "source_frame_sha256": "aa2c595b24829892550c6019f21ae4b197e57892e954d93f70ac9fd677a2712c",
+          "stats_file": "reports/video-final/authored-sync-frames/08-323783b-software-evidence-ad49209-before_mention/authored.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 165.70567804839757,
+          "decoded_global_pts_seconds": 165.741016,
+          "source_requested_seconds": 14.22101600000002,
+          "decoded_source_pts_seconds": 14.24,
+          "ssim": 0.998277,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/08-323783b-software-evidence-ad49209-spoken_phrase_end/encoded-frame.png",
+          "encoded_frame_sha256": "b18171425142282b0c669720052dd51fe6fa22985696f08da1cfd3c913ed1190",
+          "source_frame": "reports/video-final/authored-sync-frames/08-323783b-software-evidence-ad49209-spoken_phrase_end/actual-source-frame.png",
+          "source_frame_sha256": "f1447ffc32e41a7756080f33dc92225f7774e008214265062e967bc1b247a725",
+          "stats_file": "reports/video-final/authored-sync-frames/08-323783b-software-evidence-ad49209-spoken_phrase_end/authored.ssim"
+        }
+      ],
+      "source_video": "runtime/video-final/motion/08-agents.mp4",
+      "source_video_sha256": "77b99b2e771d575bb14c7d60b819c36eba4c1dd206030bdf9a4834a37a5a510d",
+      "ready_screenshot": "runtime/video-final/motion/ready-08/software-evidence-ready.png",
+      "ready_screenshot_sha256": "0722c86c008aa85a9e8c9833f450e9179c4c8bbea35fd2f1fe9671cbf5cf8028",
+      "measured_source_roi": {
+        "x": 1328,
+        "y": 193,
+        "width": 502,
+        "height": 229
+      },
+      "projected_roi": {
+        "x": 1328,
+        "y": 193,
+        "width": 502,
+        "height": 229
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.92,
+      "mention_start_seconds": 7.484533940444553,
+      "mention_end_seconds": 14.235678048397597
+    },
+    {
+      "chapter": "08",
+      "cue_id": "pilot-ask",
+      "passed": true,
+      "samples": [
+        {
+          "name": "before_mention",
+          "requested_global_seconds": 166.17576279713484,
+          "decoded_global_pts_seconds": 166.181016,
+          "source_requested_seconds": 14.661016000000018,
+          "decoded_source_pts_seconds": 14.68,
+          "ssim": 0.997361,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/08-323783b-pilot-ask-da67eeb-before_mention/encoded-frame.png",
+          "encoded_frame_sha256": "4fbfb959040a87bd1dd668a0c44ab43cea5e25c08eb7b263f716cbb2d5b6843a",
+          "source_frame": "reports/video-final/authored-sync-frames/08-323783b-pilot-ask-da67eeb-before_mention/actual-source-frame.png",
+          "source_frame_sha256": "9aeb102fa2300cd7762daca7721c046c0dc211a9c571b75f8a0334d961fe7fff",
+          "stats_file": "reports/video-final/authored-sync-frames/08-323783b-pilot-ask-da67eeb-before_mention/authored.ssim"
+        },
+        {
+          "name": "spoken_phrase_end",
+          "requested_global_seconds": 174.3738136931768,
+          "decoded_global_pts_seconds": 174.381016,
+          "source_requested_seconds": 22.861016000000006,
+          "decoded_source_pts_seconds": 22.88,
+          "ssim": 0.998855,
+          "threshold": 0.92,
+          "timing_within_spoken_boundary": true,
+          "passed": true,
+          "encoded_frame": "reports/video-final/authored-sync-frames/08-323783b-pilot-ask-da67eeb-spoken_phrase_end/encoded-frame.png",
+          "encoded_frame_sha256": "a8f342c354fed5963db2c922f2ec99782f3fb1979b7438d44b07693bd7109439",
+          "source_frame": "reports/video-final/authored-sync-frames/08-323783b-pilot-ask-da67eeb-spoken_phrase_end/actual-source-frame.png",
+          "source_frame_sha256": "4b5a19a326b02496dbd4ae9ebdfefe266a3bed3a32fb036108b599895b09877d",
+          "stats_file": "reports/video-final/authored-sync-frames/08-323783b-pilot-ask-da67eeb-spoken_phrase_end/authored.ssim"
+        }
+      ],
+      "source_video": "runtime/video-final/motion/08-agents.mp4",
+      "source_video_sha256": "77b99b2e771d575bb14c7d60b819c36eba4c1dd206030bdf9a4834a37a5a510d",
+      "ready_screenshot": "runtime/video-final/motion/ready-08/pilot-ask-ready.png",
+      "ready_screenshot_sha256": "4ff5f885a090458437e124cf9c43ce736bb622ed4f6a75f0b71701441befd30b",
+      "measured_source_roi": {
+        "x": 103,
+        "y": 193,
+        "width": 1709,
+        "height": 727
+      },
+      "projected_roi": {
+        "x": 103,
+        "y": 193,
+        "width": 1709,
+        "height": 727
+      },
+      "border_inset_pixels": 8,
+      "threshold": 0.92,
+      "mention_start_seconds": 14.735762797134859,
+      "mention_end_seconds": 22.903813693176815
+    }
+  ],
+  "sources": [
+    {
+      "chapter": "01",
+      "source": "runtime/video-final/motion/01-solution.mp4",
+      "sha256": "024c10f0235c97b16bbbd3a2ec26f7b52215a6b1e1c9424eedac6fc91d4a1eff",
+      "identity_source_timing": true,
+      "chapter_start_seconds": 0.0
+    },
+    {
+      "chapter": "08",
+      "source": "runtime/video-final/motion/08-agents.mp4",
+      "sha256": "77b99b2e771d575bb14c7d60b819c36eba4c1dd206030bdf9a4834a37a5a510d",
+      "identity_source_timing": true,
+      "chapter_start_seconds": 151.51999999999998
+    }
+  ],
+  "failures": [],
+  "ui_chapters_excluded": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07"
+  ],
+  "threshold": 0.92,
+  "border_inset_pixels": 8,
+  "source_manifest_sha256": "4889f96eb130897acf79b04fa49c9f6c0572aa5b992772ee76394d7eabaf4f1f",
+  "sync_plan_sha256": "4dc157fac2f6ad16473587cb85bdf6070a0a4c73fbd54b2d0a4d98c386c82e2b",
+  "delivery_manifest_sha256": "3b2f54e925d4cbf0e73467e7039fd3962631ae2b10a761b70743b2146978d0f1",
+  "provider_requests": 0,
+  "application_state_changes": 0,
+  "limits": [
+    "Two actual encoded samples per authored cue are compared with raw source frames at decoded final PTS minus chapter start.",
+    "This comparison requires an untrimmed identity source clock and the actual same-canvas authored geometry; no synthetic timestamp or visual match is invented.",
+    "SSIM establishes pixel correspondence, not semantic recognition, clinical correctness or verification of a narrated outcome claim."
+  ]
+}

@@ -1,0 +1,2 @@
+name,value,unit,denominator,method
+task_accuracy,,fraction,,Independent scenario truth; incorrect evaluated answers remain in denominator.

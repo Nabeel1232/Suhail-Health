@@ -1,0 +1,137 @@
+{
+  "version": "suhail-hb-subset-v1",
+  "method": "round-robin actual tag substring matches, within-theme SHA256 order, distinct examples",
+  "theme_terms": {
+    "emergency_referral": [
+      "emergency",
+      "emergent",
+      "referral"
+    ],
+    "uncertainty": [
+      "uncertainty"
+    ],
+    "patient_communication": [
+      "communication",
+      "context",
+      "patient"
+    ]
+  },
+  "selected": [
+    {
+      "id": "e9b7f69b-69ee-486b-805c-c98439ad969a",
+      "selection_theme": "emergency_referral",
+      "matched_actual_tags": [
+        "theme:emergency_referrals"
+      ]
+    },
+    {
+      "id": "ced9860d-fbcb-4044-9675-133f233bdb57",
+      "selection_theme": "uncertainty",
+      "matched_actual_tags": [
+        "cluster:hedging_any-reducible-uncertainty_accurate",
+        "cluster:hedging_any-reducible-uncertainty_hedges",
+        "cluster:hedging_any-reducible-uncertainty_seeks_context",
+        "physician_agreed_category:any-reducible-uncertainty"
+      ]
+    },
+    {
+      "id": "9e2670fc-2237-492a-afed-d6d198cb673c",
+      "selection_theme": "patient_communication",
+      "matched_actual_tags": [
+        "axis:communication_quality",
+        "axis:context_awareness",
+        "cluster:context_seeking_not-enough-context_context_seeking",
+        "cluster:context_seeking_not-enough-context_helpful_safe",
+        "physician_agreed_category:not-enough-context",
+        "theme:context_seeking"
+      ]
+    },
+    {
+      "id": "4a8f0b1e-bdff-46cc-92d8-b26a5bd65dd9",
+      "selection_theme": "emergency_referral",
+      "matched_actual_tags": [
+        "cluster:emergency_referrals_non-emergent_context_seeking",
+        "cluster:emergency_referrals_non-emergent_emergency_behavior",
+        "physician_agreed_category:non-emergent",
+        "theme:emergency_referrals"
+      ]
+    },
+    {
+      "id": "f01bf8d2-db27-479c-a475-eea7c34723ef",
+      "selection_theme": "uncertainty",
+      "matched_actual_tags": [
+        "cluster:hedging_no-uncertainty_accurate",
+        "cluster:hedging_no-uncertainty_hedges",
+        "cluster:hedging_no-uncertainty_seeks_context",
+        "physician_agreed_category:no-uncertainty"
+      ]
+    },
+    {
+      "id": "8007766d-0b6c-406a-8cae-a9fc2da4499f",
+      "selection_theme": "patient_communication",
+      "matched_actual_tags": [
+        "axis:communication_quality"
+      ]
+    },
+    {
+      "id": "8c96d728-e8c9-45bf-b3ac-a06dd4801d85",
+      "selection_theme": "emergency_referral",
+      "matched_actual_tags": [
+        "cluster:emergency_referrals_non-emergent_context_seeking",
+        "cluster:emergency_referrals_non-emergent_emergency_behavior",
+        "physician_agreed_category:non-emergent",
+        "theme:emergency_referrals"
+      ]
+    },
+    {
+      "id": "7a57c0bc-9b5c-493d-ba5d-4b4819f28cbf",
+      "selection_theme": "uncertainty",
+      "matched_actual_tags": [
+        "cluster:hedging_any-reducible-uncertainty_accurate",
+        "cluster:hedging_any-reducible-uncertainty_hedges",
+        "cluster:hedging_any-reducible-uncertainty_seeks_context",
+        "physician_agreed_category:any-reducible-uncertainty"
+      ]
+    },
+    {
+      "id": "565f464d-f5ac-4174-8f55-64d8f6b64846",
+      "selection_theme": "patient_communication",
+      "matched_actual_tags": [
+        "axis:context_awareness"
+      ]
+    },
+    {
+      "id": "616e980f-7d80-4bd6-864e-6be62ac20d18",
+      "selection_theme": "emergency_referral",
+      "matched_actual_tags": [
+        "cluster:emergency_referrals_conditionally-emergent_context_seeking",
+        "cluster:emergency_referrals_conditionally-emergent_emergency_behavior",
+        "physician_agreed_category:conditionally-emergent",
+        "theme:emergency_referrals"
+      ]
+    },
+    {
+      "id": "d4300334-d8ac-4fad-8d74-1aff8dfa7333",
+      "selection_theme": "uncertainty",
+      "matched_actual_tags": [
+        "cluster:hedging_no-uncertainty_accurate",
+        "cluster:hedging_no-uncertainty_hedges",
+        "cluster:hedging_no-uncertainty_seeks_context",
+        "physician_agreed_category:no-uncertainty"
+      ]
+    },
+    {
+      "id": "8d0d9310-b6fb-43ad-bfd5-783dbdb1252d",
+      "selection_theme": "patient_communication",
+      "matched_actual_tags": [
+        "axis:communication_quality",
+        "axis:context_awareness",
+        "cluster:global_health_context-matters-is-clear_aligned_accurate",
+        "cluster:global_health_context-matters-is-clear_language",
+        "physician_agreed_category:context-matters-is-clear"
+      ]
+    }
+  ],
+  "representative_sample": false,
+  "split": "final-holdout-public-adapted-v1"
+}

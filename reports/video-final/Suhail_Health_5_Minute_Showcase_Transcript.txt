@@ -1,0 +1,36 @@
+Suhail Health | Five-minute prototype showcase
+
+Edited from the verified v4 synthetic demonstration, with the original ElevenLabs Sarah narration.
+
+00:00:00  01 Care coordination, in one connected workspace
+Meet Suhail Health. A connected workspace for hospitals, clinics, and organizations coordinating screening follow-up. An actionable result is the start of a journey. Suhail connects explanation, consultation, referral, and documented care. Patients see their next step. Teams see who owns the work. And with Ask Suhail, each signed-in user can ask about their own permitted records and jump straight to the relevant detail.
+
+00:00:28  02 A clear entry for every role
+The public page introduces the service, its audiences, and the connected care journey. Secure sign-in opens an authorized workspace. Separate synthetic demonstration access lets reviewers explore fictional cases by role. Inside, each person sees the work and records permitted to their account.
+
+00:00:49  03 See the work and inspect the evidence
+Switch between the focused list and the journey board. Both show the same authorized cases. Summary cards filter the real queue, including urgent review and reconciliation. Open an episode to see independent milestones, current ownership, and the next action. Select a milestone to inspect its recorded state, linked evidence, and assigned work. The activity record preserves how the case changed.
+
+00:01:15  04 Clear support on a phone
+On a phone, the patient sees the next step and responsible team first. Receiving an update and understanding it are separate actions. Patients can ask a clinician a question, request practical support, or provide appointment preferences for staff confirmation. Ask Suhail helps locate their own plan and care team. English and right-to-left Arabic support the patient journey, with section navigation that follows the visible content.
+
+00:01:44  05 Connect the right human expertise
+The clinical workspace brings assigned episodes and unanswered questions together. A human reply records the response, agreed action, and owner. Clinicians can request a specialist opinion; specialists see their assigned consultations. Optional AI assistance prepares source-linked drafts for review. A draft stays separate from a human consultation, verified evidence, and a clinical disposition.
+
+00:02:11  06 A handoff needs an accountable receiver
+Receiving services see a minimum referral packet with its reason, source version, and granted scope. Ask Suhail answers workload questions from that provider’s permitted packets and links back to the right referral. Explicit acceptance changes the agreed responsibility. Rejection preserves its reason and creates recovery work. Accepted services can report unavailable capacity, confirm an appointment, and record attendance or a no-show. A proposed transfer keeps the sending owner accountable.
+
+00:02:44  07 Read the source. Establish the endpoint.
+Returned evidence starts pending verification. An authorized clinician reads the retained document, inspects provenance, and checks the patient, order, and result version. The closure checklist shows remaining requirements. If onward care is needed, referral acceptance alone is insufficient: treatment initiation or an accepted, owned surveillance plan must support the endpoint. Only an authorized clinical disposition records completed required care.
+
+00:03:15  08 Keep exceptions visible and owned
+Trusted urgent signals route to staff without waiting for a model. Acknowledgement and the clinician’s disposition are recorded separately. Identity conflicts enter quarantine until authorized reconciliation. Corrected results reopen affected work. Earlier evidence is marked superseded. Decline, inability to contact, and other exceptions retain their category and residual need.
+
+00:03:41  09 A documented plan for the patient
+The completed patient view displays the approved care plan, reviewed source evidence, and the responsible team. Earlier communication and understanding remain historical records. Questions and requests for help stay available. The wording follows the documented outcome, keeping the next step readable and connected to its source.
+
+00:04:03  10 Keep the whole loop moving
+Operations measures independent milestones against the full actionable-episode denominator. Completed care, open episodes, and documented exceptions stay distinct. Delivery records show integration status, attempts, and links to the underlying case. Urgent acknowledgements link back to their cases, and overdue work has its own queue. The dashboard makes unfinished work visible, with clear definitions and traceable records.
+
+00:04:31  11 One accountable journey, with context at hand
+Software verification includes fifteen hundred passing deterministic checks. Execution records preserve the source, model configuration, and spending controls behind each measurement. Suhail Health connects patients and care teams across the screening-to-care journey. Six focused agents support the workflow. Ask Suhail brings permitted context within reach. The care team stays in control.

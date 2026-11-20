@@ -1,0 +1,1126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://suhail.invalid/contracts/canonical-records-v1",
+  "title": "Suhail canonical persisted coordination records",
+  "$defs": {
+    "Case": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dataset": {
+          "type": "string"
+        },
+        "patient_id": {
+          "type": "string"
+        },
+        "patient_name": {
+          "type": "string"
+        },
+        "source_organization": {
+          "type": "string"
+        },
+        "order_id": {
+          "type": "string"
+        },
+        "result_version": {
+          "type": "integer"
+        },
+        "test_code": {
+          "type": "string"
+        },
+        "pathway": {
+          "type": "string"
+        },
+        "policy_version": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "backup_queue": {
+          "type": "string"
+        },
+        "disposition": {
+          "type": "string"
+        },
+        "residual_need": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer"
+        },
+        "quarantine_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "identity_verified": {
+          "type": "boolean"
+        },
+        "urgent": {
+          "type": "boolean"
+        },
+        "requires_onward": {
+          "type": "boolean"
+        },
+        "language": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "issued_at": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "closed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "delay_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "dataset",
+        "patient_id",
+        "patient_name",
+        "source_organization",
+        "order_id",
+        "result_version",
+        "test_code",
+        "pathway",
+        "policy_version",
+        "owner",
+        "backup_queue",
+        "disposition",
+        "residual_need",
+        "version",
+        "identity_verified",
+        "urgent",
+        "requires_onward",
+        "language",
+        "channel",
+        "issued_at",
+        "created_at",
+        "delay_reasons"
+      ],
+      "additionalProperties": false
+    },
+    "Task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "assignee": {
+          "type": "string"
+        },
+        "next_action": {
+          "type": "string"
+        },
+        "due_at": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "completed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "type",
+        "status",
+        "assignee",
+        "next_action",
+        "due_at",
+        "required",
+        "reason",
+        "created_at"
+      ],
+      "additionalProperties": false
+    },
+    "Milestone": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "type",
+        "status",
+        "required",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "Communication": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        },
+        "template_version": {
+          "type": "string"
+        },
+        "delivery_status": {
+          "type": "string"
+        },
+        "acknowledged_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "understanding": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "delivered_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "language",
+        "channel",
+        "body",
+        "template_version",
+        "delivery_status",
+        "understanding",
+        "created_at"
+      ],
+      "additionalProperties": false
+    },
+    "Consultation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "recipient": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "reply": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "agreed_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "action_owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "human_author": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requester": {
+          "type": "string"
+        },
+        "due_at": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "replied_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "type",
+        "question",
+        "recipient",
+        "status",
+        "requester",
+        "due_at",
+        "created_at"
+      ],
+      "additionalProperties": false
+    },
+    "Handoff": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "sender": {
+          "type": "string"
+        },
+        "receiver": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "requested_at": {
+          "type": "string"
+        },
+        "due_at": {
+          "type": "string"
+        },
+        "decided_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_actor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "scope",
+        "sender",
+        "receiver",
+        "status",
+        "reason",
+        "requested_at",
+        "due_at"
+      ],
+      "additionalProperties": false
+    },
+    "AccessGrant": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "handoff_id": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "granted_by": {
+          "type": "string"
+        },
+        "expires_at": {
+          "type": "string"
+        },
+        "revoked": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "handoff_id",
+        "organization",
+        "scope",
+        "purpose",
+        "granted_by",
+        "expires_at",
+        "revoked"
+      ],
+      "additionalProperties": false
+    },
+    "Appointment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "scheduled_at": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "provider",
+        "scheduled_at",
+        "status",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "Evidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "patient_id": {
+          "type": "string"
+        },
+        "order_id": {
+          "type": "string"
+        },
+        "result_version": {
+          "type": "integer"
+        },
+        "verification": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "effective_at": {
+          "type": "string"
+        },
+        "received_at": {
+          "type": "string"
+        },
+        "verified_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verification_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requires_onward": {
+          "type": "boolean"
+        },
+        "plan_owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "recall_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "type",
+        "reference",
+        "source",
+        "patient_id",
+        "order_id",
+        "result_version",
+        "verification",
+        "status",
+        "effective_at",
+        "received_at",
+        "requires_onward"
+      ],
+      "additionalProperties": false
+    },
+    "SourceArtifact": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "authority": {
+          "type": "string"
+        },
+        "content_hash": {
+          "type": "string"
+        },
+        "content": {
+          "type": "object"
+        },
+        "received_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "reference",
+        "case_id",
+        "source",
+        "authority",
+        "content_hash",
+        "content",
+        "received_at"
+      ],
+      "additionalProperties": false
+    },
+    "Escalation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "trigger": {
+          "type": "string"
+        },
+        "recipient": {
+          "type": "string"
+        },
+        "backup": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "due_at": {
+          "type": "string"
+        },
+        "acknowledged_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acknowledged_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "disposition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "disposition_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "disposition_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "escalated_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "trigger",
+        "recipient",
+        "backup",
+        "created_at",
+        "due_at"
+      ],
+      "additionalProperties": false
+    },
+    "Disposition": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "residual_need": {
+          "type": "string"
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "endpoint": {
+          "type": "string"
+        },
+        "policy_version": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "created_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "category",
+        "reason",
+        "residual_need",
+        "reviewer",
+        "endpoint",
+        "policy_version",
+        "evidence_ids",
+        "created_at"
+      ],
+      "additionalProperties": false
+    },
+    "AuditEvent": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "actor_id": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "correlation_id": {
+          "type": "string"
+        },
+        "before_version": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "after_version": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "detail": {
+          "type": "object"
+        },
+        "created_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "actor_id",
+        "organization",
+        "event_type",
+        "correlation_id",
+        "detail",
+        "created_at"
+      ],
+      "additionalProperties": false
+    },
+    "Outbox": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "destination": {
+          "type": "string"
+        },
+        "payload": {
+          "type": "object"
+        },
+        "status": {
+          "type": "string"
+        },
+        "attempts": {
+          "type": "integer"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "next_attempt_at": {
+          "type": "string"
+        },
+        "lease_until": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "error_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "kind",
+        "destination",
+        "payload",
+        "status",
+        "attempts",
+        "owner",
+        "next_attempt_at",
+        "created_at"
+      ],
+      "additionalProperties": false
+    },
+    "SourceEvent": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "source_organization": {
+          "type": "string"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "result_version": {
+          "type": "integer"
+        },
+        "occurred_at": {
+          "type": "string"
+        },
+        "received_at": {
+          "type": "string"
+        },
+        "provenance": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "key",
+        "case_id",
+        "source_organization",
+        "event_id",
+        "result_version",
+        "occurred_at",
+        "received_at",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "PatientExperience": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "patient_id": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "integer"
+        },
+        "reassurance": {
+          "type": "integer"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "captured_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "patient_id",
+        "confidence",
+        "reassurance",
+        "comment",
+        "captured_at"
+      ],
+      "additionalProperties": false
+    },
+    "StaffCaseDetail": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dataset": {
+          "type": "string"
+        },
+        "patient_id": {
+          "type": "string"
+        },
+        "patient_name": {
+          "type": "string"
+        },
+        "source_organization": {
+          "type": "string"
+        },
+        "order_id": {
+          "type": "string"
+        },
+        "result_version": {
+          "type": "integer"
+        },
+        "test_code": {
+          "type": "string"
+        },
+        "pathway": {
+          "type": "string"
+        },
+        "policy_version": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "backup_queue": {
+          "type": "string"
+        },
+        "disposition": {
+          "type": "string"
+        },
+        "residual_need": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer"
+        },
+        "quarantine_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "identity_verified": {
+          "type": "boolean"
+        },
+        "urgent": {
+          "type": "boolean"
+        },
+        "requires_onward": {
+          "type": "boolean"
+        },
+        "language": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "issued_at": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "closed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "delay_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "phase": {
+          "type": "string"
+        },
+        "next_action": {
+          "type": "string"
+        },
+        "due_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Task"
+          }
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Milestone"
+          }
+        },
+        "communications": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Communication"
+          }
+        },
+        "consultations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Consultation"
+          }
+        },
+        "handoffs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Handoff"
+          }
+        },
+        "appointments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Appointment"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "escalations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Escalation"
+          }
+        },
+        "dispositions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Disposition"
+          }
+        },
+        "audit": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AuditEvent"
+          }
+        },
+        "experience": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PatientExperience"
+          }
+        },
+        "access_grants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AccessGrant"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "dataset",
+        "patient_id",
+        "patient_name",
+        "source_organization",
+        "order_id",
+        "result_version",
+        "test_code",
+        "pathway",
+        "policy_version",
+        "owner",
+        "backup_queue",
+        "disposition",
+        "residual_need",
+        "version",
+        "quarantine_reason",
+        "identity_verified",
+        "urgent",
+        "requires_onward",
+        "language",
+        "channel",
+        "issued_at",
+        "created_at",
+        "closed_at",
+        "delay_reasons",
+        "phase",
+        "next_action",
+        "due_at",
+        "tasks",
+        "milestones",
+        "communications",
+        "consultations",
+        "handoffs",
+        "appointments",
+        "evidence",
+        "escalations",
+        "dispositions",
+        "audit",
+        "experience",
+        "access_grants"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "$ref": "#/$defs/StaffCaseDetail"
+}

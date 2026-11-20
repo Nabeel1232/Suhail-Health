@@ -1,0 +1,81 @@
+name: suhail-health
+x-backend: &backend
+  image: suhail-health-backend:local
+  build:
+    context: .
+    dockerfile: infra/api.Dockerfile
+  environment: &backend-env
+    DATABASE_URL: postgresql+psycopg://suhail:${POSTGRES_PASSWORD:?Run scripts/runtime_config.py and use --env-file .runtime/app.env}@db:5432/suhail
+    ENV_FILE_PATH: /run/secrets/owner.env
+    PROVIDER_A_URL: http://provider-a:8101
+    PROVIDER_B_URL: http://provider-b:8102
+    FHIR_URL: http://fhir:8103
+    API_INTERNAL_URL: http://api:8000
+    DEMO_MODE: ${DEMO_MODE:-true}
+    SESSION_SECURE: ${SESSION_SECURE:-false}
+  volumes:
+    - ${ENV_FILE_PATH:-./.env}:/run/secrets/owner.env:ro
+    - app_runtime:/app/.runtime
+    - app_logs:/app/runtime
+    - ./reports:/app/reports:ro
+  depends_on:
+    db:
+      condition: service_healthy
+  restart: unless-stopped
+services:
+  db:
+    image: postgres:17.7-alpine@sha256:bb377b7239d2774ac8cc76f481596ce96c5a6b5e9d141f6d0a0ee371a6e7c0f2
+    environment:
+      POSTGRES_DB: suhail
+      POSTGRES_USER: suhail
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Runtime password required}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U suhail -d suhail]
+      interval: 5s
+      retries: 15
+  api:
+    <<: *backend
+    ports: ["127.0.0.1:8000:8000"]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      retries: 12
+  worker:
+    <<: *backend
+    command: [python, -m, services.api.worker]
+  provider-a:
+    <<: *backend
+    environment:
+      <<: *backend-env
+      PROVIDER_ID: provider-a
+    command: [uvicorn, integrations.provider:app, --host, 0.0.0.0, --port, "8101"]
+  provider-b:
+    <<: *backend
+    environment:
+      <<: *backend-env
+      PROVIDER_ID: provider-b
+    command: [uvicorn, integrations.provider:app, --host, 0.0.0.0, --port, "8102"]
+  fhir:
+    <<: *backend
+    command: [uvicorn, integrations.fhir:app, --host, 0.0.0.0, --port, "8103"]
+  web:
+    image: suhail-health-web:local
+    build:
+      context: .
+      dockerfile: infra/web.Dockerfile
+      args:
+        API_INTERNAL_URL: http://api:8000
+    environment:
+      API_INTERNAL_URL: http://api:8000
+      NODE_ENV: production
+    ports: ["127.0.0.1:3000:3000"]
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  postgres_data:
+  app_runtime:
+  app_logs:

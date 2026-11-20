@@ -1,0 +1,25 @@
+Suhail Health — Closing the Screening-to-Care Loop
+
+00:00:00  01  Why results get lost
+A screening test only helps if someone acts on the result. In a study of more than thirty-two thousand adults with a positive stool test, only fifty-six percent completed a follow-up colonoscopy within a year. Every transfer creates a chance for responsibility to become unclear. Suhail Health gives each result a visible route to care.
+
+00:00:23  02  Every result has an owner
+Meet Mariam, a fictional patient in this demo. Her result arrives in a worklist with an owner, a next action, and a deadline. Navigators can find overdue work, rejected transfers, and cases that need assignment. Open a completed case to see dates, service targets, and the evidence behind each step, from the result through closure.
+
+00:00:47  03  Clear for the patient
+On her phone, Mariam can see where she is in the journey. Her result message arrives in Arabic. It explains what happens next and who will help. She can confirm receipt and answer two questions to check understanding. If she needs help, her navigator gets a task to call her. Her care team is easy to reach.
+
+00:01:08  04  Connect human expertise
+Clinicians bring assigned episodes and patient questions into one workspace. Human replies record an agreed action and owner. Specialists see their assigned consultations. Optional AI assistance prepares source-linked drafts for review. The care team makes the clinical decisions.
+
+00:01:28  05  Make the handoff accountable
+Receiving services see a minimum referral packet. They explicitly accept a referral or record a rejection reason. Appointment controls keep booking, attendance, and no-shows distinct. A proposed transfer keeps the sending owner accountable until the receiver accepts the intended responsibility.
+
+00:01:49  06  Safe escalation, evidenced closure
+An urgent result goes straight to a clinician on a sixty-minute clock, with an on-call backup and no model in that path. To close required care, an authorized clinician needs verified evidence of the investigation, the reviewed outcome, and the patient update. The checklist shows exactly what is missing.
+
+00:02:10  07  Measure what happens next
+Operations can see time to notification, understanding, and completed care, and where work is stalled. In a simulated cohort calibrated to published studies, estimated follow-up completion rises from fifty-six to sixty-nine percent within a year. A pilot would measure the effect in practice.
+
+00:02:31  08  Human control, ready to pilot
+Six bounded agents prepare drafts and check records. The care team remains responsible for decisions. Fifteen hundred automated safety checks passed, including five hundred correctly refused premature closures. We are seeking a partner for a twelve-week pilot on one screening pathway. Suhail Health. Guiding every result to care.

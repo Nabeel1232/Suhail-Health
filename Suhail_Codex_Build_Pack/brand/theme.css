@@ -1,0 +1,62 @@
+:root {
+  color-scheme: light;
+  --suhail-teal: #006568;
+  --suhail-ink: #143d3c;
+  --suhail-gold: #c9a25b;
+  --suhail-page: #f4f8f7;
+  --suhail-surface: #ffffff;
+  --suhail-text: #173d3b;
+  --suhail-muted: #526c69;
+  --suhail-border: #d4e2de;
+  --suhail-soft: #e8f3f0;
+  --suhail-on-primary: #ffffff;
+  --suhail-danger: #9a2638;
+  --suhail-danger-soft: #fff0f2;
+  --suhail-warning: #765000;
+  --suhail-warning-soft: #fff3d8;
+  --suhail-success: #176248;
+  --suhail-success-soft: #e9f5ee;
+  --suhail-focus: #006568;
+  --suhail-radius-sm: 6px;
+  --suhail-radius: 10px;
+  --suhail-radius-lg: 16px;
+  --suhail-space-1: 4px;
+  --suhail-space-2: 8px;
+  --suhail-space-3: 12px;
+  --suhail-space-4: 16px;
+  --suhail-space-6: 24px;
+  --suhail-space-8: 32px;
+  --suhail-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --suhail-font-ar: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+}
+[data-suhail-theme="dark"] {
+  color-scheme: dark;
+  --suhail-teal: #81d5ca;
+  --suhail-page: #102527;
+  --suhail-surface: #183235;
+  --suhail-text: #edf6f2;
+  --suhail-muted: #bdd0ca;
+  --suhail-border: #3b5754;
+  --suhail-soft: #224442;
+  --suhail-on-primary: #123936;
+  --suhail-danger: #ffc0ca;
+  --suhail-danger-soft: #4c2631;
+  --suhail-warning: #ffe0a5;
+  --suhail-warning-soft: #46391f;
+  --suhail-success: #b0e5c9;
+  --suhail-success-soft: #1e4435;
+  --suhail-focus: #81d5ca;
+}
+.suhail-app { background: var(--suhail-page); color: var(--suhail-text); font-family: var(--suhail-font); }
+.suhail-app :is(button, input, select, textarea) { font: inherit; }
+.suhail-app :focus-visible { outline: 3px solid var(--suhail-focus); outline-offset: 3px; }
+.suhail-app [lang="ar"] { font-family: var(--suhail-font-ar); }
+.suhail-number { font-variant-numeric: tabular-nums; }
+.suhail-logo-tile { background: #fff; border-radius: var(--suhail-radius-sm); }
+@media (prefers-reduced-motion: reduce) {
+  .suhail-app *, .suhail-app *::before, .suhail-app *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  .suhail-app { background: #fff; color: #143d3c; }
+  .suhail-no-print { display: none !important; }
+}

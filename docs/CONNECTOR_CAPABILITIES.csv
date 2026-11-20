@@ -1,0 +1,11 @@
+connector,operation,status,implementation,limitation
+FHIR R4 test server,Patient Observation DiagnosticReport ServiceRequest Task Appointment Encounter Procedure read search version-aware update,simulated,integrations/fhir.py,Authenticated synthetic-only read/search/version-aware update; no full FHIR conformance claim
+FHIR R4 intake,Observation patient order source-version import,implemented,integrations/routes.py,Exact synthetic references; configured positive FIT mapping only
+Provider A,request accept reject appointment status returned evidence,simulated,integrations/provider.py,Independent persisted local service with organization-bound credentials
+Provider B,request accept reject appointment status returned evidence,simulated,integrations/provider.py,Independent persisted local service with organization-bound credentials
+Files,validated CSV JSON result intake,implemented,services/api/main.py,Uploaded identity is quarantined until authorized reconciliation
+Controlled documents,retained source upload and clinician verification,manual,services/api/domain.py,Upload alone cannot complete evidence gate
+Notification simulator,delivery acknowledgement understanding,simulated,services/api/worker.py,No real SMS or email
+Existing hospital EHR,clinical read or writeback,unavailable,Connector interface only,Requires actual registration credentials and supported institutional APIs
+Malaffi NABIDH Riayati,national exchange access,unavailable,None,No live exchange or universal write access is claimed
+Clinical expert assessment,external assessment,unavailable,Separate optional evidence workstream,Not performed

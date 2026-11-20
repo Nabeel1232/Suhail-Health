@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "run_id": "groq-smoke-holdout-v1",
+  "case_records": 66,
+  "provider_records": 69,
+  "checks": [
+    "hash chains",
+    "selected IDs",
+    "count equations",
+    "schema",
+    "usage reconciliation",
+    "candidate/grader response lineage",
+    "model provenance",
+    "no capability probe substitution"
+  ],
+  "errors": []
+}

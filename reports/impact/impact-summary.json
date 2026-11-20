@@ -1,0 +1,175 @@
+{
+  "schema": "suhail-impact-v1",
+  "generated_at": "2026-11-20T00:00:00Z",
+  "label": "Simulated cohort under declared assumptions. Clinical outcomes were not measured.",
+  "cohort": {
+    "n": 10000,
+    "seed": 20261120,
+    "horizon_days": 360,
+    "pathway": "colorectal-fit"
+  },
+  "arms": {
+    "usual_care": {
+      "completed_90d": 0.43,
+      "completed_180d": 0.51,
+      "completed_360d": 0.56,
+      "median_days": 33.67,
+      "no_followup_by_300d": 0.4504,
+      "untracked_or_undocumented_360d": 0.44,
+      "drop_off": {
+        "not_reached": 1320,
+        "referral_lost": 1100,
+        "never_scheduled": 880,
+        "no_show_not_rebooked": 1100
+      }
+    },
+    "suhail": {
+      "completed_90d": 0.524,
+      "completed_180d": 0.6391,
+      "completed_360d": 0.69,
+      "median_days": 48.86,
+      "no_followup_by_300d": 0.3204,
+      "untracked_or_undocumented_360d": 0.0,
+      "drop_off": {
+        "not_reached": 929,
+        "referral_lost": 785,
+        "never_scheduled": 619,
+        "no_show_not_rebooked": 767
+      },
+      "documented_exception_360d": 0.31
+    }
+  },
+  "delta": {
+    "completed_360d_pp": 13.0,
+    "low_pp": 6.5,
+    "high_pp": 19.4,
+    "additional_completed_per_10000": 1300,
+    "low_per_10000": 650,
+    "high_per_10000": 1940,
+    "documented_exceptions_per_10000": 3100
+  },
+  "calibration": {
+    "eventual_completion": 0.6003512676553628,
+    "log_location": 3.6430965402557214,
+    "log_scale": 1.4984591201765485,
+    "recovery_probability": {
+      "low": 0.14772727272727276,
+      "central": 0.2954545454545455,
+      "high": 0.440909090909091
+    }
+  },
+  "sensitivity": [
+    {
+      "baseline_completion": 0.42,
+      "scenario": "low",
+      "r": 0.14772727,
+      "suhail_completion": 0.50568182
+    },
+    {
+      "baseline_completion": 0.42,
+      "scenario": "central",
+      "r": 0.29545455,
+      "suhail_completion": 0.59136364
+    },
+    {
+      "baseline_completion": 0.42,
+      "scenario": "high",
+      "r": 0.44090909,
+      "suhail_completion": 0.67572727
+    },
+    {
+      "baseline_completion": 0.56,
+      "scenario": "low",
+      "r": 0.14772727,
+      "suhail_completion": 0.625
+    },
+    {
+      "baseline_completion": 0.56,
+      "scenario": "central",
+      "r": 0.29545455,
+      "suhail_completion": 0.69
+    },
+    {
+      "baseline_completion": 0.56,
+      "scenario": "high",
+      "r": 0.44090909,
+      "suhail_completion": 0.754
+    },
+    {
+      "baseline_completion": 0.8,
+      "scenario": "low",
+      "r": 0.14772727,
+      "suhail_completion": 0.82954545
+    },
+    {
+      "baseline_completion": 0.8,
+      "scenario": "central",
+      "r": 0.29545455,
+      "suhail_completion": 0.85909091
+    },
+    {
+      "baseline_completion": 0.8,
+      "scenario": "high",
+      "r": 0.44090909,
+      "suhail_completion": 0.88818182
+    }
+  ],
+  "mechanisms": [
+    {
+      "failure_point": "not_reached",
+      "suhail_feature": "Delivery tracking, teach-back and an owned help or consultation task.",
+      "verified_by": "failed_understanding, unanswered_consultation"
+    },
+    {
+      "failure_point": "referral_lost",
+      "suhail_feature": "Reject or expire the referral while retaining ownership and opening recovery work.",
+      "verified_by": "rejected_handoff, expired_handoff"
+    },
+    {
+      "failure_point": "never_scheduled",
+      "suhail_feature": "Capacity and access barriers open navigator follow-up without fabricating a booking.",
+      "verified_by": "no_slots, access_barrier"
+    },
+    {
+      "failure_point": "no_show_not_rebooked",
+      "suhail_feature": "Cancellation or nonattendance opens appointment recovery work.",
+      "verified_by": "cancelled_visit, no_show"
+    }
+  ],
+  "anchors": [
+    {
+      "id": "mohl2023",
+      "text": "Mohl et al., JAMA Network Open (2023). Among 32,769 US patients with a positive stool-based screening test, 43.3% completed colonoscopy by 90 days, 51.4% by 180 days, and 56.1% by 360 days.",
+      "doi": "10.1001/jamanetworkopen.2022.51384"
+    },
+    {
+      "id": "coronado2025",
+      "text": "Coronado et al., Annals of Internal Medicine (2025). PRECISE analysed 967 patients across a 32-clinic network. Twelve-month completion was 55.1% with navigation and 42.1% with usual care, a 13.0-point difference (95% CI 6.5 to 19.4).",
+      "doi": "10.7326/ANNALS-24-01885"
+    },
+    {
+      "id": "corley2017",
+      "text": "Corley et al., JAMA (2017). In the 70,124-patient positive FIT cohort, colonoscopy at 10 to 12 months was associated with higher odds of colorectal cancer (1.48) and advanced-stage disease (1.97) than colonoscopy at 8 to 30 days. The study does not establish causality.",
+      "doi": "10.1001/jama.2017.3634"
+    }
+  ],
+  "assumptions": [
+    "A synthetic cohort of 10,000 positive FIT episodes uses a 360-day horizon. Usual care uses rounded study targets of 43%, 51%, and 56% at days 90, 180, and 360.",
+    "Usual-care cases without completion by day 360 are assigned one primary failure point with shares of 30% unreached or unclear, 25% referral failure, 20% never scheduled, and 25% attendance failure.",
+    "The paired arms retain the same observed baseline completion times. Only cases without usual-care completion within the horizon are eligible for recovery.",
+    "Recovery probability is the PRECISE risk difference divided by the baseline incomplete share. For a recovered case, follow-up occurs after a lognormal delay from day 30 with median 45 days and log-scale standard deviation 0.50.",
+    "For this simulation, all Suhail episodes have an owned ledger entry, and remaining noncompletions are represented by documented exceptions with residual need. A pilot must distinguish unresolved open work from clinician-authorized exceptions."
+  ],
+  "limitations": [
+    "The studies are from US health systems. The figures are neither UAE baselines nor measured outcomes for Suhail.",
+    "The navigation trial tested human navigation. Applying its effect to a software-supported workflow assumes comparable staffing, access and capacity. The model range transfers the trial interval and omits other sources of uncertainty.",
+    "Failure shares and recovery timing are assumptions. The model does not estimate effects on cancer stage, mortality, service capacity or cost.",
+    "Published usual-care completion studies do not measure missing ownership. In this model, usual-care noncompletion is a proxy for cases whose tracking or documented disposition is unknown.",
+    "Software checks establish workflow behavior on synthetic trajectories. They do not establish recovery probability, universal documentation or clinical effectiveness."
+  ],
+  "software_evidence": {
+    "report": "reports/runs/20261120T135507Z-offline/summary.json",
+    "journey_checks_passed": 1000,
+    "premature_closures_refused": 500
+  }
+}

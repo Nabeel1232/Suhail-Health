@@ -1,0 +1,30 @@
+{
+  "id": "actual-backend-at-first-journey-import",
+  "captured_at": "2026-11-14T21:32:31.377443+00:00",
+  "file_hashes": {
+    "services/api/schemas.py": "0f0a76baa18fa5f136e2f6acf9baa86523e1c52769de2b319de5cd9b1e482d52",
+    "services/api/seed.py": "c4f4c1214541ee622354b8ccf5358a1b4772d2e83e4f5f75734f078b5958f0ee",
+    "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+    "services/api/domain.py": "bad086a029ffe9aee8eee2fb835e7294d2d27c40ced80df9b50419a632ab8c48",
+    "services/api/policy.py": "450b752a045e51adc627cf1fef99c042edc0c65f029a9f20798318652dade7dc",
+    "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+    "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+    "services/api/worker.py": "da243719b7a1c53463dfc1c54acbbbbfd8486dd14f6f4b8c673f2ace3c07dba9",
+    "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+    "services/api/main.py": "4f4744fdada382c748be50d472fbe9b173dec92f8e414c84e6e43989ff14cc9b"
+  },
+  "backend_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+  "already_loaded_api_modules": [],
+  "captured_before_services_api_db_and_domain_import": true,
+  "instrumentation_revision": {
+    "evals/provenance.py": "1c4eac0e45fddafce1b81667f0221375c6ab38994f8373b99791788a3f5070e1",
+    "evals/domain_harness.py": "f8b4cfb09c23dd7660bbfa960cd051730e024267f310cacb5edd5a36abfc134f"
+  },
+  "reason": "Instrumentation-only source capture added before DomainHarness first import to distinguish final backend security repairs from earlier model-source freeze; no model/prompt/RAG/scorer/truth/command changes.",
+  "prior_backend_captures": "Earlier scheduler-resume/prejourney captures are intermediate; this execution-time capture governs actual fulljourneys. Raw case backend_source_hash from the scheduler is a resume-point label, not a replacement for this phase evidence.",
+  "applies_to_components": [
+    "journeys"
+  ],
+  "artifact_path": "actual-backend-source"
+}

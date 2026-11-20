@@ -1,0 +1,47 @@
+{
+  "status": "COMPLETE",
+  "new_api_calls": 0,
+  "existing_live_responses_audited": 6,
+  "task_passed": 5,
+  "task_incorrect": 1,
+  "original_failure_counts_unchanged": true,
+  "reason": "Original v1 scorer queried English FTS terms for Arabic source context, raised PolicyReviewRequired and lost the candidate ID in its exception path. Existing real responses are audited with their exact permitted policy references. This is secondary post-hoc scoring, not new inference or silent replacement of the primary failed-case denominator.",
+  "cases": [
+    {
+      "case_id": "intake-holdout-002",
+      "component": "intake",
+      "passed": false,
+      "candidate_call_id": "c71086d0-4011-4470-8f2d-b59be6c4a4d2"
+    },
+    {
+      "case_id": "pathway_router-holdout-002",
+      "component": "pathway_router",
+      "passed": true,
+      "candidate_call_id": "ca887e36-bd7c-4676-aa22-ad4b95f99401"
+    },
+    {
+      "case_id": "safety_escalation-holdout-002",
+      "component": "safety_escalation",
+      "passed": true,
+      "candidate_call_id": "48ecb560-29d1-4ac2-8294-c836949936e8"
+    },
+    {
+      "case_id": "patient_navigator-holdout-002",
+      "component": "patient_navigator",
+      "passed": true,
+      "candidate_call_id": "af773186-9d9a-4ea2-98f4-f0fee2663589"
+    },
+    {
+      "case_id": "coordination-holdout-002",
+      "component": "coordination",
+      "passed": true,
+      "candidate_call_id": "fc5819f0-df8e-41d4-9cbf-d5b7a5ccc803"
+    },
+    {
+      "case_id": "closure_evidence-holdout-002",
+      "component": "closure_evidence",
+      "passed": true,
+      "candidate_call_id": "6523d0c4-ec7a-496d-8391-ac26fd634079"
+    }
+  ]
+}

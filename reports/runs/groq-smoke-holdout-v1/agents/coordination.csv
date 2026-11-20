@@ -1,0 +1,7 @@
+name,value,unit,denominator,method
+task_accuracy,1.0,fraction,5,Independent scenario truth; incorrect evaluated answers remain in denominator.
+evaluated_coverage,0.8333333333333334,fraction,6,"All selected cases remain in execution coverage, including failures and skipped cases."
+selected_case_pass_fraction,0.8333333333333334,fraction,6,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+action_correct,1.0,fraction,5,Independent known synthetic truth; no grader model.
+review_or_abstention,0.0,fraction,5,Independent known synthetic truth; no grader model.
+secondary_existing_response_audit_pass_fraction,1.0,fraction,1,Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.

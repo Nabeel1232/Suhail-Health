@@ -1,0 +1,7 @@
+case_id,component,passed,candidate_call_id,scorer_version,scored_at
+intake-holdout-002,intake,False,c71086d0-4011-4470-8f2d-b59be6c4a4d2,secondary-source-language-audit-v2,2026-11-14T21:45:06.039171+00:00
+pathway_router-holdout-002,pathway_router,True,ca887e36-bd7c-4676-aa22-ad4b95f99401,secondary-source-language-audit-v2,2026-11-14T21:45:06.061444+00:00
+safety_escalation-holdout-002,safety_escalation,True,48ecb560-29d1-4ac2-8294-c836949936e8,secondary-source-language-audit-v2,2026-11-14T21:45:06.079506+00:00
+patient_navigator-holdout-002,patient_navigator,True,af773186-9d9a-4ea2-98f4-f0fee2663589,secondary-source-language-audit-v2,2026-11-14T21:45:06.096547+00:00
+coordination-holdout-002,coordination,True,fc5819f0-df8e-41d4-9cbf-d5b7a5ccc803,secondary-source-language-audit-v2,2026-11-14T21:45:06.114546+00:00
+closure_evidence-holdout-002,closure_evidence,True,6523d0c4-ec7a-496d-8391-ac26fd634079,secondary-source-language-audit-v2,2026-11-14T21:45:06.131562+00:00

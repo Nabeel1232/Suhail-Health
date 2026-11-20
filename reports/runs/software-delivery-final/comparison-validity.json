@@ -1,0 +1,15 @@
+{
+  "excluded_invalid_pair_ids": [],
+  "A_B": {
+    "matched_pairs": 0,
+    "difference": null,
+    "pairs": [],
+    "interpretation": "Descriptive scripted conformance only; no clinical outcome or incremental-AI effect estimate."
+  },
+  "B_C": {
+    "matched_pairs": 0,
+    "difference": null,
+    "pairs": [],
+    "interpretation": "Descriptive scripted conformance only; no clinical outcome or incremental-AI effect estimate."
+  }
+}

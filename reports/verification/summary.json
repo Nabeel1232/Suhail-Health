@@ -1,0 +1,3559 @@
+{
+  "title": "Suhail Health actual release verification",
+  "generated_at": "2026-11-14T22:11:50.516007+00:00",
+  "status": "COMPLETE",
+  "evidence_mode": "software_and_synthetic_customer_journeys",
+  "checks": {
+    "acceptance_security_provider_postgres": {
+      "status": "COMPLETE",
+      "path": "runtime/test-results.xml",
+      "sha256": "b5a362a2af06340fa8b28d5e6c9b49e08549723a39b8d9517e513d8dc869ad71",
+      "tests": 98,
+      "passed": 98,
+      "failed": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "tests.test_agents.test_AT16_filtered_retrieval_missing_conflict_injected_expired",
+          "status": "passed",
+          "seconds": 0.006
+        },
+        {
+          "name": "tests.test_agents.test_AT13_tool_allowlist_role_schema_case_version",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "tests.test_agents.test_onward_detached_closure_requires_endpoint",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_agents.test_atomic_concurrent_budget_reservation",
+          "status": "passed",
+          "seconds": 0.135
+        },
+        {
+          "name": "tests.test_agents.test_mocked_429_retry_unknown_usage_and_incompatible_modes",
+          "status": "passed",
+          "seconds": 0.187
+        },
+        {
+          "name": "tests.test_agents.test_mocked_auth_failure_has_no_retry_or_secret",
+          "status": "passed",
+          "seconds": 0.128
+        },
+        {
+          "name": "tests.test_agents.test_unknown_pricing_with_usd_cap_stops_before_dispatch",
+          "status": "passed",
+          "seconds": 0.077
+        },
+        {
+          "name": "tests.test_backend.test_AT01_source_linked_owned_case_and_persistence",
+          "status": "passed",
+          "seconds": 1.006
+        },
+        {
+          "name": "tests.test_backend.test_AT02_owned_quarantine_and_authorized_recovery[overrides0-identity_conflict]",
+          "status": "passed",
+          "seconds": 1.047
+        },
+        {
+          "name": "tests.test_backend.test_AT02_owned_quarantine_and_authorized_recovery[overrides1-unsupported_pathway]",
+          "status": "passed",
+          "seconds": 1.038
+        },
+        {
+          "name": "tests.test_backend.test_AT02_owned_quarantine_and_authorized_recovery[overrides2-missing_staffing_mapping]",
+          "status": "passed",
+          "seconds": 1.003
+        },
+        {
+          "name": "tests.test_backend.test_AT03_delivery_acknowledgement_understanding_separate",
+          "status": "passed",
+          "seconds": 1.139
+        },
+        {
+          "name": "tests.test_backend.test_AT04_both_human_consultations_and_agreed_owned_action",
+          "status": "passed",
+          "seconds": 1.018
+        },
+        {
+          "name": "tests.test_backend.test_AT05_rejection_preserves_owner_and_acceptance_has_scope",
+          "status": "passed",
+          "seconds": 1.084
+        },
+        {
+          "name": "tests.test_backend.test_AT06_timeouts_no_show_and_cancellation_have_recovery",
+          "status": "passed",
+          "seconds": 1.135
+        },
+        {
+          "name": "tests.test_backend.test_AT07_urgent_independent_of_model_and_ack_separate",
+          "status": "passed",
+          "seconds": 1.163
+        },
+        {
+          "name": "tests.test_backend.test_AT08_booking_attendance_and_verified_assessment_separate",
+          "status": "passed",
+          "seconds": 1.545
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[wrong_patient]",
+          "status": "passed",
+          "seconds": 1.066
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[wrong_order]",
+          "status": "passed",
+          "seconds": 4.824
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[stale]",
+          "status": "passed",
+          "seconds": 0.982
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[fabricated]",
+          "status": "passed",
+          "seconds": 1.063
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[unverified]",
+          "status": "passed",
+          "seconds": 0.961
+        },
+        {
+          "name": "tests.test_backend.test_AT09_valid_uploaded_source_requires_authorized_verification",
+          "status": "passed",
+          "seconds": 1.088
+        },
+        {
+          "name": "tests.test_backend.test_AT10_onward_endpoint_blocks_even_after_referral_acceptance",
+          "status": "passed",
+          "seconds": 1.604
+        },
+        {
+          "name": "tests.test_backend.test_AT11_corrected_result_reopens_closed_case_and_old_version_stays_old",
+          "status": "passed",
+          "seconds": 1.389
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[informed_decline]",
+          "status": "passed",
+          "seconds": 1.054
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[unable_to_contact]",
+          "status": "passed",
+          "seconds": 1.071
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[clinically_resolved]",
+          "status": "passed",
+          "seconds": 0.999
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[other_exception]",
+          "status": "passed",
+          "seconds": 1.051
+        },
+        {
+          "name": "tests.test_backend.test_AT13_minimum_packet_crosspatient_and_admin_limits",
+          "status": "passed",
+          "seconds": 1.094
+        },
+        {
+          "name": "tests.test_backend.test_AT14_replay_has_one_handoff_and_worker_restart_preserves_due",
+          "status": "passed",
+          "seconds": 0.999
+        },
+        {
+          "name": "tests.test_backend.test_AT14_bounded_failure_enters_owned_deadletter",
+          "status": "passed",
+          "seconds": 1.173
+        },
+        {
+          "name": "tests.test_backend.test_AT17_overdue_unassigned_fallback_and_rejected_visible",
+          "status": "passed",
+          "seconds": 0.979
+        },
+        {
+          "name": "tests.test_backend.test_authenticated_API_cookies_versions_patient_scope_and_AT20_metrics",
+          "status": "passed",
+          "seconds": 3.703
+        },
+        {
+          "name": "tests.test_backend.test_patient_experience_is_scoped_observed_and_separate_from_understanding",
+          "status": "passed",
+          "seconds": 0.994
+        },
+        {
+          "name": "tests.test_backend.test_corrected_result_rejects_old_acknowledgement_and_supersedes_old_queued_notice",
+          "status": "passed",
+          "seconds": 1.044
+        },
+        {
+          "name": "tests.test_backend.test_demo_clock_has_reproducible_frozen_base_and_persisted_advances",
+          "status": "passed",
+          "seconds": 0.926
+        },
+        {
+          "name": "tests.test_backend.test_org_bound_connector_credentials_reject_impersonation_and_foreign_provider",
+          "status": "passed",
+          "seconds": 0.911
+        },
+        {
+          "name": "tests.test_backend.test_packet_revocation_removes_grant_without_rewriting_ownership",
+          "status": "passed",
+          "seconds": 1.054
+        },
+        {
+          "name": "tests.test_backend.test_source_event_identity_cannot_be_reused_for_another_payload",
+          "status": "passed",
+          "seconds": 0.967
+        },
+        {
+          "name": "tests.test_backend.test_proposed_case_identity_cannot_overwrite_another_order",
+          "status": "passed",
+          "seconds": 1.063
+        },
+        {
+          "name": "tests.test_backend.test_cancelled_required_task_cannot_waive_declared_endpoint",
+          "status": "passed",
+          "seconds": 1.397
+        },
+        {
+          "name": "tests.test_backend.test_specialist_service_grant_cannot_be_used_by_an_unrelated_organization",
+          "status": "passed",
+          "seconds": 1.016
+        },
+        {
+          "name": "tests.test_backend.test_normal_deployment_ignores_persisted_demonstration_clock",
+          "status": "passed",
+          "seconds": 0.927
+        },
+        {
+          "name": "tests.test_backend.test_invalid_surveillance_recall_or_owner_cannot_clear_care_endpoint[not-a-date-navigation-team]",
+          "status": "passed",
+          "seconds": 0.992
+        },
+        {
+          "name": "tests.test_backend.test_invalid_surveillance_recall_or_owner_cannot_clear_care_endpoint[2000-01-01-navigation-team]",
+          "status": "passed",
+          "seconds": 0.97
+        },
+        {
+          "name": "tests.test_backend.test_invalid_surveillance_recall_or_owner_cannot_clear_care_endpoint[2099-01-01-   ]",
+          "status": "passed",
+          "seconds": 0.974
+        },
+        {
+          "name": "tests.test_backend.test_configured_policy_drives_codes_evidence_and_service_windows",
+          "status": "passed",
+          "seconds": 0.915
+        },
+        {
+          "name": "tests.test_backend.test_policy_configuration_cannot_remove_evidence_or_human_authority",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_backend.test_no_slots_capacity_before_booking_creates_owned_work_without_fake_appointment",
+          "status": "passed",
+          "seconds": 1.009
+        },
+        {
+          "name": "tests.test_backend.test_new_required_work_reopens_completed_care_instead_of_preserving_false_completion",
+          "status": "passed",
+          "seconds": 1.404
+        },
+        {
+          "name": "tests.test_backend.test_whitespace_task_owner_falls_back_and_consultation_owner_cannot_be_blank",
+          "status": "passed",
+          "seconds": 0.961
+        },
+        {
+          "name": "tests.test_backend.test_policy_version_change_creates_owned_review_and_reconciliation_preserves_existing_due_dates",
+          "status": "passed",
+          "seconds": 1.007
+        },
+        {
+          "name": "tests.test_backend.test_fresh_trusted_urgent_source_event_reopens_a_previously_completed_episode",
+          "status": "passed",
+          "seconds": 1.233
+        },
+        {
+          "name": "tests.test_backend.test_patient_care_plan_uses_approved_source_text_not_source_verification_attestation",
+          "status": "passed",
+          "seconds": 0.914
+        },
+        {
+          "name": "tests.test_backend.test_patient_care_plan_does_not_display_technical_json_or_invent_from_attestation",
+          "status": "passed",
+          "seconds": 0.792
+        },
+        {
+          "name": "tests.test_backend.test_completed_care_next_step_points_to_the_documented_plan",
+          "status": "passed",
+          "seconds": 1.076
+        },
+        {
+          "name": "tests.test_backend.test_amendment_preserves_factual_referral_booking_and_attendance_milestones",
+          "status": "passed",
+          "seconds": 1.121
+        },
+        {
+          "name": "tests.test_backend.test_amended_unsupported_source_code_updates_current_mapping_and_creates_owned_quarantine",
+          "status": "passed",
+          "seconds": 0.73
+        },
+        {
+          "name": "tests.test_backend.test_amended_identity_conflict_removes_patient_access_and_requires_source_reconciliation",
+          "status": "passed",
+          "seconds": 0.857
+        },
+        {
+          "name": "tests.test_backend.test_amendment_fresh_review_can_close_without_recreating_factual_service_history",
+          "status": "passed",
+          "seconds": 1.428
+        },
+        {
+          "name": "tests.test_backend.test_retained_source_endpoint_shows_actual_document_provenance_and_records_read_audit",
+          "status": "passed",
+          "seconds": 0.806
+        },
+        {
+          "name": "tests.test_backend.test_retained_source_endpoint_denies_patient_receiver_and_ungranted_or_foreign_reviewer",
+          "status": "passed",
+          "seconds": 0.932
+        },
+        {
+          "name": "tests.test_backend.test_retained_source_endpoint_guards_missing_cross_case_and_patient_order_mismatches_but_allows_history",
+          "status": "passed",
+          "seconds": 1.109
+        },
+        {
+          "name": "tests.test_backend.test_owned_coordination_task_in_progress_persists_without_extending_deadline",
+          "status": "passed",
+          "seconds": 0.772
+        },
+        {
+          "name": "tests.test_eval_scheduling.test_round_robin_preserves_selected_cases_and_prioritizes_each_group",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_eval_scheduling.test_pacing_applies_to_every_sdk_dispatch_without_changing_request",
+          "status": "passed",
+          "seconds": 0.001
+        },
+        {
+          "name": "tests.test_evaluation.test_healthbench_negative_weights_and_only_aggregate_clipping",
+          "status": "passed",
+          "seconds": 0.001
+        },
+        {
+          "name": "tests.test_evaluation.test_actual_healthbench_schema_preserved_and_rubric_not_candidate_input",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_evaluation.test_count_equations_keep_incorrect_outputs_in_completed_denominator",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_evaluation.test_unknown_provider_usage_stays_unknown",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_evaluation.test_immutable_ledger_hashes_and_duplicate_guard",
+          "status": "passed",
+          "seconds": 0.013
+        },
+        {
+          "name": "tests.test_evaluation.test_disjoint_synthetic_splits_and_semantic_not_schema_score",
+          "status": "passed",
+          "seconds": 0.001
+        },
+        {
+          "name": "tests.test_evaluation.test_arabic_policy_context_scores_without_english_fts_failure",
+          "status": "passed",
+          "seconds": 0.003
+        },
+        {
+          "name": "tests.test_evaluation.test_benchmark_aliases_preserve_process_precedence",
+          "status": "passed",
+          "seconds": 0.007
+        },
+        {
+          "name": "tests.test_evaluation.test_matched_comparison_requires_same_valid_independent_pairs",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_integrations_live.test_AT18_two_real_provider_services_callbacks_and_source_evidence",
+          "status": "passed",
+          "seconds": 6.353
+        },
+        {
+          "name": "tests.test_integrations_live.test_AT01_real_fhir_r4_test_intake_versioning",
+          "status": "passed",
+          "seconds": 0.657
+        },
+        {
+          "name": "tests.test_integrations_live.test_fhir_r4_task_and_appointment_use_correct_patient_fields",
+          "status": "passed",
+          "seconds": 0.207
+        },
+        {
+          "name": "tests.test_postgres.test_postgres_duplicate_simultaneous_intake_is_one_source_case",
+          "status": "passed",
+          "seconds": 0.211
+        },
+        {
+          "name": "tests.test_postgres.test_postgres_concurrent_same_version_cannot_lose_an_update",
+          "status": "passed",
+          "seconds": 0.181
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_real_source_structures_and_feature_combinations_are_disjoint_after_labels_removed[intake]",
+          "status": "passed",
+          "seconds": 0.007
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_real_source_structures_and_feature_combinations_are_disjoint_after_labels_removed[pathway_router]",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_real_source_structures_and_feature_combinations_are_disjoint_after_labels_removed[safety_escalation]",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_real_source_structures_and_feature_combinations_are_disjoint_after_labels_removed[patient_navigator]",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_real_source_structures_and_feature_combinations_are_disjoint_after_labels_removed[coordination]",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_real_source_structures_and_feature_combinations_are_disjoint_after_labels_removed[closure_evidence]",
+          "status": "passed",
+          "seconds": 0.006
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_intake_truth_matches_actual_parsed_source_not_only_case_labels[development]",
+          "status": "passed",
+          "seconds": 0.001
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_intake_truth_matches_actual_parsed_source_not_only_case_labels[validation]",
+          "status": "passed",
+          "seconds": 0.001
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_intake_truth_matches_actual_parsed_source_not_only_case_labels[holdout]",
+          "status": "passed",
+          "seconds": 0.001
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_ids_seeds_and_all_linked_evidence_are_consistent_and_disjoint_from_v1",
+          "status": "passed",
+          "seconds": 0.031
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_same_independent_scorer_accepts_gold_and_rejects_wrong_actions[intake]",
+          "status": "passed",
+          "seconds": 0.021
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_same_independent_scorer_accepts_gold_and_rejects_wrong_actions[pathway_router]",
+          "status": "passed",
+          "seconds": 0.02
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_same_independent_scorer_accepts_gold_and_rejects_wrong_actions[safety_escalation]",
+          "status": "passed",
+          "seconds": 0.019
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_same_independent_scorer_accepts_gold_and_rejects_wrong_actions[patient_navigator]",
+          "status": "passed",
+          "seconds": 0.019
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_same_independent_scorer_accepts_gold_and_rejects_wrong_actions[coordination]",
+          "status": "passed",
+          "seconds": 0.019
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_same_independent_scorer_accepts_gold_and_rejects_wrong_actions[closure_evidence]",
+          "status": "passed",
+          "seconds": 0.019
+        },
+        {
+          "name": "tests.test_synthetic_v2.test_questions_and_metadata_are_honest_and_generation_does_not_mutate_v1",
+          "status": "passed",
+          "seconds": 0.006
+        }
+      ]
+    },
+    "browser_patient_staff": {
+      "status": "COMPLETE",
+      "path": "runtime/browser-results.xml",
+      "sha256": "9016e60d34dc455aff7b9382ac2d5afde9500a2d03d0fd22629fa8181e520a7b",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "tests.test_browser.test_public_entry_keyboard_and_demo_signin",
+          "status": "passed",
+          "seconds": 3.784
+        },
+        {
+          "name": "tests.test_browser.test_patient_question_human_reply_two_sessions_and_rtl_mobile",
+          "status": "passed",
+          "seconds": 3.765
+        },
+        {
+          "name": "tests.test_browser.test_clinician_specialist_consultation_real_human_reply",
+          "status": "passed",
+          "seconds": 1.969
+        },
+        {
+          "name": "tests.test_browser.test_quarantine_authorized_recovery_browser",
+          "status": "passed",
+          "seconds": 1.989
+        },
+        {
+          "name": "tests.test_browser.test_urgent_with_unavailable_inference_ack_separate_disposition",
+          "status": "passed",
+          "seconds": 0.659
+        },
+        {
+          "name": "tests.test_browser.test_invalid_evidence_and_onward_endpoint_blocked_in_browser",
+          "status": "passed",
+          "seconds": 1.053
+        },
+        {
+          "name": "tests.test_browser.test_amended_result_reopens_approved_work_in_browser",
+          "status": "passed",
+          "seconds": 0.396
+        },
+        {
+          "name": "tests.test_browser.test_informed_decline_retains_residual_need_and_permissions",
+          "status": "passed",
+          "seconds": 0.574
+        },
+        {
+          "name": "tests.test_browser.test_operations_evaluation_reports_and_no_js_failures",
+          "status": "passed",
+          "seconds": 0.889
+        },
+        {
+          "name": "tests.test_browser_care.test_full_visible_result_to_care_with_two_providers",
+          "status": "passed",
+          "seconds": 14.066
+        }
+      ]
+    },
+    "fresh_install_acceptance": {
+      "status": "COMPLETE",
+      "path": "runtime/fresh-install/fresh-tests.xml",
+      "sha256": "0ab65f1e458b05685aab1016e7dc34c3564559f29ae5cd53b0456608e8fe9961",
+      "tests": 65,
+      "passed": 65,
+      "failed": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "tests.test_backend.test_AT01_source_linked_owned_case_and_persistence",
+          "status": "passed",
+          "seconds": 0.487
+        },
+        {
+          "name": "tests.test_backend.test_AT02_owned_quarantine_and_authorized_recovery[overrides0-identity_conflict]",
+          "status": "passed",
+          "seconds": 0.769
+        },
+        {
+          "name": "tests.test_backend.test_AT02_owned_quarantine_and_authorized_recovery[overrides1-unsupported_pathway]",
+          "status": "passed",
+          "seconds": 0.752
+        },
+        {
+          "name": "tests.test_backend.test_AT02_owned_quarantine_and_authorized_recovery[overrides2-missing_staffing_mapping]",
+          "status": "passed",
+          "seconds": 0.713
+        },
+        {
+          "name": "tests.test_backend.test_AT03_delivery_acknowledgement_understanding_separate",
+          "status": "passed",
+          "seconds": 1.077
+        },
+        {
+          "name": "tests.test_backend.test_AT04_both_human_consultations_and_agreed_owned_action",
+          "status": "passed",
+          "seconds": 0.977
+        },
+        {
+          "name": "tests.test_backend.test_AT05_rejection_preserves_owner_and_acceptance_has_scope",
+          "status": "passed",
+          "seconds": 0.978
+        },
+        {
+          "name": "tests.test_backend.test_AT06_timeouts_no_show_and_cancellation_have_recovery",
+          "status": "passed",
+          "seconds": 0.985
+        },
+        {
+          "name": "tests.test_backend.test_AT07_urgent_independent_of_model_and_ack_separate",
+          "status": "passed",
+          "seconds": 0.84
+        },
+        {
+          "name": "tests.test_backend.test_AT08_booking_attendance_and_verified_assessment_separate",
+          "status": "passed",
+          "seconds": 0.857
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[wrong_patient]",
+          "status": "passed",
+          "seconds": 0.748
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[wrong_order]",
+          "status": "passed",
+          "seconds": 0.962
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[stale]",
+          "status": "passed",
+          "seconds": 0.975
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[fabricated]",
+          "status": "passed",
+          "seconds": 1.055
+        },
+        {
+          "name": "tests.test_backend.test_AT09_invalid_evidence_cannot_clear_endpoint[unverified]",
+          "status": "passed",
+          "seconds": 0.985
+        },
+        {
+          "name": "tests.test_backend.test_AT09_valid_uploaded_source_requires_authorized_verification",
+          "status": "passed",
+          "seconds": 1.007
+        },
+        {
+          "name": "tests.test_backend.test_AT10_onward_endpoint_blocks_even_after_referral_acceptance",
+          "status": "passed",
+          "seconds": 1.551
+        },
+        {
+          "name": "tests.test_backend.test_AT11_corrected_result_reopens_closed_case_and_old_version_stays_old",
+          "status": "passed",
+          "seconds": 1.44
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[informed_decline]",
+          "status": "passed",
+          "seconds": 1.059
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[unable_to_contact]",
+          "status": "passed",
+          "seconds": 1.516
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[clinically_resolved]",
+          "status": "passed",
+          "seconds": 0.99
+        },
+        {
+          "name": "tests.test_backend.test_AT12_exception_category_and_residual_need_preserved[other_exception]",
+          "status": "passed",
+          "seconds": 1.106
+        },
+        {
+          "name": "tests.test_backend.test_AT13_minimum_packet_crosspatient_and_admin_limits",
+          "status": "passed",
+          "seconds": 4.933
+        },
+        {
+          "name": "tests.test_backend.test_AT14_replay_has_one_handoff_and_worker_restart_preserves_due",
+          "status": "passed",
+          "seconds": 1.025
+        },
+        {
+          "name": "tests.test_backend.test_AT14_bounded_failure_enters_owned_deadletter",
+          "status": "passed",
+          "seconds": 1.365
+        },
+        {
+          "name": "tests.test_backend.test_AT17_overdue_unassigned_fallback_and_rejected_visible",
+          "status": "passed",
+          "seconds": 1.064
+        },
+        {
+          "name": "tests.test_backend.test_authenticated_API_cookies_versions_patient_scope_and_AT20_metrics",
+          "status": "passed",
+          "seconds": 1.744
+        },
+        {
+          "name": "tests.test_backend.test_patient_experience_is_scoped_observed_and_separate_from_understanding",
+          "status": "passed",
+          "seconds": 1.08
+        },
+        {
+          "name": "tests.test_backend.test_corrected_result_rejects_old_acknowledgement_and_supersedes_old_queued_notice",
+          "status": "passed",
+          "seconds": 1.043
+        },
+        {
+          "name": "tests.test_backend.test_demo_clock_has_reproducible_frozen_base_and_persisted_advances",
+          "status": "passed",
+          "seconds": 0.908
+        },
+        {
+          "name": "tests.test_backend.test_org_bound_connector_credentials_reject_impersonation_and_foreign_provider",
+          "status": "passed",
+          "seconds": 0.887
+        },
+        {
+          "name": "tests.test_backend.test_packet_revocation_removes_grant_without_rewriting_ownership",
+          "status": "passed",
+          "seconds": 1.056
+        },
+        {
+          "name": "tests.test_backend.test_source_event_identity_cannot_be_reused_for_another_payload",
+          "status": "passed",
+          "seconds": 1.003
+        },
+        {
+          "name": "tests.test_backend.test_proposed_case_identity_cannot_overwrite_another_order",
+          "status": "passed",
+          "seconds": 0.95
+        },
+        {
+          "name": "tests.test_backend.test_cancelled_required_task_cannot_waive_declared_endpoint",
+          "status": "passed",
+          "seconds": 1.337
+        },
+        {
+          "name": "tests.test_backend.test_specialist_service_grant_cannot_be_used_by_an_unrelated_organization",
+          "status": "passed",
+          "seconds": 0.992
+        },
+        {
+          "name": "tests.test_backend.test_normal_deployment_ignores_persisted_demonstration_clock",
+          "status": "passed",
+          "seconds": 0.872
+        },
+        {
+          "name": "tests.test_backend.test_invalid_surveillance_recall_or_owner_cannot_clear_care_endpoint[not-a-date-navigation-team]",
+          "status": "passed",
+          "seconds": 0.968
+        },
+        {
+          "name": "tests.test_backend.test_invalid_surveillance_recall_or_owner_cannot_clear_care_endpoint[2000-01-01-navigation-team]",
+          "status": "passed",
+          "seconds": 0.697
+        },
+        {
+          "name": "tests.test_backend.test_invalid_surveillance_recall_or_owner_cannot_clear_care_endpoint[2099-01-01-   ]",
+          "status": "passed",
+          "seconds": 0.816
+        },
+        {
+          "name": "tests.test_backend.test_configured_policy_drives_codes_evidence_and_service_windows",
+          "status": "passed",
+          "seconds": 0.693
+        },
+        {
+          "name": "tests.test_backend.test_policy_configuration_cannot_remove_evidence_or_human_authority",
+          "status": "passed",
+          "seconds": 0.0
+        },
+        {
+          "name": "tests.test_backend.test_no_slots_capacity_before_booking_creates_owned_work_without_fake_appointment",
+          "status": "passed",
+          "seconds": 0.958
+        },
+        {
+          "name": "tests.test_backend.test_new_required_work_reopens_completed_care_instead_of_preserving_false_completion",
+          "status": "passed",
+          "seconds": 1.462
+        },
+        {
+          "name": "tests.test_backend.test_whitespace_task_owner_falls_back_and_consultation_owner_cannot_be_blank",
+          "status": "passed",
+          "seconds": 1.022
+        },
+        {
+          "name": "tests.test_backend.test_policy_version_change_creates_owned_review_and_reconciliation_preserves_existing_due_dates",
+          "status": "passed",
+          "seconds": 0.996
+        },
+        {
+          "name": "tests.test_backend.test_fresh_trusted_urgent_source_event_reopens_a_previously_completed_episode",
+          "status": "passed",
+          "seconds": 1.442
+        },
+        {
+          "name": "tests.test_backend.test_patient_care_plan_uses_approved_source_text_not_source_verification_attestation",
+          "status": "passed",
+          "seconds": 1.08
+        },
+        {
+          "name": "tests.test_backend.test_patient_care_plan_does_not_display_technical_json_or_invent_from_attestation",
+          "status": "passed",
+          "seconds": 1.007
+        },
+        {
+          "name": "tests.test_backend.test_completed_care_next_step_points_to_the_documented_plan",
+          "status": "passed",
+          "seconds": 1.441
+        },
+        {
+          "name": "tests.test_backend.test_amendment_preserves_factual_referral_booking_and_attendance_milestones",
+          "status": "passed",
+          "seconds": 1.432
+        },
+        {
+          "name": "tests.test_backend.test_amended_unsupported_source_code_updates_current_mapping_and_creates_owned_quarantine",
+          "status": "passed",
+          "seconds": 1.004
+        },
+        {
+          "name": "tests.test_backend.test_amended_identity_conflict_removes_patient_access_and_requires_source_reconciliation",
+          "status": "passed",
+          "seconds": 0.985
+        },
+        {
+          "name": "tests.test_backend.test_amendment_fresh_review_can_close_without_recreating_factual_service_history",
+          "status": "passed",
+          "seconds": 1.667
+        },
+        {
+          "name": "tests.test_backend.test_retained_source_endpoint_shows_actual_document_provenance_and_records_read_audit",
+          "status": "passed",
+          "seconds": 1.017
+        },
+        {
+          "name": "tests.test_backend.test_retained_source_endpoint_denies_patient_receiver_and_ungranted_or_foreign_reviewer",
+          "status": "passed",
+          "seconds": 1.174
+        },
+        {
+          "name": "tests.test_backend.test_retained_source_endpoint_guards_missing_cross_case_and_patient_order_mismatches_but_allows_history",
+          "status": "passed",
+          "seconds": 1.343
+        },
+        {
+          "name": "tests.test_backend.test_owned_coordination_task_in_progress_persists_without_extending_deadline",
+          "status": "passed",
+          "seconds": 1.008
+        },
+        {
+          "name": "tests.test_agents.test_AT16_filtered_retrieval_missing_conflict_injected_expired",
+          "status": "passed",
+          "seconds": 0.002
+        },
+        {
+          "name": "tests.test_agents.test_AT13_tool_allowlist_role_schema_case_version",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "tests.test_agents.test_onward_detached_closure_requires_endpoint",
+          "status": "passed",
+          "seconds": 0.001
+        },
+        {
+          "name": "tests.test_agents.test_atomic_concurrent_budget_reservation",
+          "status": "passed",
+          "seconds": 0.156
+        },
+        {
+          "name": "tests.test_agents.test_mocked_429_retry_unknown_usage_and_incompatible_modes",
+          "status": "passed",
+          "seconds": 0.179
+        },
+        {
+          "name": "tests.test_agents.test_mocked_auth_failure_has_no_retry_or_secret",
+          "status": "passed",
+          "seconds": 0.123
+        },
+        {
+          "name": "tests.test_agents.test_unknown_pricing_with_usd_cap_stops_before_dispatch",
+          "status": "passed",
+          "seconds": 0.073
+        }
+      ]
+    }
+  },
+  "proofs": {
+    "full_browser_care_journey": {
+      "case_id": "SC-001",
+      "started_at": "2026-11-14T21:58:39.334893+00:00",
+      "evidence_mode": "actual_browser_over_persisted_synthetic_application",
+      "steps": [
+        {
+          "step": "initial_post_consultation_state",
+          "case_version": 9,
+          "owner": "navigation-team",
+          "disposition": "open",
+          "handoffs": [],
+          "appointments": [],
+          "evidence": []
+        },
+        {
+          "step": "patient_acknowledgement_understanding_and_optional_feedback",
+          "case_version": 12,
+          "owner": "navigation-team",
+          "disposition": "open",
+          "handoffs": [],
+          "appointments": [],
+          "evidence": []
+        },
+        {
+          "step": "provider_a_proposed_sender_retains_owner",
+          "case_version": 13,
+          "owner": "navigation-team",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "requested"
+            }
+          ],
+          "appointments": [],
+          "evidence": []
+        },
+        {
+          "step": "provider_a_rejected_sender_still_accountable",
+          "case_version": 14,
+          "owner": "navigation-team",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            }
+          ],
+          "appointments": [],
+          "evidence": []
+        },
+        {
+          "step": "provider_b_authorized_acceptance_changes_episode_owner",
+          "case_version": 16,
+          "owner": "provider-b",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            },
+            {
+              "id": "handoff-6bc89ee458c54e53",
+              "receiver": "provider-b",
+              "scope": "episode",
+              "status": "accepted"
+            }
+          ],
+          "appointments": [],
+          "evidence": []
+        },
+        {
+          "step": "capacity_problem_before_booking_creates_owned_recovery",
+          "case_version": 17,
+          "owner": "provider-b",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            },
+            {
+              "id": "handoff-6bc89ee458c54e53",
+              "receiver": "provider-b",
+              "scope": "episode",
+              "status": "accepted"
+            }
+          ],
+          "appointments": [],
+          "evidence": []
+        },
+        {
+          "step": "no_show_creates_owned_recovery",
+          "case_version": 19,
+          "owner": "provider-b",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            },
+            {
+              "id": "handoff-6bc89ee458c54e53",
+              "receiver": "provider-b",
+              "scope": "episode",
+              "status": "accepted"
+            }
+          ],
+          "appointments": [
+            {
+              "id": "appt-cf217bef8bc74b54",
+              "status": "no_show"
+            }
+          ],
+          "evidence": []
+        },
+        {
+          "step": "rebooked_then_attended_investigation_still_required",
+          "case_version": 21,
+          "owner": "provider-b",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            },
+            {
+              "id": "handoff-6bc89ee458c54e53",
+              "receiver": "provider-b",
+              "scope": "episode",
+              "status": "accepted"
+            }
+          ],
+          "appointments": [
+            {
+              "id": "appt-cf217bef8bc74b54",
+              "status": "attended"
+            }
+          ],
+          "evidence": []
+        },
+        {
+          "step": "investigation_reviewed_outcome_and_patient_plan_verified",
+          "case_version": 27,
+          "owner": "provider-b",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            },
+            {
+              "id": "handoff-6bc89ee458c54e53",
+              "receiver": "provider-b",
+              "scope": "episode",
+              "status": "accepted"
+            }
+          ],
+          "appointments": [
+            {
+              "id": "appt-cf217bef8bc74b54",
+              "status": "attended"
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev-f5d0b1b9374646a8",
+              "type": "investigation",
+              "verification": "verified",
+              "source": "provider-b"
+            },
+            {
+              "id": "ev-042c02dd3b77424e",
+              "type": "reviewed_outcome",
+              "verification": "verified",
+              "source": "source-clinic"
+            },
+            {
+              "id": "ev-95793bdc049e4042",
+              "type": "patient_updated",
+              "verification": "verified",
+              "source": "source-clinic"
+            }
+          ]
+        },
+        {
+          "step": "owned_consultation_and_recovery_tasks_completed",
+          "case_version": 29,
+          "owner": "provider-b",
+          "disposition": "open",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            },
+            {
+              "id": "handoff-6bc89ee458c54e53",
+              "receiver": "provider-b",
+              "scope": "episode",
+              "status": "accepted"
+            }
+          ],
+          "appointments": [
+            {
+              "id": "appt-cf217bef8bc74b54",
+              "status": "attended"
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev-f5d0b1b9374646a8",
+              "type": "investigation",
+              "verification": "verified",
+              "source": "provider-b"
+            },
+            {
+              "id": "ev-042c02dd3b77424e",
+              "type": "reviewed_outcome",
+              "verification": "verified",
+              "source": "source-clinic"
+            },
+            {
+              "id": "ev-95793bdc049e4042",
+              "type": "patient_updated",
+              "verification": "verified",
+              "source": "source-clinic"
+            }
+          ]
+        },
+        {
+          "step": "authorized_completed_required_care_disposition",
+          "case_version": 30,
+          "owner": "provider-b",
+          "disposition": "completed_required_care",
+          "handoffs": [
+            {
+              "id": "handoff-334c68a786334ad2",
+              "receiver": "provider-a",
+              "scope": "episode",
+              "status": "rejected"
+            },
+            {
+              "id": "handoff-6bc89ee458c54e53",
+              "receiver": "provider-b",
+              "scope": "episode",
+              "status": "accepted"
+            }
+          ],
+          "appointments": [
+            {
+              "id": "appt-cf217bef8bc74b54",
+              "status": "attended"
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev-f5d0b1b9374646a8",
+              "type": "investigation",
+              "verification": "verified",
+              "source": "provider-b"
+            },
+            {
+              "id": "ev-042c02dd3b77424e",
+              "type": "reviewed_outcome",
+              "verification": "verified",
+              "source": "source-clinic"
+            },
+            {
+              "id": "ev-95793bdc049e4042",
+              "type": "patient_updated",
+              "verification": "verified",
+              "source": "source-clinic"
+            }
+          ]
+        }
+      ],
+      "status": "completed",
+      "source_reviews": [
+        {
+          "evidence_id": "ev-f5d0b1b9374646a8",
+          "case_id": "SC-001",
+          "case_version": 22,
+          "reference": "synthetic://browser-care/ddfeceaf36/investigation",
+          "source": "provider-b",
+          "content_hash": "2ae77566f7b0912d09e5782b8b0f8d839902d9987397baa2da037019d8b7082f",
+          "verification": "pending",
+          "status": "current",
+          "matching": {
+            "patient_match": true,
+            "order_match": true,
+            "result_version_match": true,
+            "type_match": true
+          }
+        },
+        {
+          "evidence_id": "ev-042c02dd3b77424e",
+          "case_id": "SC-001",
+          "case_version": 24,
+          "reference": "synthetic://browser-care/ddfeceaf36/reviewed_outcome",
+          "source": "source-clinic",
+          "content_hash": "8b5915114fa4b6565bb28c93095398e6cd9407b6e4c777e352aa04096297d1b4",
+          "verification": "pending",
+          "status": "current",
+          "matching": {
+            "patient_match": true,
+            "order_match": true,
+            "result_version_match": true,
+            "type_match": true
+          }
+        },
+        {
+          "evidence_id": "ev-95793bdc049e4042",
+          "case_id": "SC-001",
+          "case_version": 26,
+          "reference": "synthetic://browser-care/ddfeceaf36/patient_updated",
+          "source": "source-clinic",
+          "content_hash": "907665867166e354c95526b1363cba076b5ed8b31644ccef6ccb5f2c9e35fc1a",
+          "verification": "pending",
+          "status": "current",
+          "matching": {
+            "patient_match": true,
+            "order_match": true,
+            "result_version_match": true,
+            "type_match": true
+          }
+        }
+      ],
+      "finished_at": "2026-11-14T21:58:53.348147+00:00"
+    },
+    "independent_provider_journey": {
+      "case_id": "INT-56b180b11c",
+      "provider_a_rejected": "handoff-417c7a21ad214e2c",
+      "provider_b_accepted": "handoff-ec1c2855a32c459c",
+      "appointment_id": "appt-e030f13d75a4452d",
+      "returned_verified_evidence": "ev-41b0733785ea4583",
+      "owner": "navigation-team",
+      "mode": "real_http_synthetic_provider_services",
+      "captured_at": "2026-11-14T22:06:59.404900+00:00"
+    },
+    "graph_persistence": {
+      "thread_id": "restart-proof-fee30d855e024c3aad1360fde22c6eb3",
+      "pause": {
+        "thread_id": "restart-proof-fee30d855e024c3aad1360fde22c6eb3",
+        "status": "awaiting_human",
+        "interrupts": 1
+      },
+      "resumed_status": "review_recorded",
+      "database": "postgresql",
+      "clinical_state_changed": false
+    },
+    "fresh_install": {
+      "started_at": "2026-11-14T21:30:11.428456+00:00",
+      "workspace": "/tmp/suhail-fresh-83599p2_",
+      "steps": [
+        {
+          "name": "python-venv",
+          "command": [
+            "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.venv/bin/python",
+            "-m",
+            "venv",
+            "/tmp/suhail-fresh-83599p2_/.venv"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 1.8357393853366375
+        },
+        {
+          "name": "python-install",
+          "command": [
+            "/tmp/suhail-fresh-83599p2_/.venv/bin/python",
+            "-m",
+            "pip",
+            "install",
+            "-r",
+            "requirements.lock"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 18.64136091992259
+        },
+        {
+          "name": "fresh-schema-seed",
+          "command": [
+            "/tmp/suhail-fresh-83599p2_/.venv/bin/python",
+            "-m",
+            "services.api.seed"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 4.003047674894333
+        },
+        {
+          "name": "fresh-acceptance",
+          "command": [
+            "/tmp/suhail-fresh-83599p2_/.venv/bin/python",
+            "-m",
+            "pytest",
+            "tests/test_backend.py",
+            "tests/test_agents.py",
+            "-q",
+            "--junitxml=/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/runtime/fresh-install/fresh-tests.xml"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 35.82137954607606
+        },
+        {
+          "name": "web-install",
+          "command": [
+            "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/node/bin/npm",
+            "ci",
+            "--no-audit",
+            "--no-fund"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 8.328662924468517
+        },
+        {
+          "name": "web-production-build",
+          "command": [
+            "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/node/bin/npm",
+            "run",
+            "build"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 15.891076914966106
+        },
+        {
+          "name": "final-amendment-acceptance",
+          "command": [
+            "/tmp/suhail-fresh-83599p2_/.venv/bin/python",
+            "-m",
+            "pytest",
+            "tests/test_backend.py",
+            "tests/test_agents.py",
+            "-q",
+            "--junitxml=/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/runtime/fresh-install/fresh-tests.xml"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 33.17244076728821,
+          "reason": "Refresh exact final amendment and operations mapping source in the original clean dependency installation"
+        },
+        {
+          "name": "final-operations-web-build",
+          "command": [
+            "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/node/bin/npm",
+            "run",
+            "build"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 12.705514967441559,
+          "reason": "Refresh exact final amendment and operations mapping source in the original clean dependency installation"
+        },
+        {
+          "name": "delivery-source-review-acceptance",
+          "command": [
+            "/tmp/suhail-fresh-83599p2_/.venv/bin/python",
+            "-m",
+            "pytest",
+            "tests/test_backend.py",
+            "tests/test_agents.py",
+            "-q",
+            "--junitxml=/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/runtime/fresh-install/fresh-tests.xml"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 66.83906834200025,
+          "reason": "Exact final application source tested in the original isolated fresh dependency installation"
+        },
+        {
+          "name": "delivery-source-review-web-build",
+          "command": [
+            "/lustrefs/shared/nabeel.sayed/work_dir/Future_Health/.runtime/node/bin/npm",
+            "run",
+            "build"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 14.374727096408606,
+          "reason": "Exact final application source tested in the original isolated fresh dependency installation"
+        }
+      ],
+      "status": "passed",
+      "secrets_copied": false,
+      "source_hashes": {
+        "services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "services/api/seed.py": "c4f4c1214541ee622354b8ccf5358a1b4772d2e83e4f5f75734f078b5958f0ee",
+        "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+        "services/api/domain.py": "57bf75d4fdab10b4c36e2e1de6231225b22db2e685337d724e79e6aaddde9629",
+        "services/api/main.py": "2bb8e1a039d0bbd5eafbc23b7f772f1f16ad520afc35d4ff2daa8fb976bb5780",
+        "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "services/api/policy.py": "450b752a045e51adc627cf1fef99c042edc0c65f029a9f20798318652dade7dc",
+        "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+        "services/api/worker.py": "da243719b7a1c53463dfc1c54acbbbbfd8486dd14f6f4b8c673f2ace3c07dba9",
+        "services/api/schemas.py": "0f0a76baa18fa5f136e2f6acf9baa86523e1c52769de2b319de5cd9b1e482d52",
+        "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+        "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+        "services/agents/retrieval.py": "7f297962ca83c46cf5b4a41e6ca14a3e3823aeca6ac4e55a6b1d6161399fdc79",
+        "services/agents/__init__.py": "3a13defd8d0cb16ecc18dba0dadf3c5fc55e6268189f48284a52ddffb29fb8df",
+        "services/agents/graph.py": "c414fa1a71a3b507812cd7fb8711d5e49ca022cb3a99c2f6e101a00cbec5cf90",
+        "services/agents/routes.py": "7b8bcdfb9720c1265e39f485c2793cbab5955fc25f01d2cb5db0e09e089b3dac",
+        "services/agents/gateway.py": "73434cfa6804a4163b4076db2f52f5c712b03eaa6aa0bd0fd0d63500ea844b1f",
+        "services/agents/knowledge.json": "29d6fc1645348d8896619cc1050e48cb8af38faad04f3f707eba3311a844095a",
+        "services/agents/engine.py": "51eb54d94d0462fbf911092ddb8e274428d3da0ab84a4fb4f335e049e8cb2b60",
+        "integrations/fhir.py": "828c53badbcbf856c65d6c3231047fc5098d517099867199630430df2f0151eb",
+        "integrations/__init__.py": "74c56c63edbbd58465ed2b3385b4c9ed1031dd94c6e24ce658561e320de850f1",
+        "integrations/routes.py": "0828acad35bdb40a7821cc671067b3547efbd9fa01e126b5f210cb55874805b3",
+        "integrations/provider.py": "9e239b81909fd5b7ce610b886c398ef1639a8fac8b7d99b14582e1ce2b05adef",
+        "apps/web/tsconfig.json": "9ae7ca3817f842a5d233859a9b48b0bcebe7f71e5d7b678f24d707a9fae94abe",
+        "apps/web/package.json": "cc6b72ecb3991df476140565242b4eb621289a9ea948c494032f9a2422d89a4e",
+        "apps/web/next.config.ts": "226cf9d05b22d4e39c1ed77d9f12a020347b7cd104f6179c9877d9e406042a05",
+        "apps/web/package-lock.json": "7da76ba3baf7957129b5f7aaf291f1b85e9c892e03ece782a3f18151aad16fc3",
+        "apps/web/next-env.d.ts": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b",
+        "apps/web/app/layout.tsx": "b608a08c8817f43452f2a372da5727deba673f132d005b00145b06dd27faba60",
+        "apps/web/app/globals.css": "9d8232e5cd3ad50f012e1a7eb48e25864802deb9e247e871ea365189e436d41f",
+        "apps/web/app/page.tsx": "42d0a3ab09411bc813530e9db98c935287e67b1d5b3eafc76b59f76652aaa104",
+        "apps/web/lib/api.ts": "c2226b04485d70d857e89af40714a98084a1320a7e364b2844460cbdf6269fec",
+        "apps/web/components/experience-survey.tsx": "e74320616f7811b7135cfa0ee8a07e7c3bf1cdea4d1d45c280c4e826acbac658",
+        "apps/web/components/assistant.tsx": "1b1b11ddf2ee2c66773c961a9ddb1e03c44e34dd0027ed54b299c9ffb3f21f2e",
+        "apps/web/components/intake.tsx": "87fb4325a50922634e859288df5849368402672147088a3706949a833d844cf7",
+        "apps/web/components/patient.tsx": "5abeb42341df0376343144896ddbc88f851fa1be5a51754dca366ea42560afdd",
+        "apps/web/components/care.tsx": "322d7129c6c22c82085cbf59ef6c6e3baa3904fbdb8f49348d7b960c51072d09",
+        "apps/web/components/shell.tsx": "e414e60ab63e619061092c690b90f544edf335f9f744990a441007cf742c7cbb",
+        "apps/web/components/source-review.tsx": "2a009d78511e9ca1be1fe650e572a43c2057783203d3b9dab58487366222eb32",
+        "apps/web/components/workspaces.tsx": "65f252ea8e4b1b516911aa0f52a3dd58b8a7969f54d197cb22c3dc98b65aa621",
+        "apps/web/components/home.tsx": "69ebef1746ae4c82936c557bff24025912a5abcee2e34cd716dcf54b38d58e42",
+        "apps/web/components/ui.tsx": "f43e0ad4096bf8e311147427c337c7dad0be344ee08cd9b8fe66d26e18b1f7e4",
+        "apps/web/app/patient/page.tsx": "083d5f4d6f9229e6e132ba55a32975b12627bf727c4fedbe9fef7a26362e14e5",
+        "apps/web/app/clinical/page.tsx": "512a6e5cb66de9cf16510fc61cf064c947806a554f58c47ce504151c9474f048",
+        "apps/web/app/receiving/page.tsx": "f2e31d9e9423ea1c641aa39813e3042f96ce22763cd819014f54b385a4ca00e0",
+        "apps/web/app/evaluation/page.tsx": "c9d0a78dd3ba6568e1480d0a88eb8000ce102036e2c26c84551190b6d8a5daa9",
+        "apps/web/app/operations/page.tsx": "117684b9cfdea13d542d2af9d55b0471bc7427acc6f8f2dc3999bb89a487f8d8",
+        "apps/web/app/worklist/page.tsx": "b16a1f01a4df8eafef2ad3fe3c8d9e9e398a7faf91011c911246e85e3f0fd9d3",
+        "apps/web/app/api/[...path]/route.ts": "82a0d97ee28224d16c63e339a15eab09c7e88542fd5592bd150f8e3203427e1b",
+        "apps/web/app/cases/[id]/page.tsx": "4e8e62cf9249cf0f68193956a0a264390572780bc2b56bd49692174192a97c91",
+        "pathways/colorectal-demo/policy.json": "aedea9d1b3a050efe1879c8b4b7fd4986756a558901373f10f440da0a0f05d21"
+      },
+      "finished_at": "2026-11-14T22:06:56.962146+00:00"
+    },
+    "demo_replay": {
+      "status": "passed",
+      "case_id": "REPLAY-b4218fd00a",
+      "evidence_mode": "real_http_synthetic_replay",
+      "clinical_care_completed": false,
+      "remaining": [
+        "open_required_task:acknowledgement",
+        "open_required_task:understanding",
+        "open_required_task:agreed_action:consult-984b94f175bb4f6f",
+        "open_required_task:referral_recovery"
+      ],
+      "commands": [
+        {
+          "timestamp": "2026-11-14T21:32:37.531515+00:00",
+          "action": "signin:navigator",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": null,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.575899+00:00",
+          "action": "intake",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 1,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.588102+00:00",
+          "action": "signin:clinician",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": null,
+          "record_id": null
+        },
+        {
+          "action": "premature_closure_correctly_blocked",
+          "http_status": 409
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.610895+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 1,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.630023+00:00",
+          "action": "/communications",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 2,
+          "record_id": "msg-f398032747cf498e"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.643965+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 2,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.661754+00:00",
+          "action": "/consultations",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 3,
+          "record_id": "consult-984b94f175bb4f6f"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.676140+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 3,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.686529+00:00",
+          "action": "signin:specialist",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": null,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.802396+00:00",
+          "action": "/consultations/consult-984b94f175bb4f6f/reply",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 4,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.816342+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 4,
+          "record_id": null
+        },
+        {
+          "action": "/handoffs",
+          "http_status": 409,
+          "reason": "version_conflict_retry",
+          "attempt": 1
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.836241+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 5,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.855742+00:00",
+          "action": "/handoffs",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 6,
+          "record_id": "handoff-ef086ba67d994bb3"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.876154+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 6,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.886633+00:00",
+          "action": "signin:receiver_a",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": null,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.899940+00:00",
+          "action": "/handoffs/handoff-ef086ba67d994bb3/reject",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 7,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.914903+00:00",
+          "action": "owner_after_rejection",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 7,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.928462+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 7,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.950234+00:00",
+          "action": "/handoffs",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 8,
+          "record_id": "handoff-c89291c743e94b87"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.964100+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 8,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.975580+00:00",
+          "action": "signin:receiver_b",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": null,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:37.991739+00:00",
+          "action": "/handoffs/handoff-c89291c743e94b87/accept",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 9,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.006070+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 9,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.018919+00:00",
+          "action": "/cases/REPLAY-b4218fd00a/appointments",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 10,
+          "record_id": "appt-94ca38073f6f45bb"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.034327+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 10,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.047335+00:00",
+          "action": "/appointments/appt-94ca38073f6f45bb/events",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 11,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.062542+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 11,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.076942+00:00",
+          "action": "/appointments/appt-94ca38073f6f45bb/events",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 12,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.092550+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 12,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.113521+00:00",
+          "action": "/cases/REPLAY-b4218fd00a/evidence",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 13,
+          "record_id": "ev-0d1bea6a1e0241b7"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.128237+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 13,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.150652+00:00",
+          "action": "/evidence/ev-0d1bea6a1e0241b7/verification",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 14,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.166609+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 14,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.187457+00:00",
+          "action": "/cases/REPLAY-b4218fd00a/evidence",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 15,
+          "record_id": "ev-db1dce27b45c4065"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.203670+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 15,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.226232+00:00",
+          "action": "/evidence/ev-db1dce27b45c4065/verification",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 16,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.242957+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 16,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.264910+00:00",
+          "action": "/cases/REPLAY-b4218fd00a/evidence",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 17,
+          "record_id": "ev-aba3db5fbe4a4018"
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.279699+00:00",
+          "action": "read_current_version",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 17,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.302577+00:00",
+          "action": "/evidence/ev-aba3db5fbe4a4018/verification",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 18,
+          "record_id": null
+        },
+        {
+          "timestamp": "2026-11-14T21:32:38.307482+00:00",
+          "action": "closure_check",
+          "http_status": 200,
+          "case_id": "REPLAY-b4218fd00a",
+          "version": 18,
+          "record_id": null
+        }
+      ],
+      "limitations": [
+        "New replay participant has no provisioned patient account; acknowledgement/understanding remain open. The full authenticated patient-to-care browser journey is tested separately."
+      ]
+    },
+    "application_restart": {
+      "status": "passed",
+      "actual_process_restart": [
+        "api",
+        "worker"
+      ],
+      "database": "postgresql",
+      "case_ids": [
+        "SC-001",
+        "SC-002"
+      ],
+      "before": {
+        "SC-001": {
+          "owner": "provider-b",
+          "disposition": "completed_required_care",
+          "version": 30,
+          "result_version": 1,
+          "due_at": null,
+          "tasks": [
+            {
+              "id": "task-3e7b2aaaa0f946ed",
+              "type": "understanding",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-8ae2847274924d59",
+              "type": "referral",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-fa95ca06bcca4eea",
+              "type": "appointment",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-f163faadb3114a6b",
+              "type": "attendance",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-4aaebf735db34650",
+              "type": "investigation",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-9f2d995f44254372",
+              "type": "reviewed_outcome",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-10236391fad5498a",
+              "type": "patient_updated",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-8d68830bd40f47b4",
+              "type": "notification",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-f5e7ba5fff784cc8",
+              "type": "acknowledgement",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-2c5a19b6f0bb4ac4",
+              "type": "consultation:consult-8bd46c9b959a43bf",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-16T08:00:00+00:00"
+            },
+            {
+              "id": "task-d88894e5e10144a2",
+              "type": "evidence_review:ev-517c7c42fc814884",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-4b86adf6cabc4918",
+              "type": "agreed_action:consult-8bd46c9b959a43bf",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-c02e12daf2e043ff",
+              "type": "understanding_help",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-1163e926fb5e48a0",
+              "type": "appointment_recovery",
+              "status": "completed",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-85b274774f664055",
+              "type": "evidence_review:ev-38e3b8d4a97b4bed",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-6c72e153a40049c7",
+              "type": "evidence_review:ev-060cfd0869af4fc2",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-85027796be334e3d",
+              "type": "referral_recovery",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            }
+          ]
+        },
+        "SC-002": {
+          "owner": "navigation-team",
+          "disposition": "open",
+          "version": 7,
+          "result_version": 1,
+          "due_at": "2026-11-17T08:00:00+00:00",
+          "tasks": [
+            {
+              "id": "task-18006d6f555e46fc",
+              "type": "notification",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-fcd7991c1ff94bd6",
+              "type": "acknowledgement",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-1ea5e2872421450e",
+              "type": "understanding",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-74a2c1ab55f14289",
+              "type": "reviewed_outcome",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-24124b0cdaef4612",
+              "type": "patient_updated",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-9cd92c6722f34f10",
+              "type": "referral_recovery",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-8b5180014c584dd5",
+              "type": "investigation",
+              "status": "required",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-b837686dfaec4381",
+              "type": "attendance",
+              "status": "required",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-3a2a72a80096441f",
+              "type": "referral",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-9a72c0ed155e4e01",
+              "type": "appointment",
+              "status": "completed",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-3540b308c3314a9c",
+              "type": "appointment_recovery",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            }
+          ]
+        }
+      },
+      "after": {
+        "SC-001": {
+          "owner": "provider-b",
+          "disposition": "completed_required_care",
+          "version": 30,
+          "result_version": 1,
+          "due_at": null,
+          "tasks": [
+            {
+              "id": "task-3e7b2aaaa0f946ed",
+              "type": "understanding",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-8ae2847274924d59",
+              "type": "referral",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-fa95ca06bcca4eea",
+              "type": "appointment",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-f163faadb3114a6b",
+              "type": "attendance",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-4aaebf735db34650",
+              "type": "investigation",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-9f2d995f44254372",
+              "type": "reviewed_outcome",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-10236391fad5498a",
+              "type": "patient_updated",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-8d68830bd40f47b4",
+              "type": "notification",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-f5e7ba5fff784cc8",
+              "type": "acknowledgement",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-2c5a19b6f0bb4ac4",
+              "type": "consultation:consult-8bd46c9b959a43bf",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-16T08:00:00+00:00"
+            },
+            {
+              "id": "task-d88894e5e10144a2",
+              "type": "evidence_review:ev-517c7c42fc814884",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-4b86adf6cabc4918",
+              "type": "agreed_action:consult-8bd46c9b959a43bf",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-c02e12daf2e043ff",
+              "type": "understanding_help",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-1163e926fb5e48a0",
+              "type": "appointment_recovery",
+              "status": "completed",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-85b274774f664055",
+              "type": "evidence_review:ev-38e3b8d4a97b4bed",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-6c72e153a40049c7",
+              "type": "evidence_review:ev-060cfd0869af4fc2",
+              "status": "completed",
+              "assignee": "clinician",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-85027796be334e3d",
+              "type": "referral_recovery",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            }
+          ]
+        },
+        "SC-002": {
+          "owner": "navigation-team",
+          "disposition": "open",
+          "version": 7,
+          "result_version": 1,
+          "due_at": "2026-11-17T08:00:00+00:00",
+          "tasks": [
+            {
+              "id": "task-18006d6f555e46fc",
+              "type": "notification",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-fcd7991c1ff94bd6",
+              "type": "acknowledgement",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-1ea5e2872421450e",
+              "type": "understanding",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-74a2c1ab55f14289",
+              "type": "reviewed_outcome",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-24124b0cdaef4612",
+              "type": "patient_updated",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-9cd92c6722f34f10",
+              "type": "referral_recovery",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-8b5180014c584dd5",
+              "type": "investigation",
+              "status": "required",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-b837686dfaec4381",
+              "type": "attendance",
+              "status": "required",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-3a2a72a80096441f",
+              "type": "referral",
+              "status": "completed",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-9a72c0ed155e4e01",
+              "type": "appointment",
+              "status": "completed",
+              "assignee": "provider-b",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            },
+            {
+              "id": "task-3540b308c3314a9c",
+              "type": "appointment_recovery",
+              "status": "required",
+              "assignee": "navigation-team",
+              "due_at": "2026-11-17T08:00:00+00:00"
+            }
+          ]
+        }
+      },
+      "lost_or_duplicated_tasks": 0,
+      "ownership_and_deadlines_preserved": true
+    },
+    "container_stack": {
+      "mode": "actual_isolated_compose_stack",
+      "project": "suhail-verification",
+      "started_at": "2026-11-14T22:09:50.115230+00:00",
+      "client_timezone": "Asia/Dubai",
+      "ports": {
+        "web": 13000,
+        "api": 18001
+      },
+      "status": "passed",
+      "checks": [
+        "seven_isolated_services_running_database_api_healthy",
+        "web_intro_rendered",
+        "postgresql_authoritative_health",
+        "web_cookie_proxy_and_eight_named_seeded_episodes",
+        "independent_worker_delivered_persisted_outbox_without_acknowledgement_or_understanding",
+        "clinician_reads_actual_retained_source_with_hash_and_audit",
+        "own_patient_source_document_denied",
+        "cross_patient_case_denied",
+        "source_body_not_in_general_case_payload",
+        "both_providers_and_fhir_independently_healthy",
+        "final_backend_web_image_sources_and_running_images_match",
+        "native_main_services_left_running_and_unchanged_health"
+      ],
+      "http_records": [
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:18000/health",
+          "status": 200,
+          "latency_ms": 7.39,
+          "at": "2026-11-14T22:09:50.403854+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/",
+          "status": 200,
+          "latency_ms": 6.16,
+          "at": "2026-11-14T22:09:50.410046+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:18001/health",
+          "status": 200,
+          "latency_ms": 6.49,
+          "at": "2026-11-14T22:09:50.416651+00:00"
+        },
+        {
+          "method": "POST",
+          "url": "http://127.0.0.1:13000/api/auth/demo",
+          "status": 200,
+          "latency_ms": 13.84,
+          "at": "2026-11-14T22:09:50.442987+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/auth/me",
+          "status": 200,
+          "latency_ms": 6.31,
+          "at": "2026-11-14T22:09:50.449310+00:00"
+        },
+        {
+          "method": "POST",
+          "url": "http://127.0.0.1:13000/api/auth/demo",
+          "status": 200,
+          "latency_ms": 8.41,
+          "at": "2026-11-14T22:09:50.457756+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/auth/me",
+          "status": 200,
+          "latency_ms": 5.38,
+          "at": "2026-11-14T22:09:50.463153+00:00"
+        },
+        {
+          "method": "POST",
+          "url": "http://127.0.0.1:13000/api/auth/demo",
+          "status": 200,
+          "latency_ms": 7.03,
+          "at": "2026-11-14T22:09:50.470217+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/auth/me",
+          "status": 200,
+          "latency_ms": 4.72,
+          "at": "2026-11-14T22:09:50.474956+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases",
+          "status": 200,
+          "latency_ms": 60.2,
+          "at": "2026-11-14T22:09:50.535189+00:00"
+        },
+        {
+          "method": "POST",
+          "url": "http://127.0.0.1:13000/api/events/results",
+          "status": 200,
+          "latency_ms": 34.66,
+          "at": "2026-11-14T22:09:50.570568+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/COMPOSE-FINAL-285c3e6b14",
+          "status": 200,
+          "latency_ms": 14.65,
+          "at": "2026-11-14T22:09:50.585343+00:00"
+        },
+        {
+          "method": "POST",
+          "url": "http://127.0.0.1:13000/api/communications",
+          "status": 200,
+          "at": "2026-11-14T22:09:50.602833+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/COMPOSE-FINAL-285c3e6b14",
+          "status": 200,
+          "latency_ms": 14.93,
+          "at": "2026-11-14T22:09:50.617915+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/COMPOSE-FINAL-285c3e6b14",
+          "status": 200,
+          "latency_ms": 19.27,
+          "at": "2026-11-14T22:09:51.137461+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/COMPOSE-FINAL-285c3e6b14",
+          "status": 200,
+          "latency_ms": 18.63,
+          "at": "2026-11-14T22:09:51.656370+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/COMPOSE-FINAL-285c3e6b14",
+          "status": 200,
+          "latency_ms": 18.44,
+          "at": "2026-11-14T22:09:52.175092+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/COMPOSE-FINAL-285c3e6b14",
+          "status": 200,
+          "latency_ms": 19.24,
+          "at": "2026-11-14T22:09:52.694617+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/operations",
+          "status": 200,
+          "latency_ms": 26.23,
+          "at": "2026-11-14T22:09:52.721024+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/SC-001",
+          "status": 200,
+          "latency_ms": 14.47,
+          "at": "2026-11-14T22:09:52.735633+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/SC-001",
+          "status": 200,
+          "latency_ms": 14.46,
+          "at": "2026-11-14T22:09:52.750217+00:00"
+        },
+        {
+          "method": "POST",
+          "url": "http://127.0.0.1:13000/api/cases/SC-001/evidence",
+          "status": 200,
+          "at": "2026-11-14T22:09:52.770570+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/evidence/ev-3ca99370bcc34417/source",
+          "status": 200,
+          "latency_ms": 8.78,
+          "at": "2026-11-14T22:09:52.779535+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/SC-001",
+          "status": 200,
+          "latency_ms": 14.93,
+          "at": "2026-11-14T22:09:52.794579+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/evidence/ev-3ca99370bcc34417/source",
+          "status": 403,
+          "latency_ms": 7.1,
+          "at": "2026-11-14T22:09:52.801807+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/SC-002",
+          "status": 403,
+          "latency_ms": 7.94,
+          "at": "2026-11-14T22:09:52.809802+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:13000/api/cases/SC-001",
+          "status": 200,
+          "latency_ms": 15.17,
+          "at": "2026-11-14T22:09:52.824991+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:18000/health",
+          "status": 200,
+          "latency_ms": 4.89,
+          "at": "2026-11-14T22:09:53.984575+00:00"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:3000/",
+          "status": 200,
+          "latency_ms": 5.31,
+          "at": "2026-11-14T22:09:53.989919+00:00"
+        }
+      ],
+      "model_calls": 0,
+      "notification_mode": "local_outbox_simulator",
+      "commands": [
+        [
+          "bash",
+          "scripts/compose.sh",
+          "--env-file",
+          ".runtime/app.env",
+          "-p",
+          "suhail-verification",
+          "-f",
+          "compose.yaml",
+          "-f",
+          "infra/compose.verify.yaml",
+          "ps",
+          "--format",
+          "json"
+        ],
+        [
+          "bash",
+          "scripts/compose.sh",
+          "--env-file",
+          ".runtime/app.env",
+          "-p",
+          "suhail-verification",
+          "-f",
+          "compose.yaml",
+          "-f",
+          "infra/compose.verify.yaml",
+          "exec",
+          "-T",
+          "api",
+          "python",
+          "-c",
+          "import json,urllib.request;print(json.dumps([json.load(urllib.request.urlopen(u)) for u in ['http://provider-a:8101/health','http://provider-b:8102/health','http://fhir:8103/health']]))"
+        ],
+        [
+          "docker",
+          "image",
+          "inspect",
+          "suhail-health-backend:local",
+          "--format",
+          "{{.Id}}"
+        ],
+        [
+          "docker",
+          "image",
+          "inspect",
+          "suhail-health-web:local",
+          "--format",
+          "{{.Id}}"
+        ],
+        [
+          "docker",
+          "run",
+          "--rm",
+          "--network",
+          "none",
+          "--entrypoint",
+          "python",
+          "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+          "-c",
+          "import hashlib,json;from pathlib import Path;files=['evals/__init__.py', 'evals/common.py', 'evals/domain_harness.py', 'evals/healthbench.py', 'evals/provenance.py', 'evals/reporting.py', 'evals/runner.py', 'evals/scheduling.py', 'evals/synthetic.py', 'evals/synthetic_v2.py', 'integrations/__init__.py', 'integrations/fhir.py', 'integrations/provider.py', 'integrations/routes.py', 'pathways/colorectal-demo/policy.json', 'requirements.lock', 'services/__init__.py', 'services/agents/__init__.py', 'services/agents/engine.py', 'services/agents/gateway.py', 'services/agents/graph.py', 'services/agents/knowledge.json', 'services/agents/retrieval.py', 'services/agents/routes.py', 'services/api/__init__.py', 'services/api/auth.py', 'services/api/config.py', 'services/api/db.py', 'services/api/domain.py', 'services/api/main.py', 'services/api/policy.py', 'services/api/schemas.py', 'services/api/seed.py', 'services/api/serve.py', 'services/api/worker.py'];print(json.dumps({p:hashlib.sha256(Path('/app',p).read_bytes()).hexdigest() for p in files},sort_keys=True))"
+        ],
+        [
+          "docker",
+          "run",
+          "--rm",
+          "--network",
+          "none",
+          "--entrypoint",
+          "node",
+          "sha256:54c28978737919e076795b827efd3040453ea3bf77ac4dcc434799430725cc93",
+          "-e",
+          "const fs=require('fs'),c=require('crypto'),m={\"apps/web/app/api/[...path]/route.ts\": \"app/api/[...path]/route.ts\", \"apps/web/app/cases/[id]/page.tsx\": \"app/cases/[id]/page.tsx\", \"apps/web/app/clinical/page.tsx\": \"app/clinical/page.tsx\", \"apps/web/app/evaluation/page.tsx\": \"app/evaluation/page.tsx\", \"apps/web/app/globals.css\": \"app/globals.css\", \"apps/web/app/layout.tsx\": \"app/layout.tsx\", \"apps/web/app/operations/page.tsx\": \"app/operations/page.tsx\", \"apps/web/app/page.tsx\": \"app/page.tsx\", \"apps/web/app/patient/page.tsx\": \"app/patient/page.tsx\", \"apps/web/app/receiving/page.tsx\": \"app/receiving/page.tsx\", \"apps/web/app/worklist/page.tsx\": \"app/worklist/page.tsx\", \"apps/web/components/assistant.tsx\": \"components/assistant.tsx\", \"apps/web/components/care.tsx\": \"components/care.tsx\", \"apps/web/components/experience-survey.tsx\": \"components/experience-survey.tsx\", \"apps/web/components/home.tsx\": \"components/home.tsx\", \"apps/web/components/intake.tsx\": \"components/intake.tsx\", \"apps/web/components/patient.tsx\": \"components/patient.tsx\", \"apps/web/components/shell.tsx\": \"components/shell.tsx\", \"apps/web/components/source-review.tsx\": \"components/source-review.tsx\", \"apps/web/components/ui.tsx\": \"components/ui.tsx\", \"apps/web/components/workspaces.tsx\": \"components/workspaces.tsx\", \"apps/web/lib/api.ts\": \"lib/api.ts\", \"apps/web/package-lock.json\": \"package-lock.json\", \"apps/web/package.json\": \"package.json\"};process.stdout.write(JSON.stringify(Object.fromEntries(Object.entries(m).map(([k,p])=>[k,c.createHash('sha256').update(fs.readFileSync('/app/'+p)).digest('hex')]))));"
+        ],
+        [
+          "docker",
+          "inspect",
+          "9a2d2e154222",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "a400c77c4ebd",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "f47d663ac6bd",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "3c48f729d0cc",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "92e909ad8c61",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "090f303199af",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "65c6e1d4c298",
+          "--format",
+          "{{.Image}}"
+        ]
+      ],
+      "services": [
+        {
+          "Service": "api",
+          "ID": "9a2d2e154222",
+          "State": "running",
+          "Health": "healthy",
+          "Ports": "127.0.0.1:18001->8000/tcp"
+        },
+        {
+          "Service": "db",
+          "ID": "a400c77c4ebd",
+          "State": "running",
+          "Health": "healthy",
+          "Ports": "5432/tcp"
+        },
+        {
+          "Service": "fhir",
+          "ID": "f47d663ac6bd",
+          "State": "running",
+          "Health": "",
+          "Ports": "8000/tcp"
+        },
+        {
+          "Service": "provider-a",
+          "ID": "3c48f729d0cc",
+          "State": "running",
+          "Health": "",
+          "Ports": "8000/tcp"
+        },
+        {
+          "Service": "provider-b",
+          "ID": "92e909ad8c61",
+          "State": "running",
+          "Health": "",
+          "Ports": "8000/tcp"
+        },
+        {
+          "Service": "web",
+          "ID": "090f303199af",
+          "State": "running",
+          "Health": "",
+          "Ports": "127.0.0.1:13000->3000/tcp"
+        },
+        {
+          "Service": "worker",
+          "ID": "65c6e1d4c298",
+          "State": "running",
+          "Health": "",
+          "Ports": "8000/tcp"
+        }
+      ],
+      "native_health_before": {
+        "status": "ok",
+        "database": "postgresql",
+        "synthetic_only": true,
+        "policy_version": "demo-fit-v1",
+        "notifications": "local simulator"
+      },
+      "api_health": {
+        "status": "ok",
+        "database": "postgresql",
+        "synthetic_only": true,
+        "policy_version": "demo-fit-v1",
+        "notifications": "local simulator"
+      },
+      "authorized_episode_count": 10,
+      "worker_delivery": {
+        "case_id": "COMPOSE-FINAL-285c3e6b14",
+        "communication_id": "msg-d9b5888575cb453e",
+        "outbox_id": "out-7ec80ace40a04af4",
+        "status": "delivered",
+        "attempts": 1,
+        "owner": "integration-operations",
+        "delivered_at": "2026-11-15T08:00:00+00:00",
+        "acknowledgement": null,
+        "understanding": "unknown"
+      },
+      "source_review": {
+        "case_id": "SC-001",
+        "evidence_id": "ev-3ca99370bcc34417",
+        "reference": "synthetic://container-proof/5193f23625bf44d3b36193ea256f515b",
+        "source": "source-clinic",
+        "authority": "uploaded_pending_human_source_check",
+        "content_hash": "0f5f3a11c90a55fd2c025e33415dfb9657bb90a1f8deb433a67ca3ebc28ef7ac",
+        "retained_body_characters": 167,
+        "matching": {
+          "patient_match": true,
+          "order_match": true,
+          "result_version_match": true,
+          "type_match": true
+        },
+        "verification": "pending",
+        "clinician_http_status": 200,
+        "own_patient_source_http_status": 403,
+        "cross_patient_case_http_status": 403,
+        "read_audit_id": "audit-e3ad75962cf5475b"
+      },
+      "internal_services": [
+        {
+          "status": "ok",
+          "organization": "provider-a",
+          "mode": "synthetic_simulator",
+          "persisted_referrals": 2
+        },
+        {
+          "status": "ok",
+          "organization": "provider-b",
+          "mode": "synthetic_simulator",
+          "persisted_referrals": 2
+        },
+        {
+          "status": "ok",
+          "mode": "synthetic_fhir_r4_test",
+          "fhir_version": "4.0.1"
+        }
+      ],
+      "source_parity": {
+        "source_files_checked": 59,
+        "images": {
+          "suhail-health-backend:local": "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+          "suhail-health-web:local": "sha256:54c28978737919e076795b827efd3040453ea3bf77ac4dcc434799430725cc93"
+        }
+      },
+      "native_health_after": {
+        "status": "ok",
+        "database": "postgresql",
+        "synthetic_only": true,
+        "policy_version": "demo-fit-v1",
+        "notifications": "local simulator"
+      },
+      "finished_at": "2026-11-14T22:09:53.990032+00:00",
+      "finished_at_client": "2026-11-15T02:09:53.991062+04:00",
+      "verification_stack_left_running": true,
+      "main_services_stopped": false
+    },
+    "container_source_parity": {
+      "checked_at": "2026-11-14T22:09:53.965654+00:00",
+      "project": "suhail-verification",
+      "status": "passed",
+      "matches": {
+        "evals/__init__.py": true,
+        "evals/common.py": true,
+        "evals/domain_harness.py": true,
+        "evals/healthbench.py": true,
+        "evals/provenance.py": true,
+        "evals/reporting.py": true,
+        "evals/runner.py": true,
+        "evals/scheduling.py": true,
+        "evals/synthetic.py": true,
+        "evals/synthetic_v2.py": true,
+        "integrations/__init__.py": true,
+        "integrations/fhir.py": true,
+        "integrations/provider.py": true,
+        "integrations/routes.py": true,
+        "pathways/colorectal-demo/policy.json": true,
+        "requirements.lock": true,
+        "services/__init__.py": true,
+        "services/agents/__init__.py": true,
+        "services/agents/engine.py": true,
+        "services/agents/gateway.py": true,
+        "services/agents/graph.py": true,
+        "services/agents/knowledge.json": true,
+        "services/agents/retrieval.py": true,
+        "services/agents/routes.py": true,
+        "services/api/__init__.py": true,
+        "services/api/auth.py": true,
+        "services/api/config.py": true,
+        "services/api/db.py": true,
+        "services/api/domain.py": true,
+        "services/api/main.py": true,
+        "services/api/policy.py": true,
+        "services/api/schemas.py": true,
+        "services/api/seed.py": true,
+        "services/api/serve.py": true,
+        "services/api/worker.py": true,
+        "apps/web/app/api/[...path]/route.ts": true,
+        "apps/web/app/cases/[id]/page.tsx": true,
+        "apps/web/app/clinical/page.tsx": true,
+        "apps/web/app/evaluation/page.tsx": true,
+        "apps/web/app/globals.css": true,
+        "apps/web/app/layout.tsx": true,
+        "apps/web/app/operations/page.tsx": true,
+        "apps/web/app/page.tsx": true,
+        "apps/web/app/patient/page.tsx": true,
+        "apps/web/app/receiving/page.tsx": true,
+        "apps/web/app/worklist/page.tsx": true,
+        "apps/web/components/assistant.tsx": true,
+        "apps/web/components/care.tsx": true,
+        "apps/web/components/experience-survey.tsx": true,
+        "apps/web/components/home.tsx": true,
+        "apps/web/components/intake.tsx": true,
+        "apps/web/components/patient.tsx": true,
+        "apps/web/components/shell.tsx": true,
+        "apps/web/components/source-review.tsx": true,
+        "apps/web/components/ui.tsx": true,
+        "apps/web/components/workspaces.tsx": true,
+        "apps/web/lib/api.ts": true,
+        "apps/web/package-lock.json": true,
+        "apps/web/package.json": true
+      },
+      "hashes": {
+        "evals/__init__.py": "069eb225ba61280ee9b81b915f136b2acc2a1080b1bd74fc97f5ec22b3324e7f",
+        "evals/common.py": "91df6f4d880594fd12abe1a33e7a8d83dd02a9f63e549411a39c57a451bac456",
+        "evals/domain_harness.py": "f8b4cfb09c23dd7660bbfa960cd051730e024267f310cacb5edd5a36abfc134f",
+        "evals/healthbench.py": "3a90a0a9f69a9d7629857970179b8159b8c09c3c3bb5dd7edea065f13de46aa5",
+        "evals/provenance.py": "c62b88912ce8c07c200219552caed2e35ad538d3f0cf2d04d70ddbf9e6ea04fb",
+        "evals/reporting.py": "b3586f8a7b6bfd790e35e3b7829fb4f3b23489640464883f303f138d564f82d9",
+        "evals/runner.py": "1a0043016ba5af907cc372d0a266dd1b3dc5afa0b51b5744c4f687e54418f257",
+        "evals/scheduling.py": "1434a806ac1bd1f6c8d3163df2c453406d6111e639fd5be2fade1dab6d51a7a0",
+        "evals/synthetic.py": "3efa7afa73d14dd4a778823bc381911851d2d26adb03513a89043eb9bee8dbe0",
+        "evals/synthetic_v2.py": "934d4183730144c7763b590926a86977420e06399e370f027df1dc512bc0691d",
+        "integrations/__init__.py": "74c56c63edbbd58465ed2b3385b4c9ed1031dd94c6e24ce658561e320de850f1",
+        "integrations/fhir.py": "828c53badbcbf856c65d6c3231047fc5098d517099867199630430df2f0151eb",
+        "integrations/provider.py": "9e239b81909fd5b7ce610b886c398ef1639a8fac8b7d99b14582e1ce2b05adef",
+        "integrations/routes.py": "0828acad35bdb40a7821cc671067b3547efbd9fa01e126b5f210cb55874805b3",
+        "pathways/colorectal-demo/policy.json": "aedea9d1b3a050efe1879c8b4b7fd4986756a558901373f10f440da0a0f05d21",
+        "requirements.lock": "6911aa5846c78fd578eb3302d6c7e881ea3b92130fc9e5589bd6cdc819864a41",
+        "services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "services/agents/__init__.py": "3a13defd8d0cb16ecc18dba0dadf3c5fc55e6268189f48284a52ddffb29fb8df",
+        "services/agents/engine.py": "51eb54d94d0462fbf911092ddb8e274428d3da0ab84a4fb4f335e049e8cb2b60",
+        "services/agents/gateway.py": "73434cfa6804a4163b4076db2f52f5c712b03eaa6aa0bd0fd0d63500ea844b1f",
+        "services/agents/graph.py": "c414fa1a71a3b507812cd7fb8711d5e49ca022cb3a99c2f6e101a00cbec5cf90",
+        "services/agents/knowledge.json": "29d6fc1645348d8896619cc1050e48cb8af38faad04f3f707eba3311a844095a",
+        "services/agents/retrieval.py": "7f297962ca83c46cf5b4a41e6ca14a3e3823aeca6ac4e55a6b1d6161399fdc79",
+        "services/agents/routes.py": "7b8bcdfb9720c1265e39f485c2793cbab5955fc25f01d2cb5db0e09e089b3dac",
+        "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+        "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+        "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+        "services/api/domain.py": "57bf75d4fdab10b4c36e2e1de6231225b22db2e685337d724e79e6aaddde9629",
+        "services/api/main.py": "2bb8e1a039d0bbd5eafbc23b7f772f1f16ad520afc35d4ff2daa8fb976bb5780",
+        "services/api/policy.py": "450b752a045e51adc627cf1fef99c042edc0c65f029a9f20798318652dade7dc",
+        "services/api/schemas.py": "0f0a76baa18fa5f136e2f6acf9baa86523e1c52769de2b319de5cd9b1e482d52",
+        "services/api/seed.py": "c4f4c1214541ee622354b8ccf5358a1b4772d2e83e4f5f75734f078b5958f0ee",
+        "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+        "services/api/worker.py": "da243719b7a1c53463dfc1c54acbbbbfd8486dd14f6f4b8c673f2ace3c07dba9",
+        "apps/web/app/api/[...path]/route.ts": "82a0d97ee28224d16c63e339a15eab09c7e88542fd5592bd150f8e3203427e1b",
+        "apps/web/app/cases/[id]/page.tsx": "4e8e62cf9249cf0f68193956a0a264390572780bc2b56bd49692174192a97c91",
+        "apps/web/app/clinical/page.tsx": "512a6e5cb66de9cf16510fc61cf064c947806a554f58c47ce504151c9474f048",
+        "apps/web/app/evaluation/page.tsx": "c9d0a78dd3ba6568e1480d0a88eb8000ce102036e2c26c84551190b6d8a5daa9",
+        "apps/web/app/globals.css": "9d8232e5cd3ad50f012e1a7eb48e25864802deb9e247e871ea365189e436d41f",
+        "apps/web/app/layout.tsx": "b608a08c8817f43452f2a372da5727deba673f132d005b00145b06dd27faba60",
+        "apps/web/app/operations/page.tsx": "117684b9cfdea13d542d2af9d55b0471bc7427acc6f8f2dc3999bb89a487f8d8",
+        "apps/web/app/page.tsx": "42d0a3ab09411bc813530e9db98c935287e67b1d5b3eafc76b59f76652aaa104",
+        "apps/web/app/patient/page.tsx": "083d5f4d6f9229e6e132ba55a32975b12627bf727c4fedbe9fef7a26362e14e5",
+        "apps/web/app/receiving/page.tsx": "f2e31d9e9423ea1c641aa39813e3042f96ce22763cd819014f54b385a4ca00e0",
+        "apps/web/app/worklist/page.tsx": "b16a1f01a4df8eafef2ad3fe3c8d9e9e398a7faf91011c911246e85e3f0fd9d3",
+        "apps/web/components/assistant.tsx": "1b1b11ddf2ee2c66773c961a9ddb1e03c44e34dd0027ed54b299c9ffb3f21f2e",
+        "apps/web/components/care.tsx": "322d7129c6c22c82085cbf59ef6c6e3baa3904fbdb8f49348d7b960c51072d09",
+        "apps/web/components/experience-survey.tsx": "e74320616f7811b7135cfa0ee8a07e7c3bf1cdea4d1d45c280c4e826acbac658",
+        "apps/web/components/home.tsx": "69ebef1746ae4c82936c557bff24025912a5abcee2e34cd716dcf54b38d58e42",
+        "apps/web/components/intake.tsx": "87fb4325a50922634e859288df5849368402672147088a3706949a833d844cf7",
+        "apps/web/components/patient.tsx": "5abeb42341df0376343144896ddbc88f851fa1be5a51754dca366ea42560afdd",
+        "apps/web/components/shell.tsx": "e414e60ab63e619061092c690b90f544edf335f9f744990a441007cf742c7cbb",
+        "apps/web/components/source-review.tsx": "2a009d78511e9ca1be1fe650e572a43c2057783203d3b9dab58487366222eb32",
+        "apps/web/components/ui.tsx": "f43e0ad4096bf8e311147427c337c7dad0be344ee08cd9b8fe66d26e18b1f7e4",
+        "apps/web/components/workspaces.tsx": "65f252ea8e4b1b516911aa0f52a3dd58b8a7969f54d197cb22c3dc98b65aa621",
+        "apps/web/lib/api.ts": "c2226b04485d70d857e89af40714a98084a1320a7e364b2844460cbdf6269fec",
+        "apps/web/package-lock.json": "7da76ba3baf7957129b5f7aaf291f1b85e9c892e03ece782a3f18151aad16fc3",
+        "apps/web/package.json": "cc6b72ecb3991df476140565242b4eb621289a9ea948c494032f9a2422d89a4e"
+      },
+      "host_hashes": {
+        "evals/__init__.py": "069eb225ba61280ee9b81b915f136b2acc2a1080b1bd74fc97f5ec22b3324e7f",
+        "evals/common.py": "91df6f4d880594fd12abe1a33e7a8d83dd02a9f63e549411a39c57a451bac456",
+        "evals/domain_harness.py": "f8b4cfb09c23dd7660bbfa960cd051730e024267f310cacb5edd5a36abfc134f",
+        "evals/healthbench.py": "3a90a0a9f69a9d7629857970179b8159b8c09c3c3bb5dd7edea065f13de46aa5",
+        "evals/provenance.py": "c62b88912ce8c07c200219552caed2e35ad538d3f0cf2d04d70ddbf9e6ea04fb",
+        "evals/reporting.py": "b3586f8a7b6bfd790e35e3b7829fb4f3b23489640464883f303f138d564f82d9",
+        "evals/runner.py": "1a0043016ba5af907cc372d0a266dd1b3dc5afa0b51b5744c4f687e54418f257",
+        "evals/scheduling.py": "1434a806ac1bd1f6c8d3163df2c453406d6111e639fd5be2fade1dab6d51a7a0",
+        "evals/synthetic.py": "3efa7afa73d14dd4a778823bc381911851d2d26adb03513a89043eb9bee8dbe0",
+        "evals/synthetic_v2.py": "934d4183730144c7763b590926a86977420e06399e370f027df1dc512bc0691d",
+        "integrations/__init__.py": "74c56c63edbbd58465ed2b3385b4c9ed1031dd94c6e24ce658561e320de850f1",
+        "integrations/fhir.py": "828c53badbcbf856c65d6c3231047fc5098d517099867199630430df2f0151eb",
+        "integrations/provider.py": "9e239b81909fd5b7ce610b886c398ef1639a8fac8b7d99b14582e1ce2b05adef",
+        "integrations/routes.py": "0828acad35bdb40a7821cc671067b3547efbd9fa01e126b5f210cb55874805b3",
+        "pathways/colorectal-demo/policy.json": "aedea9d1b3a050efe1879c8b4b7fd4986756a558901373f10f440da0a0f05d21",
+        "requirements.lock": "6911aa5846c78fd578eb3302d6c7e881ea3b92130fc9e5589bd6cdc819864a41",
+        "services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "services/agents/__init__.py": "3a13defd8d0cb16ecc18dba0dadf3c5fc55e6268189f48284a52ddffb29fb8df",
+        "services/agents/engine.py": "51eb54d94d0462fbf911092ddb8e274428d3da0ab84a4fb4f335e049e8cb2b60",
+        "services/agents/gateway.py": "73434cfa6804a4163b4076db2f52f5c712b03eaa6aa0bd0fd0d63500ea844b1f",
+        "services/agents/graph.py": "c414fa1a71a3b507812cd7fb8711d5e49ca022cb3a99c2f6e101a00cbec5cf90",
+        "services/agents/knowledge.json": "29d6fc1645348d8896619cc1050e48cb8af38faad04f3f707eba3311a844095a",
+        "services/agents/retrieval.py": "7f297962ca83c46cf5b4a41e6ca14a3e3823aeca6ac4e55a6b1d6161399fdc79",
+        "services/agents/routes.py": "7b8bcdfb9720c1265e39f485c2793cbab5955fc25f01d2cb5db0e09e089b3dac",
+        "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+        "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+        "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+        "services/api/domain.py": "57bf75d4fdab10b4c36e2e1de6231225b22db2e685337d724e79e6aaddde9629",
+        "services/api/main.py": "2bb8e1a039d0bbd5eafbc23b7f772f1f16ad520afc35d4ff2daa8fb976bb5780",
+        "services/api/policy.py": "450b752a045e51adc627cf1fef99c042edc0c65f029a9f20798318652dade7dc",
+        "services/api/schemas.py": "0f0a76baa18fa5f136e2f6acf9baa86523e1c52769de2b319de5cd9b1e482d52",
+        "services/api/seed.py": "c4f4c1214541ee622354b8ccf5358a1b4772d2e83e4f5f75734f078b5958f0ee",
+        "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+        "services/api/worker.py": "da243719b7a1c53463dfc1c54acbbbbfd8486dd14f6f4b8c673f2ace3c07dba9",
+        "apps/web/app/api/[...path]/route.ts": "82a0d97ee28224d16c63e339a15eab09c7e88542fd5592bd150f8e3203427e1b",
+        "apps/web/app/cases/[id]/page.tsx": "4e8e62cf9249cf0f68193956a0a264390572780bc2b56bd49692174192a97c91",
+        "apps/web/app/clinical/page.tsx": "512a6e5cb66de9cf16510fc61cf064c947806a554f58c47ce504151c9474f048",
+        "apps/web/app/evaluation/page.tsx": "c9d0a78dd3ba6568e1480d0a88eb8000ce102036e2c26c84551190b6d8a5daa9",
+        "apps/web/app/globals.css": "9d8232e5cd3ad50f012e1a7eb48e25864802deb9e247e871ea365189e436d41f",
+        "apps/web/app/layout.tsx": "b608a08c8817f43452f2a372da5727deba673f132d005b00145b06dd27faba60",
+        "apps/web/app/operations/page.tsx": "117684b9cfdea13d542d2af9d55b0471bc7427acc6f8f2dc3999bb89a487f8d8",
+        "apps/web/app/page.tsx": "42d0a3ab09411bc813530e9db98c935287e67b1d5b3eafc76b59f76652aaa104",
+        "apps/web/app/patient/page.tsx": "083d5f4d6f9229e6e132ba55a32975b12627bf727c4fedbe9fef7a26362e14e5",
+        "apps/web/app/receiving/page.tsx": "f2e31d9e9423ea1c641aa39813e3042f96ce22763cd819014f54b385a4ca00e0",
+        "apps/web/app/worklist/page.tsx": "b16a1f01a4df8eafef2ad3fe3c8d9e9e398a7faf91011c911246e85e3f0fd9d3",
+        "apps/web/components/assistant.tsx": "1b1b11ddf2ee2c66773c961a9ddb1e03c44e34dd0027ed54b299c9ffb3f21f2e",
+        "apps/web/components/care.tsx": "322d7129c6c22c82085cbf59ef6c6e3baa3904fbdb8f49348d7b960c51072d09",
+        "apps/web/components/experience-survey.tsx": "e74320616f7811b7135cfa0ee8a07e7c3bf1cdea4d1d45c280c4e826acbac658",
+        "apps/web/components/home.tsx": "69ebef1746ae4c82936c557bff24025912a5abcee2e34cd716dcf54b38d58e42",
+        "apps/web/components/intake.tsx": "87fb4325a50922634e859288df5849368402672147088a3706949a833d844cf7",
+        "apps/web/components/patient.tsx": "5abeb42341df0376343144896ddbc88f851fa1be5a51754dca366ea42560afdd",
+        "apps/web/components/shell.tsx": "e414e60ab63e619061092c690b90f544edf335f9f744990a441007cf742c7cbb",
+        "apps/web/components/source-review.tsx": "2a009d78511e9ca1be1fe650e572a43c2057783203d3b9dab58487366222eb32",
+        "apps/web/components/ui.tsx": "f43e0ad4096bf8e311147427c337c7dad0be344ee08cd9b8fe66d26e18b1f7e4",
+        "apps/web/components/workspaces.tsx": "65f252ea8e4b1b516911aa0f52a3dd58b8a7969f54d197cb22c3dc98b65aa621",
+        "apps/web/lib/api.ts": "c2226b04485d70d857e89af40714a98084a1320a7e364b2844460cbdf6269fec",
+        "apps/web/package-lock.json": "7da76ba3baf7957129b5f7aaf291f1b85e9c892e03ece782a3f18151aad16fc3",
+        "apps/web/package.json": "cc6b72ecb3991df476140565242b4eb621289a9ea948c494032f9a2422d89a4e"
+      },
+      "images": {
+        "suhail-health-backend:local": "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+        "suhail-health-web:local": "sha256:54c28978737919e076795b827efd3040453ea3bf77ac4dcc434799430725cc93"
+      },
+      "running_container_images": {
+        "api": "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+        "db": "sha256:9104a94e25680111c00d6c9ad5913129d2f45c1bc51b363db177d638c313392e",
+        "fhir": "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+        "provider-a": "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+        "provider-b": "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+        "web": "sha256:54c28978737919e076795b827efd3040453ea3bf77ac4dcc434799430725cc93",
+        "worker": "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8"
+      },
+      "running_images_match_rebuilt_tags": {
+        "api": true,
+        "fhir": true,
+        "provider-a": true,
+        "provider-b": true,
+        "web": true,
+        "worker": true
+      },
+      "source_files_checked": 59,
+      "commands": [
+        [
+          "bash",
+          "scripts/compose.sh",
+          "--env-file",
+          ".runtime/app.env",
+          "-p",
+          "suhail-verification",
+          "-f",
+          "compose.yaml",
+          "-f",
+          "infra/compose.verify.yaml",
+          "ps",
+          "--format",
+          "json"
+        ],
+        [
+          "bash",
+          "scripts/compose.sh",
+          "--env-file",
+          ".runtime/app.env",
+          "-p",
+          "suhail-verification",
+          "-f",
+          "compose.yaml",
+          "-f",
+          "infra/compose.verify.yaml",
+          "exec",
+          "-T",
+          "api",
+          "python",
+          "-c",
+          "import json,urllib.request;print(json.dumps([json.load(urllib.request.urlopen(u)) for u in ['http://provider-a:8101/health','http://provider-b:8102/health','http://fhir:8103/health']]))"
+        ],
+        [
+          "docker",
+          "image",
+          "inspect",
+          "suhail-health-backend:local",
+          "--format",
+          "{{.Id}}"
+        ],
+        [
+          "docker",
+          "image",
+          "inspect",
+          "suhail-health-web:local",
+          "--format",
+          "{{.Id}}"
+        ],
+        [
+          "docker",
+          "run",
+          "--rm",
+          "--network",
+          "none",
+          "--entrypoint",
+          "python",
+          "sha256:83947195daabf7d7542ce9dd7ebca2815913b641b531474438f9211560b67ff8",
+          "-c",
+          "import hashlib,json;from pathlib import Path;files=['evals/__init__.py', 'evals/common.py', 'evals/domain_harness.py', 'evals/healthbench.py', 'evals/provenance.py', 'evals/reporting.py', 'evals/runner.py', 'evals/scheduling.py', 'evals/synthetic.py', 'evals/synthetic_v2.py', 'integrations/__init__.py', 'integrations/fhir.py', 'integrations/provider.py', 'integrations/routes.py', 'pathways/colorectal-demo/policy.json', 'requirements.lock', 'services/__init__.py', 'services/agents/__init__.py', 'services/agents/engine.py', 'services/agents/gateway.py', 'services/agents/graph.py', 'services/agents/knowledge.json', 'services/agents/retrieval.py', 'services/agents/routes.py', 'services/api/__init__.py', 'services/api/auth.py', 'services/api/config.py', 'services/api/db.py', 'services/api/domain.py', 'services/api/main.py', 'services/api/policy.py', 'services/api/schemas.py', 'services/api/seed.py', 'services/api/serve.py', 'services/api/worker.py'];print(json.dumps({p:hashlib.sha256(Path('/app',p).read_bytes()).hexdigest() for p in files},sort_keys=True))"
+        ],
+        [
+          "docker",
+          "run",
+          "--rm",
+          "--network",
+          "none",
+          "--entrypoint",
+          "node",
+          "sha256:54c28978737919e076795b827efd3040453ea3bf77ac4dcc434799430725cc93",
+          "-e",
+          "const fs=require('fs'),c=require('crypto'),m={\"apps/web/app/api/[...path]/route.ts\": \"app/api/[...path]/route.ts\", \"apps/web/app/cases/[id]/page.tsx\": \"app/cases/[id]/page.tsx\", \"apps/web/app/clinical/page.tsx\": \"app/clinical/page.tsx\", \"apps/web/app/evaluation/page.tsx\": \"app/evaluation/page.tsx\", \"apps/web/app/globals.css\": \"app/globals.css\", \"apps/web/app/layout.tsx\": \"app/layout.tsx\", \"apps/web/app/operations/page.tsx\": \"app/operations/page.tsx\", \"apps/web/app/page.tsx\": \"app/page.tsx\", \"apps/web/app/patient/page.tsx\": \"app/patient/page.tsx\", \"apps/web/app/receiving/page.tsx\": \"app/receiving/page.tsx\", \"apps/web/app/worklist/page.tsx\": \"app/worklist/page.tsx\", \"apps/web/components/assistant.tsx\": \"components/assistant.tsx\", \"apps/web/components/care.tsx\": \"components/care.tsx\", \"apps/web/components/experience-survey.tsx\": \"components/experience-survey.tsx\", \"apps/web/components/home.tsx\": \"components/home.tsx\", \"apps/web/components/intake.tsx\": \"components/intake.tsx\", \"apps/web/components/patient.tsx\": \"components/patient.tsx\", \"apps/web/components/shell.tsx\": \"components/shell.tsx\", \"apps/web/components/source-review.tsx\": \"components/source-review.tsx\", \"apps/web/components/ui.tsx\": \"components/ui.tsx\", \"apps/web/components/workspaces.tsx\": \"components/workspaces.tsx\", \"apps/web/lib/api.ts\": \"lib/api.ts\", \"apps/web/package-lock.json\": \"package-lock.json\", \"apps/web/package.json\": \"package.json\"};process.stdout.write(JSON.stringify(Object.fromEntries(Object.entries(m).map(([k,p])=>[k,c.createHash('sha256').update(fs.readFileSync('/app/'+p)).digest('hex')]))));"
+        ],
+        [
+          "docker",
+          "inspect",
+          "9a2d2e154222",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "a400c77c4ebd",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "f47d663ac6bd",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "3c48f729d0cc",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "92e909ad8c61",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "090f303199af",
+          "--format",
+          "{{.Image}}"
+        ],
+        [
+          "docker",
+          "inspect",
+          "65c6e1d4c298",
+          "--format",
+          "{{.Image}}"
+        ]
+      ]
+    },
+    "canonical_contract": {
+      "status": "passed",
+      "schema": "contracts/canonical-records.schema.json",
+      "actual_endpoint": "GET /cases/SC-001",
+      "data_scope": "authenticated_synthetic_staff_record"
+    },
+    "backup_restore": {
+      "status": "passed",
+      "scope": "isolated synthetic verification database only",
+      "method": "pg_dump restored transactionally into new disposable database",
+      "source_counts": "8,76,7",
+      "restored_counts": "8,76,7",
+      "count_order": [
+        "cases",
+        "tasks",
+        "source_artifacts"
+      ],
+      "private_backup_path": ".runtime/verification-postgres-backup.sql",
+      "backup_sha256": "5045ab3b331d7089b3565d2a70fb46f7ca7b0481458d3c0b34ca44c650446f73",
+      "restored_database_removed": true
+    }
+  },
+  "evaluation_runs": [
+    {
+      "run_id": "development-domain-pilot-v1",
+      "status": "BLOCKED",
+      "counts": {
+        "selected": 30,
+        "attempted": 0,
+        "completed": 0,
+        "failed": 0,
+        "skipped": 30,
+        "task_passed": null,
+        "task_incorrect": null
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "development-domain-pilot-v1",
+        "case_records": 30,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/development-domain-pilot-v1/summary.html"
+    },
+    {
+      "run_id": "development-domain-pilot-v2",
+      "status": "COMPLETE",
+      "counts": {
+        "selected": 30,
+        "attempted": 30,
+        "completed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": 30,
+        "task_incorrect": 0
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "development-domain-pilot-v2",
+        "case_records": 30,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/development-domain-pilot-v2/summary.html"
+    },
+    {
+      "run_id": "development-domain-pilot-v3",
+      "status": "COMPLETE",
+      "counts": {
+        "selected": 30,
+        "attempted": 30,
+        "completed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": 30,
+        "task_incorrect": 0
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "development-domain-pilot-v3",
+        "case_records": 30,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/development-domain-pilot-v3/summary.html"
+    },
+    {
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "counts": {
+        "selected": 66,
+        "attempted": 52,
+        "completed": 44,
+        "failed": 8,
+        "skipped": 14,
+        "task_passed": 42,
+        "task_incorrect": 0
+      },
+      "usage": {
+        "api_calls": 69,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms_p50": 28706.83143287897,
+        "latency_ms_p95": 30635.62273606658,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "groq-smoke-holdout-v1",
+        "case_records": 66,
+        "provider_records": 69,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/groq-smoke-holdout-v1/summary.html"
+    },
+    {
+      "run_id": "software-delivery-final",
+      "status": "COMPLETE",
+      "counts": {
+        "selected": 1500,
+        "attempted": 1500,
+        "completed": 1500,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": 1500,
+        "task_incorrect": 0
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "software-delivery-final",
+        "case_records": 1500,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/software-delivery-final/summary.html"
+    },
+    {
+      "run_id": "software-final-v3",
+      "status": "COMPLETE",
+      "counts": {
+        "selected": 1500,
+        "attempted": 1500,
+        "completed": 1500,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": 1500,
+        "task_incorrect": 0
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "software-final-v3",
+        "case_records": 1500,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/software-final-v3/summary.html"
+    },
+    {
+      "run_id": "software-holdout-v1",
+      "status": "COMPLETE",
+      "counts": {
+        "selected": 1500,
+        "attempted": 1500,
+        "completed": 1500,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": 1500,
+        "task_incorrect": 0
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "software-holdout-v1",
+        "case_records": 1500,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/software-holdout-v1/summary.html"
+    },
+    {
+      "run_id": "software-release-regression-v2",
+      "status": "COMPLETE",
+      "counts": {
+        "selected": 1500,
+        "attempted": 1500,
+        "completed": 1500,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": 1500,
+        "task_incorrect": 0
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "software-release-regression-v2",
+        "case_records": 1500,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/software-release-regression-v2/summary.html"
+    },
+    {
+      "run_id": "synthetic-v2-validation-preparation",
+      "status": "NOT_RUN",
+      "counts": {
+        "selected": 6,
+        "attempted": 0,
+        "completed": 0,
+        "failed": 0,
+        "skipped": 6,
+        "task_passed": null,
+        "task_incorrect": null
+      },
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "integrity": {
+        "valid": true,
+        "run_id": "synthetic-v2-validation-preparation",
+        "case_records": 6,
+        "provider_records": 0,
+        "checks": [
+          "hash chains",
+          "selected IDs",
+          "count equations",
+          "schema",
+          "usage reconciliation",
+          "candidate/grader response lineage",
+          "model provenance",
+          "no capability probe substitution"
+        ],
+        "errors": []
+      },
+      "report": "../runs/synthetic-v2-validation-preparation/summary.html"
+    }
+  ],
+  "source_hashes": {
+    "services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "services/agents/routes.py": "7b8bcdfb9720c1265e39f485c2793cbab5955fc25f01d2cb5db0e09e089b3dac",
+    "services/agents/knowledge.json": "29d6fc1645348d8896619cc1050e48cb8af38faad04f3f707eba3311a844095a",
+    "services/agents/retrieval.py": "7f297962ca83c46cf5b4a41e6ca14a3e3823aeca6ac4e55a6b1d6161399fdc79",
+    "services/agents/graph.py": "c414fa1a71a3b507812cd7fb8711d5e49ca022cb3a99c2f6e101a00cbec5cf90",
+    "services/agents/__init__.py": "3a13defd8d0cb16ecc18dba0dadf3c5fc55e6268189f48284a52ddffb29fb8df",
+    "services/agents/gateway.py": "73434cfa6804a4163b4076db2f52f5c712b03eaa6aa0bd0fd0d63500ea844b1f",
+    "services/agents/engine.py": "51eb54d94d0462fbf911092ddb8e274428d3da0ab84a4fb4f335e049e8cb2b60",
+    "services/api/schemas.py": "0f0a76baa18fa5f136e2f6acf9baa86523e1c52769de2b319de5cd9b1e482d52",
+    "services/api/seed.py": "c4f4c1214541ee622354b8ccf5358a1b4772d2e83e4f5f75734f078b5958f0ee",
+    "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+    "services/api/domain.py": "57bf75d4fdab10b4c36e2e1de6231225b22db2e685337d724e79e6aaddde9629",
+    "services/api/policy.py": "450b752a045e51adc627cf1fef99c042edc0c65f029a9f20798318652dade7dc",
+    "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+    "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+    "services/api/worker.py": "da243719b7a1c53463dfc1c54acbbbbfd8486dd14f6f4b8c673f2ace3c07dba9",
+    "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+    "services/api/main.py": "2bb8e1a039d0bbd5eafbc23b7f772f1f16ad520afc35d4ff2daa8fb976bb5780",
+    "integrations/provider.py": "9e239b81909fd5b7ce610b886c398ef1639a8fac8b7d99b14582e1ce2b05adef",
+    "integrations/fhir.py": "828c53badbcbf856c65d6c3231047fc5098d517099867199630430df2f0151eb",
+    "integrations/routes.py": "0828acad35bdb40a7821cc671067b3547efbd9fa01e126b5f210cb55874805b3",
+    "integrations/__init__.py": "74c56c63edbbd58465ed2b3385b4c9ed1031dd94c6e24ce658561e320de850f1",
+    "apps/web/package.json": "cc6b72ecb3991df476140565242b4eb621289a9ea948c494032f9a2422d89a4e",
+    "apps/web/next.config.ts": "226cf9d05b22d4e39c1ed77d9f12a020347b7cd104f6179c9877d9e406042a05",
+    "apps/web/package-lock.json": "7da76ba3baf7957129b5f7aaf291f1b85e9c892e03ece782a3f18151aad16fc3",
+    "apps/web/next-env.d.ts": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b",
+    "apps/web/tsconfig.json": "9ae7ca3817f842a5d233859a9b48b0bcebe7f71e5d7b678f24d707a9fae94abe",
+    "apps/web/components/care.tsx": "322d7129c6c22c82085cbf59ef6c6e3baa3904fbdb8f49348d7b960c51072d09",
+    "apps/web/components/home.tsx": "69ebef1746ae4c82936c557bff24025912a5abcee2e34cd716dcf54b38d58e42",
+    "apps/web/components/assistant.tsx": "1b1b11ddf2ee2c66773c961a9ddb1e03c44e34dd0027ed54b299c9ffb3f21f2e",
+    "apps/web/components/experience-survey.tsx": "e74320616f7811b7135cfa0ee8a07e7c3bf1cdea4d1d45c280c4e826acbac658",
+    "apps/web/components/workspaces.tsx": "65f252ea8e4b1b516911aa0f52a3dd58b8a7969f54d197cb22c3dc98b65aa621",
+    "apps/web/components/shell.tsx": "e414e60ab63e619061092c690b90f544edf335f9f744990a441007cf742c7cbb",
+    "apps/web/components/intake.tsx": "87fb4325a50922634e859288df5849368402672147088a3706949a833d844cf7",
+    "apps/web/components/ui.tsx": "f43e0ad4096bf8e311147427c337c7dad0be344ee08cd9b8fe66d26e18b1f7e4",
+    "apps/web/components/patient.tsx": "5abeb42341df0376343144896ddbc88f851fa1be5a51754dca366ea42560afdd",
+    "apps/web/components/source-review.tsx": "2a009d78511e9ca1be1fe650e572a43c2057783203d3b9dab58487366222eb32",
+    "apps/web/lib/api.ts": "c2226b04485d70d857e89af40714a98084a1320a7e364b2844460cbdf6269fec",
+    "apps/web/app/page.tsx": "42d0a3ab09411bc813530e9db98c935287e67b1d5b3eafc76b59f76652aaa104",
+    "apps/web/app/layout.tsx": "b608a08c8817f43452f2a372da5727deba673f132d005b00145b06dd27faba60",
+    "apps/web/app/globals.css": "9d8232e5cd3ad50f012e1a7eb48e25864802deb9e247e871ea365189e436d41f",
+    "apps/web/app/receiving/page.tsx": "f2e31d9e9423ea1c641aa39813e3042f96ce22763cd819014f54b385a4ca00e0",
+    "apps/web/app/evaluation/page.tsx": "c9d0a78dd3ba6568e1480d0a88eb8000ce102036e2c26c84551190b6d8a5daa9",
+    "apps/web/app/worklist/page.tsx": "b16a1f01a4df8eafef2ad3fe3c8d9e9e398a7faf91011c911246e85e3f0fd9d3",
+    "apps/web/app/patient/page.tsx": "083d5f4d6f9229e6e132ba55a32975b12627bf727c4fedbe9fef7a26362e14e5",
+    "apps/web/app/clinical/page.tsx": "512a6e5cb66de9cf16510fc61cf064c947806a554f58c47ce504151c9474f048",
+    "apps/web/app/operations/page.tsx": "117684b9cfdea13d542d2af9d55b0471bc7427acc6f8f2dc3999bb89a487f8d8",
+    "apps/web/app/cases/[id]/page.tsx": "4e8e62cf9249cf0f68193956a0a264390572780bc2b56bd49692174192a97c91",
+    "apps/web/app/api/[...path]/route.ts": "82a0d97ee28224d16c63e339a15eab09c7e88542fd5592bd150f8e3203427e1b",
+    "pathways/colorectal-demo/policy.json": "aedea9d1b3a050efe1879c8b4b7fd4986756a558901373f10f440da0a0f05d21",
+    "tests/test_browser.py": "4b98efc960be9c7730233ae771d2f262cfa29350543e0fcc604f0f3fdb0020bf",
+    "tests/test_backend.py": "c001c31ee75d0ed8eec5bf74df3d977dd6d12b97208ec2cf7d63dc380cc5cfcd",
+    "tests/test_eval_scheduling.py": "ab00c6a7fcbeef6b0c0834e675bf7ac09d29160cff3db6fe196661e0a5c3cfc6",
+    "tests/test_synthetic_v2.py": "5103a0479fffcbf9ac882be7e6bee4943e5b754a9bf5d5846d2c643b01a88687",
+    "tests/test_agents.py": "52263d10fe88dccb55d5421faab052a71a0c4047b76b158c8aadc143c5fc3ea8",
+    "tests/test_browser_care.py": "760937196d4ade5693588bc8fe2149ea1bd81093009be49f756828e5ebf17ae5",
+    "tests/test_postgres.py": "4448c978b2cec9d2481feeedcbfc1d8c6929a042165fc47dc6ad6dfd36d62985",
+    "tests/test_integrations_live.py": "0967db0facef6fc416ec0c48e78510791d315bdd27ef94046e50e3c1e30a4602",
+    "tests/test_evaluation.py": "b3d9206b6f57fb6d8174ffa96b181e3529cebe5951d25e8b695910c76e76b230",
+    "scripts/demo_replay.py": "1b9a7d4f15d0385cf3b6d9aa4b900e9e78aad23dd44afdbceada5b531db0c84a",
+    "scripts/doctor.py": "cbfc0ca7374eb322f9b8af71349ef02117bcbd8d017ccec32361b6eacf6a7269",
+    "scripts/local.py": "c29d22f3f24b61566db2201ef25cf94b231ba9c162f726d7c2e631aca37fdaba",
+    "scripts/render_secondary_audit.py": "5df44f0e0e038db02eb0283e5d8a899eddc5d97a1db9f0b9ddc975dbc5856175",
+    "scripts/export_contracts.py": "ee26b252efe66855dd82341419bd1fb1b3ff6a2d38f764803fead8eb7e64bca9",
+    "scripts/fresh_check.py": "890db0eb102ed45b9bf87355e53c7d2b74f548c87277063e795844071797f870",
+    "scripts/reset_demo.py": "e4b14dc3f6bb1032e3736f0dd36ab03e82e230533698ded4637ad5eb7ec33f9c",
+    "scripts/verification_report.py": "d01137a9d3cb23418a6f5dcb1394e253f95ab6f7d944c7a2d8a9cfa6086d6465",
+    "scripts/runtime_config.py": "2965ce91308d20922b9e142c31c4b25ef4c7f4e79ce62361e276d63c4ae32bda",
+    "requirements.lock": "6911aa5846c78fd578eb3302d6c7e881ea3b92130fc9e5589bd6cdc819864a41",
+    "compose.yaml": "0c401643bab7445cfb0df5026262880147fce498e4b191e380d405404a85e2f8",
+    "Makefile": "045281ae6d167d91918c64922b13c03e442a27ff0e2ebb2e52d69ff787d0ac08",
+    ".env.example": "3424f73168fd4dd0e37c191670a5c713920d47ec7beab962847af0ffc0fb3905",
+    "infra/api.Dockerfile": "addb647a55d8dd2c049b6ce7e0c9d4f5990a663d9ab1a4a413e566bd42b6c1ed",
+    "infra/web.Dockerfile": "bd3a53c6b6530249004e9670e650ab39647e958fd2cacef73e49ecf067783406",
+    "infra/compose.verify.yaml": "f54cfa22dfefad63397436e5158d2a3ec48d13e860a49a98c1d388c3c9250642"
+  },
+  "code_revision": null,
+  "dirty_state_hash": "5b7247271a0ad1ada079a9e6b05be62900711081f1ce7c9546c519f822144b81",
+  "limitations": [
+    "Fictional participants and simulated provider/FHIR services; no real patient contact or live EHR/exchange connection.",
+    "The 1,000-trajectory/500-invalid-closure evaluation is deterministic software execution, not 1,500 live AI trajectories.",
+    "Live Groq model quality and adapted public conversation rubric estimates are separate run records, with actual partial/failed counts and unknown usage retained.",
+    "No clinical outcome improvement, human usability study, independent translation/clinical review, or medical production approval is claimed.",
+    "MedAgentBench cloud-processing rights/container/original scorer remain unverified; credentialed MIMIC is disabled; Synthea was not run."
+  ]
+}

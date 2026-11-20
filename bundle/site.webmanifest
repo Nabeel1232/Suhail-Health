@@ -1,0 +1,30 @@
+{
+  "name": "Suhail Health",
+  "short_name": "Suhail",
+  "description": "Screening to care coordination",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#143D3C",
+  "theme_color": "#143D3C",
+  "icons": [
+    {
+      "src": "icons/app-icon-dark-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/app-icon-dark-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-icon-dark-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

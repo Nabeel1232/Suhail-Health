@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Suhail Health · intake</title><style>body{font:16px system-ui;margin:32px;color:#143d3c;background:#f4f8f7}main{max-width:1000px;margin:auto;background:white;padding:28px;border:1px solid #d4e2de;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:12px;border-bottom:1px solid #d4e2de}th{background:#e8f3f0}pre{white-space:pre-wrap}</style><main><p>Suhail Health · Guiding every result to care</p><h1>intake</h1><p>groq-smoke-holdout-v1 · PARTIAL · live_groq_synthetic</p><table><tr><th>Measurement</th><th>Value</th><th>Denominator</th><th>Method</th></tr><tr><td>task_accuracy</td><td>1.0</td><td>5</td><td>Independent scenario truth; incorrect evaluated answers remain in denominator.</td></tr><tr><td>evaluated_coverage</td><td>0.8333333333333334</td><td>6</td><td>All selected cases remain in execution coverage, including failures and skipped cases.</td></tr><tr><td>selected_case_pass_fraction</td><td>0.8333333333333334</td><td>6</td><td>Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.</td></tr><tr><td>action_correct</td><td>1.0</td><td>5</td><td>Independent known synthetic truth; no grader model.</td></tr><tr><td>field_precision</td><td>1.0</td><td>5</td><td>Independent known synthetic truth; no grader model.</td></tr><tr><td>field_recall</td><td>1.0</td><td>5</td><td>Independent known synthetic truth; no grader model.</td></tr><tr><td>review_or_abstention</td><td>1.0</td><td>5</td><td>Independent known synthetic truth; no grader model.</td></tr><tr><td>secondary_existing_response_audit_pass_fraction</td><td>0.0</td><td>1</td><td>Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.</td></tr></table><h2>Execution counts and usage</h2><pre>{
+  &quot;counts&quot;: {
+    &quot;selected&quot;: 6,
+    &quot;attempted&quot;: 6,
+    &quot;completed&quot;: 5,
+    &quot;failed&quot;: 1,
+    &quot;skipped&quot;: 0,
+    &quot;task_passed&quot;: 5,
+    &quot;task_incorrect&quot;: 0
+  },
+  &quot;usage&quot;: {
+    &quot;api_calls&quot;: 10,
+    &quot;input_tokens&quot;: null,
+    &quot;output_tokens&quot;: null,
+    &quot;cost_usd&quot;: null,
+    &quot;latency_ms_p50&quot;: 1673.0933748185635,
+    &quot;latency_ms_p95&quot;: 2990.4985427856445,
+    &quot;price_map_version&quot;: &quot;groq-models-2026-11-15&quot;,
+    &quot;budget_reason&quot;: null
+  }
+}</pre><h2>Limits</h2><ul><li>Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.</li><li>Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.</li><li>A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.</li><li>Standard/full presets not executed unless explicit budgets are supplied.</li><li>Observed429s consume conservative unknown-usage reservations; all failed calls retained.</li><li>Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.</li><li>Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.</li><li>Postresume latency includes explicit local pacing; no pure network-latency claim.</li><li>usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.</li><li>Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.</li><li>Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.</li><li>One Arabic case had a primary scoring exception; its existing response is evaluated only in the separately versioned secondary audit, preserving the primary failure denominator.</li></ul></main></html>

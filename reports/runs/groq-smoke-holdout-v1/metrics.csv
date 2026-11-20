@@ -1,0 +1,50 @@
+component,evidence_mode,name,value,unit,denominator,method
+intake,live_groq_synthetic,task_accuracy,1.0,fraction,5,Independent scenario truth; incorrect evaluated answers remain in denominator.
+intake,live_groq_synthetic,evaluated_coverage,0.8333333333333334,fraction,6,"All selected cases remain in execution coverage, including failures and skipped cases."
+intake,live_groq_synthetic,selected_case_pass_fraction,0.8333333333333334,fraction,6,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+intake,live_groq_synthetic,action_correct,1.0,fraction,5,Independent known synthetic truth; no grader model.
+intake,live_groq_synthetic,field_precision,1.0,fraction,5,Independent known synthetic truth; no grader model.
+intake,live_groq_synthetic,field_recall,1.0,fraction,5,Independent known synthetic truth; no grader model.
+intake,live_groq_synthetic,review_or_abstention,1.0,fraction,5,Independent known synthetic truth; no grader model.
+intake,live_groq_synthetic,secondary_existing_response_audit_pass_fraction,0.0,fraction,1,Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.
+pathway_router,live_groq_synthetic,task_accuracy,1.0,fraction,5,Independent scenario truth; incorrect evaluated answers remain in denominator.
+pathway_router,live_groq_synthetic,evaluated_coverage,0.8333333333333334,fraction,6,"All selected cases remain in execution coverage, including failures and skipped cases."
+pathway_router,live_groq_synthetic,selected_case_pass_fraction,0.8333333333333334,fraction,6,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+pathway_router,live_groq_synthetic,action_correct,1.0,fraction,5,Independent known synthetic truth; no grader model.
+pathway_router,live_groq_synthetic,review_or_abstention,0.6,fraction,5,Independent known synthetic truth; no grader model.
+pathway_router,live_groq_synthetic,secondary_existing_response_audit_pass_fraction,1.0,fraction,1,Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.
+safety_escalation,live_groq_synthetic,task_accuracy,1.0,fraction,5,Independent scenario truth; incorrect evaluated answers remain in denominator.
+safety_escalation,live_groq_synthetic,evaluated_coverage,0.8333333333333334,fraction,6,"All selected cases remain in execution coverage, including failures and skipped cases."
+safety_escalation,live_groq_synthetic,selected_case_pass_fraction,0.8333333333333334,fraction,6,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+safety_escalation,live_groq_synthetic,action_correct,1.0,fraction,5,Independent known synthetic truth; no grader model.
+safety_escalation,live_groq_synthetic,review_or_abstention,0.6,fraction,5,Independent known synthetic truth; no grader model.
+safety_escalation,live_groq_synthetic,secondary_existing_response_audit_pass_fraction,1.0,fraction,1,Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.
+patient_navigator,live_groq_synthetic,task_accuracy,1.0,fraction,5,Independent scenario truth; incorrect evaluated answers remain in denominator.
+patient_navigator,live_groq_synthetic,evaluated_coverage,0.8333333333333334,fraction,6,"All selected cases remain in execution coverage, including failures and skipped cases."
+patient_navigator,live_groq_synthetic,selected_case_pass_fraction,0.8333333333333334,fraction,6,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+patient_navigator,live_groq_synthetic,action_correct,1.0,fraction,5,Independent known synthetic truth; no grader model.
+patient_navigator,live_groq_synthetic,review_or_abstention,0.6,fraction,5,Independent known synthetic truth; no grader model.
+patient_navigator,live_groq_synthetic,secondary_existing_response_audit_pass_fraction,1.0,fraction,1,Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.
+coordination,live_groq_synthetic,task_accuracy,1.0,fraction,5,Independent scenario truth; incorrect evaluated answers remain in denominator.
+coordination,live_groq_synthetic,evaluated_coverage,0.8333333333333334,fraction,6,"All selected cases remain in execution coverage, including failures and skipped cases."
+coordination,live_groq_synthetic,selected_case_pass_fraction,0.8333333333333334,fraction,6,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+coordination,live_groq_synthetic,action_correct,1.0,fraction,5,Independent known synthetic truth; no grader model.
+coordination,live_groq_synthetic,review_or_abstention,0.0,fraction,5,Independent known synthetic truth; no grader model.
+coordination,live_groq_synthetic,secondary_existing_response_audit_pass_fraction,1.0,fraction,1,Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.
+closure_evidence,live_groq_synthetic,task_accuracy,1.0,fraction,5,Independent scenario truth; incorrect evaluated answers remain in denominator.
+closure_evidence,live_groq_synthetic,evaluated_coverage,0.8333333333333334,fraction,6,"All selected cases remain in execution coverage, including failures and skipped cases."
+closure_evidence,live_groq_synthetic,selected_case_pass_fraction,0.8333333333333334,fraction,6,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+closure_evidence,live_groq_synthetic,action_correct,1.0,fraction,5,Independent known synthetic truth; no grader model.
+closure_evidence,live_groq_synthetic,evidence_precision,1.0,fraction,5,Independent known synthetic truth; no grader model.
+closure_evidence,live_groq_synthetic,review_or_abstention,0.6,fraction,5,Independent known synthetic truth; no grader model.
+closure_evidence,live_groq_synthetic,secondary_existing_response_audit_pass_fraction,1.0,fraction,1,Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged.
+journeys,live_groq_synthetic,task_accuracy,1.0,fraction,12,Independent scenario truth; incorrect evaluated answers remain in denominator.
+journeys,live_groq_synthetic,evaluated_coverage,0.6666666666666666,fraction,18,"All selected cases remain in execution coverage, including failures and skipped cases."
+journeys,live_groq_synthetic,selected_case_pass_fraction,0.6666666666666666,fraction,18,Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed.
+journeys,live_groq_synthetic,arm_A_marginal_coverage_required_care_completed,0.0,fraction,6,Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence.
+journeys,live_groq_synthetic,arm_B_marginal_coverage_required_care_completed,1.0,fraction,5,Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence.
+journeys,live_groq_synthetic,arm_C_marginal_coverage_required_care_completed,1.0,fraction,1,Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence.
+journeys,live_groq_synthetic,matched_A_B_required_care_difference,1.0,fraction,5,"Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate."
+journeys,live_groq_synthetic,matched_B_C_required_care_difference,0.0,fraction,1,"Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate."
+software_suite,deterministic_software,task_accuracy,,fraction,,Independent scenario truth; incorrect evaluated answers remain in denominator.
+external_suite,adapted_external,adapted_healthbench_rubric_score,0.20104025327905925,fraction,2,"Signed weights / total positive weights per example; clip aggregate mean to [0,1]. Groq batched rubric-grader estimate; not official HealthBench."

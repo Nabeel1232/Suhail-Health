@@ -1,0 +1,98 @@
+{
+  "package": "Suhail Health Codex Build Pack",
+  "version": "1.0",
+  "date": "2026-11-14",
+  "kind": "prompts_requirements_and_brand_assets_not_application_results",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 1313,
+      "sha256": "0373d5823f5599217c84f0935c746212850b51aec2a9623b218dc2b122bdafc6"
+    },
+    {
+      "path": "CODEX_BUILD_PROMPT.md",
+      "bytes": 18291,
+      "sha256": "924930ad2ff568f15cea4d8de9454b0f8ecf7b4b444e7c8b147a7c10a4ec8503"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3391,
+      "sha256": "3a2aab06ba0d008c97c293bb909270ea715753659287064782a4704a3a1b51e2"
+    },
+    {
+      "path": "brand/BRAND_GUIDE.md",
+      "bytes": 4653,
+      "sha256": "1b901e760432089a10a87175057e006e623a7def3f46e8077fa5492a6f872946"
+    },
+    {
+      "path": "brand/app-icon.svg",
+      "bytes": 633,
+      "sha256": "4c61c4390b2229ba957341b8cf5b771c61d1b626b63ce908bfa70aa15289ff18"
+    },
+    {
+      "path": "brand/favicon.svg",
+      "bytes": 271,
+      "sha256": "5faba5d4e3bc9a890b8ed95ca817e803f289cee1c4adff52d863beedc471dc75"
+    },
+    {
+      "path": "brand/journey-motif.svg",
+      "bytes": 737,
+      "sha256": "e081d64b617e11a2df35b0c8fb26d1be8cab63a4b14e9f823320e70e59ab4abf"
+    },
+    {
+      "path": "brand/logo-original.png",
+      "bytes": 391474,
+      "sha256": "e2f1bc561f1ddb8003096b93814553d68d5749e6882a2e684d43270a5e84344b"
+    },
+    {
+      "path": "brand/social-card.svg",
+      "bytes": 1168,
+      "sha256": "c0f151513deb60ce1f064090405431e2270d53a9c25fb67e46a59aaea42f974f"
+    },
+    {
+      "path": "brand/theme.css",
+      "bytes": 2166,
+      "sha256": "b874509a6f82207bbcc25387dc0b73c22001ae3f7aa6ccd4b2109af26adef818"
+    },
+    {
+      "path": "brand/tokens.json",
+      "bytes": 1021,
+      "sha256": "865b354fb2d997c50f78e604cba79e91ac6cfc296e3bb6ce7da1193d9743b21a"
+    },
+    {
+      "path": "docs/BENCHMARK_PROTOCOL.md",
+      "bytes": 14063,
+      "sha256": "db4a97c3b8ba5b8c938ae14af4cbd7911c0fabe5908852d8d2d34f4656aa3fed"
+    },
+    {
+      "path": "docs/BUILD_STAGES.md",
+      "bytes": 7631,
+      "sha256": "7c454254b25c85caeb4f0d835ae405da415cd88160747aa7b52c339acf2052d6"
+    },
+    {
+      "path": "docs/CUSTOMER_EXPERIENCE.md",
+      "bytes": 6860,
+      "sha256": "97ecfb78de423e227ef929377ff247a6fc4b7829590742d9214a38d2dcea4f25"
+    },
+    {
+      "path": "docs/PRODUCT_SPEC.md",
+      "bytes": 52580,
+      "sha256": "1e7be26ec545424ed31bcd19ef8633f56eb4bd5de00fdfc6ef996941c9db6dc5"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 3028,
+      "sha256": "f9a7ac6342fec94797c055d6319c1397a4d325b995a7dd8cbcc355adb2af65ee"
+    },
+    {
+      "path": "evals/dataset-registry.yaml",
+      "bytes": 5088,
+      "sha256": "346c2d28861fdac945011133cb911cbe924e20f7a6a6a39dea9725edf66a0af8"
+    },
+    {
+      "path": "evals/report.schema.json",
+      "bytes": 5702,
+      "sha256": "0a859fb27898be62743f19a5318d04a77d668eb79723f9fb5713975e45f39d73"
+    }
+  ]
+}

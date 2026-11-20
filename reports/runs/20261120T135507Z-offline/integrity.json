@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "run_id": "20261120T135507Z-offline",
+  "case_records": 1500,
+  "provider_records": 0,
+  "checks": [
+    "hash chains",
+    "selected IDs",
+    "count equations",
+    "schema",
+    "usage reconciliation",
+    "candidate/grader response lineage",
+    "model provenance",
+    "no capability probe substitution"
+  ],
+  "errors": []
+}

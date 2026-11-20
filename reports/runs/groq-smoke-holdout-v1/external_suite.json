@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "run_id": "groq-smoke-holdout-v1",
+  "status": "PARTIAL",
+  "reason_code": "budget_exhausted",
+  "evidence_mode": "adapted_external",
+  "component": "external_suite",
+  "started_at": "2026-11-14T21:17:57.813247+00:00",
+  "finished_at": "2026-11-14T21:40:15.644871+00:00",
+  "provenance": {
+    "code_revision": null,
+    "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "grader_model": "openai/gpt-oss-120b",
+    "dataset": "healthbench_adapted",
+    "dataset_revision": "40ee1968852fc57f625934251ac22be47077a8fb",
+    "dataset_checksum": "e99dd3c6372c10d6fcc5e385c5fae69d0dd40392dae56836ef9493ae324ecd2f",
+    "license": "mit",
+    "selected_case_ids": [
+      "healthbench-e9b7f69b-69ee-486b-805c-c98439ad969a",
+      "healthbench-ced9860d-fbcb-4044-9675-133f233bdb57",
+      "healthbench-9e2670fc-2237-492a-afed-d6d198cb673c",
+      "healthbench-4a8f0b1e-bdff-46cc-92d8-b26a5bd65dd9",
+      "healthbench-f01bf8d2-db27-479c-a475-eea7c34723ef",
+      "healthbench-8007766d-0b6c-406a-8cae-a9fc2da4499f",
+      "healthbench-8c96d728-e8c9-45bf-b3ac-a06dd4801d85",
+      "healthbench-7a57c0bc-9b5c-493d-ba5d-4b4819f28cbf",
+      "healthbench-565f464d-f5ac-4174-8f55-64d8f6b64846",
+      "healthbench-616e980f-7d80-4bd6-864e-6be62ac20d18",
+      "healthbench-d4300334-d8ac-4fad-8d74-1aff8dfa7333",
+      "healthbench-8d0d9310-b6fb-43ad-bfd5-783dbdb1252d"
+    ],
+    "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+    "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+    "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+    "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+    "sampling_parameters": {
+      "temperature": 0,
+      "structured_max_tokens": 1500,
+      "external_max_tokens": 1500,
+      "grader_max_tokens": 1500,
+      "stream": false,
+      "concurrency": 1,
+      "configured_max_concurrency": 2,
+      "tool_parallel_calls": false,
+      "quantization": "provider managed; not disclosed"
+    }
+  },
+  "counts": {
+    "selected": 12,
+    "attempted": 2,
+    "completed": 2,
+    "failed": 0,
+    "skipped": 10,
+    "task_passed": null,
+    "task_incorrect": null
+  },
+  "metrics": [
+    {
+      "name": "adapted_healthbench_rubric_score",
+      "value": 0.20104025327905925,
+      "unit": "fraction",
+      "denominator": 2,
+      "method": "Signed weights / total positive weights per example; clip aggregate mean to [0,1]. Groq batched rubric-grader estimate; not official HealthBench."
+    }
+  ],
+  "usage": {
+    "api_calls": 6,
+    "input_tokens": null,
+    "output_tokens": null,
+    "cost_usd": null,
+    "latency_ms_p50": 29899.273172020912,
+    "latency_ms_p95": 30579.688906669617,
+    "price_map_version": "groq-models-2026-11-15",
+    "budget_reason": null
+  },
+  "errors": [
+    {
+      "case_id": "healthbench-9e2670fc-2237-492a-afed-d6d198cb673c",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-4a8f0b1e-bdff-46cc-92d8-b26a5bd65dd9",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-f01bf8d2-db27-479c-a475-eea7c34723ef",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-8007766d-0b6c-406a-8cae-a9fc2da4499f",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-8c96d728-e8c9-45bf-b3ac-a06dd4801d85",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-7a57c0bc-9b5c-493d-ba5d-4b4819f28cbf",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-565f464d-f5ac-4174-8f55-64d8f6b64846",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-616e980f-7d80-4bd6-864e-6be62ac20d18",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-d4300334-d8ac-4fad-8d74-1aff8dfa7333",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    },
+    {
+      "case_id": "healthbench-8d0d9310-b6fb-43ad-bfd5-783dbdb1252d",
+      "code": "budget_exhausted",
+      "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+    }
+  ],
+  "limitations": [
+    "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+    "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+    "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+    "Standard/full presets not executed unless explicit budgets are supplied.",
+    "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+    "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+    "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+    "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+    "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+    "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+    "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+    "Public deterministic thematic subset, not representative overall HealthBench.",
+    "Candidate and grader may share model/family; no independent human review performed.",
+    "Batched rubric grading differs from the reference one-criterion-per-request protocol."
+  ],
+  "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+}

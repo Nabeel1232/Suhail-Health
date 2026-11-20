@@ -1,0 +1,5244 @@
+[
+  {
+    "actual_backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "agent_proposals": [],
+    "arm": "A",
+    "attempted": true,
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500000-A",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_phase": "priority-journey-resume-v2",
+    "finished_at": "2026-11-14T21:32:32.464870+00:00",
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590317-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590317-P",
+        "patient_name": "Synthetic Participant 590317",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590317/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590317-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500000",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": true,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": false,
+        "scenario": "normal_completion"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 0,
+      "attendance": false,
+      "care_completed": false,
+      "consultation": 0,
+      "delay_reasons": [],
+      "disposition": "open",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "Diagnostic follow-up pending",
+      "understanding": true
+    },
+    "latency_ms": 212.1412195265293,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+      "disposition": "open",
+      "version": 5
+    },
+    "paired_id": "trajectory-holdout-500000",
+    "previous_hash": "de3f2a016304980efde8a3f34af7fd22b6ca97eae5a03c6c34cbbfe4ffb3d458",
+    "record_hash": "54131aabc8807ea0802df654b6eaddc959f3c1d6512dc77c55bedc8fec8cfc22",
+    "scenario": "normal_completion",
+    "score": {
+      "assertions": [
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:32:32.252732+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+          "dataset": "eval-trajectory-holdout-500000",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590317-O",
+          "patient_id": "SYN-HOLDOUT-590317-P",
+          "patient_name": "Synthetic Participant 590317",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A-1-communication",
+          "language": "en"
+        },
+        "record_id": "msg-6d797f21b0984dd3",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-6d797f21b0984dd3",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-6d797f21b0984dd3",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      }
+    ]
+  },
+  {
+    "actual_backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "agent_proposals": [],
+    "arm": "B",
+    "attempted": true,
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500000-B",
+    "component": "journeys",
+    "error": {
+      "code": "execution_error",
+      "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+    },
+    "evaluated": false,
+    "evidence_mode": "deterministic_software",
+    "execution_phase": "priority-journey-resume-v2",
+    "finished_at": "2026-11-14T21:32:32.537605+00:00",
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-B",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-B",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590317-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590317-P",
+        "patient_name": "Synthetic Participant 590317",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590317/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590317-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500000",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": true,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": false,
+        "scenario": "normal_completion"
+      }
+    },
+    "journey": {},
+    "latency_ms": 27.189675718545914,
+    "output": {},
+    "paired_id": "trajectory-holdout-500000",
+    "previous_hash": "54131aabc8807ea0802df654b6eaddc959f3c1d6512dc77c55bedc8fec8cfc22",
+    "record_hash": "33247177f82e3eecd1f11548d80aea7ba1e9c63542fc0600d065342aa558ec09",
+    "scenario": "normal_completion",
+    "score": {
+      "assertions": [],
+      "passed": false
+    },
+    "started_at": "2026-11-14T21:32:32.510419+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-B",
+          "dataset": "eval-trajectory-holdout-500000",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-B-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590317-O",
+          "patient_id": "SYN-HOLDOUT-590317-P",
+          "patient_name": "Synthetic Participant 590317",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 5
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A-1-communication",
+          "language": "en"
+        },
+        "record_id": null,
+        "version": 5
+      }
+    ]
+  },
+  {
+    "actual_backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "agent_proposals": [
+      {
+        "candidate_call_id": "e7e4cdc0-a2c2-4a21-af95-0a2c27b2c944",
+        "function": "intake",
+        "latency_ms": 2092.1622700989246,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+          "case_version": 5,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "1"
+            }
+          ],
+          "function": "intake",
+          "missing_fields": [],
+          "patient_message": "",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "review_pathway",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590317/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2260,
+          "output_tokens": 681,
+          "total_tokens": 2941
+        }
+      },
+      {
+        "candidate_call_id": "367a93e5-3a0d-474b-b650-ba7d42113c53",
+        "function": "pathway_router",
+        "latency_ms": 29700.981080532074,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+          "case_version": 5,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "1"
+            }
+          ],
+          "function": "pathway_router",
+          "missing_fields": [],
+          "patient_message": "The result has been routed to the colorectal coordination pathway for follow‑up.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "route_colorectal",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590317/result",
+            "demo-fit-workflow#Sections 1-4: ownership, communication, consultation, endpoint"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2261,
+          "output_tokens": 719,
+          "total_tokens": 2980
+        }
+      },
+      {
+        "candidate_call_id": "db0c1203-19b6-4932-9864-951cd678fa4e",
+        "function": "safety_escalation",
+        "latency_ms": 30433.637138456106,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+          "case_version": 5,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "1"
+            }
+          ],
+          "function": "safety_escalation",
+          "missing_fields": [],
+          "patient_message": "We have received your screening result. A qualified clinician will review the details and get back to you with the appropriate next steps. You can expect a response shortly.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "request_clinician",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590317/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2263,
+          "output_tokens": 672,
+          "total_tokens": 2935
+        }
+      },
+      {
+        "candidate_call_id": "007d2760-5c98-4b7f-a83d-1c7166b6d501",
+        "function": "patient_navigator",
+        "latency_ms": 30143.278930336237,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+          "case_version": 5,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "1"
+            }
+          ],
+          "function": "patient_navigator",
+          "missing_fields": [],
+          "patient_message": "Your FIT positive screening result requires follow‑up. Our navigation team will coordinate the next steps and a clinician will review your result to arrange the appropriate colonoscopy. We will contact you soon with details. If you have any questions, a clinician will reply.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "explain_next_step",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590317/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2261,
+          "output_tokens": 923,
+          "total_tokens": 3184
+        }
+      },
+      {
+        "candidate_call_id": "41060ec5-74b3-48ad-94f0-ab42eaeb0bb5",
+        "function": "coordination",
+        "latency_ms": 29603.117782622576,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A",
+          "case_version": 5,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "SYN-HOLDOUT-590317-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "1"
+            },
+            {
+              "field": "pathway",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "colorectal-fit"
+            },
+            {
+              "field": "identity_verified",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "true"
+            },
+            {
+              "field": "urgent",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "false"
+            },
+            {
+              "field": "disposition",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "open"
+            },
+            {
+              "field": "next_action",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "Obtain receiving-service acceptance"
+            },
+            {
+              "field": "owner",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "navigation-team"
+            },
+            {
+              "field": "language",
+              "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+              "value": "en"
+            }
+          ],
+          "function": "coordination",
+          "missing_fields": [],
+          "patient_message": "Your care team is preparing to transfer your screening result to the appropriate specialist service. They will contact you soon with the next steps.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "prepare_handoff",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590317/result",
+            "demo-fit-workflow#Sections 1-4: ownership, communication, consultation, endpoint",
+            "uspstf-stool-followup#Practice Considerations / Stool-Based Tests",
+            "demo-patient-en#Next step and help"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2260,
+          "output_tokens": 1068,
+          "total_tokens": 3328
+        }
+      }
+    ],
+    "arm": "C",
+    "attempted": true,
+    "candidate_call_id": null,
+    "candidate_call_lineage": [
+      {
+        "call_id": "e7e4cdc0-a2c2-4a21-af95-0a2c27b2c944",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "ff243b137e9e56030577f43046236df3da77d7c1b4ba2e5bff2d6a792ad4b828"
+      },
+      {
+        "call_id": "367a93e5-3a0d-474b-b650-ba7d42113c53",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "1991a5cd5ef9f917cc818d4ba34433cd2f80f6e53eb3aeeaa73fe302689629d6"
+      },
+      {
+        "call_id": "db0c1203-19b6-4932-9864-951cd678fa4e",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "f18b6c04b41e60e8a9b2ca141752e4e9a8bbc5eb01eff4d4fde46a693fc314ac"
+      },
+      {
+        "call_id": "007d2760-5c98-4b7f-a83d-1c7166b6d501",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "879b15ee4e8b8564f3203cc8aceb338d08c3e058f85b49710b02c0263dc3bdfc"
+      },
+      {
+        "call_id": "41060ec5-74b3-48ad-94f0-ab42eaeb0bb5",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "3ce1c800d9aebc24d1bfb9668dd7e2067c13dbc79f0a397da7ba970d5734875d"
+      }
+    ],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500000-C",
+    "component": "journeys",
+    "error": {
+      "code": "execution_error",
+      "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+    },
+    "evaluated": false,
+    "evidence_mode": "live_groq_synthetic",
+    "execution_phase": "priority-journey-resume-v2",
+    "finished_at": "2026-11-14T21:34:35.360567+00:00",
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-C",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-C",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590317-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590317-P",
+        "patient_name": "Synthetic Participant 590317",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590317/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590317-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500000",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": true,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": false,
+        "scenario": "normal_completion"
+      }
+    },
+    "journey": {},
+    "latency_ms": 122793.2901866734,
+    "output": {},
+    "paired_id": "trajectory-holdout-500000",
+    "previous_hash": "33247177f82e3eecd1f11548d80aea7ba1e9c63542fc0600d065342aa558ec09",
+    "record_hash": "bd52ce57ffe7fe083d91e4bbd20e3def2a99c1f7e542a68af0c9394387cdcdbf",
+    "scenario": "normal_completion",
+    "score": {
+      "assertions": [],
+      "passed": false
+    },
+    "started_at": "2026-11-14T21:32:32.567281+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-C",
+          "dataset": "eval-trajectory-holdout-500000",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-C-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590317-O",
+          "patient_id": "SYN-HOLDOUT-590317-P",
+          "patient_name": "Synthetic Participant 590317",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590317/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 5
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500000-A-1-communication",
+          "language": "en"
+        },
+        "record_id": null,
+        "version": 5
+      }
+    ]
+  },
+  {
+    "actual_backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "agent_proposals": [],
+    "arm": "A",
+    "attempted": true,
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500001-A",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-A/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:36:39.407423+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590318-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590318-P",
+        "patient_name": "Synthetic Participant 590318",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590318/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590318-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500001",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": true,
+        "residual_need": true,
+        "scenario": "unsupported_pathway"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 0,
+      "attendance": false,
+      "care_completed": false,
+      "consultation": 0,
+      "delay_reasons": [],
+      "disposition": "open",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "Diagnostic follow-up pending",
+      "understanding": true
+    },
+    "latency_ms": 207.1356549859047,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A",
+      "disposition": "open",
+      "version": 5
+    },
+    "paired_id": "trajectory-holdout-500001",
+    "previous_hash": "bd52ce57ffe7fe083d91e4bbd20e3def2a99c1f7e542a68af0c9394387cdcdbf",
+    "record_hash": "56ba26a5c0a68c923d049c411ea3af566433f8f1dab8253f08a5aac195f7c6a3",
+    "scenario": "rejected_handoff",
+    "scenario_contract": {
+      "base_fixture_tag": "unsupported_pathway",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "rejected_handoff"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:36:39.200287+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A",
+          "dataset": "eval-trajectory-holdout-500001",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "patient_name": "Synthetic Participant 590318",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A-1-communication",
+          "language": "en"
+        },
+        "record_id": "msg-2fdbb7fd7d3a4684",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-2fdbb7fd7d3a4684",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-2fdbb7fd7d3a4684",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-A-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      }
+    ]
+  },
+  {
+    "actual_backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "agent_proposals": [],
+    "arm": "B",
+    "attempted": true,
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500001-B",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-B/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:36:40.712402+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590318-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590318-P",
+        "patient_name": "Synthetic Participant 590318",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590318/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590318-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500001",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": true,
+        "residual_need": true,
+        "scenario": "unsupported_pathway"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 1,
+      "attendance": true,
+      "care_completed": true,
+      "consultation": 2,
+      "delay_reasons": [
+        "handoff_rejected"
+      ],
+      "disposition": "completed_required_care",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "",
+      "understanding": true
+    },
+    "latency_ms": 585.0411206483841,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B",
+      "disposition": "completed_required_care",
+      "version": 25
+    },
+    "paired_id": "trajectory-holdout-500001",
+    "previous_hash": "56ba26a5c0a68c923d049c411ea3af566433f8f1dab8253f08a5aac195f7c6a3",
+    "record_hash": "eccdfc40cf870fd4dee538f4fa42fb5bc82122916350135107ad91972ca09083",
+    "scenario": "rejected_handoff",
+    "scenario_contract": {
+      "base_fixture_tag": "unsupported_pathway",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "rejected_handoff"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "authorized_completion_persisted",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:36:40.127359+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B",
+          "dataset": "eval-trajectory-holdout-500001",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "patient_name": "Synthetic Participant 590318",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-1-communication",
+          "language": "en"
+        },
+        "record_id": "msg-ed2c531021294134",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-ed2c531021294134",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-ed2c531021294134",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      },
+      {
+        "actor_role": "patient",
+        "command": "consultation",
+        "input": {
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-4-consultation",
+          "question": "What is my next step?",
+          "recipient": "clinician",
+          "type": "patient_to_clinician"
+        },
+        "record_id": "consult-8786d60cdcae4f95",
+        "version": 6
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Confirm the patient next step and arrange assessment",
+          "consultation_id": "consult-8786d60cdcae4f95",
+          "expected_version": 6,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-5-consultation_reply",
+          "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you."
+        },
+        "record_id": null,
+        "version": 7
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation",
+        "input": {
+          "expected_version": 7,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-6-consultation",
+          "question": "Please advise the coordination steps for the documented actionable screening result.",
+          "recipient": "specialist",
+          "type": "clinician_to_specialist"
+        },
+        "record_id": "consult-8642993f402d4af1",
+        "version": 8
+      },
+      {
+        "actor_role": "specialist",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Obtain assessment report and clinician review",
+          "consultation_id": "consult-8642993f402d4af1",
+          "expected_version": 8,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-7-consultation_reply",
+          "reply": "Arrange the documented diagnostic assessment and return the report for clinician review."
+        },
+        "record_id": null,
+        "version": 9
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 9,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-8-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-a99c2a5b0a3447f1"
+        },
+        "record_id": "task-a99c2a5b0a3447f1",
+        "version": 10
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 10,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-9-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-accf190ff7074a22"
+        },
+        "record_id": "task-accf190ff7074a22",
+        "version": 11
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 11,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-10-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-f7afb51d9eff4968",
+        "version": 12
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_reject",
+        "input": {
+          "expected_version": 12,
+          "handoff_id": "handoff-f7afb51d9eff4968",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-11-handoff_reject",
+          "reason": "Synthetic service capacity unavailable"
+        },
+        "record_id": null,
+        "version": 13
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 13,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-12-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-134e7fd2ff9a40bb"
+        },
+        "record_id": "task-134e7fd2ff9a40bb",
+        "version": 14
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 14,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-13-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-3e1d94c1692b4234",
+        "version": 15
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_accept",
+        "input": {
+          "expected_version": 15,
+          "handoff_id": "handoff-3e1d94c1692b4234",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-14-handoff_accept",
+          "reason": "Synthetic destination explicitly accepts intended scope"
+        },
+        "record_id": null,
+        "version": 16
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_create",
+        "input": {
+          "expected_version": 16,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-15-appointment_create",
+          "provider": "provider-a",
+          "scheduled_at": "2026-11-18T09:00:00+00:00"
+        },
+        "record_id": "appt-9753168189564ea5",
+        "version": 17
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_event",
+        "input": {
+          "appointment_id": "appt-9753168189564ea5",
+          "expected_version": 17,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-16-appointment_event",
+          "source_event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-attended-15",
+          "status": "attended"
+        },
+        "record_id": null,
+        "version": 18
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: investigation for case groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B. This fixture is not clinical guidance.",
+          "expected_version": 18,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-17-evidence_add",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B/investigation/16",
+          "result_version": 1,
+          "type": "investigation"
+        },
+        "record_id": "ev-262d87ed31074aae",
+        "version": 19
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-262d87ed31074aae",
+          "expected_version": 19,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-18-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 20
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B. This fixture is not clinical guidance.",
+          "expected_version": 20,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-19-evidence_add",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B/reviewed_outcome/18",
+          "requires_onward": false,
+          "result_version": 1,
+          "type": "reviewed_outcome"
+        },
+        "record_id": "ev-7d7281e786454f0d",
+        "version": 21
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-7d7281e786454f0d",
+          "expected_version": 21,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-20-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 22
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B. This fixture is not clinical guidance.",
+          "expected_version": 22,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-21-evidence_add",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B/patient_updated/20",
+          "result_version": 1,
+          "type": "patient_updated"
+        },
+        "record_id": "ev-9a890db6893744bb",
+        "version": 23
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-9a890db6893744bb",
+          "expected_version": 23,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-22-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 24
+      },
+      {
+        "actor_role": "clinician",
+        "command": "disposition",
+        "input": {
+          "category": "completed_required_care",
+          "expected_version": 24,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-B-23-disposition",
+          "reason": "All configured synthetic diagnostic/care endpoint evidence checked",
+          "residual_need": ""
+        },
+        "record_id": null,
+        "version": 25
+      }
+    ]
+  },
+  {
+    "actual_backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "agent_proposals": [
+      {
+        "candidate_call_id": "141f04c5-d539-4c69-a5f9-3cba53301c4a",
+        "function": "intake",
+        "latency_ms": 2129.9519054591656,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+          "case_version": 1,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "1"
+            }
+          ],
+          "function": "intake",
+          "missing_fields": [],
+          "patient_message": "",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "review_pathway",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590318/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2265,
+          "output_tokens": 625,
+          "total_tokens": 2890
+        }
+      },
+      {
+        "candidate_call_id": "1e0aea40-03d8-445d-9c8d-26dbd54c51d2",
+        "function": "pathway_router",
+        "latency_ms": 29600.48895329237,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+          "case_version": 1,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "1"
+            }
+          ],
+          "function": "pathway_router",
+          "missing_fields": [],
+          "patient_message": "",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "route_colorectal",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590318/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2266,
+          "output_tokens": 659,
+          "total_tokens": 2925
+        }
+      },
+      {
+        "candidate_call_id": "93e2c6fa-3833-49a6-b8db-93afa9354e75",
+        "function": "safety_escalation",
+        "latency_ms": 29768.708437681198,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+          "case_version": 1,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "1"
+            }
+          ],
+          "function": "safety_escalation",
+          "missing_fields": [],
+          "patient_message": "We have received your screening result. A clinician will review your case and respond with the next steps.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "request_clinician",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590318/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2268,
+          "output_tokens": 741,
+          "total_tokens": 3009
+        }
+      },
+      {
+        "candidate_call_id": "0f47fd1d-43e3-4196-bc56-6cd26965e60e",
+        "function": "patient_navigator",
+        "latency_ms": 31182.783763855696,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+          "case_version": 1,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "1"
+            },
+            {
+              "field": "pathway",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "colorectal-fit"
+            },
+            {
+              "field": "identity_verified",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "true"
+            },
+            {
+              "field": "urgent",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "false"
+            },
+            {
+              "field": "disposition",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "open"
+            },
+            {
+              "field": "next_action",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "Send approved result notification"
+            },
+            {
+              "field": "language",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "en"
+            }
+          ],
+          "function": "patient_navigator",
+          "missing_fields": [],
+          "patient_message": "We have received your FIT positive result. The next step is to arrange a follow‑up colonoscopy. Our navigation team will contact you to schedule the appointment and answer any questions you may have. Please look for a notification from us soon.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "explain_next_step",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590318/result",
+            "demo-fit-workflow#Sections 1-4: ownership, communication, consultation, endpoint",
+            "uspstf-stool-followup#Practice Considerations / Stool-Based Tests",
+            "demo-patient-en#Next step and help"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2266,
+          "output_tokens": 952,
+          "total_tokens": 3218
+        }
+      },
+      {
+        "candidate_call_id": "9112fef1-db4d-4baf-a0c6-175aa2fcde9d",
+        "function": "coordination",
+        "latency_ms": 29721.222683787346,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+          "case_version": 1,
+          "evidence_ids": [],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "1"
+            },
+            {
+              "field": "pathway",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "colorectal-fit"
+            },
+            {
+              "field": "identity_verified",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "true"
+            },
+            {
+              "field": "urgent",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "false"
+            },
+            {
+              "field": "disposition",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "open"
+            },
+            {
+              "field": "next_action",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "Send approved result notification"
+            }
+          ],
+          "function": "coordination",
+          "missing_fields": [],
+          "patient_message": "Your screening result requires follow‑up. Our navigation team is preparing to hand off your case to the appropriate clinical team. You will receive a message from them shortly with the next steps.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "prepare_handoff",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590318/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 2265,
+          "output_tokens": 1043,
+          "total_tokens": 3308
+        }
+      },
+      {
+        "candidate_call_id": "b0fe7140-1759-4cdc-8508-babd3284fa37",
+        "function": "closure_evidence",
+        "latency_ms": 29045.648612082005,
+        "mode": "live_groq",
+        "model": "openai/gpt-oss-120b",
+        "proposal": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+          "case_version": 24,
+          "evidence_ids": [
+            "ev-8bf8e7f7f37b42d2",
+            "ev-ccbf6b62564d4a0e",
+            "ev-d82098d5af6f46ea"
+          ],
+          "extracted_facts": [
+            {
+              "field": "patient_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-P"
+            },
+            {
+              "field": "order_id",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "SYN-HOLDOUT-590318-O"
+            },
+            {
+              "field": "test_code",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "FIT_POSITIVE"
+            },
+            {
+              "field": "result_version",
+              "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+              "value": "1"
+            }
+          ],
+          "function": "closure_evidence",
+          "missing_fields": [],
+          "patient_message": "Your case will be reviewed by a clinician for closure. You will be contacted with the final outcome.",
+          "policy_version": "demo-fit-v1",
+          "recommended_action": "closure_review",
+          "review_reason": null,
+          "source_references": [
+            "synthetic://SYN-HOLDOUT-590318/result"
+          ]
+        },
+        "tool_call_ids": [],
+        "tool_events": [],
+        "usage": {
+          "input_tokens": 3365,
+          "output_tokens": 833,
+          "total_tokens": 4198
+        }
+      }
+    ],
+    "arm": "C",
+    "attempted": true,
+    "candidate_call_id": "b0fe7140-1759-4cdc-8508-babd3284fa37",
+    "candidate_call_lineage": [
+      {
+        "call_id": "141f04c5-d539-4c69-a5f9-3cba53301c4a",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "499577cd52e1314f378c43db341ee143e2e2f412cf5764b1b3e88444ad67e917"
+      },
+      {
+        "call_id": "1e0aea40-03d8-445d-9c8d-26dbd54c51d2",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "795f1ee8152a4b64f72a0a20980e630c8438f94ce48caf8766e78c9e71f166fd"
+      },
+      {
+        "call_id": "93e2c6fa-3833-49a6-b8db-93afa9354e75",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "c48c2c3571faea4a6d4ba2caaac05545ada89826c98b67b9b8abb67a3d48a692"
+      },
+      {
+        "call_id": "0f47fd1d-43e3-4196-bc56-6cd26965e60e",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "b2b01a15abc55027b3c8c8998af41b552b456f183487986785f3239577c9347d"
+      },
+      {
+        "call_id": "9112fef1-db4d-4baf-a0c6-175aa2fcde9d",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "968d9fc43fdf1dabfd35c5151cea652cd612a839dab9cc768d2e976e68e83e75"
+      },
+      {
+        "call_id": "b0fe7140-1759-4cdc-8508-babd3284fa37",
+        "model": "openai/gpt-oss-120b",
+        "output_hash": "f91ea5712b63aefea99dee367ea4df376b60a188cc7759fcef7c7940c6bfc210"
+      }
+    ],
+    "candidate_model": "openai/gpt-oss-120b",
+    "candidate_output_hash": "f91ea5712b63aefea99dee367ea4df376b60a188cc7759fcef7c7940c6bfc210",
+    "case_id": "paired-trajectory-holdout-500001-C",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "live_groq_synthetic",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-C/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:39:14.351629+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590318-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590318-P",
+        "patient_name": "Synthetic Participant 590318",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590318/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590318-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500001",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": true,
+        "residual_need": true,
+        "scenario": "unsupported_pathway"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 1,
+      "attendance": true,
+      "care_completed": true,
+      "consultation": 2,
+      "delay_reasons": [
+        "handoff_rejected"
+      ],
+      "disposition": "completed_required_care",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "",
+      "understanding": true
+    },
+    "latency_ms": 152922.9389615357,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+      "disposition": "completed_required_care",
+      "version": 25
+    },
+    "paired_id": "trajectory-holdout-500001",
+    "previous_hash": "eccdfc40cf870fd4dee538f4fa42fb5bc82122916350135107ad91972ca09083",
+    "record_hash": "86a29a89cd029d71002089581662257a7425f5e2e4fb23968861248e435550b7",
+    "scenario": "rejected_handoff",
+    "scenario_contract": {
+      "base_fixture_tag": "unsupported_pathway",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "rejected_handoff"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:36:41.428712+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C",
+          "dataset": "eval-trajectory-holdout-500001",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "patient_name": "Synthetic Participant 590318",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590318/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-1-communication",
+          "language": "en"
+        },
+        "record_id": "msg-a28d6f7878344771",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-a28d6f7878344771",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-a28d6f7878344771",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      },
+      {
+        "actor_role": "patient",
+        "command": "consultation",
+        "input": {
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-4-consultation",
+          "question": "What is my next step?",
+          "recipient": "clinician",
+          "type": "patient_to_clinician"
+        },
+        "record_id": "consult-f06072662a774778",
+        "version": 6
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Confirm the patient next step and arrange assessment",
+          "consultation_id": "consult-f06072662a774778",
+          "expected_version": 6,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-5-consultation_reply",
+          "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you."
+        },
+        "record_id": null,
+        "version": 7
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation",
+        "input": {
+          "expected_version": 7,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-6-consultation",
+          "question": "Please advise the coordination steps for the documented actionable screening result.",
+          "recipient": "specialist",
+          "type": "clinician_to_specialist"
+        },
+        "record_id": "consult-040db1a3e07f4c63",
+        "version": 8
+      },
+      {
+        "actor_role": "specialist",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Obtain assessment report and clinician review",
+          "consultation_id": "consult-040db1a3e07f4c63",
+          "expected_version": 8,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-7-consultation_reply",
+          "reply": "Arrange the documented diagnostic assessment and return the report for clinician review."
+        },
+        "record_id": null,
+        "version": 9
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 9,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-8-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-1ae67a87f12b4886"
+        },
+        "record_id": "task-1ae67a87f12b4886",
+        "version": 10
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 10,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-9-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-c4250377a73e4f02"
+        },
+        "record_id": "task-c4250377a73e4f02",
+        "version": 11
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 11,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-10-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-a827b688d7864a3e",
+        "version": 12
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_reject",
+        "input": {
+          "expected_version": 12,
+          "handoff_id": "handoff-a827b688d7864a3e",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-11-handoff_reject",
+          "reason": "Synthetic service capacity unavailable"
+        },
+        "record_id": null,
+        "version": 13
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 13,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-12-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-1b989af107854c24"
+        },
+        "record_id": "task-1b989af107854c24",
+        "version": 14
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 14,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-13-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-5fdc3d9e7f7c433b",
+        "version": 15
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_accept",
+        "input": {
+          "expected_version": 15,
+          "handoff_id": "handoff-5fdc3d9e7f7c433b",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-14-handoff_accept",
+          "reason": "Synthetic destination explicitly accepts intended scope"
+        },
+        "record_id": null,
+        "version": 16
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_create",
+        "input": {
+          "expected_version": 16,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-15-appointment_create",
+          "provider": "provider-a",
+          "scheduled_at": "2026-11-18T09:00:00+00:00"
+        },
+        "record_id": "appt-f727a8b2048b4e0b",
+        "version": 17
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_event",
+        "input": {
+          "appointment_id": "appt-f727a8b2048b4e0b",
+          "expected_version": 17,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-16-appointment_event",
+          "source_event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-attended-15",
+          "status": "attended"
+        },
+        "record_id": null,
+        "version": 18
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: investigation for case groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C. This fixture is not clinical guidance.",
+          "expected_version": 18,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-17-evidence_add",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C/investigation/16",
+          "result_version": 1,
+          "type": "investigation"
+        },
+        "record_id": "ev-8bf8e7f7f37b42d2",
+        "version": 19
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-8bf8e7f7f37b42d2",
+          "expected_version": 19,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-18-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 20
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C. This fixture is not clinical guidance.",
+          "expected_version": 20,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-19-evidence_add",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C/reviewed_outcome/18",
+          "requires_onward": false,
+          "result_version": 1,
+          "type": "reviewed_outcome"
+        },
+        "record_id": "ev-ccbf6b62564d4a0e",
+        "version": 21
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-ccbf6b62564d4a0e",
+          "expected_version": 21,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-20-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 22
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C. This fixture is not clinical guidance.",
+          "expected_version": 22,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-21-evidence_add",
+          "order_id": "SYN-HOLDOUT-590318-O",
+          "patient_id": "SYN-HOLDOUT-590318-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C/patient_updated/20",
+          "result_version": 1,
+          "type": "patient_updated"
+        },
+        "record_id": "ev-d82098d5af6f46ea",
+        "version": 23
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-d82098d5af6f46ea",
+          "expected_version": 23,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-22-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 24
+      },
+      {
+        "actor_role": "clinician",
+        "command": "disposition",
+        "input": {
+          "category": "completed_required_care",
+          "expected_version": 24,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500001-C-23-disposition",
+          "reason": "Human scenario actor independently checks deterministic endpoint evidence",
+          "residual_need": ""
+        },
+        "record_id": null,
+        "version": 25
+      }
+    ]
+  },
+  {
+    "agent_proposals": [],
+    "arm": "A",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500002-A",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-A/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:15.854571+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A",
+        "identity_verified": true,
+        "language": "ar",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590319-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590319-P",
+        "patient_name": "Synthetic Participant 590319",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590319/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590319-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500002",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": true,
+        "residual_need": true,
+        "scenario": "identity_conflict"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 0,
+      "attendance": false,
+      "care_completed": false,
+      "consultation": 0,
+      "delay_reasons": [],
+      "disposition": "open",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "Diagnostic follow-up pending",
+      "understanding": true
+    },
+    "latency_ms": 119.8151670396328,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A",
+      "disposition": "open",
+      "version": 5
+    },
+    "paired_id": "trajectory-holdout-500002",
+    "previous_hash": "e33c831b3932674eaf150e182813626c42842b75fbf43dcd905b21c02c49dbb3",
+    "record_hash": "87cb01418ca0adfa7b5b11d33d6e279c7db7020e8e13a241838f4b0e5bce0d09",
+    "scenario": "no_show",
+    "scenario_contract": {
+      "base_fixture_tag": "identity_conflict",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "no_show"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:15.734760+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A",
+          "dataset": "eval-trajectory-holdout-500002",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "ar",
+          "order_id": "SYN-HOLDOUT-590319-O",
+          "patient_id": "SYN-HOLDOUT-590319-P",
+          "patient_name": "Synthetic Participant 590319",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590319/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A-1-communication",
+          "language": "ar"
+        },
+        "record_id": "msg-37f04f7c42c74a96",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-37f04f7c42c74a96",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-37f04f7c42c74a96",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-A-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      }
+    ]
+  },
+  {
+    "agent_proposals": [],
+    "arm": "B",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500002-B",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-B/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:16.403211+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B",
+        "identity_verified": true,
+        "language": "ar",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590319-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590319-P",
+        "patient_name": "Synthetic Participant 590319",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590319/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590319-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500002",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": true,
+        "residual_need": true,
+        "scenario": "identity_conflict"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 1,
+      "attendance": true,
+      "care_completed": true,
+      "consultation": 2,
+      "delay_reasons": [
+        "handoff_rejected",
+        "no_show"
+      ],
+      "disposition": "completed_required_care",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "",
+      "understanding": true
+    },
+    "latency_ms": 475.7255055010319,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B",
+      "disposition": "completed_required_care",
+      "version": 26
+    },
+    "paired_id": "trajectory-holdout-500002",
+    "previous_hash": "87cb01418ca0adfa7b5b11d33d6e279c7db7020e8e13a241838f4b0e5bce0d09",
+    "record_hash": "3cbc31f9e5a18f8967f4e7bf434c6c45800f027f5489a0394103104f2d1f0a7d",
+    "scenario": "no_show",
+    "scenario_contract": {
+      "base_fixture_tag": "identity_conflict",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "no_show"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "authorized_completion_persisted",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:15.927493+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B",
+          "dataset": "eval-trajectory-holdout-500002",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "ar",
+          "order_id": "SYN-HOLDOUT-590319-O",
+          "patient_id": "SYN-HOLDOUT-590319-P",
+          "patient_name": "Synthetic Participant 590319",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590319/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-1-communication",
+          "language": "ar"
+        },
+        "record_id": "msg-52ba1a6538a14f96",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-52ba1a6538a14f96",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-52ba1a6538a14f96",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      },
+      {
+        "actor_role": "patient",
+        "command": "consultation",
+        "input": {
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-4-consultation",
+          "question": "What is my next step?",
+          "recipient": "clinician",
+          "type": "patient_to_clinician"
+        },
+        "record_id": "consult-f7071e844cc9493b",
+        "version": 6
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Confirm the patient next step and arrange assessment",
+          "consultation_id": "consult-f7071e844cc9493b",
+          "expected_version": 6,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-5-consultation_reply",
+          "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you."
+        },
+        "record_id": null,
+        "version": 7
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation",
+        "input": {
+          "expected_version": 7,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-6-consultation",
+          "question": "Please advise the coordination steps for the documented actionable screening result.",
+          "recipient": "specialist",
+          "type": "clinician_to_specialist"
+        },
+        "record_id": "consult-8b3f1d3cf00d486c",
+        "version": 8
+      },
+      {
+        "actor_role": "specialist",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Obtain assessment report and clinician review",
+          "consultation_id": "consult-8b3f1d3cf00d486c",
+          "expected_version": 8,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-7-consultation_reply",
+          "reply": "Arrange the documented diagnostic assessment and return the report for clinician review."
+        },
+        "record_id": null,
+        "version": 9
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 9,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-8-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-28a333144c9d4b31"
+        },
+        "record_id": "task-28a333144c9d4b31",
+        "version": 10
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 10,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-9-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-452d37f9a7794442"
+        },
+        "record_id": "task-452d37f9a7794442",
+        "version": 11
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 11,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-10-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-cb326e8fb1c34976",
+        "version": 12
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_reject",
+        "input": {
+          "expected_version": 12,
+          "handoff_id": "handoff-cb326e8fb1c34976",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-11-handoff_reject",
+          "reason": "Synthetic service capacity unavailable"
+        },
+        "record_id": null,
+        "version": 13
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 13,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-12-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-4ed867e59a9c4c38"
+        },
+        "record_id": "task-4ed867e59a9c4c38",
+        "version": 14
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 14,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-13-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-888ad91802154bf9",
+        "version": 15
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_accept",
+        "input": {
+          "expected_version": 15,
+          "handoff_id": "handoff-888ad91802154bf9",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-14-handoff_accept",
+          "reason": "Synthetic destination explicitly accepts intended scope"
+        },
+        "record_id": null,
+        "version": 16
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_create",
+        "input": {
+          "expected_version": 16,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-15-appointment_create",
+          "provider": "provider-a",
+          "scheduled_at": "2026-11-18T09:00:00+00:00"
+        },
+        "record_id": "appt-dcc377c70dae4061",
+        "version": 17
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_event",
+        "input": {
+          "appointment_id": "appt-dcc377c70dae4061",
+          "expected_version": 17,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-16-appointment_event",
+          "source_event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-no_show-15",
+          "status": "no_show"
+        },
+        "record_id": null,
+        "version": 18
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_event",
+        "input": {
+          "appointment_id": "appt-dcc377c70dae4061",
+          "expected_version": 18,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-17-appointment_event",
+          "source_event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-attended-recovery",
+          "status": "attended"
+        },
+        "record_id": null,
+        "version": 19
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: investigation for case groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B. This fixture is not clinical guidance.",
+          "expected_version": 19,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-18-evidence_add",
+          "order_id": "SYN-HOLDOUT-590319-O",
+          "patient_id": "SYN-HOLDOUT-590319-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B/investigation/17",
+          "result_version": 1,
+          "type": "investigation"
+        },
+        "record_id": "ev-fec19ab766e94118",
+        "version": 20
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-fec19ab766e94118",
+          "expected_version": 20,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-19-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 21
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B. This fixture is not clinical guidance.",
+          "expected_version": 21,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-20-evidence_add",
+          "order_id": "SYN-HOLDOUT-590319-O",
+          "patient_id": "SYN-HOLDOUT-590319-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B/reviewed_outcome/19",
+          "requires_onward": false,
+          "result_version": 1,
+          "type": "reviewed_outcome"
+        },
+        "record_id": "ev-bdfe5a4e86554a90",
+        "version": 22
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-bdfe5a4e86554a90",
+          "expected_version": 22,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-21-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 23
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B. This fixture is not clinical guidance.",
+          "expected_version": 23,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-22-evidence_add",
+          "order_id": "SYN-HOLDOUT-590319-O",
+          "patient_id": "SYN-HOLDOUT-590319-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B/patient_updated/21",
+          "result_version": 1,
+          "type": "patient_updated"
+        },
+        "record_id": "ev-d937aaa52d3c4ece",
+        "version": 24
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-d937aaa52d3c4ece",
+          "expected_version": 24,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-23-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 25
+      },
+      {
+        "actor_role": "clinician",
+        "command": "disposition",
+        "input": {
+          "category": "completed_required_care",
+          "expected_version": 25,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500002-B-24-disposition",
+          "reason": "All configured synthetic diagnostic/care endpoint evidence checked",
+          "residual_need": ""
+        },
+        "record_id": null,
+        "version": 26
+      }
+    ]
+  },
+  {
+    "arm": "C",
+    "attempted": false,
+    "case_id": "paired-trajectory-holdout-500002-C",
+    "component": "journeys",
+    "error": {
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    },
+    "evaluated": false,
+    "evidence_mode": "live_groq_synthetic",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:16.456180+00:00",
+    "paired_id": "trajectory-holdout-500002",
+    "previous_hash": "3cbc31f9e5a18f8967f4e7bf434c6c45800f027f5489a0394103104f2d1f0a7d",
+    "record_hash": "5abd5d075b6e32e9462df4b484d572ddb32b7411869827e9a550a12e8ea3a7d8",
+    "scenario": "no_show",
+    "score": {},
+    "started_at": "2026-11-14T21:40:16.456168+00:00"
+  },
+  {
+    "agent_proposals": [],
+    "arm": "A",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500003-A",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-A/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:16.645225+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590320-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590320-P",
+        "patient_name": "Synthetic Participant 590320",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590320/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590320-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500003",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": true,
+        "scenario": "corrected_result"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 0,
+      "attendance": false,
+      "care_completed": false,
+      "consultation": 0,
+      "delay_reasons": [],
+      "disposition": "open",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "Diagnostic follow-up pending",
+      "understanding": true
+    },
+    "latency_ms": 118.67157742381096,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A",
+      "disposition": "open",
+      "version": 5
+    },
+    "paired_id": "trajectory-holdout-500003",
+    "previous_hash": "5abd5d075b6e32e9462df4b484d572ddb32b7411869827e9a550a12e8ea3a7d8",
+    "record_hash": "b24612dbd99a547e1bf951c22e0abef93bdcceee9ed3a7ddc1bfcdf9782d149b",
+    "scenario": "onward_care",
+    "scenario_contract": {
+      "base_fixture_tag": "corrected_result",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "onward_care"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:16.526557+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A",
+          "dataset": "eval-trajectory-holdout-500003",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590320-O",
+          "patient_id": "SYN-HOLDOUT-590320-P",
+          "patient_name": "Synthetic Participant 590320",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590320/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A-1-communication",
+          "language": "en"
+        },
+        "record_id": "msg-b2863f98e6d74cb9",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-b2863f98e6d74cb9",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-b2863f98e6d74cb9",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-A-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      }
+    ]
+  },
+  {
+    "agent_proposals": [],
+    "arm": "B",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500003-B",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-B/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:17.191805+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590320-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590320-P",
+        "patient_name": "Synthetic Participant 590320",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590320/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590320-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500003",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": true,
+        "scenario": "corrected_result"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 2,
+      "attendance": true,
+      "care_completed": true,
+      "consultation": 2,
+      "delay_reasons": [],
+      "disposition": "completed_required_care",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "",
+      "understanding": true
+    },
+    "latency_ms": 475.02315789461136,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B",
+      "disposition": "completed_required_care",
+      "version": 26
+    },
+    "paired_id": "trajectory-holdout-500003",
+    "previous_hash": "b24612dbd99a547e1bf951c22e0abef93bdcceee9ed3a7ddc1bfcdf9782d149b",
+    "record_hash": "9a7194a0d955823492e93803dc9d999f1a58213c6389a632948d8c1df4b0b926",
+    "scenario": "onward_care",
+    "scenario_contract": {
+      "base_fixture_tag": "corrected_result",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "onward_care"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "accepted_onward_referral_cannot_close_required_care",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "authorized_completion_persisted",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:16.716787+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B",
+          "dataset": "eval-trajectory-holdout-500003",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590320-O",
+          "patient_id": "SYN-HOLDOUT-590320-P",
+          "patient_name": "Synthetic Participant 590320",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590320/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-1-communication",
+          "language": "en"
+        },
+        "record_id": "msg-1fb1daf3c2224c9b",
+        "version": 2
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-1fb1daf3c2224c9b",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-2-acknowledgement"
+        },
+        "record_id": null,
+        "version": 4
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-1fb1daf3c2224c9b",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-3-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 5
+      },
+      {
+        "actor_role": "patient",
+        "command": "consultation",
+        "input": {
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-4-consultation",
+          "question": "What is my next step?",
+          "recipient": "clinician",
+          "type": "patient_to_clinician"
+        },
+        "record_id": "consult-ca5b70f0158f4642",
+        "version": 6
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Confirm the patient next step and arrange assessment",
+          "consultation_id": "consult-ca5b70f0158f4642",
+          "expected_version": 6,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-5-consultation_reply",
+          "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you."
+        },
+        "record_id": null,
+        "version": 7
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation",
+        "input": {
+          "expected_version": 7,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-6-consultation",
+          "question": "Please advise the coordination steps for the documented actionable screening result.",
+          "recipient": "specialist",
+          "type": "clinician_to_specialist"
+        },
+        "record_id": "consult-4cfe688c63e74bd6",
+        "version": 8
+      },
+      {
+        "actor_role": "specialist",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Obtain assessment report and clinician review",
+          "consultation_id": "consult-4cfe688c63e74bd6",
+          "expected_version": 8,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-7-consultation_reply",
+          "reply": "Arrange the documented diagnostic assessment and return the report for clinician review."
+        },
+        "record_id": null,
+        "version": 9
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 9,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-8-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-c6ac266172e04e32"
+        },
+        "record_id": "task-c6ac266172e04e32",
+        "version": 10
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 10,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-9-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-dc0ba6472ee54a0d"
+        },
+        "record_id": "task-dc0ba6472ee54a0d",
+        "version": 11
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 11,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-10-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-6c9a5c4d18924892",
+        "version": 12
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_accept",
+        "input": {
+          "expected_version": 12,
+          "handoff_id": "handoff-6c9a5c4d18924892",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-11-handoff_accept",
+          "reason": "Synthetic destination explicitly accepts intended scope"
+        },
+        "record_id": null,
+        "version": 13
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_create",
+        "input": {
+          "expected_version": 13,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-12-appointment_create",
+          "provider": "provider-a",
+          "scheduled_at": "2026-11-18T09:00:00+00:00"
+        },
+        "record_id": "appt-ee85d03cbac14191",
+        "version": 14
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_event",
+        "input": {
+          "appointment_id": "appt-ee85d03cbac14191",
+          "expected_version": 14,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-13-appointment_event",
+          "source_event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-attended-12",
+          "status": "attended"
+        },
+        "record_id": null,
+        "version": 15
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: investigation for case groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B. This fixture is not clinical guidance.",
+          "expected_version": 15,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-14-evidence_add",
+          "order_id": "SYN-HOLDOUT-590320-O",
+          "patient_id": "SYN-HOLDOUT-590320-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B/investigation/13",
+          "result_version": 1,
+          "type": "investigation"
+        },
+        "record_id": "ev-747dd84efbc24a9b",
+        "version": 16
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-747dd84efbc24a9b",
+          "expected_version": 16,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-15-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 17
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B. This fixture is not clinical guidance.",
+          "expected_version": 17,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-16-evidence_add",
+          "order_id": "SYN-HOLDOUT-590320-O",
+          "patient_id": "SYN-HOLDOUT-590320-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B/reviewed_outcome/15",
+          "requires_onward": true,
+          "result_version": 1,
+          "type": "reviewed_outcome"
+        },
+        "record_id": "ev-05e5f5b7e2a647e5",
+        "version": 18
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-05e5f5b7e2a647e5",
+          "expected_version": 18,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-17-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 19
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B. This fixture is not clinical guidance.",
+          "expected_version": 19,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-18-evidence_add",
+          "order_id": "SYN-HOLDOUT-590320-O",
+          "patient_id": "SYN-HOLDOUT-590320-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B/patient_updated/17",
+          "result_version": 1,
+          "type": "patient_updated"
+        },
+        "record_id": "ev-cf4eed0a25124cbb",
+        "version": 20
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-cf4eed0a25124cbb",
+          "expected_version": 20,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-19-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 21
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 21,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-20-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-b",
+          "scope": "task"
+        },
+        "record_id": "handoff-507e191d1f6b410e",
+        "version": 22
+      },
+      {
+        "actor_role": "receiver_b",
+        "command": "handoff_accept",
+        "input": {
+          "expected_version": 22,
+          "handoff_id": "handoff-507e191d1f6b410e",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-21-handoff_accept",
+          "reason": "Synthetic destination explicitly accepts intended scope"
+        },
+        "record_id": null,
+        "version": 23
+      },
+      {
+        "actor_role": "clinician",
+        "command": "disposition",
+        "detail": {
+          "message": "Required care cannot close yet.",
+          "missing": [
+            "declared_onward_care_endpoint",
+            "open_required_task:treatment_initiated"
+          ]
+        },
+        "expected_denial": 409
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: treatment_initiated for case groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B. This fixture is not clinical guidance.",
+          "expected_version": 23,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-23-evidence_add",
+          "order_id": "SYN-HOLDOUT-590320-O",
+          "patient_id": "SYN-HOLDOUT-590320-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B/treatment_initiated/22",
+          "result_version": 1,
+          "type": "treatment_initiated"
+        },
+        "record_id": "ev-cb9198ca3452414c",
+        "version": 24
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-cb9198ca3452414c",
+          "expected_version": 24,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-24-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 25
+      },
+      {
+        "actor_role": "clinician",
+        "command": "disposition",
+        "input": {
+          "category": "completed_required_care",
+          "expected_version": 25,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500003-B-25-disposition",
+          "reason": "All configured synthetic diagnostic/care endpoint evidence checked",
+          "residual_need": ""
+        },
+        "record_id": null,
+        "version": 26
+      }
+    ]
+  },
+  {
+    "arm": "C",
+    "attempted": false,
+    "case_id": "paired-trajectory-holdout-500003-C",
+    "component": "journeys",
+    "error": {
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    },
+    "evaluated": false,
+    "evidence_mode": "live_groq_synthetic",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:17.232340+00:00",
+    "paired_id": "trajectory-holdout-500003",
+    "previous_hash": "9a7194a0d955823492e93803dc9d999f1a58213c6389a632948d8c1df4b0b926",
+    "record_hash": "c6fb61c12d93f62d511b06d8515f2f9a511d87b2c561e6a373bbecd52cba510a",
+    "scenario": "onward_care",
+    "score": {},
+    "started_at": "2026-11-14T21:40:17.232330+00:00"
+  },
+  {
+    "agent_proposals": [],
+    "arm": "A",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500004-A",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-A/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:17.426767+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590321-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590321-P",
+        "patient_name": "Synthetic Participant 590321",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590321/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590321-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500004",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": true,
+        "scenario": "wrong_evidence"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 0,
+      "attendance": false,
+      "care_completed": false,
+      "consultation": 0,
+      "delay_reasons": [],
+      "disposition": "open",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "Diagnostic follow-up pending",
+      "understanding": true
+    },
+    "latency_ms": 137.49749585986137,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A",
+      "disposition": "open",
+      "version": 6
+    },
+    "paired_id": "trajectory-holdout-500004",
+    "previous_hash": "c6fb61c12d93f62d511b06d8515f2f9a511d87b2c561e6a373bbecd52cba510a",
+    "record_hash": "1184e1c41d7639f6030ae2a6177d9b7662caf8235ce6c41c6a46bce51aeaffc3",
+    "scenario": "identity_conflict",
+    "scenario_contract": {
+      "base_fixture_tag": "wrong_evidence",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "identity_conflict"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:17.289275+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A",
+          "dataset": "eval-trajectory-holdout-500004",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A-RESULT-v1",
+          "identity_verified": false,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590321-O",
+          "patient_id": "SYN-HOLDOUT-590321-P",
+          "patient_name": "Synthetic Participant 590321",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590321/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "reconciliation",
+        "input": {
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A-1-reconciliation",
+          "identity_verified": true,
+          "pathway": "colorectal-fit",
+          "reason": "Authorized matching review from synthetic source evidence",
+          "source_reference": "synthetic://verified-identity"
+        },
+        "record_id": null,
+        "version": 2
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 2,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A-2-communication",
+          "language": "en"
+        },
+        "record_id": "msg-9980dd2eef58473f",
+        "version": 3
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-9980dd2eef58473f",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A-3-acknowledgement"
+        },
+        "record_id": null,
+        "version": 5
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-9980dd2eef58473f",
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-A-4-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 6
+      }
+    ]
+  },
+  {
+    "agent_proposals": [],
+    "arm": "B",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500004-B",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-B/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:17.906344+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590321-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590321-P",
+        "patient_name": "Synthetic Participant 590321",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590321/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590321-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500004",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": true,
+        "scenario": "wrong_evidence"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 1,
+      "attendance": true,
+      "care_completed": true,
+      "consultation": 2,
+      "delay_reasons": [],
+      "disposition": "completed_required_care",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "",
+      "understanding": true
+    },
+    "latency_ms": 427.67126113176346,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B",
+      "disposition": "completed_required_care",
+      "version": 23
+    },
+    "paired_id": "trajectory-holdout-500004",
+    "previous_hash": "1184e1c41d7639f6030ae2a6177d9b7662caf8235ce6c41c6a46bce51aeaffc3",
+    "record_hash": "cc94b3b90cb152a97113d325855e5a1e13c22b1d208201be9c056dd89505bcb3",
+    "scenario": "identity_conflict",
+    "scenario_contract": {
+      "base_fixture_tag": "wrong_evidence",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "identity_conflict"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "authorized_completion_persisted",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:17.478677+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B",
+          "dataset": "eval-trajectory-holdout-500004",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-RESULT-v1",
+          "identity_verified": false,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590321-O",
+          "patient_id": "SYN-HOLDOUT-590321-P",
+          "patient_name": "Synthetic Participant 590321",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590321/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": false
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "navigator",
+        "command": "reconciliation",
+        "input": {
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-1-reconciliation",
+          "identity_verified": true,
+          "pathway": "colorectal-fit",
+          "reason": "Authorized matching review from synthetic source evidence",
+          "source_reference": "synthetic://verified-identity"
+        },
+        "record_id": null,
+        "version": 2
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 2,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-2-communication",
+          "language": "en"
+        },
+        "record_id": "msg-399a6c4cd45b4973",
+        "version": 3
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 1,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-399a6c4cd45b4973",
+          "expected_version": 4,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-3-acknowledgement"
+        },
+        "record_id": null,
+        "version": 5
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-399a6c4cd45b4973",
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-4-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 6
+      },
+      {
+        "actor_role": "patient",
+        "command": "consultation",
+        "input": {
+          "expected_version": 6,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-5-consultation",
+          "question": "What is my next step?",
+          "recipient": "clinician",
+          "type": "patient_to_clinician"
+        },
+        "record_id": "consult-d1bfd9d809b54aee",
+        "version": 7
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Confirm the patient next step and arrange assessment",
+          "consultation_id": "consult-d1bfd9d809b54aee",
+          "expected_version": 7,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-6-consultation_reply",
+          "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you."
+        },
+        "record_id": null,
+        "version": 8
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation",
+        "input": {
+          "expected_version": 8,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-7-consultation",
+          "question": "Please advise the coordination steps for the documented actionable screening result.",
+          "recipient": "specialist",
+          "type": "clinician_to_specialist"
+        },
+        "record_id": "consult-7204bb8d24984ce9",
+        "version": 9
+      },
+      {
+        "actor_role": "specialist",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Obtain assessment report and clinician review",
+          "consultation_id": "consult-7204bb8d24984ce9",
+          "expected_version": 9,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-8-consultation_reply",
+          "reply": "Arrange the documented diagnostic assessment and return the report for clinician review."
+        },
+        "record_id": null,
+        "version": 10
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 10,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-9-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-394960672ed8449f"
+        },
+        "record_id": "task-394960672ed8449f",
+        "version": 11
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 11,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-10-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-c95881f4130442f4"
+        },
+        "record_id": "task-c95881f4130442f4",
+        "version": 12
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 12,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-11-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-0ddb0cd95a73458d",
+        "version": 13
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_accept",
+        "input": {
+          "expected_version": 13,
+          "handoff_id": "handoff-0ddb0cd95a73458d",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-12-handoff_accept",
+          "reason": "Synthetic destination explicitly accepts intended scope"
+        },
+        "record_id": null,
+        "version": 14
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_create",
+        "input": {
+          "expected_version": 14,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-13-appointment_create",
+          "provider": "provider-a",
+          "scheduled_at": "2026-11-18T09:00:00+00:00"
+        },
+        "record_id": "appt-89333819aa184091",
+        "version": 15
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_event",
+        "input": {
+          "appointment_id": "appt-89333819aa184091",
+          "expected_version": 15,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-14-appointment_event",
+          "source_event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-attended-13",
+          "status": "attended"
+        },
+        "record_id": null,
+        "version": 16
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: investigation for case groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B. This fixture is not clinical guidance.",
+          "expected_version": 16,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-15-evidence_add",
+          "order_id": "SYN-HOLDOUT-590321-O",
+          "patient_id": "SYN-HOLDOUT-590321-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B/investigation/14",
+          "result_version": 1,
+          "type": "investigation"
+        },
+        "record_id": "ev-9f4ad6f108f34e9e",
+        "version": 17
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-9f4ad6f108f34e9e",
+          "expected_version": 17,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-16-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 18
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B. This fixture is not clinical guidance.",
+          "expected_version": 18,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-17-evidence_add",
+          "order_id": "SYN-HOLDOUT-590321-O",
+          "patient_id": "SYN-HOLDOUT-590321-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B/reviewed_outcome/16",
+          "requires_onward": false,
+          "result_version": 1,
+          "type": "reviewed_outcome"
+        },
+        "record_id": "ev-ffc64085cada4509",
+        "version": 19
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-ffc64085cada4509",
+          "expected_version": 19,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-18-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 20
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B. This fixture is not clinical guidance.",
+          "expected_version": 20,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-19-evidence_add",
+          "order_id": "SYN-HOLDOUT-590321-O",
+          "patient_id": "SYN-HOLDOUT-590321-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B/patient_updated/18",
+          "result_version": 1,
+          "type": "patient_updated"
+        },
+        "record_id": "ev-f31169fdf58e4419",
+        "version": 21
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-f31169fdf58e4419",
+          "expected_version": 21,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-20-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 22
+      },
+      {
+        "actor_role": "clinician",
+        "command": "disposition",
+        "input": {
+          "category": "completed_required_care",
+          "expected_version": 22,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500004-B-21-disposition",
+          "reason": "All configured synthetic diagnostic/care endpoint evidence checked",
+          "residual_need": ""
+        },
+        "record_id": null,
+        "version": 23
+      }
+    ]
+  },
+  {
+    "arm": "C",
+    "attempted": false,
+    "case_id": "paired-trajectory-holdout-500004-C",
+    "component": "journeys",
+    "error": {
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    },
+    "evaluated": false,
+    "evidence_mode": "live_groq_synthetic",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:17.948224+00:00",
+    "paired_id": "trajectory-holdout-500004",
+    "previous_hash": "cc94b3b90cb152a97113d325855e5a1e13c22b1d208201be9c056dd89505bcb3",
+    "record_hash": "a2920865967fcde4aae6f0f5f33efb9bed6ab67e879843c2333d77b1fd316154",
+    "scenario": "identity_conflict",
+    "score": {},
+    "started_at": "2026-11-14T21:40:17.948213+00:00"
+  },
+  {
+    "agent_proposals": [],
+    "arm": "A",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500005-A",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-A/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:18.166108+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590322-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590322-P",
+        "patient_name": "Synthetic Participant 590322",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590322/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590322-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500005",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": true,
+        "scenario": "unanswered_consultation"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 0,
+      "attendance": false,
+      "care_completed": false,
+      "consultation": 0,
+      "delay_reasons": [],
+      "disposition": "open",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "Diagnostic follow-up pending",
+      "understanding": true
+    },
+    "latency_ms": 175.72547867894173,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A",
+      "disposition": "open",
+      "version": 7
+    },
+    "paired_id": "trajectory-holdout-500005",
+    "previous_hash": "a2920865967fcde4aae6f0f5f33efb9bed6ab67e879843c2333d77b1fd316154",
+    "record_hash": "c1f99ab3ff63825adcad19769cc6177d9a9a4dc73b762c6c5c9993c72dfdb176",
+    "scenario": "urgent_timeout",
+    "scenario_contract": {
+      "base_fixture_tag": "unanswered_consultation",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "urgent_timeout"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "urgent_acknowledgement_is_not_disposition",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:17.990387+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A",
+          "dataset": "eval-trajectory-holdout-500005",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590322-O",
+          "patient_id": "SYN-HOLDOUT-590322-P",
+          "patient_name": "Synthetic Participant 590322",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590322/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": true
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "clinician",
+        "command": "escalation_ack",
+        "input": {
+          "escalation_id": "esc-19acdf72e82b4a1f",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A-1-escalation_ack"
+        },
+        "record_id": null,
+        "version": 2
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "detail": "Routine progression is paused pending clinician urgent disposition.",
+        "expected_denial": 409
+      },
+      {
+        "actor_role": "clinician",
+        "command": "escalation_disposition",
+        "input": {
+          "decision": "Human review recorded; resume configured follow-up",
+          "escalation_id": "esc-19acdf72e82b4a1f",
+          "expected_version": 2,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A-3-escalation_disposition",
+          "reason": "Qualified synthetic clinician reviewed source flag and documented next action"
+        },
+        "record_id": null,
+        "version": 3
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A-4-communication",
+          "language": "en"
+        },
+        "record_id": "msg-534eff17e7254874",
+        "version": 4
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 2,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-534eff17e7254874",
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A-5-acknowledgement"
+        },
+        "record_id": null,
+        "version": 6
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-534eff17e7254874",
+          "expected_version": 6,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-A-6-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 7
+      }
+    ]
+  },
+  {
+    "agent_proposals": [],
+    "arm": "B",
+    "attempted": true,
+    "backend_source_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+    "candidate_call_id": null,
+    "candidate_call_lineage": [],
+    "candidate_model": null,
+    "candidate_output_hash": null,
+    "case_id": "paired-trajectory-holdout-500005-B",
+    "component": "journeys",
+    "error": null,
+    "evaluated": true,
+    "evidence_mode": "deterministic_software",
+    "execution_database": "/tmp/suhail-groq-smoke-holdout-v1-journey-arm-B/suhail-groq-smoke-holdout-v1-journey-execution.sqlite3",
+    "execution_harness_revision": "independent-arm-stores-v2",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:18.703537+00:00",
+    "independent_arm_store": true,
+    "input": {
+      "case": {
+        "appointments": [],
+        "backup_queue": "clinical-backup",
+        "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B",
+        "communications": [],
+        "consultations": [],
+        "delay_reasons": [],
+        "disposition": "open",
+        "evidence": [],
+        "handoffs": [],
+        "id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B",
+        "identity_verified": true,
+        "language": "en",
+        "milestones": [],
+        "next_action": "Arrange clinician-reviewed diagnostic follow-up",
+        "order_id": "SYN-HOLDOUT-590322-O",
+        "owner": "navigation-team",
+        "pathway": "colorectal-fit",
+        "patient_id": "SYN-HOLDOUT-590322-P",
+        "patient_name": "Synthetic Participant 590322",
+        "policy_version": "demo-fit-v1",
+        "quarantine_reason": null,
+        "residual_need": true,
+        "result_version": 1,
+        "source_organization": "screening-center",
+        "source_references": [
+          "synthetic://SYN-HOLDOUT-590322/result"
+        ],
+        "tasks": [
+          {
+            "assignee": "navigation-team",
+            "due_at": "2026-11-16T09:00:00+00:00",
+            "id": "SYN-HOLDOUT-590322-T",
+            "next_action": "Arrange diagnostic assessment",
+            "required": true,
+            "status": "required",
+            "type": "investigation"
+          }
+        ],
+        "test_code": "FIT_POS",
+        "trusted_urgent": false,
+        "urgent": false,
+        "version": 1
+      },
+      "component": "software_suite",
+      "generator_version": "suhail-synthetic-v1",
+      "id": "trajectory-holdout-500005",
+      "split": "holdout",
+      "truth": {
+        "completed_required_care": false,
+        "owner_continuity": true,
+        "quarantined": false,
+        "residual_need": true,
+        "scenario": "unanswered_consultation"
+      }
+    },
+    "journey": {
+      "accepted_handoffs": 1,
+      "attendance": true,
+      "care_completed": true,
+      "consultation": 2,
+      "delay_reasons": [],
+      "disposition": "completed_required_care",
+      "notification": true,
+      "owner": "navigation-team",
+      "residual_need": "",
+      "understanding": true
+    },
+    "latency_ms": 484.4999834895134,
+    "output": {
+      "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B",
+      "disposition": "completed_required_care",
+      "version": 24
+    },
+    "paired_id": "trajectory-holdout-500005",
+    "previous_hash": "c1f99ab3ff63825adcad19769cc6177d9a9a4dc73b762c6c5c9993c72dfdb176",
+    "record_hash": "96f88e4efdef969d93cf4419f2fa25b3e6cb9e313c463ed1edfd1997356d5d3f",
+    "scenario": "urgent_timeout",
+    "scenario_contract": {
+      "base_fixture_tag": "unanswered_consultation",
+      "base_fixture_tag_is_not_the_driver_scenario": true,
+      "preselected_scenario": "urgent_timeout"
+    },
+    "score": {
+      "assertions": [
+        {
+          "name": "arm_starts_in_its_own_case_identity",
+          "passed": true
+        },
+        {
+          "name": "arm_starts_at_fresh_case_version",
+          "passed": true
+        },
+        {
+          "name": "urgent_acknowledgement_is_not_disposition",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_acknowledge",
+          "passed": true
+        },
+        {
+          "name": "delivery_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "acknowledgement_does_not_establish_understanding",
+          "passed": true
+        },
+        {
+          "name": "both_consultations_have_human_reply",
+          "passed": true
+        },
+        {
+          "name": "proposal_preserves_owner",
+          "passed": true
+        },
+        {
+          "name": "task_scope_or_rejection_preserves_episode_owner",
+          "passed": true
+        },
+        {
+          "name": "closure_allowed_only_after_required_care",
+          "passed": true
+        },
+        {
+          "name": "authorized_completion_persisted",
+          "passed": true
+        },
+        {
+          "name": "paired_arm_expected_state",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "started_at": "2026-11-14T21:40:18.219040+00:00",
+    "tool_events": [
+      {
+        "command": "intake",
+        "input": {
+          "case_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B",
+          "dataset": "eval-trajectory-holdout-500005",
+          "event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-RESULT-v1",
+          "identity_verified": true,
+          "issued_at": "2026-11-14T09:00:00+00:00",
+          "language": "en",
+          "order_id": "SYN-HOLDOUT-590322-O",
+          "patient_id": "SYN-HOLDOUT-590322-P",
+          "patient_name": "Synthetic Participant 590322",
+          "result_version": 1,
+          "source_organization": "source-clinic",
+          "source_reference": "synthetic://SYN-HOLDOUT-590322/result",
+          "test_code": "FIT_POSITIVE",
+          "trusted_urgent": true
+        },
+        "version": 1
+      },
+      {
+        "actor_role": "clinician",
+        "command": "escalation_ack",
+        "input": {
+          "escalation_id": "esc-c5f4b1afed8c4cd5",
+          "expected_version": 1,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-1-escalation_ack"
+        },
+        "record_id": null,
+        "version": 2
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "detail": "Routine progression is paused pending clinician urgent disposition.",
+        "expected_denial": 409
+      },
+      {
+        "actor_role": "clinician",
+        "command": "escalation_disposition",
+        "input": {
+          "decision": "Human review recorded; resume configured follow-up",
+          "escalation_id": "esc-c5f4b1afed8c4cd5",
+          "expected_version": 2,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-3-escalation_disposition",
+          "reason": "Qualified synthetic clinician reviewed source flag and documented next action"
+        },
+        "record_id": null,
+        "version": 3
+      },
+      {
+        "actor_role": "navigator",
+        "command": "communication",
+        "input": {
+          "channel": "portal",
+          "expected_version": 3,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-4-communication",
+          "language": "en"
+        },
+        "record_id": "msg-7c8020d36d874c63",
+        "version": 4
+      },
+      {
+        "command": "worker.run_once",
+        "result": {
+          "delivered": 2,
+          "failed": 0,
+          "timers": 0
+        }
+      },
+      {
+        "actor_role": "patient",
+        "command": "acknowledgement",
+        "input": {
+          "communication_id": "msg-7c8020d36d874c63",
+          "expected_version": 5,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-5-acknowledgement"
+        },
+        "record_id": null,
+        "version": 6
+      },
+      {
+        "actor_role": "patient",
+        "command": "understanding",
+        "input": {
+          "communication_id": "msg-7c8020d36d874c63",
+          "expected_version": 6,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-6-understanding",
+          "outcome": "passed"
+        },
+        "record_id": null,
+        "version": 7
+      },
+      {
+        "actor_role": "patient",
+        "command": "consultation",
+        "input": {
+          "expected_version": 7,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-7-consultation",
+          "question": "What is my next step?",
+          "recipient": "clinician",
+          "type": "patient_to_clinician"
+        },
+        "record_id": "consult-0c46b41f779e48d5",
+        "version": 8
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Confirm the patient next step and arrange assessment",
+          "consultation_id": "consult-0c46b41f779e48d5",
+          "expected_version": 8,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-8-consultation_reply",
+          "reply": "Your screening result needs diagnostic follow-up. We will discuss the assessment with you."
+        },
+        "record_id": null,
+        "version": 9
+      },
+      {
+        "actor_role": "clinician",
+        "command": "consultation",
+        "input": {
+          "expected_version": 9,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-9-consultation",
+          "question": "Please advise the coordination steps for the documented actionable screening result.",
+          "recipient": "specialist",
+          "type": "clinician_to_specialist"
+        },
+        "record_id": "consult-a57ff4b16aa042a3",
+        "version": 10
+      },
+      {
+        "actor_role": "specialist",
+        "command": "consultation_reply",
+        "input": {
+          "action_owner": "navigation-team",
+          "agreed_action": "Obtain assessment report and clinician review",
+          "consultation_id": "consult-a57ff4b16aa042a3",
+          "expected_version": 10,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-10-consultation_reply",
+          "reply": "Arrange the documented diagnostic assessment and return the report for clinician review."
+        },
+        "record_id": null,
+        "version": 11
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 11,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-11-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-69f863687a34483a"
+        },
+        "record_id": "task-69f863687a34483a",
+        "version": 12
+      },
+      {
+        "actor_role": "navigator",
+        "command": "task",
+        "input": {
+          "expected_version": 12,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-12-task",
+          "reason": "Scenario actor completed the recorded agreed coordination action",
+          "status": "completed",
+          "task_id": "task-53cbe2065d504ee4"
+        },
+        "record_id": "task-53cbe2065d504ee4",
+        "version": 13
+      },
+      {
+        "actor_role": "navigator",
+        "command": "handoff",
+        "input": {
+          "expected_version": 13,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-13-handoff",
+          "reason": "Synthetic permitted minimal diagnostic referral",
+          "receiver": "provider-a",
+          "scope": "task"
+        },
+        "record_id": "handoff-a35f59fb52684deb",
+        "version": 14
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "handoff_accept",
+        "input": {
+          "expected_version": 14,
+          "handoff_id": "handoff-a35f59fb52684deb",
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-14-handoff_accept",
+          "reason": "Synthetic destination explicitly accepts intended scope"
+        },
+        "record_id": null,
+        "version": 15
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_create",
+        "input": {
+          "expected_version": 15,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-15-appointment_create",
+          "provider": "provider-a",
+          "scheduled_at": "2026-11-18T09:00:00+00:00"
+        },
+        "record_id": "appt-f75b0ed76edc4c86",
+        "version": 16
+      },
+      {
+        "actor_role": "receiver_a",
+        "command": "appointment_event",
+        "input": {
+          "appointment_id": "appt-f75b0ed76edc4c86",
+          "expected_version": 16,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-16-appointment_event",
+          "source_event_id": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-attended-15",
+          "status": "attended"
+        },
+        "record_id": null,
+        "version": 17
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: investigation for case groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B. This fixture is not clinical guidance.",
+          "expected_version": 17,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-17-evidence_add",
+          "order_id": "SYN-HOLDOUT-590322-O",
+          "patient_id": "SYN-HOLDOUT-590322-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B/investigation/16",
+          "result_version": 1,
+          "type": "investigation"
+        },
+        "record_id": "ev-1c9b97f0eb9548de",
+        "version": 18
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-1c9b97f0eb9548de",
+          "expected_version": 18,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-18-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 19
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: reviewed_outcome for case groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B. This fixture is not clinical guidance.",
+          "expected_version": 19,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-19-evidence_add",
+          "order_id": "SYN-HOLDOUT-590322-O",
+          "patient_id": "SYN-HOLDOUT-590322-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B/reviewed_outcome/18",
+          "requires_onward": false,
+          "result_version": 1,
+          "type": "reviewed_outcome"
+        },
+        "record_id": "ev-64f0a71350844f4e",
+        "version": 20
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-64f0a71350844f4e",
+          "expected_version": 20,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-20-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 21
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_add",
+        "input": {
+          "document_text": "Project-generated synthetic source document. Known truth: patient_updated for case groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B. This fixture is not clinical guidance.",
+          "expected_version": 21,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-21-evidence_add",
+          "order_id": "SYN-HOLDOUT-590322-O",
+          "patient_id": "SYN-HOLDOUT-590322-P",
+          "reference": "synthetic://groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B/patient_updated/20",
+          "result_version": 1,
+          "type": "patient_updated"
+        },
+        "record_id": "ev-06483db01d2d446a",
+        "version": 22
+      },
+      {
+        "actor_role": "clinician",
+        "command": "evidence_verify",
+        "input": {
+          "evidence_id": "ev-06483db01d2d446a",
+          "expected_version": 22,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-22-evidence_verify",
+          "reason": "Synthetic scenario source identity/order/version independently checked",
+          "verified": true
+        },
+        "record_id": null,
+        "version": 23
+      },
+      {
+        "actor_role": "clinician",
+        "command": "disposition",
+        "input": {
+          "category": "completed_required_care",
+          "expected_version": 23,
+          "idempotency_key": "groq-smoke-holdout-v1-paired-trajectory-holdout-500005-B-23-disposition",
+          "reason": "All configured synthetic diagnostic/care endpoint evidence checked",
+          "residual_need": ""
+        },
+        "record_id": null,
+        "version": 24
+      }
+    ]
+  },
+  {
+    "arm": "C",
+    "attempted": false,
+    "case_id": "paired-trajectory-holdout-500005-C",
+    "component": "journeys",
+    "error": {
+      "code": "budget_insufficient_for_full_journey",
+      "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+    },
+    "evaluated": false,
+    "evidence_mode": "live_groq_synthetic",
+    "execution_phase": "independent-arm-store-resume-v3",
+    "finished_at": "2026-11-14T21:40:18.744528+00:00",
+    "paired_id": "trajectory-holdout-500005",
+    "previous_hash": "96f88e4efdef969d93cf4419f2fa25b3e6cb9e313c463ed1edfd1997356d5d3f",
+    "record_hash": "ca268a76440ff61b205c83ca625d4373e242f7764b229dab10e0eda40a1de44b",
+    "scenario": "urgent_timeout",
+    "score": {},
+    "started_at": "2026-11-14T21:40:18.744516+00:00"
+  }
+]

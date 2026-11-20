@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "source": "reports/video-v4/Suhail_Health_Final_Showcase.mp4",
+  "source_sha256": "0be130a2ccbf9ef2b31cff33b1079058c556e87402cd6014c7196ab99539aa35",
+  "sha256": "67ff89ed693b1a593efdba7b37fd64b61230e6fefeca76cba58573f745c90b92",
+  "duration_seconds": 298.421016,
+  "resolution": "1920x1080",
+  "caption_count": 72,
+  "chapters": 11,
+  "voice": "Original ElevenLabs Sarah narration",
+  "complete_audio_video_decode": true,
+  "edit": "Retained eleven whole chapters from the earlier v4 showcase. Playback 1.015x, captions and chapters rebased to the muxed segments."
+}

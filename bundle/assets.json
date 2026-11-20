@@ -1,0 +1,312 @@
+{
+  "brand": "Suhail Health",
+  "created": "2026-11-15",
+  "assets": [
+    {
+      "path": "logos/suhail-health-logo-mono-ink.png",
+      "width": 908,
+      "height": 858,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 96288
+    },
+    {
+      "path": "logos/suhail-health-logo-mono-ink.webp",
+      "width": 908,
+      "height": 858,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 50088
+    },
+    {
+      "path": "logos/suhail-health-logo-mono-white.png",
+      "width": 908,
+      "height": 858,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 95494
+    },
+    {
+      "path": "logos/suhail-health-logo-mono-white.webp",
+      "width": 908,
+      "height": 858,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 50278
+    },
+    {
+      "path": "logos/suhail-health-logo-on-dark-320w.png",
+      "width": 320,
+      "height": 302,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 29169
+    },
+    {
+      "path": "logos/suhail-health-logo-on-dark-640w.png",
+      "width": 640,
+      "height": 605,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 75595
+    },
+    {
+      "path": "logos/suhail-health-logo-on-dark-960w.png",
+      "width": 960,
+      "height": 907,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 132680
+    },
+    {
+      "path": "logos/suhail-health-logo-on-dark.png",
+      "width": 908,
+      "height": 858,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 92824
+    },
+    {
+      "path": "logos/suhail-health-logo-on-dark.webp",
+      "width": 908,
+      "height": 858,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 65054
+    },
+    {
+      "path": "logos/suhail-health-logo-on-light-320w.png",
+      "width": 320,
+      "height": 302,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 38453
+    },
+    {
+      "path": "logos/suhail-health-logo-on-light-640w.png",
+      "width": 640,
+      "height": 605,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 122936
+    },
+    {
+      "path": "logos/suhail-health-logo-on-light-960w.png",
+      "width": 960,
+      "height": 907,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 236095
+    },
+    {
+      "path": "logos/suhail-health-logo-on-light.png",
+      "width": 908,
+      "height": 858,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 216695
+    },
+    {
+      "path": "logos/suhail-health-logo-on-light.webp",
+      "width": 908,
+      "height": 858,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 148338
+    },
+    {
+      "path": "symbols/suhail-health-symbol-mono-ink.png",
+      "width": 971,
+      "height": 962,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 78404
+    },
+    {
+      "path": "symbols/suhail-health-symbol-mono-ink.webp",
+      "width": 971,
+      "height": 962,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 37842
+    },
+    {
+      "path": "symbols/suhail-health-symbol-mono-white.png",
+      "width": 971,
+      "height": 962,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 77861
+    },
+    {
+      "path": "symbols/suhail-health-symbol-mono-white.webp",
+      "width": 971,
+      "height": 962,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 38100
+    },
+    {
+      "path": "symbols/suhail-health-symbol-on-dark.png",
+      "width": 971,
+      "height": 962,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 71538
+    },
+    {
+      "path": "symbols/suhail-health-symbol-on-dark.webp",
+      "width": 971,
+      "height": 962,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 48290
+    },
+    {
+      "path": "symbols/suhail-health-symbol-on-light.png",
+      "width": 971,
+      "height": 962,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 275024
+    },
+    {
+      "path": "symbols/suhail-health-symbol-on-light.webp",
+      "width": 971,
+      "height": 962,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 178230
+    },
+    {
+      "path": "icons/app-icon-dark-1024x1024.png",
+      "width": 1024,
+      "height": 1024,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 94558
+    },
+    {
+      "path": "icons/app-icon-dark-192x192.png",
+      "width": 192,
+      "height": 192,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 9337
+    },
+    {
+      "path": "icons/app-icon-dark-512x512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 33152
+    },
+    {
+      "path": "icons/app-icon-light-1024x1024.png",
+      "width": 1024,
+      "height": 1024,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 215432
+    },
+    {
+      "path": "icons/app-icon-light-192x192.png",
+      "width": 192,
+      "height": 192,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 12419
+    },
+    {
+      "path": "icons/app-icon-light-512x512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 62252
+    },
+    {
+      "path": "icons/apple-touch-icon-dark-180x180.png",
+      "width": 180,
+      "height": 180,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 8250
+    },
+    {
+      "path": "icons/apple-touch-icon-light-180x180.png",
+      "width": 180,
+      "height": 180,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 10890
+    },
+    {
+      "path": "icons/maskable-icon-dark-512x512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 24480
+    },
+    {
+      "path": "icons/maskable-icon-light-512x512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 35902
+    },
+    {
+      "path": "favicons/favicon-dark-16x16.png",
+      "width": 16,
+      "height": 16,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 599
+    },
+    {
+      "path": "favicons/favicon-dark-32x32.png",
+      "width": 32,
+      "height": 32,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 1391
+    },
+    {
+      "path": "favicons/favicon-dark-48x48.png",
+      "width": 48,
+      "height": 48,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 2194
+    },
+    {
+      "path": "favicons/favicon-light-16x16.png",
+      "width": 16,
+      "height": 16,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 584
+    },
+    {
+      "path": "favicons/favicon-light-32x32.png",
+      "width": 32,
+      "height": 32,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 1388
+    },
+    {
+      "path": "favicons/favicon-light-48x48.png",
+      "width": 48,
+      "height": 48,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 2328
+    }
+  ],
+  "svgType": "raster-backed compositions; not pure vector",
+  "originalSha256": "e2f1bc561f1ddb8003096b93814553d68d5749e6882a2e684d43270a5e84344b"
+}

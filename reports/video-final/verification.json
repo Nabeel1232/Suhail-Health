@@ -1,0 +1,244 @@
+{
+  "status": "passed",
+  "started_at": "2026-11-20T15:04:39.235485+00:00",
+  "finished_at": "2026-11-20T15:04:45.614513+00:00",
+  "mode": "local_ffprobe_ffmpeg_final_media_verification",
+  "video": "Suhail_Health_Final_Demo.mp4",
+  "bytes": 11900770,
+  "video_sha256": "16f1616d3f8d93f10fb652a4f83e7d3cce577709af22ad93fc0b9c73c7d7c06a",
+  "duration_seconds": 175.181333,
+  "narration_seconds": 161.828571,
+  "expected_chapters": 8,
+  "timing": {
+    "lead_seconds_per_chapter": 0.4,
+    "tail_seconds_per_chapter": 0.4,
+    "audio_speed": 0.95983731,
+    "frames_per_second": 25
+  },
+  "expected_chapter_rounded_total_seconds": 175.16,
+  "expected_unrounded_total_seconds": 175.00000055634425,
+  "narration_plus_two_seconds_per_chapter": null,
+  "video_stream": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "25/1"
+  },
+  "audio_stream": {
+    "codec_name": "aac",
+    "sample_rate": "48000",
+    "channels": 2
+  },
+  "checks": {
+    "h264_1920x1080_25fps": true,
+    "aac_stereo_48000hz": true,
+    "embedded_english_captions": true,
+    "positive_consistent_duration": true,
+    "expected_chapter_markers": true,
+    "chapter_sources_match_storyboard_order": true,
+    "recorded_audio_speed_matches_requested": true,
+    "source_audio_qc_passed": true,
+    "duration_within_declared_target": true,
+    "chapter_order_titles_and_bounds": true,
+    "captions_valid_nonempty_and_in_bounds": true,
+    "srt_vtt_equivalent": true,
+    "captions_cover_all_actual_sources": true,
+    "transcript_nonempty_and_all_narration_texts_covered": true,
+    "complete_video_audio_decode_clean": true,
+    "final_media_and_text_metadata_secret_scan": true,
+    "final_video_hash_matches_delivery_manifest": true,
+    "semantic_visual_state_sync_verified": true,
+    "authored_visual_state_sync_verified": true
+  },
+  "chapter_checks": [
+    {
+      "id": "01",
+      "start_seconds": 0.0,
+      "end_seconds": 23.88,
+      "title": "01 Why results get lost",
+      "passed": true
+    },
+    {
+      "id": "02",
+      "start_seconds": 23.88,
+      "end_seconds": 47.32,
+      "title": "02 Every result has an owner",
+      "passed": true
+    },
+    {
+      "id": "03",
+      "start_seconds": 47.32,
+      "end_seconds": 68.44,
+      "title": "03 Clear for the patient",
+      "passed": true
+    },
+    {
+      "id": "04",
+      "start_seconds": 68.44,
+      "end_seconds": 88.72,
+      "title": "04 Connect human expertise",
+      "passed": true
+    },
+    {
+      "id": "05",
+      "start_seconds": 88.72,
+      "end_seconds": 109.4,
+      "title": "05 Make the handoff accountable",
+      "passed": true
+    },
+    {
+      "id": "06",
+      "start_seconds": 109.4,
+      "end_seconds": 130.16,
+      "title": "06 Safe escalation, evidenced closure",
+      "passed": true
+    },
+    {
+      "id": "07",
+      "start_seconds": 130.16,
+      "end_seconds": 151.52,
+      "title": "07 Measure what happens next",
+      "passed": true
+    },
+    {
+      "id": "08",
+      "start_seconds": 151.52,
+      "end_seconds": 175.16,
+      "title": "08 Human control, ready to pilot",
+      "passed": true
+    }
+  ],
+  "captions": {
+    "srt_cues": 41,
+    "vtt_cues": 41,
+    "source_checks": [
+      {
+        "id": "01",
+        "alignment_file": "runtime/video-final/01-alignment.json",
+        "caption_count": 5,
+        "expected_caption_count": 5,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 336,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      },
+      {
+        "id": "02",
+        "alignment_file": "runtime/video-final/02-alignment.json",
+        "caption_count": 5,
+        "expected_caption_count": 5,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 332,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      },
+      {
+        "id": "03",
+        "alignment_file": "runtime/video-final/03-alignment.json",
+        "caption_count": 6,
+        "expected_caption_count": 6,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 307,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      },
+      {
+        "id": "04",
+        "alignment_file": "runtime/video-final/04-alignment.json",
+        "caption_count": 5,
+        "expected_caption_count": 5,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 280,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      },
+      {
+        "id": "05",
+        "alignment_file": "runtime/video-final/05-alignment.json",
+        "caption_count": 5,
+        "expected_caption_count": 5,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 295,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      },
+      {
+        "id": "06",
+        "alignment_file": "runtime/video-final/06-alignment.json",
+        "caption_count": 5,
+        "expected_caption_count": 5,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 305,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      },
+      {
+        "id": "07",
+        "alignment_file": "runtime/video-final/07-alignment.json",
+        "caption_count": 4,
+        "expected_caption_count": 4,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 292,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      },
+      {
+        "id": "08",
+        "alignment_file": "runtime/video-final/08-alignment.json",
+        "caption_count": 6,
+        "expected_caption_count": 6,
+        "capture_exists": true,
+        "narration_exists": true,
+        "alignment_characters": 330,
+        "alignment_arrays_valid_and_monotonic": true,
+        "caption_timestamps_match_scaled_source_alignment": true,
+        "caption_text_covers_alignment": true,
+        "passed": true
+      }
+    ]
+  },
+  "decode": {
+    "exit_code": 0,
+    "error_output_empty": true,
+    "elapsed_seconds": 4.007,
+    "error_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "secret_scan": {
+    "status": "passed",
+    "text_files_scanned": 260,
+    "final_media_bytes_scanned": 11900770,
+    "exact_credential_loaded_in_memory": true,
+    "private_credential_source_excluded": true,
+    "credential_or_credential_fingerprint_recorded": false,
+    "findings": [],
+    "limitation": "Exact currently provided credential only; older or transformed secrets are outside this check."
+  },
+  "provider_calls": 0,
+  "application_state_changes": 0,
+  "limits": [
+    "Technical decode/timing/lineage checks do not replace a visual editorial review.",
+    "No clinical validation or patient-outcome claim is implied."
+  ]
+}

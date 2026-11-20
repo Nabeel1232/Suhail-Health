@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Suhail Health · coordination</title><style>body{font:16px system-ui;margin:32px;color:#143d3c;background:#f4f8f7}main{max-width:1000px;margin:auto;background:white;padding:28px;border:1px solid #d4e2de;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:12px;border-bottom:1px solid #d4e2de}th{background:#e8f3f0}pre{white-space:pre-wrap}</style><main><p>Suhail Health · Guiding every result to care</p><h1>coordination</h1><p>20261120T123924Z-offline · NOT_RUN · deterministic_software</p><table><tr><th>Measurement</th><th>Value</th><th>Denominator</th><th>Method</th></tr><tr><td>task_accuracy</td><td>Not measured</td><td>Not measured</td><td>Independent scenario truth; incorrect evaluated answers remain in denominator.</td></tr></table><h2>Execution counts and usage</h2><pre>{
+  &quot;counts&quot;: {
+    &quot;selected&quot;: 0,
+    &quot;attempted&quot;: 0,
+    &quot;completed&quot;: 0,
+    &quot;failed&quot;: 0,
+    &quot;skipped&quot;: 0,
+    &quot;task_passed&quot;: null,
+    &quot;task_incorrect&quot;: null
+  },
+  &quot;usage&quot;: {
+    &quot;api_calls&quot;: 0,
+    &quot;input_tokens&quot;: 0,
+    &quot;output_tokens&quot;: 0,
+    &quot;cost_usd&quot;: 0,
+    &quot;latency_ms_p50&quot;: null,
+    &quot;latency_ms_p95&quot;: null,
+    &quot;price_map_version&quot;: null,
+    &quot;budget_reason&quot;: null
+  }
+}</pre><h2>Limits</h2><ul><li>Deterministic persisted domain commands, no live model inference in this layer.</li><li>SQLite isolated test store; production PostgreSQL API/browser integration verified separately.</li><li>Provider requests/events here execute domain authorization with synthetic actors; independent provider HTTP-contract checks are a separate test layer.</li><li>Operational deadlines and behavior are demonstration settings, not clinical validation.</li><li>usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.</li><li>Live function inference was not run in this deterministic software run.</li></ul></main></html>

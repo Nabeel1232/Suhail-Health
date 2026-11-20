@@ -1,0 +1,23 @@
+{
+  "id": "synthetic-split-limitations-v1",
+  "recorded_at": "2026-11-14T21:28:31.684571+00:00",
+  "generator_version": "suhail-synthetic-v1",
+  "generator_sha256": "063d628f24d3e0eda03ab393fcbce8335fb29e1321aaa39a8adabf567b76ab8d",
+  "disjoint_properties": [
+    "patient IDs across development/validation/holdout split names",
+    "generation seeds across development/validation/holdout",
+    "final live input records were not used for semantic prompt optimization"
+  ],
+  "overlapping_properties": [
+    "same six variant structures per function",
+    "same patient-question wording",
+    "same task/scenario family operators and care-rule vocabulary"
+  ],
+  "labels_are_not_evidence": "Different template_family strings include split prefixes; these do not demonstrate structurally disjoint scenario or text families.",
+  "offline_layer_note": "Some synthetic patient identifier ranges also occur in the offline known-regression suite; actual persisted case IDs and evidence layers are separate. Do not claim global patient-family independence across software and model evidence layers.",
+  "allowed_claim": "Executed bounded conformance on known scripted scenario/template families with disjoint split IDs/seeds, plus adapted public conversation rubric estimates.",
+  "unsupported_claim": "Unseen-family generalization, representative clinical performance, independent clinical validation or patient outcome improvement.",
+  "original_limitations_erratum": "Any original manifest/header text implying disjoint template/scenario families is superseded by this explicit measurement limitation. Raw inputs, scores, original hashes and selected-case denominators remain unchanged.",
+  "model_prompt_scorer_cases_unchanged": true,
+  "future_work": "Implement v2 truly distinct text/interaction-family generator and tests without overwriting v1 cases; an additional authorized budget/new untouched dataset version is required for new live generalization evidence."
+}

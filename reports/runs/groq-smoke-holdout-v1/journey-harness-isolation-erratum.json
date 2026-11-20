@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-11-14T21:35:50.872698+00:00",
+  "reason": "InitialA/B/C sharedSQLite database plusidenticalpatient/order causedcorrectclinicaldeduplication intoAepisode; B/Cfirstpairfailed. No validpairedcomparisonevidencefrompair0.",
+  "original_pair_id": "trajectory-holdout-500000",
+  "invalid_case_ids": [
+    "paired-trajectory-holdout-500000-A",
+    "paired-trajectory-holdout-500000-B",
+    "paired-trajectory-holdout-500000-C"
+  ],
+  "preserve_failure_denominators": true,
+  "failed_ids_not_retried": true,
+  "correction": "Independentper-arm actualSQLite stores withsamefictionalpatient/order/scenariofacts andcase-startidentity/versionassertions; allper-armdatabasesarchived.",
+  "revision": "independent-arm-stores-v2",
+  "runner_sha256": "ef28a926ebbbef42f806e196bb106db064eb951e5c08bbe4dd525d3a3e6534be",
+  "archived_runner": "journey-harness-isolation-v2/evals/runner.py",
+  "no_model_prompt_rag_standalone_scorer_or_case_truth_change": true,
+  "next_preselected_pair": "trajectory-holdout-500001",
+  "development_validation": "development-arm-isolation-check.json",
+  "first_pair_excluded_from_matched_comparison": true
+}

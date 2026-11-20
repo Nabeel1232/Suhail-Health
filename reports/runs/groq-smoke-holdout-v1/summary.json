@@ -1,0 +1,1565 @@
+{
+  "schema_version": "1.0",
+  "run_id": "groq-smoke-holdout-v1",
+  "status": "PARTIAL",
+  "kind": "live",
+  "started_at": "2026-11-14T21:12:13.249279+00:00",
+  "finished_at": "2026-11-14T21:40:19.140567+00:00",
+  "counts": {
+    "selected": 66,
+    "attempted": 52,
+    "completed": 44,
+    "failed": 8,
+    "skipped": 14,
+    "task_passed": 42,
+    "task_incorrect": 0
+  },
+  "usage": {
+    "api_calls": 69,
+    "input_tokens": null,
+    "output_tokens": null,
+    "cost_usd": null,
+    "latency_ms_p50": 28706.83143287897,
+    "latency_ms_p95": 30635.62273606658,
+    "price_map_version": "groq-models-2026-11-15",
+    "budget_reason": null
+  },
+  "budget": {
+    "max_calls": 300,
+    "max_tokens": 300000,
+    "api_calls": 69,
+    "charged_tokens": 280049,
+    "known_actual_tokens": 146772,
+    "unknown_usage_calls": 14,
+    "cost_usd": null,
+    "usd_cap": null,
+    "price_map_version": "groq-models-2026-11-15"
+  },
+  "components": {
+    "intake": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "execution_error",
+      "evidence_mode": "live_groq_synthetic",
+      "component": "intake",
+      "started_at": "2026-11-14T21:12:17.101679+00:00",
+      "finished_at": "2026-11-14T21:13:15.862586+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [
+          "intake-holdout-000",
+          "intake-holdout-001",
+          "intake-holdout-002",
+          "intake-holdout-003",
+          "intake-holdout-004",
+          "intake-holdout-005"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 6,
+        "attempted": 6,
+        "completed": 5,
+        "failed": 1,
+        "skipped": 0,
+        "task_passed": 5,
+        "task_incorrect": 0
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        },
+        {
+          "name": "evaluated_coverage",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+        },
+        {
+          "name": "selected_case_pass_fraction",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+        },
+        {
+          "name": "action_correct",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "field_precision",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "field_recall",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "review_or_abstention",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "secondary_existing_response_audit_pass_fraction",
+          "value": 0.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged."
+        }
+      ],
+      "usage": {
+        "api_calls": 10,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms_p50": 1673.0933748185635,
+        "latency_ms_p95": 2990.4985427856445,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "intake-holdout-002",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "One Arabic case had a primary scoring exception; its existing response is evaluated only in the separately versioned secondary audit, preserving the primary failure denominator."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "pathway_router": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "execution_error",
+      "evidence_mode": "live_groq_synthetic",
+      "component": "pathway_router",
+      "started_at": "2026-11-14T21:13:15.889587+00:00",
+      "finished_at": "2026-11-14T21:27:57.148819+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [
+          "pathway_router-holdout-000",
+          "pathway_router-holdout-001",
+          "pathway_router-holdout-002",
+          "pathway_router-holdout-003",
+          "pathway_router-holdout-004",
+          "pathway_router-holdout-005"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 6,
+        "attempted": 6,
+        "completed": 5,
+        "failed": 1,
+        "skipped": 0,
+        "task_passed": 5,
+        "task_incorrect": 0
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        },
+        {
+          "name": "evaluated_coverage",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+        },
+        {
+          "name": "selected_case_pass_fraction",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+        },
+        {
+          "name": "action_correct",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "review_or_abstention",
+          "value": 0.6,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "secondary_existing_response_audit_pass_fraction",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged."
+        }
+      ],
+      "usage": {
+        "api_calls": 14,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms_p50": 167.7352748811245,
+        "latency_ms_p95": 29493.0372685194,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "pathway_router-holdout-002",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "One Arabic case had a primary scoring exception; its existing response is evaluated only in the separately versioned secondary audit, preserving the primary failure denominator."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "safety_escalation": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "execution_error",
+      "evidence_mode": "live_groq_synthetic",
+      "component": "safety_escalation",
+      "started_at": "2026-11-14T21:16:24.522256+00:00",
+      "finished_at": "2026-11-14T21:28:27.190717+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [
+          "safety_escalation-holdout-000",
+          "safety_escalation-holdout-001",
+          "safety_escalation-holdout-002",
+          "safety_escalation-holdout-003",
+          "safety_escalation-holdout-004",
+          "safety_escalation-holdout-005"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 6,
+        "attempted": 6,
+        "completed": 5,
+        "failed": 1,
+        "skipped": 0,
+        "task_passed": 5,
+        "task_incorrect": 0
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        },
+        {
+          "name": "evaluated_coverage",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+        },
+        {
+          "name": "selected_case_pass_fraction",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+        },
+        {
+          "name": "action_correct",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "review_or_abstention",
+          "value": 0.6,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "secondary_existing_response_audit_pass_fraction",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged."
+        }
+      ],
+      "usage": {
+        "api_calls": 6,
+        "input_tokens": 11438,
+        "output_tokens": 4593,
+        "cost_usd": 0.0044715,
+        "latency_ms_p50": 29535.623464733362,
+        "latency_ms_p95": 30566.78256392479,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "safety_escalation-holdout-002",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "One Arabic case had a primary scoring exception; its existing response is evaluated only in the separately versioned secondary audit, preserving the primary failure denominator."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "patient_navigator": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "execution_error",
+      "evidence_mode": "live_groq_synthetic",
+      "component": "patient_navigator",
+      "started_at": "2026-11-14T21:16:26.809411+00:00",
+      "finished_at": "2026-11-14T21:28:57.889075+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [
+          "patient_navigator-holdout-000",
+          "patient_navigator-holdout-001",
+          "patient_navigator-holdout-002",
+          "patient_navigator-holdout-003",
+          "patient_navigator-holdout-004",
+          "patient_navigator-holdout-005"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 6,
+        "attempted": 6,
+        "completed": 5,
+        "failed": 1,
+        "skipped": 0,
+        "task_passed": 5,
+        "task_incorrect": 0
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        },
+        {
+          "name": "evaluated_coverage",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+        },
+        {
+          "name": "selected_case_pass_fraction",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+        },
+        {
+          "name": "action_correct",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "review_or_abstention",
+          "value": 0.6,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "secondary_existing_response_audit_pass_fraction",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged."
+        }
+      ],
+      "usage": {
+        "api_calls": 6,
+        "input_tokens": 11534,
+        "output_tokens": 4735,
+        "cost_usd": 0.0045711,
+        "latency_ms_p50": 30079.261872917414,
+        "latency_ms_p95": 30530.65726906061,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "patient_navigator-holdout-002",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "One Arabic case had a primary scoring exception; its existing response is evaluated only in the separately versioned secondary audit, preserving the primary failure denominator."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "coordination": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "execution_error",
+      "evidence_mode": "live_groq_synthetic",
+      "component": "coordination",
+      "started_at": "2026-11-14T21:16:57.056123+00:00",
+      "finished_at": "2026-11-14T21:29:57.455657+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [
+          "coordination-holdout-000",
+          "coordination-holdout-001",
+          "coordination-holdout-002",
+          "coordination-holdout-003",
+          "coordination-holdout-004",
+          "coordination-holdout-005"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 6,
+        "attempted": 6,
+        "completed": 5,
+        "failed": 1,
+        "skipped": 0,
+        "task_passed": 5,
+        "task_incorrect": 0
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        },
+        {
+          "name": "evaluated_coverage",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+        },
+        {
+          "name": "selected_case_pass_fraction",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+        },
+        {
+          "name": "action_correct",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "review_or_abstention",
+          "value": 0.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "secondary_existing_response_audit_pass_fraction",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged."
+        }
+      ],
+      "usage": {
+        "api_calls": 7,
+        "input_tokens": 12167,
+        "output_tokens": 5409,
+        "cost_usd": 0.00507045,
+        "latency_ms_p50": 30157.53897279501,
+        "latency_ms_p95": 31354.042913764715,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "coordination-holdout-002",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "One Arabic case had a primary scoring exception; its existing response is evaluated only in the separately versioned secondary audit, preserving the primary failure denominator."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "closure_evidence": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "execution_error",
+      "evidence_mode": "live_groq_synthetic",
+      "component": "closure_evidence",
+      "started_at": "2026-11-14T21:17:27.300787+00:00",
+      "finished_at": "2026-11-14T21:30:58.241062+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [
+          "closure_evidence-holdout-000",
+          "closure_evidence-holdout-001",
+          "closure_evidence-holdout-002",
+          "closure_evidence-holdout-003",
+          "closure_evidence-holdout-004",
+          "closure_evidence-holdout-005"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 6,
+        "attempted": 6,
+        "completed": 5,
+        "failed": 1,
+        "skipped": 0,
+        "task_passed": 5,
+        "task_incorrect": 0
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        },
+        {
+          "name": "evaluated_coverage",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+        },
+        {
+          "name": "selected_case_pass_fraction",
+          "value": 0.8333333333333334,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+        },
+        {
+          "name": "action_correct",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "evidence_precision",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "review_or_abstention",
+          "value": 0.6,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Independent known synthetic truth; no grader model."
+        },
+        {
+          "name": "secondary_existing_response_audit_pass_fraction",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Post-hoc source-language scoring audit of existing actual responses; zero new inference. Primary scoring-error/failure counts remain unchanged."
+        }
+      ],
+      "usage": {
+        "api_calls": 7,
+        "input_tokens": 12810,
+        "output_tokens": 5610,
+        "cost_usd": 0.0052875,
+        "latency_ms_p50": 30058.87296050787,
+        "latency_ms_p95": 31733.878135681152,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "closure_evidence-holdout-002",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "One Arabic case had a primary scoring exception; its existing response is evaluated only in the separately versioned secondary audit, preserving the primary failure denominator."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "journeys": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "execution_error",
+      "evidence_mode": "live_groq_synthetic",
+      "component": "journeys",
+      "started_at": "2026-11-14T21:32:32.252732+00:00",
+      "finished_at": "2026-11-14T21:40:18.744528+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "384a2997f15fab7c885e72966ec28302068b3e4e7288c49d3fd503142a34306b",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [
+          "paired-trajectory-holdout-500000-A",
+          "paired-trajectory-holdout-500000-B",
+          "paired-trajectory-holdout-500000-C",
+          "paired-trajectory-holdout-500001-A",
+          "paired-trajectory-holdout-500001-B",
+          "paired-trajectory-holdout-500001-C",
+          "paired-trajectory-holdout-500002-A",
+          "paired-trajectory-holdout-500002-B",
+          "paired-trajectory-holdout-500002-C",
+          "paired-trajectory-holdout-500003-A",
+          "paired-trajectory-holdout-500003-B",
+          "paired-trajectory-holdout-500003-C",
+          "paired-trajectory-holdout-500004-A",
+          "paired-trajectory-holdout-500004-B",
+          "paired-trajectory-holdout-500004-C",
+          "paired-trajectory-holdout-500005-A",
+          "paired-trajectory-holdout-500005-B",
+          "paired-trajectory-holdout-500005-C"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 18,
+        "attempted": 14,
+        "completed": 12,
+        "failed": 2,
+        "skipped": 4,
+        "task_passed": 12,
+        "task_incorrect": 0
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 12,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        },
+        {
+          "name": "evaluated_coverage",
+          "value": 0.6666666666666666,
+          "unit": "fraction",
+          "denominator": 18,
+          "method": "All selected cases remain in execution coverage, including failures and skipped cases."
+        },
+        {
+          "name": "selected_case_pass_fraction",
+          "value": 0.6666666666666666,
+          "unit": "fraction",
+          "denominator": 18,
+          "method": "Passed primary scored cases / all selected; infrastructure failures and skips are not counted as passed."
+        },
+        {
+          "name": "arm_A_marginal_coverage_required_care_completed",
+          "value": 0.0,
+          "unit": "fraction",
+          "denominator": 6,
+          "method": "Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence."
+        },
+        {
+          "name": "arm_B_marginal_coverage_required_care_completed",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence."
+        },
+        {
+          "name": "arm_C_marginal_coverage_required_care_completed",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Marginal observed arm coverage only; different evaluated subsets are not a matched comparison or patient outcome evidence."
+        },
+        {
+          "name": "matched_A_B_required_care_difference",
+          "value": 1.0,
+          "unit": "fraction",
+          "denominator": 5,
+          "method": "Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate."
+        },
+        {
+          "name": "matched_B_C_required_care_difference",
+          "value": 0.0,
+          "unit": "fraction",
+          "denominator": 1,
+          "method": "Same paired IDs, evaluated independent arm stores only; scripted conformance and synthetic assumptions, no clinical or incremental-AI outcome-effect estimate."
+        }
+      ],
+      "usage": {
+        "api_calls": 11,
+        "input_tokens": 26000,
+        "output_tokens": 8916,
+        "cost_usd": 0.009249599999999998,
+        "latency_ms_p50": 29700.981080532074,
+        "latency_ms_p95": 31182.783763855696,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "paired-trajectory-holdout-500000-B",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        },
+        {
+          "case_id": "paired-trajectory-holdout-500000-C",
+          "code": "execution_error",
+          "message": "Execution did not produce a valid evaluated result; see sanitized command events."
+        },
+        {
+          "case_id": "paired-trajectory-holdout-500002-C",
+          "code": "budget_insufficient_for_full_journey",
+          "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+        },
+        {
+          "case_id": "paired-trajectory-holdout-500003-C",
+          "code": "budget_insufficient_for_full_journey",
+          "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+        },
+        {
+          "case_id": "paired-trajectory-holdout-500004-C",
+          "code": "budget_insufficient_for_full_journey",
+          "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+        },
+        {
+          "case_id": "paired-trajectory-holdout-500005-C",
+          "code": "budget_insufficient_for_full_journey",
+          "message": "Remainingconservativeallowancecannotreserve35000tokensforanothercomplete6-functionjourney; noproviderrequestdispatched."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "Scripted authorized domain role actions and known evidence use synthetic behavior and service capacity; no clinical effectiveness or reassurance claim.",
+        "A reminders; B full workflow templates; C same workflow plus observed bounded live proposals. Unexecuted selected arms remain skipped/failed with no outcome estimate.",
+        "The first shared-store pair is invalid for matched comparisons and retained with its failures. Only valid evaluated independent-store pairs enter comparison metrics.",
+        "Authorized scripted actors follow independent scenario truth while AI drafts are observed; no causal effect of model recommendations or real human review/understanding was measured."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "software_suite": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "NOT_RUN",
+      "reason_code": null,
+      "evidence_mode": "deterministic_software",
+      "component": "software_suite",
+      "started_at": null,
+      "finished_at": null,
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": null,
+        "dataset": "suhail_project_synthetic",
+        "dataset_revision": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "dataset_checksum": "08dd171414d78a0adc5f51401fdb24c5f09eda6ebd66ed7285f2ebc721d62cdf",
+        "license": "project_generated_no_upstream_license_claim",
+        "selected_case_ids": [],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 0,
+        "attempted": 0,
+        "completed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "task_passed": null,
+        "task_incorrect": null
+      },
+      "metrics": [
+        {
+          "name": "task_accuracy",
+          "value": null,
+          "unit": "fraction",
+          "denominator": null,
+          "method": "Independent scenario truth; incorrect evaluated answers remain in denominator."
+        }
+      ],
+      "usage": {
+        "api_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": null,
+        "latency_ms_p95": null,
+        "price_map_version": null,
+        "budget_reason": null
+      },
+      "errors": [],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    },
+    "external_suite": {
+      "schema_version": "1.0",
+      "run_id": "groq-smoke-holdout-v1",
+      "status": "PARTIAL",
+      "reason_code": "budget_exhausted",
+      "evidence_mode": "adapted_external",
+      "component": "external_suite",
+      "started_at": "2026-11-14T21:17:57.813247+00:00",
+      "finished_at": "2026-11-14T21:40:15.644871+00:00",
+      "provenance": {
+        "code_revision": null,
+        "dirty_state_hash": "32e3ad12c6c580912bc4e9f3ccebc202d407de1a72a146f264a1b7da50b0bd5e",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "grader_model": "openai/gpt-oss-120b",
+        "dataset": "healthbench_adapted",
+        "dataset_revision": "40ee1968852fc57f625934251ac22be47077a8fb",
+        "dataset_checksum": "e99dd3c6372c10d6fcc5e385c5fae69d0dd40392dae56836ef9493ae324ecd2f",
+        "license": "mit",
+        "selected_case_ids": [
+          "healthbench-e9b7f69b-69ee-486b-805c-c98439ad969a",
+          "healthbench-ced9860d-fbcb-4044-9675-133f233bdb57",
+          "healthbench-9e2670fc-2237-492a-afed-d6d198cb673c",
+          "healthbench-4a8f0b1e-bdff-46cc-92d8-b26a5bd65dd9",
+          "healthbench-f01bf8d2-db27-479c-a475-eea7c34723ef",
+          "healthbench-8007766d-0b6c-406a-8cae-a9fc2da4499f",
+          "healthbench-8c96d728-e8c9-45bf-b3ac-a06dd4801d85",
+          "healthbench-7a57c0bc-9b5c-493d-ba5d-4b4819f28cbf",
+          "healthbench-565f464d-f5ac-4174-8f55-64d8f6b64846",
+          "healthbench-616e980f-7d80-4bd6-864e-6be62ac20d18",
+          "healthbench-d4300334-d8ac-4fad-8d74-1aff8dfa7333",
+          "healthbench-8d0d9310-b6fb-43ad-bfd5-783dbdb1252d"
+        ],
+        "prompt_hash": "85fa68284b607ca90ecdd4d6b7136665a5405db76b5eaccd79e382a292451b36",
+        "retrieval_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+        "policy_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+        "scorer_version": "suhail-independent-state-v1;healthbench-signed-positive-denominator-aggregate-clip-v1",
+        "sampling_parameters": {
+          "temperature": 0,
+          "structured_max_tokens": 1500,
+          "external_max_tokens": 1500,
+          "grader_max_tokens": 1500,
+          "stream": false,
+          "concurrency": 1,
+          "configured_max_concurrency": 2,
+          "tool_parallel_calls": false,
+          "quantization": "provider managed; not disclosed"
+        }
+      },
+      "counts": {
+        "selected": 12,
+        "attempted": 2,
+        "completed": 2,
+        "failed": 0,
+        "skipped": 10,
+        "task_passed": null,
+        "task_incorrect": null
+      },
+      "metrics": [
+        {
+          "name": "adapted_healthbench_rubric_score",
+          "value": 0.20104025327905925,
+          "unit": "fraction",
+          "denominator": 2,
+          "method": "Signed weights / total positive weights per example; clip aggregate mean to [0,1]. Groq batched rubric-grader estimate; not official HealthBench."
+        }
+      ],
+      "usage": {
+        "api_calls": 6,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms_p50": 29899.273172020912,
+        "latency_ms_p95": 30579.688906669617,
+        "price_map_version": "groq-models-2026-11-15",
+        "budget_reason": null
+      },
+      "errors": [
+        {
+          "case_id": "healthbench-9e2670fc-2237-492a-afed-d6d198cb673c",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-4a8f0b1e-bdff-46cc-92d8-b26a5bd65dd9",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-f01bf8d2-db27-479c-a475-eea7c34723ef",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-8007766d-0b6c-406a-8cae-a9fc2da4499f",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-8c96d728-e8c9-45bf-b3ac-a06dd4801d85",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-7a57c0bc-9b5c-493d-ba5d-4b4819f28cbf",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-565f464d-f5ac-4174-8f55-64d8f6b64846",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-616e980f-7d80-4bd6-864e-6be62ac20d18",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-d4300334-d8ac-4fad-8d74-1aff8dfa7333",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        },
+        {
+          "case_id": "healthbench-8d0d9310-b6fb-43ad-bfd5-783dbdb1252d",
+          "code": "budget_exhausted",
+          "message": "Insufficient conservative allowance for candidate plus mandatory rubric grading."
+        }
+      ],
+      "limitations": [
+        "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+        "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+        "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+        "Standard/full presets not executed unless explicit budgets are supplied.",
+        "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+        "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+        "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+        "Postresume latency includes explicit local pacing; no pure network-latency claim.",
+        "usage.api_calls is reserved request attempts, including queued cancellations; actual dispatches are reported separately, with conservative unknown usage retained.",
+        "Version1 has disjoint split IDs/seeds but overlapping scripted templates, question wording and scenario families; no unseen-family or clinical generalization claim.",
+        "Actual RAG sections are retained in provider inputs and validated against a transparently late-captured knowledge pack; original retrieval_hash covered pathway files only.",
+        "Public deterministic thematic subset, not representative overall HealthBench.",
+        "Candidate and grader may share model/family; no independent human review performed.",
+        "Batched rubric grading differs from the reference one-criterion-per-request protocol."
+      ],
+      "reproduce_command": "python -m evals.runner live --run-id NEW_RUN_ID"
+    }
+  },
+  "dispatch_accounting": {
+    "reservation_attempts": 69,
+    "actual_dispatched_requests": 67,
+    "confirmed_dispatched_requests": 67,
+    "queued_pre_dispatch_cancellations": 2,
+    "unknown_dispatch_attempts": 0,
+    "completed_provider_responses": 55,
+    "successful_generation_responses": 54,
+    "paid_inference_calls": null,
+    "confirmed_dispatch_call_ids": [
+      "728f5e16-817d-4f74-a1d8-9743d9bb358c",
+      "3d13ae5f-bc40-4237-b131-4e17fb348a39",
+      "afba3ca6-df57-4453-a396-b8a4352ed96f",
+      "fd585e3c-5b16-4644-b274-6fbcb0d1128f",
+      "c71086d0-4011-4470-8f2d-b59be6c4a4d2",
+      "e249802c-d029-4556-86c1-f5f10ffc0b44",
+      "b535f8d3-2880-4ad4-89ce-8d838de33b39",
+      "12f045b0-097f-43cb-bd52-bfc65e98ca1d",
+      "082f6575-8f33-44d1-b46a-35a4ca469296",
+      "d1afcbe9-607d-46d3-9274-f01e921ed6be",
+      "a3d2c048-56f0-4c0a-bd20-225169577a38",
+      "b2fb41c4-968a-4409-aba6-a098dc2e39db",
+      "7af13212-3fb0-4661-9d9e-e9df5a34e557",
+      "36a2dfef-0c17-4c8e-8d04-5f6f253df39d",
+      "9e1a7d8b-f684-4666-b589-d99367517181",
+      "9d8294e9-3d25-4bec-a3e2-53ace0ff8d29",
+      "cfc3c688-cfcf-4372-9bb8-81474a95c6fa",
+      "2b70f509-8b57-47e2-bd15-1708f69a6ce9",
+      "cce2b922-932c-4c2c-9bd7-72b44d2035fa",
+      "ca887e36-bd7c-4676-aa22-ad4b95f99401",
+      "f3f419f5-585e-4e49-b0cd-bf79e3aef500",
+      "856f9675-2298-4783-bf3c-c1933efcb2d6",
+      "0210ca2b-874e-4741-8071-ad5ae7269d6b",
+      "ec60e329-5f16-474d-bff2-0d2e8c498954",
+      "6befb14b-e136-4667-bfd4-5048d4814fa2",
+      "513e5e0a-559d-458e-a3f7-a8c19182c143",
+      "591e0e8d-f1fa-42db-b30e-768cd02ed6c6",
+      "5d5005f0-bde1-4d69-a31a-ca5e8a3470ed",
+      "c8901df6-1b4a-49d1-8acb-2d7676f178ac",
+      "1d0f043e-6594-46cf-b547-967aa66bd275",
+      "dc07d219-7124-4ed0-9d14-0e3f7b1f6742",
+      "1d5acae7-31ad-4189-883a-b3b0363c96f1",
+      "aa38b0cb-42ca-4110-a278-6ef652ce066c",
+      "0660dd22-57c1-4547-ba5e-22548b3c1c73",
+      "48ecb560-29d1-4ac2-8294-c836949936e8",
+      "af773186-9d9a-4ea2-98f4-f0fee2663589",
+      "fc5819f0-df8e-41d4-9cbf-d5b7a5ccc803",
+      "6523d0c4-ec7a-496d-8391-ac26fd634079",
+      "493f2309-3f52-4f80-855a-6c42d8a19813",
+      "85e3d915-813d-42ac-bca9-8df7d4b5a67d",
+      "3b033c01-2ce9-44c7-b7af-3b6475b896c2",
+      "d7464c7b-fd5b-4976-b22b-69790146e323",
+      "ee93748f-bd75-47fb-9deb-420d2d22e9c2",
+      "74511b2d-1bcb-47b1-af28-47517be365b4",
+      "6197f326-d977-4775-995d-716ff2a78061",
+      "aec0c921-0c05-4fe1-ba80-aa9e2603777b",
+      "882e556b-a0f3-49e6-8635-1defc1d3d1df",
+      "532e2c24-fc4c-42da-b0b6-6c7e1c328376",
+      "2ddd3cf9-8674-4463-9aee-e6738c239713",
+      "c4e84490-a27b-4f21-9fc7-e15af6ddf0c3",
+      "0c2a975b-5a91-4937-b820-1c227abe258e",
+      "1a1f8f49-6a68-44a6-aa24-76c805558f9b",
+      "de1f0b15-e486-4dcd-8a0c-59d8cf663bb5",
+      "2dd7a21d-d0e2-4484-b66e-01e056be7b63",
+      "e7e4cdc0-a2c2-4a21-af95-0a2c27b2c944",
+      "367a93e5-3a0d-474b-b650-ba7d42113c53",
+      "db0c1203-19b6-4932-9864-951cd678fa4e",
+      "007d2760-5c98-4b7f-a83d-1c7166b6d501",
+      "41060ec5-74b3-48ad-94f0-ab42eaeb0bb5",
+      "141f04c5-d539-4c69-a5f9-3cba53301c4a",
+      "1e0aea40-03d8-445d-9c8d-26dbd54c51d2",
+      "93e2c6fa-3833-49a6-b8db-93afa9354e75",
+      "0f47fd1d-43e3-4196-bc56-6cd26965e60e",
+      "9112fef1-db4d-4baf-a0c6-175aa2fcde9d",
+      "b0fe7140-1759-4cdc-8508-babd3284fa37",
+      "0aee019b-ee43-4b20-8c73-832cd6926c36",
+      "4d4fa6db-e8e9-4890-b6a1-8472dea9c4e8"
+    ],
+    "pre_dispatch_cancelled_call_ids": [
+      "3d078353-d6c2-4e3b-9a9a-99c4a6f760ae",
+      "a13fc746-d5cb-49f6-975a-db211601e575"
+    ],
+    "unknown_dispatch_call_ids": [],
+    "definition": "usage.api_calls and spending cap count reserved request attempts, including queued cancellations. Actual SDK/network dispatch is shown separately; paid-call status and missing usage stay unknown. No conservative reservation is refunded."
+  },
+  "matched_comparisons": {
+    "excluded_invalid_pair_ids": [
+      "trajectory-holdout-500000"
+    ],
+    "A_B": {
+      "matched_pairs": 5,
+      "difference": 1.0,
+      "pairs": [
+        {
+          "paired_id": "trajectory-holdout-500001",
+          "first_case_id": "paired-trajectory-holdout-500001-A",
+          "second_case_id": "paired-trajectory-holdout-500001-B",
+          "first_care_completed": false,
+          "second_care_completed": true
+        },
+        {
+          "paired_id": "trajectory-holdout-500002",
+          "first_case_id": "paired-trajectory-holdout-500002-A",
+          "second_case_id": "paired-trajectory-holdout-500002-B",
+          "first_care_completed": false,
+          "second_care_completed": true
+        },
+        {
+          "paired_id": "trajectory-holdout-500003",
+          "first_case_id": "paired-trajectory-holdout-500003-A",
+          "second_case_id": "paired-trajectory-holdout-500003-B",
+          "first_care_completed": false,
+          "second_care_completed": true
+        },
+        {
+          "paired_id": "trajectory-holdout-500004",
+          "first_case_id": "paired-trajectory-holdout-500004-A",
+          "second_case_id": "paired-trajectory-holdout-500004-B",
+          "first_care_completed": false,
+          "second_care_completed": true
+        },
+        {
+          "paired_id": "trajectory-holdout-500005",
+          "first_case_id": "paired-trajectory-holdout-500005-A",
+          "second_case_id": "paired-trajectory-holdout-500005-B",
+          "first_care_completed": false,
+          "second_care_completed": true
+        }
+      ],
+      "interpretation": "Descriptive scripted conformance only; no clinical outcome or incremental-AI effect estimate."
+    },
+    "B_C": {
+      "matched_pairs": 1,
+      "difference": 0.0,
+      "pairs": [
+        {
+          "paired_id": "trajectory-holdout-500001",
+          "first_case_id": "paired-trajectory-holdout-500001-B",
+          "second_case_id": "paired-trajectory-holdout-500001-C",
+          "first_care_completed": true,
+          "second_care_completed": true
+        }
+      ],
+      "interpretation": "Descriptive scripted conformance only; no clinical outcome or incremental-AI effect estimate."
+    }
+  },
+  "secondary_scoring_audit": {
+    "status": "COMPLETE",
+    "new_api_calls": 0,
+    "existing_live_responses_audited": 6,
+    "task_passed": 5,
+    "task_incorrect": 1,
+    "original_failure_counts_unchanged": true,
+    "reason": "Original v1 scorer queried English FTS terms for Arabic source context, raised PolicyReviewRequired and lost the candidate ID in its exception path. Existing real responses are audited with their exact permitted policy references. This is secondary post-hoc scoring, not new inference or silent replacement of the primary failed-case denominator.",
+    "cases": [
+      {
+        "case_id": "intake-holdout-002",
+        "component": "intake",
+        "passed": false,
+        "candidate_call_id": "c71086d0-4011-4470-8f2d-b59be6c4a4d2"
+      },
+      {
+        "case_id": "pathway_router-holdout-002",
+        "component": "pathway_router",
+        "passed": true,
+        "candidate_call_id": "ca887e36-bd7c-4676-aa22-ad4b95f99401"
+      },
+      {
+        "case_id": "safety_escalation-holdout-002",
+        "component": "safety_escalation",
+        "passed": true,
+        "candidate_call_id": "48ecb560-29d1-4ac2-8294-c836949936e8"
+      },
+      {
+        "case_id": "patient_navigator-holdout-002",
+        "component": "patient_navigator",
+        "passed": true,
+        "candidate_call_id": "af773186-9d9a-4ea2-98f4-f0fee2663589"
+      },
+      {
+        "case_id": "coordination-holdout-002",
+        "component": "coordination",
+        "passed": true,
+        "candidate_call_id": "fc5819f0-df8e-41d4-9cbf-d5b7a5ccc803"
+      },
+      {
+        "case_id": "closure_evidence-holdout-002",
+        "component": "closure_evidence",
+        "passed": true,
+        "candidate_call_id": "6523d0c4-ec7a-496d-8391-ac26fd634079"
+      }
+    ]
+  },
+  "provenance_errata": {
+    "rag": {
+      "id": "rag-provenance-erratum-v1",
+      "first_captured_at": "2026-11-14T21:23:08.053598+00:00",
+      "last_validated_at": "2026-11-14T21:45:05.777375+00:00",
+      "reason": "Original source allowlist omitted services/agents/knowledge.json; original retrieval_hash covered pathway files rather than the actual SQLiteFTS knowledge pack.",
+      "original_manifest_retrieval_hash": "f2ca8bc72b643fc5e030682f95a4b5d4b59c2c855939347174684630e3e8aec4",
+      "original_hash_scope": "pathway source files only; not an initial byte capture of the actual RAG pack",
+      "late_capture_path": "rag-provenance/knowledge-captured-late.json",
+      "late_capture_sha256": "29d6fc1645348d8896619cc1050e48cb8af38faad04f3f707eba3311a844095a",
+      "actual_rag_snapshot_hash": "31cc6516abad5ebe346ff9aa6abfcdb585adc05577f4ab6ab9180f822d2d7602",
+      "pack_version": "fit-pack-v1",
+      "observed_document_ids": [
+        "demo-fit-workflow",
+        "demo-patient-ar",
+        "demo-patient-en",
+        "uspstf-stool-followup"
+      ],
+      "all_pack_documents_observed_in_actual_provider_inputs": true,
+      "verified_provider_context_records": 59,
+      "source_unchanged_claim": "Owner implementation agent reports knowledge pack unchanged since development validation. Independently every observed full section/metadata/citation is byte-content equivalent to this capture; actual provider inputs retain those sections and their original call hashes.",
+      "no_retroactive_initial_capture_claim": true,
+      "no_model_prompt_scoring_output_or_original_ledger_change": true
+    },
+    "split": {
+      "id": "synthetic-split-limitations-v1",
+      "recorded_at": "2026-11-14T21:28:31.684571+00:00",
+      "generator_version": "suhail-synthetic-v1",
+      "generator_sha256": "063d628f24d3e0eda03ab393fcbce8335fb29e1321aaa39a8adabf567b76ab8d",
+      "disjoint_properties": [
+        "patient IDs across development/validation/holdout split names",
+        "generation seeds across development/validation/holdout",
+        "final live input records were not used for semantic prompt optimization"
+      ],
+      "overlapping_properties": [
+        "same six variant structures per function",
+        "same patient-question wording",
+        "same task/scenario family operators and care-rule vocabulary"
+      ],
+      "labels_are_not_evidence": "Different template_family strings include split prefixes; these do not demonstrate structurally disjoint scenario or text families.",
+      "offline_layer_note": "Some synthetic patient identifier ranges also occur in the offline known-regression suite; actual persisted case IDs and evidence layers are separate. Do not claim global patient-family independence across software and model evidence layers.",
+      "allowed_claim": "Executed bounded conformance on known scripted scenario/template families with disjoint split IDs/seeds, plus adapted public conversation rubric estimates.",
+      "unsupported_claim": "Unseen-family generalization, representative clinical performance, independent clinical validation or patient outcome improvement.",
+      "original_limitations_erratum": "Any original manifest/header text implying disjoint template/scenario families is superseded by this explicit measurement limitation. Raw inputs, scores, original hashes and selected-case denominators remain unchanged.",
+      "model_prompt_scorer_cases_unchanged": true,
+      "future_work": "Implement v2 truly distinct text/interaction-family generator and tests without overwriting v1 cases; an additional authorized budget/new untouched dataset version is required for new live generalization evidence."
+    },
+    "backend_actual_first_import": {
+      "id": "actual-backend-at-first-journey-import",
+      "captured_at": "2026-11-14T21:32:31.377443+00:00",
+      "file_hashes": {
+        "services/api/schemas.py": "0f0a76baa18fa5f136e2f6acf9baa86523e1c52769de2b319de5cd9b1e482d52",
+        "services/api/seed.py": "c4f4c1214541ee622354b8ccf5358a1b4772d2e83e4f5f75734f078b5958f0ee",
+        "services/api/db.py": "de21886d2f6d9b719b18418e9b4ddfcd6cdd73b4d951145138b66b25633b0b38",
+        "services/api/domain.py": "bad086a029ffe9aee8eee2fb835e7294d2d27c40ced80df9b50419a632ab8c48",
+        "services/api/policy.py": "450b752a045e51adc627cf1fef99c042edc0c65f029a9f20798318652dade7dc",
+        "services/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "services/api/auth.py": "ada080b04176a35826bf402bae0dc1f9e49fdaff5ee22600e52f9515edffe5b6",
+        "services/api/config.py": "f7a25e44d84afe152bf7db2ca9772b1bd4106d5cd8e73f90f2b8c86fcca5ffc3",
+        "services/api/worker.py": "da243719b7a1c53463dfc1c54acbbbbfd8486dd14f6f4b8c673f2ace3c07dba9",
+        "services/api/serve.py": "deba016d9168ac3a999ea054af384a529fe7b3434006b42aa36c8c99f0c7b635",
+        "services/api/main.py": "4f4744fdada382c748be50d472fbe9b173dec92f8e414c84e6e43989ff14cc9b"
+      },
+      "backend_hash": "5fd20fc298cdfd731f006838fd00d7d7122ff0acd7490e6b8b520e1eebef2c67",
+      "already_loaded_api_modules": [],
+      "captured_before_services_api_db_and_domain_import": true,
+      "instrumentation_revision": {
+        "evals/provenance.py": "1c4eac0e45fddafce1b81667f0221375c6ab38994f8373b99791788a3f5070e1",
+        "evals/domain_harness.py": "f8b4cfb09c23dd7660bbfa960cd051730e024267f310cacb5edd5a36abfc134f"
+      },
+      "reason": "Instrumentation-only source capture added before DomainHarness first import to distinguish final backend security repairs from earlier model-source freeze; no model/prompt/RAG/scorer/truth/command changes.",
+      "prior_backend_captures": "Earlier scheduler-resume/prejourney captures are intermediate; this execution-time capture governs actual fulljourneys. Raw case backend_source_hash from the scheduler is a resume-point label, not a replacement for this phase evidence.",
+      "applies_to_components": [
+        "journeys"
+      ],
+      "artifact_path": "actual-backend-source"
+    },
+    "journey_isolation": {
+      "recorded_at": "2026-11-14T21:35:50.872698+00:00",
+      "reason": "InitialA/B/C sharedSQLite database plusidenticalpatient/order causedcorrectclinicaldeduplication intoAepisode; B/Cfirstpairfailed. No validpairedcomparisonevidencefrompair0.",
+      "original_pair_id": "trajectory-holdout-500000",
+      "invalid_case_ids": [
+        "paired-trajectory-holdout-500000-A",
+        "paired-trajectory-holdout-500000-B",
+        "paired-trajectory-holdout-500000-C"
+      ],
+      "preserve_failure_denominators": true,
+      "failed_ids_not_retried": true,
+      "correction": "Independentper-arm actualSQLite stores withsamefictionalpatient/order/scenariofacts andcase-startidentity/versionassertions; allper-armdatabasesarchived.",
+      "revision": "independent-arm-stores-v2",
+      "runner_sha256": "ef28a926ebbbef42f806e196bb106db064eb951e5c08bbe4dd525d3a3e6534be",
+      "archived_runner": "journey-harness-isolation-v2/evals/runner.py",
+      "no_model_prompt_rag_standalone_scorer_or_case_truth_change": true,
+      "next_preselected_pair": "trajectory-holdout-500001",
+      "development_validation": "development-arm-isolation-check.json",
+      "first_pair_excluded_from_matched_comparison": true
+    }
+  },
+  "limitations": [
+    "Single frozen configured candidate; no model sweep, optimization or clinical effectiveness claim.",
+    "Synthetic holdout patients/templates disjoint from development/validation IDs; known scripted scenario families remain software regression evidence.",
+    "Live journey proposals are observed drafts with explicit human-simulated approval; backend truth and endpoint checks govern every transition.",
+    "A/B/C comparisons share synthetic behavior, capacity and evidence; no human usability study or reassurance measurement performed.",
+    "Standard/full presets not executed unless explicit budgets are supplied.",
+    "Observed429s consume conservative unknown-usage reservations; all failed calls retained.",
+    "Operational30-second dispatch pacing and round-robin pending-case order added after observing8000TPM; model/prompt/RAG/scoring/inputIDs unchanged.",
+    "Backend security corrections before fulljourneys recorded in backend-source-at-resume; model-only responses use the original frozen agentcode.",
+    "Postresume latency includes explicit local pacing; no pure network-latency claim."
+  ],
+  "optional_workstreams": {
+    "expert_review": {
+      "status": "NOT_RUN",
+      "reason": "No qualified independent review performed"
+    },
+    "medagentbench": {
+      "status": "BLOCKED",
+      "reason": "rights_unverified; original container/scorer not established; no records uploaded"
+    },
+    "mimic_iv_ed": {
+      "status": "BLOCKED",
+      "reason": "credentialed restricted data excluded from default remote path"
+    },
+    "synthea": {
+      "status": "NOT_RUN",
+      "alternative": "Project-generated synthetic FHIR fixtures"
+    }
+  }
+}

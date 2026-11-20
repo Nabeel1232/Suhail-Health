@@ -1,0 +1,61 @@
+{
+  "excluded_invalid_pair_ids": [
+    "trajectory-holdout-500000"
+  ],
+  "A_B": {
+    "matched_pairs": 5,
+    "difference": 1.0,
+    "pairs": [
+      {
+        "paired_id": "trajectory-holdout-500001",
+        "first_case_id": "paired-trajectory-holdout-500001-A",
+        "second_case_id": "paired-trajectory-holdout-500001-B",
+        "first_care_completed": false,
+        "second_care_completed": true
+      },
+      {
+        "paired_id": "trajectory-holdout-500002",
+        "first_case_id": "paired-trajectory-holdout-500002-A",
+        "second_case_id": "paired-trajectory-holdout-500002-B",
+        "first_care_completed": false,
+        "second_care_completed": true
+      },
+      {
+        "paired_id": "trajectory-holdout-500003",
+        "first_case_id": "paired-trajectory-holdout-500003-A",
+        "second_case_id": "paired-trajectory-holdout-500003-B",
+        "first_care_completed": false,
+        "second_care_completed": true
+      },
+      {
+        "paired_id": "trajectory-holdout-500004",
+        "first_case_id": "paired-trajectory-holdout-500004-A",
+        "second_case_id": "paired-trajectory-holdout-500004-B",
+        "first_care_completed": false,
+        "second_care_completed": true
+      },
+      {
+        "paired_id": "trajectory-holdout-500005",
+        "first_case_id": "paired-trajectory-holdout-500005-A",
+        "second_case_id": "paired-trajectory-holdout-500005-B",
+        "first_care_completed": false,
+        "second_care_completed": true
+      }
+    ],
+    "interpretation": "Descriptive scripted conformance only; no clinical outcome or incremental-AI effect estimate."
+  },
+  "B_C": {
+    "matched_pairs": 1,
+    "difference": 0.0,
+    "pairs": [
+      {
+        "paired_id": "trajectory-holdout-500001",
+        "first_case_id": "paired-trajectory-holdout-500001-B",
+        "second_case_id": "paired-trajectory-holdout-500001-C",
+        "first_care_completed": true,
+        "second_care_completed": true
+      }
+    ],
+    "interpretation": "Descriptive scripted conformance only; no clinical outcome or incremental-AI effect estimate."
+  }
+}

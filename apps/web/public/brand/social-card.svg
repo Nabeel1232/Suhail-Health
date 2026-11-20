@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Suhail Health</title><desc id="desc">Guiding every result to care through coordinated referrals, clear ownership and clinician oversight.</desc>
+  <rect width="1200" height="630" fill="#143D3C"/>
+  <path d="M899 540C954 465 747 417 837 311S1066 254 1044 165" fill="none" stroke="#28625E" stroke-width="34" stroke-linecap="round"/>
+  <path d="M1044 79L1058 137L1116 151L1058 165L1044 223L1030 165L972 151L1030 137Z" fill="#C9A25B"/>
+  <text x="88" y="234" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#FFFFFF">Suhail Health</text>
+  <text x="92" y="316" font-family="Arial, sans-serif" font-size="39" fill="#A3DED3">Guiding every result to care.</text>
+  <text x="92" y="406" font-family="Arial, sans-serif" font-size="25" fill="#D9EAE4">Coordinated referrals. Clear ownership.</text>
+  <text x="92" y="447" font-family="Arial, sans-serif" font-size="25" fill="#D9EAE4">Patient privacy. Clinician oversight.</text>
+  <rect x="92" y="512" width="90" height="5" rx="2.5" fill="#C9A25B"/>
+</svg>
